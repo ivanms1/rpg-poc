@@ -17,7 +17,8 @@ Rules spec: [docs/research/mechanics.md](docs/research/mechanics.md). Content da
   - `world/` — seeded map generator (`generateWorld`), terrain/walkability, clock, fog, pathing.
   - `run/` — `createRun(seed, content)` + `runReducer(content)`: movement, night chase, locations (`locations.ts`, merchant in `shop.ts`), battles and bosses (`battles.ts`), save/load (`save.ts`, zod-validated, items by id). Content is injected (see `data/content.ts`).
 - `src/data/` — content: weapons, items, enemies (3 levels), bosses (week pools + Leshen finale), forge edges, sets. Each effect has a test in `*.test.ts`.
-- `src/render/` — canvas tileset atlas (Bountiful Bits 1-bit sheet, tinted per tile), palette.
+- `src/render/` — canvas tileset atlas (Bountiful Bits 1-bit sheet, tinted per tile), palette, map camera.
+- `src/audio/` — synthesized SFX (Web Audio) and pure cue functions mapping battle events / run changes to sounds.
 - `src/ui/` — React components on a 480×270 art-pixel stage scaled by an integer factor. `Root` → title screen or `Game` (one run, autosaves via `save/storage.ts`).
   - `combat/` — replays a `BattleResult` event log (`playback.ts` pacing/popups, `usePlayback`, `CombatView`).
   - `map/WorldCanvas` (draws via `render/drawWorld.ts`), `run/` dialogs (chest/pile choice, messages, boss preview, end screen).

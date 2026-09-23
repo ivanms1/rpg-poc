@@ -469,3 +469,19 @@ body,
 .key-button.is-on {
   background: #33202a;
 }
+
+.map-sound {
+  position: absolute;
+  right: 4px;
+  bottom: 3px;
+  display: flex;
+  padding: 1px 2px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.map-sound[aria-pressed='true'] {
+  color: var(--frame);
+}

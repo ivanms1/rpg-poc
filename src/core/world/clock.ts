@@ -18,6 +18,13 @@ export const WEEK_SEGMENTS: readonly Segment[] = Array.from({ length: DAYS_PER_W
 
 export const STEPS_PER_WEEK = WEEK_SEGMENTS.reduce((sum, s) => sum + s.steps, 0)
 
+/** The run ends with week 3's boss. */
+export const FINAL_WEEK = 3
+
+/** 0 at the start of the run, 1 when the final boss arrives: how far the land has withered. */
+export const withering = (week: number, step: number): number =>
+  Math.min(1, Math.max(0, ((week - 1) * STEPS_PER_WEEK + step) / (FINAL_WEEK * STEPS_PER_WEEK)))
+
 export interface TimeOfWeek {
   readonly segment: number
   readonly phase: Phase

@@ -25,6 +25,8 @@ export const PALETTE = {
   wood: '#a86a3c',
   bone: '#e5ddc8',
   pumpkin: '#e27a16',
+  /** Withering tint laid over the terrain as the weeks pass. */
+  decay: '#5a1024',
 
   poison: '#7fc03a',
   acid: '#c8d840',

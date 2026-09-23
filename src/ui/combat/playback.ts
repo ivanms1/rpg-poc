@@ -86,3 +86,32 @@ export const activePopups = (events: readonly BattleEvent[], index: number, spee
   }
   return active.reverse()
 }
+
+/** Health lost in one blow that shakes the arena hard. */
+export const BIG_HIT = 5
+
+type Shake = 'small' | 'big'
+
+/** Arena shake keyframes (art pixels), played with the Web Animations API. */
+export const SHAKES: Record<Shake, { readonly ms: number; readonly frames: readonly Keyframe[] }> = {
+  small: { ms: 160, frames: [{ transform: 'translate(-1px, 0)' }, { transform: 'translate(1px, 1px)' }, { transform: 'translate(0, -1px)' }, { transform: 'none' }] },
+  big: {
+    ms: 280,
+    frames: [
+      { transform: 'translate(-3px, 1px)' },
+      { transform: 'translate(3px, -2px)' },
+      { transform: 'translate(-2px, 2px)' },
+      { transform: 'translate(2px, 0)' },
+      { transform: 'translate(-1px, -1px)' },
+      { transform: 'translate(1px, 1px)' },
+      { transform: 'none' },
+    ],
+  },
+}
+
+/** Screen shake for heavy hits and deaths. */
+export const shakeOf = (event: BattleEvent | undefined): Shake | null => {
+  if (event?.type === 'death') return 'big'
+  if (event?.type !== 'damage' || event.hpLost <= 0) return null
+  return event.hpLost >= BIG_HIT ? 'big' : 'small'
+}

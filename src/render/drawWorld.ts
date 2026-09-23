@@ -16,11 +16,26 @@ export interface WorldView {
   /** Device pixels per tile pixel. */
   readonly px: number
   readonly heroBitmap: readonly string[]
-  /** Tile at the canvas centre (defaults to the player; the Shift overview uses the map centre). */
+  /** Tile at the canvas centre (defaults to the player; the Shift overview uses the explored area's centre). */
   readonly focus?: Point
+  /** 0–1: how far the land has withered as He draws near (see `withering`). */
+  readonly decay?: number
 }
 
 const REMAINS_ALPHA = 0.45
+/** Tint strength at full decay. */
+const DECAY_ALPHA = 0.35
+
+/** Tints only what's already drawn (the terrain), leaving fog and markers alone. */
+const drawDecay = (ctx: CanvasRenderingContext2D, decay: number) => {
+  if (decay <= 0) return
+  ctx.globalCompositeOperation = 'source-atop'
+  ctx.globalAlpha = DECAY_ALPHA * Math.min(1, decay)
+  ctx.fillStyle = PALETTE.decay
+  ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+  ctx.globalAlpha = 1
+  ctx.globalCompositeOperation = 'source-over'
+}
 
 const PATHLIKE: ReadonlySet<Terrain | null> = new Set(['path', 'bridge'])
 const WATERLIKE: ReadonlySet<Terrain | null> = new Set(['water', 'bridge'])
@@ -102,6 +117,8 @@ export const drawWorld = (ctx: CanvasRenderingContext2D, atlas: Atlas, view: Wor
       if (seen({ x: tx, y: ty })) drawTerrain(ctx, atlas, world, tx, ty, cam.originX + tx * size, cam.originY + ty * size, size)
     }
   }
+
+  drawDecay(ctx, view.decay ?? 0)
 
   for (const poi of world.pois) {
     if (!seen(poi)) continue

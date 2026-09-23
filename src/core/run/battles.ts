@@ -2,6 +2,7 @@
 import { simulateBattle } from '../combat/simulate'
 import { creatureCombatant } from '../items/loadout'
 import type { BossDef, CreatureDef } from '../items/types'
+import { FINAL_WEEK } from '../world/clock'
 import type { EnemyEntity } from '../world/types'
 import { addSlots, heroCombatant, heroMaxHp, withHealth } from './hero'
 import type { BattleInfo, Content, RunState, Week } from './types'
@@ -54,7 +55,7 @@ export const startBossBattle = (
   from?: string,
 ): RunState => {
   const boss = bossById(content, bossId)
-  const subtitle = from ? `${from} transforms!` : state.week === 3 ? 'The final battle' : `The week ${state.week} boss arrives`
+  const subtitle = from ? `${from} transforms!` : state.week === FINAL_WEEK ? 'The final battle' : `The week ${state.week} boss arrives`
   return battleScreen(state, content, boss, { kind: 'boss', bossId: boss.id }, true, { title: boss.name, subtitle })
 }
 
@@ -74,7 +75,7 @@ export const finishBattle = (state: RunState, content: Content): RunState => {
 
   const next = bossById(content, battle.source.bossId).next
   if (next) return startBossBattle({ ...state, hero: withHealth(hero, heroMaxHp(hero, content.sets), content.sets) }, content, next, battle.enemyName)
-  if (state.week === 3) return { ...state, hero, screen: { kind: 'victory' } }
+  if (state.week === FINAL_WEEK) return { ...state, hero, screen: { kind: 'victory' } }
   const week = (state.week + 1) as Week
   return {
     ...state,

@@ -13,6 +13,8 @@ interface Props {
   readonly world: World
   readonly player: Point
   readonly revealed: ReadonlySet<string>
+  /** 0–1 land withering (darker, bloodier terrain as the weeks pass). */
+  readonly decay: number
   /** Canvas size in art pixels. */
   readonly width: number
   readonly height: number
@@ -22,7 +24,7 @@ interface Props {
   readonly onTileClick?: (tile: Point) => void
 }
 
-export function WorldCanvas({ atlas, world, player, revealed, width, height, stageScale, overview = false, onTileClick }: Props) {
+export function WorldCanvas({ atlas, world, player, revealed, decay, width, height, stageScale, overview = false, onTileClick }: Props) {
   const ref = useRef<HTMLCanvasElement>(null)
   const camera = useRef<Camera | null>(null)
   const explored = useMemo(() => (overview ? boundsOf(revealed) : null), [overview, revealed])
@@ -36,8 +38,8 @@ export function WorldCanvas({ atlas, world, player, revealed, width, height, sta
     canvas.height = Math.round(height * deviceScale)
     const normalPx = Math.max(1, Math.round(deviceScale * MAP_ZOOM))
     const view = explored ? fitBounds(canvas.width, canvas.height, explored, Math.max(1, normalPx - 1)) : { px: normalPx, focus: player }
-    camera.current = drawWorld(ctx, atlas, { world, player, revealed, heroBitmap: ICONS.knight, ...view })
-  }, [atlas, world, player, revealed, width, height, stageScale, explored])
+    camera.current = drawWorld(ctx, atlas, { world, player, revealed, decay, heroBitmap: ICONS.knight, ...view })
+  }, [atlas, world, player, revealed, decay, width, height, stageScale, explored])
 
   const onClick = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const canvas = ref.current

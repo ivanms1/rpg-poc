@@ -40,3 +40,16 @@ test.describe('map controls', () => {
     await expect(page.getByText(/to return/)).toHaveCount(0)
   })
 })
+
+test.describe('sound', () => {
+  test('the mute switch toggles with a click or M and is remembered', async ({ page }) => {
+    await page.setViewportSize({ width: 1920, height: 1080 })
+    await page.goto(`/?seed=${SEED}`)
+    await page.getByRole('button', { name: 'Mute sound' }).click()
+    await expect(page.getByRole('button', { name: 'Unmute sound' })).toHaveAttribute('aria-pressed', 'false')
+    await page.reload()
+    await expect(page.getByRole('button', { name: 'Unmute sound' })).toBeVisible()
+    await page.keyboard.press('m')
+    await expect(page.getByRole('button', { name: 'Mute sound' })).toHaveAttribute('aria-pressed', 'true')
+  })
+})

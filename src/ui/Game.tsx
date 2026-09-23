@@ -1,17 +1,19 @@
-import { useCallback, useEffect, useMemo, useReducer, useState } from 'react'
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react'
+import { runCues } from '../audio/cues'
 import { setProgress, type Equipped } from '../core/items/loadout'
 import { heroCombatant } from '../core/run/hero'
 import { runReducer } from '../core/run/reducer'
 import { planRoute } from '../core/run/route'
 import { isSaveable } from '../core/run/save'
 import type { RunAction, RunState } from '../core/run/types'
-import { timeOfWeek } from '../core/world/clock'
+import { timeOfWeek, withering } from '../core/world/clock'
 import type { Point } from '../core/world/types'
 import { CONTENT } from '../data/content'
 import { createAtlas, loadImage, type Atlas } from '../render/atlas'
 import { PALETTE } from '../render/palette'
 import { TILESET_URL } from '../render/tiles'
 import { CombatView } from './combat/CombatView'
+import { useSound } from './audio/useSound'
 import { Inventory } from './Inventory'
 import { WorldCanvas } from './map/WorldCanvas'
 import { PixelIcon } from './PixelIcon'
@@ -52,6 +54,8 @@ export function Game({ initial, onExit }: Props) {
   const overview = mapHeld || mapPinned
   const [route, setRoute] = useState<readonly Point[]>([])
   const [state, dispatch] = useReducer(reducer, initial)
+  const sound = useSound()
+  const previous = useRef(state)
   const { hero, screen, week, step } = state
   const time = timeOfWeek(step)
   const stats = useMemo(() => heroCombatant(hero, CONTENT.sets).stats, [hero])
@@ -113,6 +117,11 @@ export function Game({ initial, onExit }: Props) {
   }, [])
 
   useEffect(() => {
+    for (const cue of runCues(previous.current, state)) sound.play(cue)
+    previous.current = state
+  }, [state, sound])
+
+  useEffect(() => {
     if (isSaveable(state)) writeSave(state)
     else if (state.screen.kind === 'gameOver' || state.screen.kind === 'victory') clearSave()
   }, [state])
@@ -129,6 +138,7 @@ export function Game({ initial, onExit }: Props) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const key = e.key.toLowerCase()
+      if (key === 'm') return sound.toggleMute()
       if (screen.kind === 'battle') return
       if (finished) {
         if (key === 'r') onExit()
@@ -158,7 +168,7 @@ export function Game({ initial, onExit }: Props) {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [act, finished, onExit, screen.kind, showBoss, overview])
+  }, [act, finished, onExit, screen.kind, showBoss, overview, sound])
 
   return (
     <Stage>
@@ -199,6 +209,7 @@ export function Game({ initial, onExit }: Props) {
               world={state.world}
               player={state.player}
               revealed={state.revealed}
+              decay={withering(week, step)}
               width={MAP_W}
               height={MAP_H}
               stageScale={scale}
@@ -209,10 +220,22 @@ export function Game({ initial, onExit }: Props) {
             <div className="map-caption">
               {time.phase} {time.day} · {time.stepsLeftInSegment} steps left · seed {state.seed}
             </div>
+            <button
+              type="button"
+              className="map-sound"
+              title="Sound (M)"
+              aria-label={sound.muted ? 'Unmute sound' : 'Mute sound'}
+              aria-pressed={!sound.muted}
+              onClick={sound.toggleMute}
+            >
+              <PixelIcon icon={sound.muted ? 'soundOff' : 'soundOn'} color="currentColor" />
+            </button>
             {loadError && <div className="error">{loadError}</div>}
           </main>
 
-          {screen.kind === 'battle' && <CombatView key={screen.battle.id} battle={screen.battle} onFinish={() => act({ type: 'finishBattle' })} />}
+          {screen.kind === 'battle' && (
+            <CombatView key={screen.battle.id} battle={screen.battle} onCue={sound.play} onFinish={() => act({ type: 'finishBattle' })} />
+          )}
           {screen.kind === 'choice' && (
             <ChoiceDialog
               title={screen.title}

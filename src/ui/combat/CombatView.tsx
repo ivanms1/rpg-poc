@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { battleCue } from '../../audio/cues'
+import type { SoundName } from '../../audio/sounds'
 import type { BattleEvent, BattleResult, Side } from '../../core/combat/types'
 import { PALETTE } from '../../render/palette'
 import type { IconName } from '../icons'
 import { PixelIcon } from '../PixelIcon'
 import { BossIntro } from './BossIntro'
 import { Fighter, POPUP_MS } from './Fighter'
-import { activePopups, SPEEDS, type Speed } from './playback'
+import { activePopups, SHAKES, shakeOf, SPEEDS, type Speed } from './playback'
 import { StatusList } from './StatusList'
 import { usePlayback } from './usePlayback'
 import './combat.css'
@@ -50,10 +52,12 @@ const actionOf = (event: BattleEvent | undefined, side: Side): 'lunge' | 'hit' |
 interface Props {
   readonly battle: BattleView
   readonly onFinish: () => void
+  /** Called with each event's sound as playback reaches it. */
+  readonly onCue?: (sound: SoundName) => void
 }
 
 /** Replays a simulated battle. Space pauses, 1–3 set speed, Ctrl/Enter skips, Enter continues once finished. */
-export function CombatView({ battle, onFinish }: Props) {
+export function CombatView({ battle, onFinish, onCue }: Props) {
   const [speed, setSpeed] = useState<Speed>(loadSpeed)
   const [paused, setPaused] = useState(false)
   const [introOpen, setIntroOpen] = useState(Boolean(battle.intro))
@@ -61,6 +65,21 @@ export function CombatView({ battle, onFinish }: Props) {
   const { index, event, done, skip } = usePlayback(events, speed, paused || introOpen)
   const snapshot = (event ?? events[0])?.snapshot
   const popups = activePopups(events, index, speed, POPUP_MS)
+  const arena = useRef<HTMLDivElement>(null)
+  /** The last event whose sound and shake have played, so re-renders never replay them. */
+  const played = useRef<BattleEvent | null>(null)
+
+  useEffect(() => {
+    if (!event || introOpen || played.current === event) return
+    played.current = event
+    const cue = battleCue(event)
+    if (cue) onCue?.(cue)
+    const shake = shakeOf(event)
+    const el = arena.current
+    if (shake && el && typeof el.animate === 'function' && !window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+      el.animate([...SHAKES[shake].frames], { duration: SHAKES[shake].ms, easing: `steps(${SHAKES[shake].frames.length - 1})` })
+    }
+  }, [event, introOpen, onCue])
 
   const chooseSpeed = (next: Speed) => {
     setSpeed(next)
@@ -142,7 +161,7 @@ export function CombatView({ battle, onFinish }: Props) {
           </button>
         </div>
 
-        <div className="combat-arena">
+        <div ref={arena} className="combat-arena">
           {fighter('player')}
           {fighter('enemy')}
         </div>

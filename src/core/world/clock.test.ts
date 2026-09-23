@@ -1,4 +1,4 @@
-import { STEPS_PER_WEEK, WEEK_SEGMENTS, nextMorning, sightRadius, timeOfWeek } from './clock'
+import { FINAL_WEEK, STEPS_PER_WEEK, WEEK_SEGMENTS, nextMorning, sightRadius, timeOfWeek, withering } from './clock'
 
 describe('clock', () => {
   it('has 3 days of 50 steps and 3 nights of 30 steps', () => {
@@ -52,5 +52,19 @@ describe('nextMorning', () => {
 
   it('by day jumps past the coming night too', () => {
     expect(nextMorning(10)).toBe(80)
+  })
+})
+
+describe('withering', () => {
+  it('grows from 0 at the start to 1 when the final boss arrives', () => {
+    expect(withering(1, 0)).toBe(0)
+    expect(withering(2, 0)).toBeCloseTo(1 / 3)
+    expect(withering(2, STEPS_PER_WEEK / 2)).toBeCloseTo(0.5)
+    expect(withering(FINAL_WEEK, STEPS_PER_WEEK)).toBe(1)
+  })
+
+  it('stays within 0–1', () => {
+    expect(withering(9, 0)).toBe(1)
+    expect(withering(0, 0)).toBe(0)
   })
 })

@@ -1,6 +1,6 @@
 import type { BattleEvent, FighterVisible } from '../../core/combat/types'
 import { EMPTY_STATUSES } from '../../core/combat/state'
-import { BEAT_MS, activePopups, beatDuration, popupsFor } from './playback'
+import { BEAT_MS, BIG_HIT, activePopups, beatDuration, popupsFor, shakeOf } from './playback'
 
 const fighter: FighterVisible = { hp: 10, maxHp: 10, attack: 1, armor: 0, speed: 0, gold: 0, statuses: EMPTY_STATUSES }
 const snapshot = { player: fighter, enemy: fighter }
@@ -78,5 +78,21 @@ describe('activePopups', () => {
 
   it('tolerates an index past the end', () => {
     expect(activePopups(events, 99, 1, 10_000)).toHaveLength(2)
+  })
+})
+
+describe('shakeOf', () => {
+  const damage = (hpLost: number) => ev({ type: 'damage', side: 'enemy', amount: hpLost, armorLost: 0, hpLost, source: 'strike' })
+
+  it('shakes more for heavy hits and deaths', () => {
+    expect(shakeOf(damage(1))).toBe('small')
+    expect(shakeOf(damage(BIG_HIT))).toBe('big')
+    expect(shakeOf(ev({ type: 'death', side: 'enemy' }))).toBe('big')
+  })
+
+  it('stays still for blocked hits and other events', () => {
+    expect(shakeOf(damage(0))).toBeNull()
+    expect(shakeOf(ev({ type: 'strike', side: 'player', damage: 1 }))).toBeNull()
+    expect(shakeOf(undefined)).toBeNull()
   })
 })

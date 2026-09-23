@@ -1,6 +1,6 @@
 # He is Coming — Browser Clone: Plan
 
-Status: Phase 6 in progress (map clarity done) · 2026-09-23
+Status: Phase 6 in progress (map clarity, game feel done) · 2026-09-23
 
 Reference docs: [research/mechanics.md](research/mechanics.md) (rules spec) ·
 [research/content.md](research/content.md) (items/enemies/bosses/sets data) ·
@@ -165,8 +165,10 @@ Twinfuse Knot, Vampire's Tooth, Cleansing Edge, Fairy Queen, Large Golem, Wishin
 - ✅ Map clarity: faded remains of used locations and defeated enemies, hold Shift (or pin with Shf) to zoom
   out to everything explored, click a revealed tile to walk there (routes go around enemies and unused
   locations, over seen tiles only).
-- Sound (sfx + ambient), hit/flash tweens, world "decay" tint as the weeks progress, difficulty modes,
-  mobile/touch layout, deploy (static → Vercel or itch.io).
+- ✅ Game feel: synthesized SFX (Web Audio, no files; cues in `src/audio/cues.ts`) with a remembered mute
+  (button or M), arena shake on heavy hits and deaths, and the land withering (a darkening red tint) as the
+  run nears the final boss.
+- Difficulty modes, creature sprites, mobile/touch layout, deploy (static → Vercel or itch.io).
 
 ### Later (optional)
 Swampland (island maps, ferryman, 8 new statuses in play, Hydra), challenges + unlocks, an original Demon King
