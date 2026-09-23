@@ -1,8 +1,9 @@
-/** Golem (merge two identical commons up a tier), Cauldron (cook two foods) and Beehive (honeycomb). */
+/** Golem (merge two identical commons up a tier), Cauldron (cook two foods), Woodcutter (two items → a heroic) and Beehive. */
 import type { Equipped } from '../items/loadout'
 import type { Tier } from '../items/types'
 import type { Poi } from '../world/types'
-import { placeItem } from './hero'
+import { ownedIds, placeItem } from './hero'
+import { randomItem } from './loot'
 import type { Content, CraftOption, RunState } from './types'
 
 const NEXT_TIER: Partial<Record<Tier, Tier>> = { normal: 'golden', golden: 'diamond' }
@@ -62,7 +63,25 @@ export const visitBeehive = (state: RunState, content: Content, poi: Poi): RunSt
   return message(updatePoi({ ...state, hero }, poi.id, { used: true }), 'Beehive', 'You carefully collect a Honeycomb.')
 }
 
-/** Applies craft option `index`: the golem is used up, the cauldron can be used again. */
+const WOODCUTTER_PAIRS = 6
+
+/** Up to 6 pairs of carried items, each pre-rolled to a hidden heroic item. */
+export const openWoodcutter = (state: RunState, content: Content, poi: Poi): RunState => {
+  const items = filled(state)
+  const pairs = items.flatMap((a, i) => items.slice(i + 1).map((b) => [a.slot, b.slot] as const)).slice(0, WOODCUTTER_PAIRS)
+  if (pairs.length === 0) return message(state, 'Woodcutter', 'Bring two items and the woodcutter will carve them into something heroic.')
+  let rng = state.rng
+  const options: CraftOption[] = []
+  for (const slots of pairs) {
+    const [heroic, next] = randomItem(rng, content, 'heroic', ownedIds(state.hero))
+    rng = next
+    if (heroic) options.push({ result: { item: heroic }, slots, hidden: true })
+  }
+  if (options.length === 0) return message(state, 'Woodcutter', 'The woodcutter has nothing left to carve.')
+  return { ...state, rng, screen: { kind: 'craft', poiId: poi.id, title: 'Woodcutter', options } }
+}
+
+/** Applies craft option `index`: the cauldron can be used again, the golem and woodcutter can't. */
 export const craft = (state: RunState, index: number): RunState => {
   if (state.screen.kind !== 'craft') return state
   const option = state.screen.options[index]
@@ -70,5 +89,5 @@ export const craft = (state: RunState, index: number): RunState => {
   const [keep, consume] = option.slots
   const items = state.hero.items.map((e, i) => (i === keep ? option.result : i === consume ? null : e))
   const next = { ...state, hero: { ...state.hero, items }, screen: { kind: 'map' as const } }
-  return state.screen.title === 'Golem' ? updatePoi(next, state.screen.poiId, { used: true }) : next
+  return state.screen.title === 'Cauldron' ? next : updatePoi(next, state.screen.poiId, { used: true })
 }

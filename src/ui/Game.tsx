@@ -14,7 +14,7 @@ import { Inventory } from './Inventory'
 import { WorldCanvas } from './map/WorldCanvas'
 import { PixelIcon } from './PixelIcon'
 import { BossPreview, ChoiceDialog, EndScreen, MessageDialog } from './run/Dialogs'
-import { CraftDialog, ForgeDialog, OilDialog, ShopDialog } from './run/ShopDialogs'
+import { CraftDialog, ForgeDialog, OilDialog, PickDialog, ShopDialog } from './run/ShopDialogs'
 import { clearSave, writeSave } from './save/storage'
 import { StatPanel } from './StatPanel'
 import { Stage } from './Stage'
@@ -98,9 +98,10 @@ export function Game({ initial, onExit }: Props) {
       const digit = Number(key)
       if (Number.isInteger(digit) && digit >= 1) {
         if (screen.kind === 'shop') return act({ type: 'buy', index: digit - 1 })
-        if (screen.kind === 'choice' || screen.kind === 'forge' || screen.kind === 'oil' || screen.kind === 'craft') return act({ type: 'choose', index: digit - 1 })
+        if (['choice', 'forge', 'oil', 'craft', 'pick'].includes(screen.kind)) return act({ type: 'choose', index: digit - 1 })
       }
       if (screen.kind === 'shop' && key === 'r') return act({ type: 'reroll' })
+      if (screen.kind === 'shop' && key === 'h') return act({ type: 'haggle' })
       const move = MOVES[key]
       if (!move || showBoss) return
       e.preventDefault()
@@ -154,12 +155,15 @@ export function Game({ initial, onExit }: Props) {
           {screen.kind === 'message' && <MessageDialog title={screen.title} text={screen.text} onClose={() => act({ type: 'dismiss' })} />}
           {screen.kind === 'shop' && (
             <ShopDialog
+              title={screen.title}
               stock={screen.stock}
               gold={hero.gold}
               rerollCost={screen.rerollCost}
+              canHaggle={screen.canHaggle}
               notice={screen.notice}
               onBuy={(index) => act({ type: 'buy', index })}
               onReroll={() => act({ type: 'reroll' })}
+              onHaggle={() => act({ type: 'haggle' })}
               onClose={() => act({ type: 'dismiss' })}
             />
           )}
@@ -179,6 +183,16 @@ export function Game({ initial, onExit }: Props) {
               title={screen.title}
               options={screen.options}
               items={hero.items}
+              onChoose={(index) => act({ type: 'choose', index })}
+              onClose={() => act({ type: 'dismiss' })}
+            />
+          )}
+          {screen.kind === 'pick' && (
+            <PickDialog
+              title={screen.title}
+              text={screen.text}
+              options={screen.options}
+              notice={screen.notice}
               onChoose={(index) => act({ type: 'choose', index })}
               onClose={() => act({ type: 'dismiss' })}
             />

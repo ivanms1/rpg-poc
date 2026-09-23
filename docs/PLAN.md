@@ -1,6 +1,6 @@
 # He is Coming — Browser Clone: Plan
 
-Status: Phase 4 done (MVP) · 2026-09-23
+Status: Phase 5 done · 2026-09-23
 
 Reference docs: [research/mechanics.md](research/mechanics.md) (rules spec) ·
 [research/content.md](research/content.md) (items/enemies/bosses/sets data) ·
@@ -153,7 +153,9 @@ with enemy levels, game over / victory screens, double-click discard, `?seed=` r
 - Title screen, game over / victory summary, save/resume in localStorage.
 - **Done when:** a full 3-week run is playable start to finish. **← This is the MVP.**
 
-### Phase 5 — Content completion (ongoing, parallelisable)
+### Phase 5 — Content completion (ongoing, parallelisable) ✅
+_Not yet: Hidden Dagger, Grindstone Club, Gemstone Scepter, Explosive Sword, Kindling Bomb, Powder Keg, Bomb Bag,
+Twinfuse Knot, Vampire's Tooth, Cleansing Edge, Fairy Queen, Large Golem, Wishing Well boons._
 - All Woodland weapons, items, jewelry, food, sets, edges, oils; Golden/Diamond + Golem; Cauldron recipes;
   weapon modifications; remaining locations (Crystal Ball, Lookout Tower, Waypoint, Fairy, Wishing Well,
   Bargaining Tent, Woodcutter).

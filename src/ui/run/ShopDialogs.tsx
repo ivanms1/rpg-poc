@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import type { EdgeDef, OilKind } from '../../core/items/types'
 import type { Equipped } from '../../core/items/loadout'
-import type { CraftOption, ShopSlot } from '../../core/run/types'
+import type { CraftOption, PickOption, ShopSlot } from '../../core/run/types'
 import { PALETTE } from '../../render/palette'
 import type { IconName } from '../icons'
 import { ItemGlyph } from '../items/ItemGlyph'
@@ -23,30 +23,41 @@ const Notice = ({ text }: { readonly text?: string }) =>
   ) : null
 
 interface ShopProps {
+  readonly title: string
   readonly stock: readonly ShopSlot[]
   readonly gold: number
-  readonly rerollCost: number
+  /** `null` hides rerolling (Bargaining Tent). */
+  readonly rerollCost: number | null
+  readonly canHaggle: boolean
   readonly notice?: string
   readonly onBuy: (index: number) => void
   readonly onReroll: () => void
+  readonly onHaggle: () => void
   readonly onClose: () => void
 }
 
-/** Traveling Merchant: 6 wares (keys 1–6), reroll (R), hover for details. */
-export function ShopDialog({ stock, gold, rerollCost, notice, onBuy, onReroll, onClose }: ShopProps) {
+/** Merchant or Bargaining Tent: wares (keys 1–6), reroll (R) or haggle (H), hover for details. */
+export function ShopDialog({ title, stock, gold, rerollCost, canHaggle, notice, onBuy, onReroll, onHaggle, onClose }: ShopProps) {
   const [hovered, setHovered] = useState<number | null>(null)
   const detail = hovered !== null ? stock[hovered] : undefined
   return (
-    <div className="panel run-dialog shop-dialog" role="dialog" aria-label="Traveling Merchant">
-      <h2>Traveling Merchant</h2>
+    <div className="panel run-dialog shop-dialog" role="dialog" aria-label={title}>
+      <h2>{title}</h2>
       <Close onClose={onClose} />
       <div className="shop-bar">
         <span className="shop-gold" aria-label={`Your gold ${gold}`}>
           <PixelIcon icon="coin" color={PALETTE.gold} /> {gold}
         </span>
-        <button type="button" className="dialog-button" onClick={onReroll} disabled={gold < rerollCost}>
-          Reroll (R) · {rerollCost}
-        </button>
+        {rerollCost !== null && (
+          <button type="button" className="dialog-button" onClick={onReroll} disabled={gold < rerollCost}>
+            Reroll (R) · {rerollCost}
+          </button>
+        )}
+        {canHaggle && (
+          <button type="button" className="dialog-button" onClick={onHaggle}>
+            Haggle (H)
+          </button>
+        )}
       </div>
       <div className="shop-grid">
         {stock.map((ware, i) => (
@@ -154,6 +165,7 @@ interface CraftProps {
 const CRAFT_BLURB: Record<string, string> = {
   Golem: 'Fuse two identical items into one stronger item.',
   Cauldron: 'Cook two ingredients into a dish.',
+  Woodcutter: 'Carve two items into one random heroic item.',
 }
 
 /** Golem / Cauldron: each option shows its two inputs and the result. */
@@ -179,12 +191,47 @@ export function CraftDialog({ title, options, items, onChoose, onClose }: CraftP
                 return input ? <ItemGlyph key={slot} item={input.item} scale={1} /> : null
               })}
               <span className="craft-arrow">→</span>
-              <ItemGlyph item={option.result.item} />
+              {option.hidden ? <span className="craft-mystery">?</span> : <ItemGlyph item={option.result.item} />}
             </span>
-            <ItemDetails equipped={option.result} />
+            {option.hidden ? (
+              <span className="item-effect">
+                {option.slots.map((slot) => items[slot]?.item.name).join(' + ')} → a random heroic item
+              </span>
+            ) : (
+              <ItemDetails equipped={option.result} />
+            )}
           </button>
         ))}
       </div>
+    </div>
+  )
+}
+
+interface PickProps {
+  readonly title: string
+  readonly text: string
+  readonly options: readonly PickOption[]
+  readonly notice?: string
+  readonly onChoose: (index: number) => void
+  readonly onClose: () => void
+}
+
+/** Crystal Ball, Waypoint, Fairy, Wishing Well: a short list of labelled choices. */
+export function PickDialog({ title, text, options, notice, onChoose, onClose }: PickProps) {
+  return (
+    <div className="panel run-dialog pick-dialog" role="dialog" aria-label={title}>
+      <h2>{title}</h2>
+      <Close onClose={onClose} />
+      <p className="forge-note">{text}</p>
+      <div className="pick-options">
+        {options.map((option, i) => (
+          <button key={option.id} type="button" className="dialog-button pick-button" onClick={() => onChoose(i)}>
+            <span className="pick-key">{i + 1}</span>
+            {option.label}
+          </button>
+        ))}
+      </div>
+      <Notice text={notice} />
     </div>
   )
 }

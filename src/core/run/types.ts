@@ -33,10 +33,21 @@ export interface Hero {
 
 export type ShopSlot = Ware
 
-/** Golem or cauldron: consume the items in `slots`; `result` lands in the first slot. */
+/** Golem, cauldron or woodcutter: consume the items in `slots`; `result` lands in the first slot. */
 export interface CraftOption {
   readonly result: Equipped
   readonly slots: readonly [number, number]
+  /** The result stays a surprise until crafted (Woodcutter). */
+  readonly hidden?: boolean
+}
+
+/** Crystal Ball (reveal a location), Waypoint (travel), Fairy (transform a slot), Wishing Well (buy a tiered item). */
+export type PickPurpose = 'reveal' | 'travel' | 'fairy' | 'well'
+
+export interface PickOption {
+  /** A POI id (reveal/travel), a slot index (fairy) or a tier (well). */
+  readonly id: string
+  readonly label: string
 }
 
 export interface BattleInfo {
@@ -62,10 +73,28 @@ export type Screen =
       readonly notice?: string
     }
   | { readonly kind: 'message'; readonly title: string; readonly text: string }
-  | { readonly kind: 'shop'; readonly poiId: string; readonly stock: readonly Ware[]; readonly rerollCost: number; readonly notice?: string }
+  | {
+      readonly kind: 'shop'
+      readonly poiId: string
+      readonly title: string
+      readonly stock: readonly Ware[]
+      /** `null` where rerolling isn't offered (Bargaining Tent). */
+      readonly rerollCost: number | null
+      readonly canHaggle: boolean
+      readonly notice?: string
+    }
   | { readonly kind: 'forge'; readonly poiId: string; readonly options: readonly EdgeDef[]; readonly cost: number; readonly notice?: string }
   | { readonly kind: 'oil'; readonly poiId: string; readonly options: readonly OilKind[] }
   | { readonly kind: 'craft'; readonly poiId: string; readonly title: string; readonly options: readonly CraftOption[] }
+  | {
+      readonly kind: 'pick'
+      readonly poiId: string
+      readonly title: string
+      readonly text: string
+      readonly purpose: PickPurpose
+      readonly options: readonly PickOption[]
+      readonly notice?: string
+    }
   | { readonly kind: 'gameOver' }
   | { readonly kind: 'victory' }
 
@@ -95,4 +124,5 @@ export type RunAction =
   | { readonly type: 'reorder'; readonly from: number; readonly to: number }
   | { readonly type: 'buy'; readonly index: number }
   | { readonly type: 'reroll' }
+  | { readonly type: 'haggle' }
   | { readonly type: 'fightBoss' }

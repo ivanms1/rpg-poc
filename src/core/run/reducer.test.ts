@@ -442,6 +442,92 @@ describe('crafting', () => {
   })
 })
 
+describe('scouting and travel', () => {
+  const far = (kind: Poi['kind'], x: number, y: number) => ({ ...poi(kind, x, y), id: `${kind}-far` })
+
+  it('a lookout tower reveals a wide area once', () => {
+    const s = play(createRun(1, CONTENT, { world: world([poi('lookout', 8, 5)]) }), right)
+    expect(s.screen).toMatchObject({ kind: 'message', title: 'Lookout Tower' })
+    expect(s.revealed.has('13,9')).toBe(true)
+    expect(s.world.pois[0]?.used).toBe(true)
+  })
+
+  it('a crystal ball reveals one of up to 3 unseen locations', () => {
+    const base = createRun(1, CONTENT, { world: world([poi('crystalBall', 8, 5), far('chest', 13, 1), far('forge', 1, 9)]) })
+    const s = play({ ...base, revealed: new Set(['7,5', '8,5']) }, right)
+    expect(s.screen).toMatchObject({ kind: 'pick', purpose: 'reveal', title: 'Crystal Ball' })
+    if (s.screen.kind !== 'pick') return
+    expect(s.screen.options.map((o) => o.label)).toEqual(expect.arrayContaining([expect.stringContaining('Treasure Chest')]))
+    const chest = s.screen.options.findIndex((o) => o.id === 'chest-far')
+    const after = play(s, { type: 'choose', index: chest })
+    expect(after.revealed.has('13,1')).toBe(true)
+    expect(after.world.pois[0]?.used).toBe(true)
+  })
+
+  it('waypoints fast-travel to each other', () => {
+    const s = play(createRun(1, CONTENT, { world: world([poi('waypoint', 8, 5), far('waypoint', 12, 8)]) }), right)
+    expect(s.screen).toMatchObject({ kind: 'pick', purpose: 'travel' })
+    const after = play(s, { type: 'choose', index: 0 })
+    expect(after.player).toEqual({ x: 12, y: 8 })
+    expect(after.screen.kind).toBe('map')
+    expect(after.world.pois[0]?.used).toBe(false)
+  })
+})
+
+describe('fairy, wishing well, bargaining tent, woodcutter', () => {
+  const byId = (id: string) => ({ item: [...CONTENT.items, ...CONTENT.weapons].find((d) => d.id === id)! })
+  const visitWith = (kind: Poi['kind'], patch: Partial<RunState['hero']>) => {
+    const s = createRun(1, CONTENT, { world: world([poi(kind, 8, 5)]) })
+    return play({ ...s, hero: { ...s.hero, ...patch } }, right)
+  }
+
+  it('the fairy turns an item into another of the same rarity', () => {
+    const s = visitWith('fairy', { items: [byId('leather-vest'), null, null, null] })
+    expect(s.screen).toMatchObject({ kind: 'pick', purpose: 'fairy' })
+    const after = play(s, { type: 'choose', index: 0 })
+    const changed = after.hero.items[0]!
+    expect(changed.item.id).not.toBe('leather-vest')
+    expect(changed.item.rarity).toBe('common')
+    expect(after.world.pois[0]?.used).toBe(true)
+    expect(visitWith('fairy', { items: [null, null] }).screen).toMatchObject({ kind: 'message' })
+  })
+
+  it('the wishing well sells a golden (5) or diamond (10) item', () => {
+    const s = visitWith('wishingWell', { gold: 12 })
+    expect(s.screen).toMatchObject({ kind: 'pick', purpose: 'well' })
+    const golden = play(s, { type: 'choose', index: 0 })
+    expect(golden.hero.gold).toBe(7)
+    expect(golden.hero.items[0]?.tier).toBe('golden')
+    const diamond = play(s, { type: 'choose', index: 1 })
+    expect(diamond.hero.items[0]?.tier).toBe('diamond')
+    expect(play(visitWith('wishingWell', { gold: 2 }), { type: 'choose', index: 0 }).screen).toMatchObject({ notice: expect.stringContaining('gold') })
+  })
+
+  it('the bargaining tent sells 2 rares for 5, and haggling once changes the price to 4 or 7', () => {
+    const s = visitWith('tent', { gold: 20 })
+    expect(s.screen).toMatchObject({ kind: 'shop', title: 'Bargaining Tent', rerollCost: null, canHaggle: true })
+    if (s.screen.kind !== 'shop') return
+    expect(s.screen.stock.map((w) => w.price)).toEqual([5, 5])
+    const haggled = play(s, { type: 'haggle' })
+    if (haggled.screen.kind !== 'shop') return
+    expect([4, 7]).toContain(haggled.screen.stock[0]?.price)
+    expect(haggled.screen.canHaggle).toBe(false)
+    expect(play(haggled, { type: 'haggle' })).toBe(haggled)
+    expect(play(haggled, { type: 'reroll' })).toBe(haggled)
+  })
+
+  it('the woodcutter turns two items into a hidden heroic', () => {
+    const s = visitWith('woodcutter', { items: [byId('leather-vest'), byId('horned-helmet'), null, null] })
+    expect(s.screen).toMatchObject({ kind: 'craft', title: 'Woodcutter' })
+    if (s.screen.kind !== 'craft') return
+    expect(s.screen.options[0]).toMatchObject({ hidden: true, slots: [0, 1] })
+    const after = play(s, { type: 'choose', index: 0 })
+    expect(after.hero.items[0]?.item.rarity).toBe('heroic')
+    expect(after.hero.items[1]).toBeNull()
+    expect(after.world.pois[0]?.used).toBe(true)
+  })
+})
+
 describe('Loose Change', () => {
   const change = { item: CONTENT.items.find((i) => i.id === 'loose-change')!, tier: 'golden' as const }
   const rich = (s: RunState, step: number): RunState => ({ ...s, step, hero: { ...s.hero, items: [change, null, null, null] } })

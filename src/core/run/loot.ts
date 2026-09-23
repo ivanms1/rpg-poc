@@ -86,3 +86,18 @@ export const shopStock = (rng: Rng, content: Content, owned: ReadonlySet<string>
 
 /** Forge: choose 1 of 2 edges. */
 export const forgeOptions = (rng: Rng, content: Content): [EdgeDef[], Rng] => drawDistinct(rng, content.edges, 2)
+
+const TENT_PRICE = 5
+const TENT_WARES = 2
+
+/** Bargaining Tent: 2 rare items (or weapons) for 5 gold each. */
+export const tentStock = (rng: Rng, content: Content, owned: ReadonlySet<string>): [ShopSlot[], Rng] => {
+  const [wares, next] = offer(rng, [...content.items, ...content.weapons].filter((d) => d.rarity === 'rare'), owned, TENT_WARES)
+  return [wares.map((equipped) => ({ equipped, price: TENT_PRICE, sold: false })), next]
+}
+
+/** Random items of one rarity (not crafted-only, not owned uniques), for the Fairy and the Wishing Well. */
+export const randomItem = (rng: Rng, content: Content, rarity: ItemDef['rarity'], owned: ReadonlySet<string>, except?: string): [ItemDef | null, Rng] => {
+  const [picked, next] = drawDistinct(rng, available(content.items.filter((i) => i.rarity === rarity && i.id !== except), owned), 1)
+  return [picked[0] ?? null, next]
+}

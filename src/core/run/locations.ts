@@ -6,7 +6,8 @@ import { nextMorning, timeOfWeek } from '../world/clock'
 import type { Poi } from '../world/types'
 import { acquire, alreadyHas, blockedReason, heroMaxHp, mergedWeapon, ownedIds, withHealth } from './hero'
 import { chestOptions, forgeOptions, graveOptions, jewelryOptions, weaponPileOptions } from './loot'
-import { craft, openCauldron, openGolem, visitBeehive } from './crafting'
+import { craft, openCauldron, openGolem, openWoodcutter, visitBeehive } from './crafting'
+import { openCrystalBall, openFairy, openWaypoint, openWell, resolvePick, visitLookout } from './scouting'
 import { openShop } from './shop'
 import type { Content, RunState } from './types'
 
@@ -90,6 +91,20 @@ export const interact = (state: RunState, content: Content, poi: Poi): RunState 
       return openCauldron(state, content, poi)
     case 'beehive':
       return visitBeehive(state, content, poi)
+    case 'woodcutter':
+      return openWoodcutter(state, content, poi)
+    case 'tent':
+      return openShop(state, content, poi)
+    case 'lookout':
+      return visitLookout(state, poi)
+    case 'crystalBall':
+      return openCrystalBall(state, poi)
+    case 'waypoint':
+      return openWaypoint(state, poi)
+    case 'fairy':
+      return openFairy(state, poi)
+    case 'wishingWell':
+      return openWell(state, poi)
     case 'campfire':
       return rest(state, content.sets, 'Campfire', CAMPFIRE_HEAL, `You rest by the fire until morning and restore ${CAMPFIRE_HEAL} health.`, 'The embers are warm. Come back at night to rest here.')
     case 'home':
@@ -134,6 +149,8 @@ export const chooseOption = (state: RunState, content: Content, index: number): 
     }
     case 'craft':
       return craft(state, index)
+    case 'pick':
+      return resolvePick(state, content, index)
     default:
       return state
   }

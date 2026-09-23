@@ -350,3 +350,36 @@
 .craft-arrow {
   color: var(--muted);
 }
+
+.craft-mystery {
+  width: 24px;
+  font-family: var(--font-title);
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--shop, #d77617);
+}
+
+/* ---------- Pick ---------- */
+.pick-dialog {
+  left: 156px;
+  top: 76px;
+  width: 260px;
+}
+
+.pick-options {
+  display: grid;
+  gap: 4px;
+}
+
+.pick-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-align: left;
+}
+
+.pick-key {
+  color: var(--muted);
+  font-size: 6px;
+}

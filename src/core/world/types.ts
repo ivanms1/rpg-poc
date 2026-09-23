@@ -46,6 +46,13 @@ export type PoiKind =
   | 'golem'
   | 'cauldron'
   | 'beehive'
+  | 'crystalBall'
+  | 'lookout'
+  | 'waypoint'
+  | 'fairy'
+  | 'wishingWell'
+  | 'tent'
+  | 'woodcutter'
 
 /** A merchant's ware (mirrors core/run ShopSlot; kept here so POIs stay self-contained). */
 export interface Ware {
@@ -66,6 +73,8 @@ export interface Poi extends Point {
   readonly rerollCost?: number
   /** Edges a forge offers. */
   readonly edgeOffer?: readonly EdgeDef[]
+  /** Bargaining Tent: already haggled. */
+  readonly haggled?: boolean
 }
 
 export interface EnemyEntity extends Point {

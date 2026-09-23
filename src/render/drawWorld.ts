@@ -33,6 +33,13 @@ const POI_STYLE: Record<Poi['kind'], { readonly tile: TileName; readonly color: 
   golem: { tile: 'golem', color: PALETTE.rock, frame: PALETTE.shrine },
   cauldron: { tile: 'cauldron', color: PALETTE.frame, frame: PALETTE.shop },
   beehive: { tile: 'beehive', color: PALETTE.speed, frame: PALETTE.shop },
+  crystalBall: { tile: 'crystalBall', color: PALETTE.freeze, frame: PALETTE.night },
+  lookout: { tile: 'tower', color: PALETTE.rock, frame: PALETTE.shrine },
+  waypoint: { tile: 'flag', color: PALETTE.armor, frame: PALETTE.armor },
+  fairy: { tile: 'mushrooms', color: PALETTE.flowers, frame: PALETTE.night },
+  wishingWell: { tile: 'well', color: PALETTE.water, frame: PALETTE.night },
+  tent: { tile: 'tent', color: PALETTE.shop, frame: PALETTE.gold },
+  woodcutter: { tile: 'axe', color: PALETTE.wood, frame: PALETTE.shop },
 }
 
 const drawTerrain = (ctx: CanvasRenderingContext2D, atlas: Atlas, world: World, tx: number, ty: number, x: number, y: number, size: number) => {

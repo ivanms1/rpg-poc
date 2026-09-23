@@ -19,12 +19,16 @@ const Point = z.object({ x: Int, y: Int })
 
 const PoiSave = Point.extend({
   id: z.string(),
-  kind: z.enum(['home', 'chest', 'weaponPile', 'campfire', 'merchant', 'bladeOil', 'forge', 'grave', 'jewelryBox', 'golem', 'cauldron', 'beehive']),
+  kind: z.enum([
+    'home', 'chest', 'weaponPile', 'campfire', 'merchant', 'bladeOil', 'forge', 'grave', 'jewelryBox',
+    'golem', 'cauldron', 'beehive', 'crystalBall', 'lookout', 'waypoint', 'fairy', 'wishingWell', 'tent', 'woodcutter',
+  ]),
   used: z.boolean(),
   offer: z.array(Ref).optional(),
   stock: z.array(z.object({ ref: Ref, price: Int.nonnegative(), sold: z.boolean() })).optional(),
   rerollCost: Int.positive().optional(),
   edgeOffer: z.array(z.string()).optional(),
+  haggled: z.boolean().optional(),
 })
 
 const SaveData = z.object({
@@ -70,6 +74,7 @@ const poiToSave = (p: Poi): z.infer<typeof PoiSave> => ({
   ...(p.stock ? { stock: p.stock.map((w) => ({ ref: toRef(w.equipped), price: w.price, sold: w.sold })) } : {}),
   ...(p.rerollCost !== undefined ? { rerollCost: p.rerollCost } : {}),
   ...(p.edgeOffer ? { edgeOffer: p.edgeOffer.map((e) => e.id) } : {}),
+  ...(p.haggled ? { haggled: true } : {}),
 })
 
 export const serializeRun = (state: RunState): SaveData => ({
@@ -128,6 +133,7 @@ const hydrate = (data: SaveData, content: Content): RunState => {
     ...(p.stock ? { stock: p.stock.map((w) => ({ equipped: item(w.ref), price: w.price, sold: w.sold })) } : {}),
     ...(p.rerollCost !== undefined ? { rerollCost: p.rerollCost } : {}),
     ...(p.edgeOffer ? { edgeOffer: p.edgeOffer.map(edge) } : {}),
+    ...(p.haggled ? { haggled: true } : {}),
   }))
 
   return {

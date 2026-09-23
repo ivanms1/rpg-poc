@@ -9,7 +9,7 @@ import { createRng, type Rng } from '../rng'
 import { finishBattle, startBossBattle, startEnemyBattle } from './battles'
 import { discardItem, goldPerDay, swapSlots } from './hero'
 import { chooseOption, interact } from './locations'
-import { buy, reroll } from './shop'
+import { buy, haggle, reroll } from './shop'
 import { drawDistinct } from './loot'
 import type { Content, Hero, RunAction, RunState, Week } from './types'
 
@@ -105,7 +105,7 @@ const move = (state: RunState, content: Content, dx: number, dy: number): RunSta
   return bossIfDue(nightChase(visited, content), content)
 }
 
-const DIALOGS: ReadonlySet<RunState['screen']['kind']> = new Set(['choice', 'message', 'shop', 'forge', 'oil', 'craft'])
+const DIALOGS: ReadonlySet<RunState['screen']['kind']> = new Set(['choice', 'message', 'shop', 'forge', 'oil', 'craft', 'pick'])
 
 const dismiss = (state: RunState, content: Content): RunState => {
   if (!DIALOGS.has(state.screen.kind)) return state
@@ -125,7 +125,7 @@ const discard = (state: RunState, content: Content, slot: number): RunState => {
   if (!canEditInventory(state)) return state
   const hero = discardItem(state.hero, slot, content.sets)
   if (hero === state.hero) return state
-  const screen = state.screen.kind === 'choice' || state.screen.kind === 'shop' ? { ...state.screen, notice: undefined } : state.screen
+  const screen = state.screen.kind === 'choice' || state.screen.kind === 'shop' || state.screen.kind === 'pick' ? { ...state.screen, notice: undefined } : state.screen
   return { ...state, hero, screen }
 }
 
@@ -147,6 +147,8 @@ const reduceAction = (content: Content, state: RunState, action: RunAction): Run
       return buy(state, content, action.index)
     case 'reroll':
       return reroll(state, content)
+    case 'haggle':
+      return haggle(state)
     case 'fightBoss':
       return state.screen.kind === 'map' ? startBossBattle(state, content) : state
   }
