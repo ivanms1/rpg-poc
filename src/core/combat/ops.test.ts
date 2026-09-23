@@ -1,5 +1,6 @@
-import { addStatus, dealDamage, gainGold, gainStat, heal, loseArmor, loseHealth, removeStatus, stealGold } from './ops'
+import { addExtraStrikes, addStatus, dealDamage, gainGold, gainStat, heal, loseArmor, loseHealth, removeStatus, stealGold } from './ops'
 import { battle, combatant, eventsOf, source, stats } from './testkit'
+import type { Hook, TriggerName } from './types'
 
 const hero = (hp = 10, armor = 0, sources = [source('Noop', {})]) => combatant('Hero', stats(hp, 1, armor, 0), sources)
 const dummy = combatant('Dummy', stats(10, 1, 0, 0))
@@ -190,5 +191,79 @@ describe('gold', () => {
     const s = stealGold(battle(combatant('Hero', stats(10), [], { gold: 2 }), dummy), 'enemy', 3, 'Raven')
     expect(s.fighters.player.gold).toBe(0)
     expect(s.fighters.enemy.gold).toBe(2)
+  })
+})
+
+describe('damage attribution and reactive triggers', () => {
+  const on = (trigger: TriggerName, log: string[]) => {
+    const hook: Hook = (s, ctx) => (log.push(`${trigger}:${ctx.payload.amount}`), s)
+    return source(`Log ${trigger}`, { hooks: { [trigger]: hook } })
+  }
+
+  it('fires onDealDamage for non-strike damage, with the dealer', () => {
+    const log: string[] = []
+    let s = battle(hero(10, 0, [on('onDealDamage', log)]), dummy)
+    s = dealDamage(s, 'enemy', 2, 'bomb', { by: 'player', kind: 'bomb' })
+    s = dealDamage(s, 'enemy', 1, 'strike', { by: 'player', kind: 'strike', isStrike: true })
+    expect(log).toEqual(['onDealDamage:2'])
+  })
+
+  it('applies the dealer’s outgoing modifiers', () => {
+    const talisman = source('Sword Talisman', { outgoingDamage: (_s, _self, amount, kind) => (kind === 'strike' ? amount : amount + 1) })
+    const s = dealDamage(battle(hero(10, 0, [talisman]), dummy), 'enemy', 2, 'bomb', { by: 'player', kind: 'bomb' })
+    expect(s.fighters.enemy.hp).toBe(7)
+  })
+
+  it('fires onLoseArmor and onLoseHealth with the amounts lost', () => {
+    const log: string[] = []
+    const s = battle(hero(10, 3, [on('onLoseArmor', log), on('onLoseHealth', log)]), dummy)
+    dealDamage(s, 'player', 5, 'hit')
+    loseArmor(s, 'player', 2, 'acid')
+    loseHealth(s, 'player', 1, 'self')
+    expect(log).toEqual(['onLoseArmor:3', 'onLoseHealth:2', 'onLoseArmor:2', 'onLoseHealth:1'])
+  })
+
+  it('fires onGainSpeed / onLoseSpeed', () => {
+    const log: string[] = []
+    let s = battle(hero(10, 0, [on('onGainSpeed', log), on('onLoseSpeed', log)]), dummy)
+    s = gainStat(s, 'player', 'speed', 2, 'x')
+    gainStat(s, 'player', 'speed', -1, 'x')
+    expect(log).toEqual(['onGainSpeed:2', 'onLoseSpeed:1'])
+  })
+
+  it('fires onLoseThorns when thorns are removed', () => {
+    const log: string[] = []
+    let s = addStatus(battle(hero(10, 0, [on('onLoseThorns', log)]), dummy), 'player', 'thorns', 4, 'x')
+    s = removeStatus(s, 'player', 'thorns', 4, 'spent')
+    expect(log).toEqual(['onLoseThorns:4'])
+  })
+
+  it('heal modifiers and overheal', () => {
+    const log: string[] = []
+    const rose = source('Sanguine Rose', { incomingHeal: (_s, _self, amount) => amount + 1 })
+    const s = heal(loseHealth(battle(hero(10, 0, [rose, on('onOverheal', log)]), dummy), 'player', 2, 'x'), 'player', 3, 'potion')
+    expect(s.fighters.player.hp).toBe(10)
+    expect(log).toEqual(['onOverheal:2'])
+    const druid = source("Druid's Cloak", { incomingHeal: () => 0 })
+    const blocked = loseHealth(battle(hero(10, 0, [druid]), dummy), 'player', 2, 'x')
+    expect(heal(blocked, 'player', 5, 'potion').fighters.player.hp).toBe(8)
+  })
+
+  it('armor gain modifiers apply to positive armor gains only', () => {
+    const talisman = source('Shield Talisman', { armorGain: (_s, _self, amount) => amount + 1 })
+    const s = gainStat(battle(hero(10, 0, [talisman]), dummy), 'player', 'armor', 2, 'x')
+    expect(s.fighters.player.armor).toBe(3)
+    expect(gainStat(s, 'player', 'armor', -1, 'x').fighters.player.armor).toBe(2)
+  })
+
+  it('extra strike modifiers', () => {
+    const bow = source('Swiftstrike Bow', { extraStrikeGain: (_s, _self, n) => n * 2 })
+    expect(addExtraStrikes(battle(hero(10, 0, [bow]), dummy), 'player', 1).fighters.player.extraStrikes).toBe(2)
+  })
+
+  it('caps gold when a source says so', () => {
+    const scepter = source('Royal Scepter', { goldCap: 10 })
+    const s = gainGold(battle(combatant('Hero', stats(10), [scepter], { gold: 8 }), dummy), 'player', 5, 'x')
+    expect(s.fighters.player.gold).toBe(10)
   })
 })

@@ -392,6 +392,26 @@ describe('rare and better items stay unique at claim time', () => {
   })
 })
 
+describe('Loose Change', () => {
+  const change = { item: CONTENT.items.find((i) => i.id === 'loose-change')!, tier: 'golden' as const }
+  const rich = (s: RunState, step: number): RunState => ({ ...s, step, hero: { ...s.hero, items: [change, null, null, null] } })
+
+  it('pays its gold (tier-scaled) when a new day begins, not at nightfall', () => {
+    const base = createRun(1, CONTENT, { world: world() })
+    expect(play(rich(base, 49), right).hero.gold).toBe(0)
+    expect(play(rich(base, 79), right).hero.gold).toBe(6)
+  })
+
+  it('pays when sleeping into the morning and when a new week starts', () => {
+    const home = createRun(1, CONTENT, { world: world([poi('home', 8, 5)]) })
+    expect(play(rich(home, 55), right).hero.gold).toBe(6)
+    const boss = { ...rich(createRun(1, CONTENT, { world: world() }), 10), hero: { ...rich(createRun(1, CONTENT, { world: world() }), 10).hero, hp: 500, baseHealth: 500, weapon: { item: CONTENT.weapons.find((w) => w.id === 'frozen-iceblade')! } } }
+    const won = play(boss, { type: 'fightBoss' }, { type: 'finishBattle' })
+    expect(won.week).toBe(2)
+    expect(won.hero.gold).toBe(6)
+  })
+})
+
 describe('reorder', () => {
   it('swaps two slots on the map', () => {
     const s = createRun(1, CONTENT, { world: world() })

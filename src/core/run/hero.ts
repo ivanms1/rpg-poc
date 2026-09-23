@@ -1,7 +1,7 @@
 /** Pure inventory and health helpers for the hero between battles. */
 import type { Combatant } from '../combat/types'
 import { buildPlayer, type Equipped, type Loadout } from '../items/loadout'
-import type { ItemDef, SetDef } from '../items/types'
+import { TIER_MULTIPLIER, type ItemDef, type SetDef } from '../items/types'
 import type { Hero } from './types'
 
 const loadoutOf = (hero: Hero, sets: readonly SetDef[]): Loadout => ({
@@ -36,6 +36,17 @@ export const ownedIds = (hero: Hero): ReadonlySet<string> =>
 
 /** Rare and better items are unique: true if the hero already has this one. */
 export const alreadyHas = (hero: Hero, item: ItemDef): boolean => item.rarity !== 'common' && ownedIds(hero).has(item.id)
+
+/** Why the hero can't take `item` (a unique they own, or a second rose), or null if they can. */
+export const blockedReason = (hero: Hero, item: ItemDef): string | null => {
+  if (alreadyHas(hero, item)) return `You already have ${item.name}.`
+  if (item.tags.includes('rose') && hero.items.some((e) => e?.item.tags.includes('rose'))) return 'You can only equip 1 rose.'
+  return null
+}
+
+/** Gold per new day from items like Loose Change (tier-scaled). */
+export const goldPerDay = (hero: Hero): number =>
+  hero.items.reduce((sum, e) => sum + (e?.item.goldPerDay ?? 0) * TIER_MULTIPLIER[e?.tier ?? 'normal'], 0)
 
 /** Puts `equipped` in the first empty slot, or returns null when all slots are full. */
 export const placeItem = (hero: Hero, equipped: Equipped, sets: readonly SetDef[] = []): Hero | null => {

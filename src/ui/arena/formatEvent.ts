@@ -11,6 +11,14 @@ const TRIGGER_LABEL: Record<TriggerName, string> = {
   onHeal: 'restored health',
   onGainThorns: 'gained thorns',
   enemyWounded: 'enemy Wounded',
+  onDealDamage: 'dealt damage',
+  onStruck: 'was struck',
+  onLoseArmor: 'lost armor',
+  onLoseHealth: 'lost health',
+  onGainSpeed: 'gained speed',
+  onLoseSpeed: 'lost speed',
+  onLoseThorns: 'lost thorns',
+  onOverheal: 'overhealed',
 }
 
 const change = (delta: number): string => (delta >= 0 ? `gains ${delta}` : `loses ${-delta}`)

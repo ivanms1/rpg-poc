@@ -27,11 +27,27 @@ export type TriggerName =
   | 'onHeal'
   | 'onGainThorns'
   | 'enemyWounded'
+  /** This fighter dealt non-strike damage to its opponent. */
+  | 'onDealDamage'
+  /** This fighter was struck (after the strike, its On Hit effects and thorns). */
+  | 'onStruck'
+  | 'onLoseArmor'
+  | 'onLoseHealth'
+  | 'onGainSpeed'
+  | 'onLoseSpeed'
+  | 'onLoseThorns'
+  /** Healing beyond max health. */
+  | 'onOverheal'
 
 export interface HookPayload {
-  /** onHit: damage the strike dealt. onDamaged/onHeal: amount. onGainThorns: stacks gained. */
+  /** onHit: damage the strike dealt. onDamaged/onHeal/on*: the amount. onGainThorns: stacks gained. */
   readonly amount?: number
+  /** onStruck: armor the strike removed. */
+  readonly armorLost?: number
 }
+
+/** What caused a damage event; outgoing modifiers can key on it. */
+export type DamageKind = 'strike' | 'thorns' | 'bomb' | 'item' | 'status'
 
 export interface HookContext {
   readonly self: Side
@@ -57,6 +73,24 @@ export interface Source {
   readonly strikeBonus?: (state: BattleState, self: Side, strikeIndex: number) => number
   /** Adjust damage this fighter is about to take (Brittlebark Beast, Ironstone Armor…). */
   readonly incomingDamage?: (state: BattleState, self: Side, amount: number, isStrike: boolean) => number
+  /** Adjust damage this fighter deals (Sword Talisman, Explosive Powder, Cactus Cap). */
+  readonly outgoingDamage?: (state: BattleState, self: Side, amount: number, kind: DamageKind) => number
+  /** Adjust healing this fighter receives (Sanguine Rose, Druid's Cloak). */
+  readonly incomingHeal?: (state: BattleState, self: Side, amount: number) => number
+  /** Adjust positive armor gains (Shield Talisman). */
+  readonly armorGain?: (state: BattleState, self: Side, amount: number) => number
+  /** Adjust additional strikes gained (Swiftstrike Bow). */
+  readonly extraStrikeGain?: (state: BattleState, self: Side, count: number) => number
+  /** Gold can't exceed this (Royal Scepter). */
+  readonly goldCap?: number
+  /** On Hit effects trigger twice (Chainlink Medallion). */
+  readonly doubleOnHit?: boolean
+  /** Freeze doubles attack instead of halving it (Cold Resistance). */
+  readonly freezeDoubles?: boolean
+  /** Thorns aren't spent on the enemy's first N strikes (Granite Thorns). */
+  readonly keepThornsForStrikes?: number
+  /** Damage from your own items hits the enemy instead (Bloodmoon Armor). */
+  readonly redirectSelfDamage?: boolean
   readonly ignoreArmor?: boolean
   /** Base number of strikes per turn (Swiftstrike Stag: 3, Twin Blade: 2). Highest wins. */
   readonly strikesPerTurn?: number

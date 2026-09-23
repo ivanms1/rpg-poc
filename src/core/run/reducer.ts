@@ -7,7 +7,7 @@ import { isWalkable } from '../world/terrain'
 import type { EnemyEntity, Point, World } from '../world/types'
 import { createRng, type Rng } from '../rng'
 import { finishBattle, startBossBattle, startEnemyBattle } from './battles'
-import { discardItem, swapSlots } from './hero'
+import { discardItem, goldPerDay, swapSlots } from './hero'
 import { chooseOption, interact } from './locations'
 import { buy, reroll } from './shop'
 import { drawDistinct } from './loot'
@@ -129,27 +129,38 @@ const discard = (state: RunState, content: Content, slot: number): RunState => {
   return { ...state, hero, screen }
 }
 
+const reduceAction = (content: Content, state: RunState, action: RunAction): RunState => {
+  switch (action.type) {
+    case 'move':
+      return move(state, content, action.dx, action.dy)
+    case 'finishBattle':
+      return bossIfDue(finishBattle(state, content), content)
+    case 'choose':
+      return bossIfDue(chooseOption(state, content, action.index), content)
+    case 'dismiss':
+      return dismiss(state, content)
+    case 'discard':
+      return discard(state, content, action.slot)
+    case 'reorder':
+      return reorder(state, action.from, action.to)
+    case 'buy':
+      return buy(state, content, action.index)
+    case 'reroll':
+      return reroll(state, content)
+    case 'fightBoss':
+      return state.screen.kind === 'map' ? startBossBattle(state, content) : state
+  }
+}
+
+/** Loose Change and friends: gold for every day that started during this action (including a new week). */
+const payDailyIncome = (before: RunState, after: RunState): RunState => {
+  const income = goldPerDay(after.hero)
+  if (income === 0) return after
+  const days = after.week > before.week ? 1 : timeOfWeek(after.step).day - timeOfWeek(before.step).day
+  return days > 0 ? { ...after, hero: { ...after.hero, gold: after.hero.gold + income * days } } : after
+}
+
 export const runReducer =
   (content: Content) =>
-  (state: RunState, action: RunAction): RunState => {
-    switch (action.type) {
-      case 'move':
-        return move(state, content, action.dx, action.dy)
-      case 'finishBattle':
-        return bossIfDue(finishBattle(state, content), content)
-      case 'choose':
-        return bossIfDue(chooseOption(state, content, action.index), content)
-      case 'dismiss':
-        return dismiss(state, content)
-      case 'discard':
-        return discard(state, content, action.slot)
-      case 'reorder':
-        return reorder(state, action.from, action.to)
-      case 'buy':
-        return buy(state, content, action.index)
-      case 'reroll':
-        return reroll(state, content)
-      case 'fightBoss':
-        return state.screen.kind === 'map' ? startBossBattle(state, content) : state
-    }
-  }
+  (state: RunState, action: RunAction): RunState =>
+    payDailyIncome(state, reduceAction(content, state, action))

@@ -13,8 +13,9 @@ import {
   loseHealth,
   stealGold,
 } from '../combat/ops'
-import { opponent, updateFighter } from '../combat/state'
-import type { BattleState, FighterState, Hook, HookContext, Side, StatName, StatusName } from '../combat/types'
+import { counterKey, getCounter, opponent, setCounter, updateFighter } from '../combat/state'
+import { runTrigger } from '../combat/triggers'
+import type { BattleState, FighterState, Hook, HookContext, Side, StatName, StatusName, TriggerName } from '../combat/types'
 
 export type Cond = (state: BattleState, self: Side, ctx?: HookContext) => boolean
 export type Amount = number | ((state: BattleState, self: Side, ctx?: HookContext) => number)
@@ -58,11 +59,14 @@ export const restore =
   (state, ctx) =>
     heal(state, ctx.self, value(amount, state, ctx.self, ctx), ctx.source.name)
 
-/** "Take N damage": self damage that armor absorbs. */
+/** "Take N damage": self damage that armor absorbs (Bloodmoon Armor sends it to the enemy instead). */
 export const takeDamage =
   (amount: Amount): Hook =>
-  (state, ctx) =>
-    dealDamage(state, ctx.self, value(amount, state, ctx.self, ctx), ctx.source.name)
+  (state, ctx) => {
+    const n = value(amount, state, ctx.self, ctx)
+    const redirect = state.sources[ctx.self].some((src) => src.redirectSelfDamage)
+    return dealDamage(state, redirect ? opponent(ctx.self) : ctx.self, n, ctx.source.name, { by: ctx.self, kind: 'item' })
+  }
 
 export const loseHp =
   (amount: Amount): Hook =>
@@ -89,7 +93,18 @@ export const extraExposed =
 export const damageEnemy =
   (amount: Amount): Hook =>
   (state, ctx) =>
-    dealDamage(state, opponent(ctx.self), value(amount, state, ctx.self, ctx), ctx.source.name)
+    dealDamage(state, opponent(ctx.self), value(amount, state, ctx.self, ctx), ctx.source.name, { by: ctx.self, kind: 'item' })
+
+/** Damage from a bomb item (Explosive Powder and friends key on it). */
+export const bombDamage =
+  (amount: Amount): Hook =>
+  (state, ctx) =>
+    dealDamage(state, opponent(ctx.self), value(amount, state, ctx.self, ctx), ctx.source.name, { by: ctx.self, kind: 'bomb' })
+
+export const enemyAdditionalStrikes =
+  (count: Amount): Hook =>
+  (state, ctx) =>
+    addExtraStrikes(state, opponent(ctx.self), value(count, state, ctx.self, ctx))
 
 export const giveEnemy =
   (status: StatusName, amount: Amount): Hook =>
@@ -113,6 +128,59 @@ export const stealEnemyGold =
   (amount: Amount): Hook =>
   (state, ctx) =>
     stealGold(state, ctx.self, value(amount, state, ctx.self, ctx), ctx.source.name)
+
+/** Fires this fighter's own `trigger` items (Blood Chain → Wounded). */
+export const triggerOwn =
+  (trigger: TriggerName): Hook =>
+  (state, ctx) =>
+    runTrigger(state, ctx.self, trigger)
+
+// ---------- Memory ----------
+const memoKey = (ctx: HookContext, name: string) => counterKey(ctx.self, ctx.source.id, name)
+
+/** Runs `hook` only the first time this source fires this battle. */
+export const once =
+  (hook: Hook): Hook =>
+  (state, ctx) => {
+    const key = memoKey(ctx, 'once')
+    if (getCounter(state, key) > 0) return state
+    return hook(setCounter(state, key, 1), ctx)
+  }
+
+/** Sets a per-battle flag for this source (read with `flagged`). */
+export const flag =
+  (name: string): Hook =>
+  (state, ctx) =>
+    setCounter(state, memoKey(ctx, name), 1)
+
+/** Runs `hook` only if this source set `flag(name)` earlier in the battle. */
+export const ifFlag =
+  (name: string, hook: Hook): Hook =>
+  (state, ctx) =>
+    getCounter(state, memoKey(ctx, name)) > 0 ? hook(state, ctx) : state
+
+/** Counts calls within the current turn and runs `hook` on the `n`th. */
+export const nthThisTurn =
+  (n: number, hook: Hook): Hook =>
+  (state, ctx) => {
+    const key = memoKey(ctx, `turn:${state.round}:${state.actor}`)
+    const count = getCounter(state, key) + 1
+    const counted = setCounter(state, key, count)
+    return count === n ? hook(counted, ctx) : counted
+  }
+
+/** Adds `amount` to a per-battle tally for this source and returns the new state (read with `tally`). */
+export const addTally =
+  (name: string, amount: Amount): Hook =>
+  (state, ctx) => {
+    const key = memoKey(ctx, name)
+    return setCounter(state, key, getCounter(state, key) + value(amount, state, ctx.self, ctx))
+  }
+
+export const tally =
+  (name: string, fallback = 0): Amount =>
+  (state, _self, ctx) =>
+    ctx ? getCounter(state, memoKey(ctx, name), fallback) : fallback
 
 // ---------- Conditions ----------
 export const not =
@@ -140,6 +208,18 @@ export const hasStatus =
   (s, self) =>
     me(s, self).statuses[status] > 0
 export const zeroBaseArmor: Cond = (s, self) => me(s, self).base.armor === 0
+export const hasGold =
+  (min: number): Cond =>
+  (s, self) =>
+    me(s, self).gold >= min
+export const hasArmorAtLeast =
+  (min: number): Cond =>
+  (s, self) =>
+    me(s, self).armor >= min
+export const payloadAtLeast =
+  (min: number): Cond =>
+  (_s, _self, ctx) =>
+    (ctx?.payload.amount ?? 0) >= min
 
 /** True during this fighter's first own turn. */
 export const firstTurn: Cond = (s, self) => me(s, self).turns === 1

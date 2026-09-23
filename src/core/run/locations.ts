@@ -4,7 +4,7 @@ import type { OilKind } from '../items/types'
 import type { Rng } from '../rng'
 import { nextMorning, timeOfWeek } from '../world/clock'
 import type { Poi } from '../world/types'
-import { acquire, alreadyHas, heroMaxHp, ownedIds, withHealth } from './hero'
+import { acquire, alreadyHas, blockedReason, heroMaxHp, ownedIds, withHealth } from './hero'
 import { chestOptions, forgeOptions, graveOptions, jewelryOptions, weaponPileOptions } from './loot'
 import { openShop } from './shop'
 import type { Content, RunState } from './types'
@@ -92,7 +92,8 @@ export const interact = (state: RunState, content: Content, poi: Poi): RunState 
 
 const takeItem = (state: RunState, content: Content, poiId: string, option: Equipped): RunState => {
   if (state.screen.kind !== 'choice') return state
-  if (alreadyHas(state.hero, option.item)) return { ...state, screen: { ...state.screen, notice: `You already have ${option.item.name}.` } }
+  const blocked = blockedReason(state.hero, option.item)
+  if (blocked) return { ...state, screen: { ...state.screen, notice: blocked } }
   const hero = acquire(state.hero, option, content.sets)
   if (!hero) return { ...state, screen: { ...state.screen, notice: 'Your inventory is full — double-click an item to discard it.' } }
   return { ...updatePoi({ ...state, hero }, poiId, { used: true }), screen: { kind: 'map' } }

@@ -1,6 +1,6 @@
 /** Traveling Merchant: buy wares for gold, reroll the stock for a rising price. */
 import type { Poi } from '../world/types'
-import { acquire, alreadyHas, ownedIds } from './hero'
+import { acquire, blockedReason, ownedIds } from './hero'
 import { shopStock } from './loot'
 import type { Content, RunState } from './types'
 
@@ -40,7 +40,8 @@ export const buy = (state: RunState, content: Content, index: number): RunState 
   const shop = currentShop(state)
   const ware = shop?.stock[index]
   if (!shop || !ware || ware.sold) return state
-  if (alreadyHas(state.hero, ware.equipped.item)) return withNotice(state, `You already have ${ware.equipped.item.name}.`)
+  const blocked = blockedReason(state.hero, ware.equipped.item)
+  if (blocked) return withNotice(state, blocked)
   if (state.hero.gold < ware.price) return withNotice(state, `Not enough gold — ${ware.equipped.item.name} costs ${ware.price}.`)
   const paid = { ...state.hero, gold: state.hero.gold - ware.price }
   const hero = acquire(paid, ware.equipped, content.sets)

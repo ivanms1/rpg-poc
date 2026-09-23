@@ -5,20 +5,25 @@ import type { BattleState, Side } from './types'
 
 const sum = (values: readonly number[]): number => values.reduce((a, b) => a + b, 0)
 
-/** Attack used for a strike: stat + "while" bonuses, halved by freeze. */
+/** Attack used for a strike: stat + "while" bonuses, halved by freeze (doubled with Cold Resistance). */
 export const effectiveAttack = (state: BattleState, side: Side): number => {
   const f = state.fighters[side]
   const attack = f.attack + sum(state.sources[side].map((src) => src.attackBonus?.(state, side) ?? 0))
   if (f.statuses.freeze <= 0) return attack
+  if (state.sources[side].some((src) => src.freezeDoubles)) return attack * 2
   return state.rules.freezeRounding === 'floor' ? Math.floor(attack / 2) : Math.ceil(attack / 2)
 }
 
-const lastDamageTo = (state: BattleState, side: Side, since: number): number => {
+const lastDamageTo = (state: BattleState, side: Side, since: number): { amount: number; armorLost: number } => {
   const hit = state.events.slice(since).find((e) => e.type === 'damage' && e.side === side)
-  return hit?.type === 'damage' ? hit.amount : 0
+  return hit?.type === 'damage' ? { amount: hit.amount, armorLost: hit.armorLost } : { amount: 0, armorLost: 0 }
 }
 
-/** One strike: damage → attacker's On Hit → defender's thorns retaliate. */
+/** Thorns fired on a strike are spent at turn end, unless the defender keeps them for this strike. */
+const spendsThorns = (state: BattleState, defender: Side, attackerStrikes: number): boolean =>
+  !state.sources[defender].some((src) => src.keepThornsForStrikes !== undefined && attackerStrikes <= src.keepThornsForStrikes)
+
+/** One strike: damage → attacker's On Hit (twice with Chainlink) → defender's thorns → defender's onStruck. */
 export const performStrike = (state: BattleState, side: Side): BattleState => {
   const target = opponent(side)
   const strikeIndex = state.fighters[side].strikes + 1
@@ -30,13 +35,17 @@ export const performStrike = (state: BattleState, side: Side): BattleState => {
 
   s = emit(s, { type: 'strike', side, damage })
   const before = s.events.length
-  s = dealDamage(s, target, damage, 'strike', { isStrike: true, ignoreArmor })
-  s = runTrigger(s, side, 'onHit', { amount: lastDamageTo(s, target, before) })
+  s = dealDamage(s, target, damage, 'strike', { isStrike: true, ignoreArmor, by: side, kind: 'strike' })
+  const hit = lastDamageTo(s, target, before)
+  const onHitRuns = 1 + s.sources[side].filter((src) => src.doubleOnHit).length
+  for (let i = 0; i < onHitRuns; i++) s = runTrigger(s, side, 'onHit', { amount: hit.amount })
 
   const thorns = s.fighters[target].statuses.thorns
-  if (isOver(s) || thorns <= 0) return s
-  s = updateFighter(s, target, { thornsFired: true })
-  return dealDamage(s, side, thorns, `${s.fighters[target].name} thorns`)
+  if (!isOver(s) && thorns > 0) {
+    if (spendsThorns(s, target, strikeIndex)) s = updateFighter(s, target, { thornsFired: true })
+    s = dealDamage(s, side, thorns, `${s.fighters[target].name} thorns`, { by: target, kind: 'thorns' })
+  }
+  return runTrigger(s, target, 'onStruck', hit)
 }
 
 const strikesThisTurn = (state: BattleState, side: Side): number => {

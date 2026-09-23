@@ -2,6 +2,7 @@
 import {
   additionalStrikes,
   belowHalfHealth,
+  bombDamage,
   damageEnemy,
   enemyHasArmor,
   enemyStat,
@@ -30,6 +31,7 @@ import {
 } from '../core/effects/dsl'
 import type { ItemDef } from '../core/items/types'
 import { byId, item } from './define'
+import { MORE_ITEMS } from './moreItems'
 
 const ARMOR_ITEMS: readonly ItemDef[] = [
   item('Horned Helmet', {
@@ -135,13 +137,13 @@ const ARMOR_ITEMS: readonly ItemDef[] = [
     rarity: 'rare',
     tags: ['bomb'],
     text: 'Exposed: Deal 6 damage',
-    effect: () => ({ hooks: { exposed: damageEnemy(6) } }),
+    effect: () => ({ hooks: { exposed: bombDamage(6) } }),
   }),
   item('Iron Shrapnel', {
     rarity: 'rare',
     tags: ['bomb'],
     text: "Battle start: Deal 3 damage to the enemy, if they don't have armor, double the damage dealt",
-    effect: () => ({ hooks: { battleStart: (s, ctx) => damageEnemy(enemyHasArmor(s, ctx.self) ? 3 : 6)(s, ctx) } }),
+    effect: () => ({ hooks: { battleStart: (s, ctx) => bombDamage(enemyHasArmor(s, ctx.self) ? 3 : 6)(s, ctx) } }),
   }),
   item('Heart-shaped Acorn', {
     rarity: 'rare',
@@ -299,6 +301,6 @@ const FOOD: readonly ItemDef[] = [
   }),
 ]
 
-export const ITEMS: readonly ItemDef[] = [...ARMOR_ITEMS, ...JEWELRY, ...FOOD]
+export const ITEMS: readonly ItemDef[] = [...ARMOR_ITEMS, ...JEWELRY, ...FOOD, ...MORE_ITEMS]
 
 export const ITEMS_BY_ID = byId(ITEMS)

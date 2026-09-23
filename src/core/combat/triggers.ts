@@ -7,6 +7,7 @@ import type { BattleState, HookPayload, Side, TriggerName } from './types'
  */
 export const runTrigger = (state: BattleState, side: Side, trigger: TriggerName, payload: HookPayload = {}): BattleState => {
   if (isOver(state) || state.depth >= state.rules.maxTriggerDepth) return state
+  if (!state.sources[side].some((src) => src.hooks?.[trigger])) return state
   let current: BattleState = { ...state, depth: state.depth + 1 }
 
   for (const source of state.sources[side]) {

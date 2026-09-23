@@ -1,4 +1,4 @@
-import type { ItemDef, ItemStats, Rarity, Scale, SourceSpec, Tag } from '../core/items/types'
+import type { ItemDef, ItemStats, Rarity, Tag } from '../core/items/types'
 
 export const slug = (name: string): string =>
   name
@@ -12,7 +12,9 @@ interface Spec {
   readonly stats?: ItemStats
   readonly text?: string
   readonly tags?: readonly Tag[]
-  readonly effect?: (x: Scale) => SourceSpec
+  readonly effect?: ItemDef['effect']
+  readonly baseModifier?: ItemDef['baseModifier']
+  readonly goldPerDay?: number
 }
 
 const define =
@@ -26,6 +28,8 @@ const define =
     stats: spec.stats ?? {},
     text: spec.text ?? '',
     ...(spec.effect ? { effect: spec.effect } : {}),
+    ...(spec.baseModifier ? { baseModifier: spec.baseModifier } : {}),
+    ...(spec.goldPerDay ? { goldPerDay: spec.goldPerDay } : {}),
   })
 
 export const weapon = define('weapon')

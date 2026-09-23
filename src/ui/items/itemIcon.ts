@@ -54,7 +54,12 @@ const ITEM_SHAPE_RULES: readonly Rule<ItemShape>[] = [
   [/feather|wings/i, 'feather'],
   [/rose/i, 'rose'],
   [/tooth|fang/i, 'tooth'],
-  [/\bice\b|frost/i, 'crystal'],
+  [/\bice\b|frost|cold|thorns/i, 'crystal'],
+  [/transfusion/i, 'bottle'],
+  [/scales/i, 'armor'],
+  [/burst|explosion/i, 'bomb'],
+  [/change|coin/i, 'coins'],
+  [/heart/i, 'gem'],
   [/stone|\bore\b/i, 'stone'],
 ]
 

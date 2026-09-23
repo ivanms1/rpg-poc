@@ -2,7 +2,7 @@ import { ITEMS_BY_ID } from '../../data/items'
 import { WEAPONS_BY_ID } from '../../data/weapons'
 import { EDGES_BY_ID } from '../../data/edges'
 import { SETS } from '../../data/sets'
-import { addSlots, discardItem, equipWeapon, heroCombatant, heroMaxHp, placeItem, swapSlots, withHealth } from './hero'
+import { addSlots, blockedReason, discardItem, equipWeapon, heroCombatant, heroMaxHp, placeItem, swapSlots, withHealth } from './hero'
 import type { SetDef } from '../items/types'
 import type { Hero } from './types'
 
@@ -76,6 +76,15 @@ describe('hero inventory', () => {
     expect(full.hp).toBe(35)
     expect(withHealth(full, 99, [hearty]).hp).toBe(35)
     expect(discardItem(full, 0, [hearty]).hp).toBe(25)
+  })
+
+  it('blocks a second copy of a unique item and a second rose', () => {
+    const ironRose = { item: ITEMS_BY_ID['iron-rose']! }
+    const withRose = { ...hero, items: [ironRose, null, null, null] }
+    expect(blockedReason(withRose, ITEMS_BY_ID['iron-rose']!)).toContain('already have')
+    expect(blockedReason(withRose, ITEMS_BY_ID['sanguine-rose']!)).toContain('1 rose')
+    expect(blockedReason(withRose, ITEMS_BY_ID['leather-vest']!)).toBeNull()
+    expect(blockedReason({ ...hero, items: [vest, null] }, ITEMS_BY_ID['leather-vest']!)).toBeNull()
   })
 
   it('builds a combatant with current health and gold', () => {

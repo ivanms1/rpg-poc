@@ -2,7 +2,7 @@ import type { BaseStats, Source } from '../combat/types'
 
 export type Rarity = 'common' | 'rare' | 'heroic' | 'mythic'
 export type Tier = 'normal' | 'golden' | 'diamond'
-export type Tag = 'stone' | 'wood' | 'water' | 'jewelry' | 'sanguine' | 'ring' | 'bomb' | 'food' | 'unique'
+export type Tag = 'stone' | 'wood' | 'water' | 'jewelry' | 'sanguine' | 'ring' | 'bomb' | 'food' | 'rose' | 'unique'
 
 export const TIER_MULTIPLIER: Record<Tier, number> = { normal: 1, golden: 2, diamond: 4 }
 
@@ -19,6 +19,12 @@ export interface ItemStats {
   readonly health?: number
 }
 
+/** What an item can know about the rest of the loadout when its effect is built. */
+export interface LoadoutContext {
+  readonly tagCount: (tag: Tag) => number
+  readonly emptySlots: number
+}
+
 export interface ItemDef {
   readonly id: string
   readonly name: string
@@ -28,7 +34,11 @@ export interface ItemDef {
   readonly stats: ItemStats
   /** Wiki effect text; `{n}` placeholders are scaled by tier. */
   readonly text: string
-  readonly effect?: (x: Scale) => SourceSpec
+  readonly effect?: (x: Scale, ctx: LoadoutContext) => SourceSpec
+  /** Rewrites base stats after everything else is summed (Granite Lance, Citrine Gemstone, Oak Heart…). */
+  readonly baseModifier?: (stats: BaseStats, ctx: LoadoutContext, x: Scale) => BaseStats
+  /** Gold gained at the start of every day (Loose Change). */
+  readonly goldPerDay?: number
 }
 
 /** Blade Oil: +1 to one weapon stat, each at most once per weapon. */

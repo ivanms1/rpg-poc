@@ -1,5 +1,5 @@
 import type { BaseStats, Combatant, Source } from '../combat/types'
-import { TIER_MULTIPLIER, type CreatureDef, type EdgeDef, type ItemDef, type ItemStats, type OilKind, type SetDef, type Tier } from './types'
+import { TIER_MULTIPLIER, type CreatureDef, type EdgeDef, type ItemDef, type ItemStats, type LoadoutContext, type OilKind, type SetDef, type Tier } from './types'
 
 export const HERO_BASE_HEALTH = 10
 
@@ -26,12 +26,22 @@ const scaleOf = (tier: Tier = 'normal') => (n: number) => n * TIER_MULTIPLIER[ti
 export const describeItem = (item: ItemDef, tier: Tier = 'normal'): string =>
   item.text.replace(/\{(-?\d+)\}/g, (_, n: string) => String(Number(n) * TIER_MULTIPLIER[tier]))
 
-export const toSource = ({ item, tier }: Equipped, slot: number): Source => ({
+const NO_CONTEXT: LoadoutContext = { tagCount: () => 0, emptySlots: 0 }
+
+export const loadoutContext = (loadout: Loadout): LoadoutContext => {
+  const gear = [loadout.weapon, ...loadout.items].filter((g): g is Equipped => g !== null)
+  return {
+    tagCount: (tag) => gear.filter((g) => g.item.tags.includes(tag)).length,
+    emptySlots: loadout.items.filter((e) => e === null).length,
+  }
+}
+
+export const toSource = ({ item, tier }: Equipped, slot: number, ctx: LoadoutContext = NO_CONTEXT): Source => ({
   id: `${item.id}#${slot}`,
   name: item.name,
   kind: item.kind,
   text: describeItem(item, tier),
-  ...(item.effect?.(scaleOf(tier)) ?? {}),
+  ...(item.effect?.(scaleOf(tier), ctx) ?? {}),
 })
 
 const addItemStats = (base: BaseStats, s: ItemStats, x: (n: number) => number = (n) => n): BaseStats => ({
@@ -57,11 +67,13 @@ const OIL_STATS: Record<OilKind, ItemStats> = { attack: { attack: 1 }, armor: { 
 /** Sums base stats from gear, oils and sets; sources are ordered weapon → edge → items by slot → sets. */
 export const buildPlayer = (loadout: Loadout): Combatant => {
   const gear = [loadout.weapon, ...loadout.items].filter((g): g is Equipped => g !== null)
+  const ctx = loadoutContext(loadout)
   const sets = activeSets(loadout, loadout.sets ?? [])
   const start: BaseStats = { maxHp: loadout.baseHealth ?? HERO_BASE_HEALTH, attack: 0, armor: 0, speed: 0 }
   const withGear = gear.reduce((acc, g) => addItemStats(acc, g.item.stats, scaleOf(g.tier)), start)
   const withOils = (loadout.oils ?? []).reduce((acc, oil) => addItemStats(acc, OIL_STATS[oil]), withGear)
-  const stats = sets.reduce((acc, set) => addItemStats(acc, set.stats ?? {}), withOils)
+  const withSets = sets.reduce((acc, set) => addItemStats(acc, set.stats ?? {}), withOils)
+  const stats = gear.reduce((acc, g) => g.item.baseModifier?.(acc, ctx, scaleOf(g.tier)) ?? acc, withSets)
   const edge: Source[] = loadout.edge ? [{ id: `edge:${loadout.edge.id}`, name: loadout.edge.name, kind: 'edge', text: loadout.edge.text, ...loadout.edge.effect() }] : []
   const setSources: Source[] = sets.map((set) => ({ id: `set:${set.id}`, name: set.name, kind: 'set', text: set.text, ...(set.effect?.() ?? {}) }))
   return {
@@ -69,7 +81,7 @@ export const buildPlayer = (loadout: Loadout): Combatant => {
     stats: { ...stats, maxHp: Math.max(1, stats.maxHp) },
     hp: loadout.hp,
     gold: loadout.gold ?? 0,
-    sources: [...gear.map((g, slot) => toSource(g, slot)), ...edge, ...setSources].sort((a, b) => SOURCE_ORDER[a.kind] - SOURCE_ORDER[b.kind]),
+    sources: [...gear.map((g, slot) => toSource(g, slot, ctx)), ...edge, ...setSources].sort((a, b) => SOURCE_ORDER[a.kind] - SOURCE_ORDER[b.kind]),
   }
 }
 

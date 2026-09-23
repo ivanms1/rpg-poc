@@ -8,7 +8,7 @@ export const turnStartTicks = (state: BattleState, side: Side): BattleState => {
   let s = state
   const poison = s.fighters[side].statuses.poison
   if (poison > 0) {
-    if (s.fighters[side].armor === 0) s = dealDamage(s, side, poison, 'poison')
+    if (s.fighters[side].armor === 0) s = dealDamage(s, side, poison, 'poison', { kind: 'status' })
     s = removeStatus(s, side, 'poison', 1, 'poison')
   }
   const acid = s.fighters[side].statuses.acid
@@ -25,7 +25,7 @@ export const turnEndTicks = (state: BattleState, side: Side): BattleState => {
     s = removeStatus(s, side, 'regen', 1, 'regeneration')
   }
   if (s.fighters[side].statuses.riptide > 0) {
-    s = dealDamage(s, side, s.rules.riptideDamage, 'riptide')
+    s = dealDamage(s, side, s.rules.riptideDamage, 'riptide', { kind: 'status' })
     s = removeStatus(s, side, 'riptide', 1, 'riptide')
   }
   s = removeStatus(s, side, 'freeze', 1, 'thaw')

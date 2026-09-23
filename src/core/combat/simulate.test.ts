@@ -198,3 +198,41 @@ describe('simulateBattle — termination', () => {
     expect(r.rounds).toBe(5)
   })
 })
+
+describe('simulateBattle — strike extensions', () => {
+  it('doubleOnHit runs On Hit effects twice', () => {
+    let hits = 0
+    const spear = source('Spear', { kind: 'weapon', hooks: { onHit: (s) => (hits++, s) } })
+    const medallion = source('Chainlink Medallion', { doubleOnHit: true })
+    simulateBattle(combatant('Hero', stats(10, 5), [spear, medallion]), combatant('Rat', stats(6, 0)))
+    expect(hits).toBe(2)
+  })
+
+  it('onStruck reports the damage and armor a strike removed, after thorns', () => {
+    const seen: string[] = []
+    const watcher = source('Watcher', { hooks: { onStruck: (s, ctx) => (seen.push(`${ctx.payload.amount}/${ctx.payload.armorLost}`), s) } })
+    simulateBattle(combatant('Hero', stats(30, 0, 2, 0), [watcher]), combatant('Rat', stats(5, 3, 0, 5)), { fatigueStartRound: 3 })
+    expect(seen[0]).toBe('3/2')
+  })
+
+  it('keepThornsForStrikes spares thorns on the enemy’s first strikes', () => {
+    const granite = source('Granite Thorns', { keepThornsForStrikes: 1 })
+    const spikes = battleStart((s, ctx) => addStatus(s, ctx.self, 'thorns', 2, 'setup'))
+    const r = simulateBattle(combatant('Hero', stats(30, 0, 0, 0), [granite, spikes]), combatant('Rat', stats(30, 1, 0, 5)), { fatigueStartRound: 4 })
+    const thornHits = damageTo(r.events, 'enemy').filter((e) => e.source === 'Hero thorns')
+    expect(thornHits).toHaveLength(2)
+  })
+
+  it('freezeDoubles makes freeze double attack', () => {
+    const cold = source('Cold Resistance', { freezeDoubles: true })
+    const frozen = battleStart((s, ctx) => addStatus(s, ctx.self, 'freeze', 1, 'setup'))
+    const r = simulateBattle(combatant('Hero', stats(30, 3), [cold, frozen]), combatant('Rat', stats(50, 0)))
+    expect(strikesBy(r.events, 'player')[0]?.damage).toBe(6)
+  })
+
+  it('strike damage is attributed to the attacker for outgoing modifiers', () => {
+    const heavy = source('Heavy', { outgoingDamage: (_s, _self, amount, kind) => (kind === 'strike' ? amount * 2 : amount) })
+    const r = simulateBattle(combatant('Hero', stats(30, 3), [heavy]), combatant('Rat', stats(50, 0)))
+    expect(damageTo(r.events, 'enemy')[0]).toMatchObject({ amount: 6 })
+  })
+})
