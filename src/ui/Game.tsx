@@ -179,12 +179,14 @@ export function Game({ initial, onExit }: Props) {
         <>
           <aside className="sidebar">
             <StatPanel stats={{ ...stats, health: hero.hp, maxHealth: stats.maxHp, gold: hero.gold }} />
+            {/* Re-keyed per screen so a pinned tooltip never outlives the screen it was opened on. */}
             <Inventory
+              key={screen.kind}
               weapon={hero.weapon}
               items={hero.items}
               total={MAX_SLOTS}
-              onDiscard={(slot) => act({ type: 'discard', slot })}
-              onReorder={(from, to) => act({ type: 'reorder', from, to })}
+              onDiscard={screen.kind === 'battle' ? undefined : (slot) => act({ type: 'discard', slot })}
+              onReorder={screen.kind === 'battle' ? undefined : (from, to) => act({ type: 'reorder', from, to })}
               describe={describe}
             />
           </aside>

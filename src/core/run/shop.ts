@@ -1,7 +1,7 @@
 /** Traveling Merchant (buy, reroll for a rising price) and Bargaining Tent (2 wares, haggle once). */
 import { nextFloat } from '../rng'
 import type { Poi, Ware } from '../world/types'
-import { acquire, blockedReason, ownedIds } from './hero'
+import { acquire, blockedReason, ownedIds, INVENTORY_FULL } from './hero'
 import { shopStock, tentStock } from './loot'
 import type { Content, RunState } from './types'
 
@@ -58,7 +58,7 @@ export const buy = (state: RunState, content: Content, index: number): RunState 
   if (state.hero.gold < ware.price) return withNotice(state, `Not enough gold — ${ware.equipped.item.name} costs ${ware.price}.`)
   const paid = { ...state.hero, gold: state.hero.gold - ware.price }
   const hero = acquire(paid, ware.equipped, content.sets, content.merges)
-  if (!hero) return withNotice(state, 'Your inventory is full — double-click an item to discard it.')
+  if (!hero) return withNotice(state, INVENTORY_FULL)
   return restock({ ...state, hero }, shop, { stock: shop.stock.map((w, i) => (i === index ? { ...w, sold: true } : w)) })
 }
 

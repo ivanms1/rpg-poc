@@ -5,7 +5,7 @@ import type { Rng } from '../rng'
 import { nextMorning } from '../world/clock'
 import { DIFFICULTIES, timeOf } from './difficulty'
 import type { Poi } from '../world/types'
-import { acquire, alreadyHas, blockedReason, heroMaxHp, mergedWeapon, ownedIds, withHealth } from './hero'
+import { acquire, alreadyHas, blockedReason, heroMaxHp, mergedWeapon, ownedIds, withHealth, INVENTORY_FULL } from './hero'
 import { chestOptions, forgeOptions, graveOptions, jewelryOptions, weaponPileOptions } from './loot'
 import { craft, openCauldron, openGolem, openWoodcutter, visitBeehive } from './crafting'
 import { openCrystalBall, openFairy, openWaypoint, openWell, resolvePick, visitLookout } from './scouting'
@@ -120,7 +120,7 @@ const takeItem = (state: RunState, content: Content, poiId: string, option: Equi
   if (blocked) return { ...state, screen: { ...state.screen, notice: blocked } }
   const merged = mergedWeapon(state.hero.weapon, option.item, content.merges)
   const hero = acquire(state.hero, option, content.sets, content.merges)
-  if (!hero) return { ...state, screen: { ...state.screen, notice: 'Your inventory is full — double-click an item to discard it.' } }
+  if (!hero) return { ...state, screen: { ...state.screen, notice: INVENTORY_FULL } }
   const taken = updatePoi({ ...state, hero }, poiId, { used: true })
   if (merged && state.hero.weapon) {
     return message(taken, 'Weapons merge', `Your ${state.hero.weapon.item.name} and ${option.item.name} merge into ${merged.name}!`)

@@ -1,6 +1,6 @@
 # He is Coming — Browser Clone: Plan
 
-Status: Phase 6 in progress (map clarity, game feel, difficulty, creature art done) · 2026-09-23
+Status: Phase 6 in progress (all but deploy done) · 2026-09-23
 
 Reference docs: [research/mechanics.md](research/mechanics.md) (rules spec) ·
 [research/content.md](research/content.md) (items/enemies/bosses/sets data) ·
@@ -172,7 +172,9 @@ Twinfuse Knot, Vampire's Tooth, Cleansing Edge, Fairy Queen, Large Golem, Wishin
   picked on the title screen and remembered, or `?difficulty=` for a `?seed=` run.
 - ✅ Placeholder creature art: 8×8 bitmaps for enemies (map and battle), 12×12 for bosses
   (`src/render/creatures.ts`).
-- Mobile/touch layout, deploy (static → Vercel or itch.io).
+- ✅ Phones: small screens scale fractionally to fill (portrait asks to turn sideways), tap to walk, tap an
+  item to pin its tooltip (with Discard), then tap a slot to move it. No double-tap zoom or pull-to-refresh.
+- Deploy (static → Vercel or itch.io) — ask first.
 
 ### Later (optional)
 Swampland (island maps, ferryman, 8 new statuses in play, Hydra), challenges + unlocks, an original Demon King

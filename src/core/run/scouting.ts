@@ -1,7 +1,7 @@
 /** Lookout Tower, Crystal Ball, Waypoint, Fairy and Wishing Well. */
 import { tileKey, revealAround } from '../world/fog'
 import { drawDistinct, randomItem } from './loot'
-import { blockedReason, ownedIds, placeItem } from './hero'
+import { blockedReason, ownedIds, placeItem, INVENTORY_FULL } from './hero'
 import type { Point, Poi, PoiKind } from '../world/types'
 import type { Content, PickOption, RunState } from './types'
 
@@ -130,7 +130,7 @@ export const resolvePick = (state: RunState, content: Content, index: number): R
       const [wish, rng] = randomItem(state.rng, content, 'common', ownedIds(state.hero))
       if (!wish || blockedReason(state.hero, wish)) return withPickNotice(state, 'The well stays silent.')
       const hero = placeItem({ ...state.hero, gold: state.hero.gold - price }, { item: wish, tier }, content.sets)
-      if (!hero) return withPickNotice(state, 'Your inventory is full — double-click an item to discard it.')
+      if (!hero) return withPickNotice(state, INVENTORY_FULL)
       return done({ ...state, rng, hero }, screen.poiId, true)
     }
   }

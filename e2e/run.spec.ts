@@ -51,6 +51,20 @@ test.describe('run loop', () => {
     await expect(slots.nth(2)).toHaveAttribute('aria-label', label!)
   })
 
+  test('a click pins an item without moving it, even before a double-click elsewhere', async ({ page }) => {
+    for (const key of CHEST_PATH) await page.keyboard.press(key)
+    await page.keyboard.press('1')
+    const slots = page.locator('.slot-grid .slot')
+    const label = (await slots.nth(0).getAttribute('aria-label'))!
+    await slots.nth(0).click()
+    await page.mouse.move(0, 0)
+    await expect(page.getByRole('tooltip')).toContainText(label)
+    await expect(page.getByRole('button', { name: 'Discard' })).toBeVisible()
+    await slots.nth(2).dblclick()
+    await expect(slots.nth(0)).toHaveAttribute('aria-label', label)
+    await expect(page.getByLabel('Empty slot')).toHaveCount(3)
+  })
+
   test('the merchant shows 6 wares and refuses without gold', async ({ page }) => {
     for (const key of MERCHANT_PATH) await page.keyboard.press(key)
     const shop = page.getByRole('dialog', { name: 'Traveling Merchant' })

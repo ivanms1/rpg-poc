@@ -86,3 +86,6 @@ export const swapSlots = (hero: Hero, from: number, to: number): Hero => {
 }
 
 export const addSlots = (hero: Hero, count: number): Hero => ({ ...hero, items: [...hero.items, ...Array.from({ length: count }, () => null)] })
+
+/** Shown when there's no free slot for a new item. */
+export const INVENTORY_FULL = 'Your inventory is full — discard an item first (double-click it, or tap it and press Discard).'

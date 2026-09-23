@@ -1,9 +1,9 @@
 import { useEffect, useState, type ReactNode } from 'react'
-import { STAGE_H, STAGE_W, useStageScale } from './useStageScale'
+import { STAGE_H, STAGE_W, useStageFit } from './useStageScale'
 
-/** The integer-scaled 480×270 stage with the optional CRT overlay (C toggles it). */
+/** The scaled 480×270 stage with the optional CRT overlay (C toggles it). */
 export function Stage({ children }: { readonly children: (scale: number) => ReactNode }) {
-  const scale = useStageScale()
+  const { scale, portrait } = useStageFit()
   const [crt, setCrt] = useState(true)
 
   useEffect(() => {
@@ -22,6 +22,11 @@ export function Stage({ children }: { readonly children: (scale: number) => Reac
           {crt && <div className="crt" aria-hidden="true" />}
         </div>
       </div>
+      {portrait && (
+        <div className="rotate-hint" role="status">
+          Turn your device sideways to play.
+        </div>
+      )}
     </div>
   )
 }
