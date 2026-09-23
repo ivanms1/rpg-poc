@@ -1,13 +1,10 @@
 /** Traveling Merchant: buy wares for gold, reroll the stock for a rising price. */
 import type { Poi } from '../world/types'
-import { equipWeapon, placeItem } from './hero'
+import { acquire, alreadyHas, ownedIds } from './hero'
 import { shopStock } from './loot'
-import type { Content, Hero, RunState } from './types'
+import type { Content, RunState } from './types'
 
 const FIRST_REROLL = 1
-
-export const ownedIds = (hero: Hero): ReadonlySet<string> =>
-  new Set([hero.weapon?.item.id, ...hero.items.map((e) => e?.item.id)].filter((id): id is string => id !== undefined))
 
 const updatePoi = (state: RunState, id: string, patch: Partial<Poi>): RunState => ({
   ...state,
@@ -39,13 +36,14 @@ const currentShop = (state: RunState): (Poi & Required<Pick<Poi, 'stock' | 'rero
 const withNotice = (state: RunState, notice: string): RunState =>
   state.screen.kind === 'shop' ? { ...state, screen: { ...state.screen, notice } } : state
 
-export const buy = (state: RunState, index: number): RunState => {
+export const buy = (state: RunState, content: Content, index: number): RunState => {
   const shop = currentShop(state)
   const ware = shop?.stock[index]
   if (!shop || !ware || ware.sold) return state
+  if (alreadyHas(state.hero, ware.equipped.item)) return withNotice(state, `You already have ${ware.equipped.item.name}.`)
   if (state.hero.gold < ware.price) return withNotice(state, `Not enough gold — ${ware.equipped.item.name} costs ${ware.price}.`)
   const paid = { ...state.hero, gold: state.hero.gold - ware.price }
-  const hero = ware.equipped.item.kind === 'weapon' ? equipWeapon(paid, ware.equipped) : placeItem(paid, ware.equipped)
+  const hero = acquire(paid, ware.equipped, content.sets)
   if (!hero) return withNotice(state, 'Your inventory is full — double-click an item to discard it.')
   const stock = shop.stock.map((w, i) => (i === index ? { ...w, sold: true } : w))
   const next = updatePoi({ ...state, hero }, shop.id, { stock })

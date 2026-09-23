@@ -121,9 +121,9 @@ const reorder = (state: RunState, from: number, to: number): RunState => {
   return hero === state.hero ? state : { ...state, hero }
 }
 
-const discard = (state: RunState, slot: number): RunState => {
+const discard = (state: RunState, content: Content, slot: number): RunState => {
   if (!canEditInventory(state)) return state
-  const hero = discardItem(state.hero, slot)
+  const hero = discardItem(state.hero, slot, content.sets)
   if (hero === state.hero) return state
   const screen = state.screen.kind === 'choice' || state.screen.kind === 'shop' ? { ...state.screen, notice: undefined } : state.screen
   return { ...state, hero, screen }
@@ -138,15 +138,15 @@ export const runReducer =
       case 'finishBattle':
         return bossIfDue(finishBattle(state, content), content)
       case 'choose':
-        return bossIfDue(chooseOption(state, action.index), content)
+        return bossIfDue(chooseOption(state, content, action.index), content)
       case 'dismiss':
         return dismiss(state, content)
       case 'discard':
-        return discard(state, action.slot)
+        return discard(state, content, action.slot)
       case 'reorder':
         return reorder(state, action.from, action.to)
       case 'buy':
-        return buy(state, action.index)
+        return buy(state, content, action.index)
       case 'reroll':
         return reroll(state, content)
       case 'fightBoss':

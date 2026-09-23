@@ -4,9 +4,9 @@ import type { OilKind } from '../items/types'
 import type { Rng } from '../rng'
 import { nextMorning, timeOfWeek } from '../world/clock'
 import type { Poi } from '../world/types'
-import { equipWeapon, heroMaxHp, placeItem, withHealth } from './hero'
+import { acquire, alreadyHas, heroMaxHp, ownedIds, withHealth } from './hero'
 import { chestOptions, forgeOptions, graveOptions, jewelryOptions, weaponPileOptions } from './loot'
-import { openShop, ownedIds } from './shop'
+import { openShop } from './shop'
 import type { Content, RunState } from './types'
 
 const CAMPFIRE_HEAL = 10
@@ -37,15 +37,18 @@ const rollOffer = (state: RunState, content: Content, kind: OfferKind): [readonl
   }
 }
 
+/** Cached offers drop unique items the hero picked up elsewhere since; an emptied offer closes the location. */
 const openOffer = (state: RunState, content: Content, poi: Poi, kind: OfferKind): RunState => {
-  const [options, rng] = poi.offer ? [poi.offer, state.rng] : rollOffer(state, content, kind)
+  const [rolled, rng] = poi.offer ? [poi.offer, state.rng] : rollOffer(state, content, kind)
+  const options = rolled.filter((o) => !alreadyHas(state.hero, o.item))
+  if (options.length === 0) return message(updatePoi({ ...state, rng }, poi.id, { used: true }), TITLES[kind], "There's nothing here you don't already have.")
   const withOffer = updatePoi({ ...state, rng }, poi.id, { offer: options })
   return { ...withOffer, screen: { kind: 'choice', poiId: poi.id, title: TITLES[kind], options } }
 }
 
-const rest = (state: RunState, title: string, heal: number, wakeText: string, dayText: string): RunState => {
+const rest = (state: RunState, sets: Content['sets'], title: string, heal: number, wakeText: string, dayText: string): RunState => {
   if (timeOfWeek(state.step).phase !== 'night') return message(state, title, dayText)
-  const hero = withHealth(state.hero, state.hero.hp + heal)
+  const hero = withHealth(state.hero, state.hero.hp + heal, sets)
   return { ...message(state, title, wakeText), hero, step: nextMorning(state.step) }
 }
 
@@ -81,26 +84,27 @@ export const interact = (state: RunState, content: Content, poi: Poi): RunState 
     case 'bladeOil':
       return openOil(state, poi)
     case 'campfire':
-      return rest(state, 'Campfire', CAMPFIRE_HEAL, `You rest by the fire until morning and restore ${CAMPFIRE_HEAL} health.`, 'The embers are warm. Come back at night to rest here.')
+      return rest(state, content.sets, 'Campfire', CAMPFIRE_HEAL, `You rest by the fire until morning and restore ${CAMPFIRE_HEAL} health.`, 'The embers are warm. Come back at night to rest here.')
     case 'home':
-      return rest(state, 'Home', heroMaxHp(state.hero, content.sets), 'You sleep soundly at home and wake fully healed.', 'Home. Come back at night to sleep here.')
+      return rest(state, content.sets, 'Home', heroMaxHp(state.hero, content.sets), 'You sleep soundly at home and wake fully healed.', 'Home. Come back at night to sleep here.')
   }
 }
 
-const takeItem = (state: RunState, poiId: string, option: Equipped): RunState => {
+const takeItem = (state: RunState, content: Content, poiId: string, option: Equipped): RunState => {
   if (state.screen.kind !== 'choice') return state
-  const hero = option.item.kind === 'weapon' ? equipWeapon(state.hero, option) : placeItem(state.hero, option)
+  if (alreadyHas(state.hero, option.item)) return { ...state, screen: { ...state.screen, notice: `You already have ${option.item.name}.` } }
+  const hero = acquire(state.hero, option, content.sets)
   if (!hero) return { ...state, screen: { ...state.screen, notice: 'Your inventory is full — double-click an item to discard it.' } }
   return { ...updatePoi({ ...state, hero }, poiId, { used: true }), screen: { kind: 'map' } }
 }
 
 /** Takes option `index` on the open chest/pile/grave/box, forge or blade oil. */
-export const chooseOption = (state: RunState, index: number): RunState => {
+export const chooseOption = (state: RunState, content: Content, index: number): RunState => {
   const { screen } = state
   switch (screen.kind) {
     case 'choice': {
       const option = screen.options[index]
-      return option ? takeItem(state, screen.poiId, option) : state
+      return option ? takeItem(state, content, screen.poiId, option) : state
     }
     case 'forge': {
       const edge = screen.options[index]

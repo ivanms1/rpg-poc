@@ -3,6 +3,7 @@ import { WEAPONS_BY_ID } from '../../data/weapons'
 import { EDGES_BY_ID } from '../../data/edges'
 import { SETS } from '../../data/sets'
 import { addSlots, discardItem, equipWeapon, heroCombatant, heroMaxHp, placeItem, swapSlots, withHealth } from './hero'
+import type { SetDef } from '../items/types'
 import type { Hero } from './types'
 
 const vest = { item: ITEMS_BY_ID['leather-vest']! }
@@ -65,6 +66,16 @@ describe('hero inventory', () => {
     expect(withHealth(fed, -3).hp).toBe(0)
     const dropped = discardItem({ ...fed, hp: 25 }, 0)
     expect(dropped.hp).toBe(20)
+  })
+
+  it('set health bonuses count toward max health when gear changes', () => {
+    const hearty: SetDef = { id: 'hearty', name: 'Hearty', parts: ['leather-vest', 'redwood-roast'], text: 'Gain 10 health', stats: { health: 10 } }
+    const withVest = placeItem({ ...hero, hp: 20 }, vest, [hearty])!
+    const full = placeItem(withVest, roast, [hearty])!
+    expect(heroMaxHp(full, [hearty])).toBe(35)
+    expect(full.hp).toBe(35)
+    expect(withHealth(full, 99, [hearty]).hp).toBe(35)
+    expect(discardItem(full, 0, [hearty]).hp).toBe(25)
   })
 
   it('builds a combatant with current health and gold', () => {

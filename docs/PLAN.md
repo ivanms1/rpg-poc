@@ -1,6 +1,6 @@
 # He is Coming — Browser Clone: Plan
 
-Status: Phase 3 done · 2026-09-23
+Status: Phase 4 done (MVP) · 2026-09-23
 
 Reference docs: [research/mechanics.md](research/mechanics.md) (rules spec) ·
 [research/content.md](research/content.md) (items/enemies/bosses/sets data) ·
@@ -144,7 +144,7 @@ Each phase ends with something playable or testable.
 - Locations: Treasure Chest, Campfire, Home, Weapon Pile.
 - **Done when:** you can walk a full week, fight enemies, pick up items, and sleep.
 
-### Phase 4 — Full run loop (2–3 days)
+### Phase 4 — Full run loop (2–3 days) ✅
 _Already done in Phase 3: weekly boss (random pool, Tab preview, fight early), +2 slots per boss, week progression
 with enemy levels, game over / victory screens, double-click discard, `?seed=` runs._
 - Inventory UI: 1 weapon + 4/6/8 slots, drag to reorder, double-click to discard, tooltips with set info.

@@ -372,3 +372,76 @@ body,
   font: inherit;
   cursor: pointer;
 }
+
+/* ---------- Title ---------- */
+.title-screen {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.title-screen h1 {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: 36px;
+  font-weight: normal;
+  color: var(--frame);
+}
+
+.title-sub {
+  margin: 0 0 8px;
+  color: var(--muted);
+}
+
+.title-actions {
+  display: grid;
+  gap: 5px;
+  min-width: 150px;
+}
+
+.title-actions .dialog-button {
+  padding: 4px 10px;
+  border: 1px solid var(--frame);
+  background: none;
+  color: var(--frame);
+  font: inherit;
+  cursor: pointer;
+}
+
+.title-actions .dialog-button:hover,
+.title-actions .dialog-button:focus-visible {
+  background: #33202a;
+  outline: none;
+}
+
+.title-screen .dialog-notice {
+  max-width: 260px;
+  color: var(--enemy);
+}
+
+.title-controls {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 2px 18px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 7px;
+  text-align: left;
+}
+
+.title-controls div {
+  display: flex;
+  gap: 5px;
+}
+
+.title-controls dt {
+  color: var(--frame);
+}
+
+.title-controls dd {
+  margin: 0;
+}

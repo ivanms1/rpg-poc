@@ -51,7 +51,7 @@ export const finishBattle = (state: RunState, content: Content): RunState => {
   const final = battle.result.final.player
   if (battle.result.winner !== 'player') return { ...state, hero: { ...state.hero, hp: 0 }, screen: { kind: 'gameOver' } }
 
-  const hero = withHealth({ ...state.hero, gold: final.gold + battle.goldReward }, final.hp)
+  const hero = withHealth({ ...state.hero, gold: final.gold + battle.goldReward }, final.hp, content.sets)
   if (battle.source.kind === 'enemy') {
     const { entityId } = battle.source
     const enemies = state.world.enemies.map((e) => (e.id === entityId ? { ...e, alive: false } : e))
@@ -59,7 +59,7 @@ export const finishBattle = (state: RunState, content: Content): RunState => {
   }
 
   const next = bossById(content, battle.source.bossId).next
-  if (next) return startBossBattle({ ...state, hero: withHealth(hero, heroMaxHp(hero, content.sets)) }, content, next)
+  if (next) return startBossBattle({ ...state, hero: withHealth(hero, heroMaxHp(hero, content.sets), content.sets) }, content, next)
   if (state.week === 3) return { ...state, hero, screen: { kind: 'victory' } }
   const week = (state.week + 1) as Week
   return {

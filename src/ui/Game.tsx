@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useMemo, useReducer, useState } from 'react'
 import { setProgress, type Equipped } from '../core/items/loadout'
 import { heroCombatant } from '../core/run/hero'
-import { createRun, runReducer } from '../core/run/reducer'
-import type { RunAction } from '../core/run/types'
+import { runReducer } from '../core/run/reducer'
+import { isSaveable } from '../core/run/save'
+import type { RunAction, RunState } from '../core/run/types'
 import { timeOfWeek } from '../core/world/clock'
 import { CONTENT } from '../data/content'
 import { createAtlas, loadImage, type Atlas } from '../render/atlas'
@@ -14,9 +15,10 @@ import { WorldCanvas } from './map/WorldCanvas'
 import { PixelIcon } from './PixelIcon'
 import { BossPreview, ChoiceDialog, EndScreen, MessageDialog } from './run/Dialogs'
 import { ForgeDialog, OilDialog, ShopDialog } from './run/ShopDialogs'
+import { clearSave, writeSave } from './save/storage'
 import { StatPanel } from './StatPanel'
+import { Stage } from './Stage'
 import { Timeline } from './Timeline'
-import { STAGE_H, STAGE_W, useStageScale } from './useStageScale'
 
 /** Map canvas in art pixels: .map-area (384×224) minus its 1px border. */
 const MAP_W = 382
@@ -30,19 +32,18 @@ const MOVES: Record<string, readonly [number, number]> = {
 
 const reducer = runReducer(CONTENT)
 
-/** ?seed=123 replays a specific run; otherwise every page load is a new one. */
-const initialSeed = (): number => {
-  const fromUrl = Number(new URLSearchParams(window.location.search).get('seed'))
-  return Number.isInteger(fromUrl) && fromUrl > 0 ? fromUrl : Math.floor(Math.random() * 1_000_000_000)
+interface Props {
+  readonly initial: RunState
+  /** Leave the run (back to the title screen). */
+  readonly onExit: () => void
 }
 
-export function App() {
-  const scale = useStageScale()
+/** One run in progress. Autosaves between battles; a finished run clears the save. */
+export function Game({ initial, onExit }: Props) {
   const [atlas, setAtlas] = useState<Atlas | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
-  const [crt, setCrt] = useState(true)
   const [showBoss, setShowBoss] = useState(false)
-  const [state, dispatch] = useReducer(reducer, undefined, () => createRun(initialSeed(), CONTENT))
+  const [state, dispatch] = useReducer(reducer, initial)
   const { hero, screen, week, step } = state
   const time = timeOfWeek(step)
   const stats = useMemo(() => heroCombatant(hero, CONTENT.sets).stats, [hero])
@@ -62,11 +63,12 @@ export function App() {
   const boss = CONTENT.bosses.find((b) => b.id === state.bosses[week - 1])
 
   const act = useCallback((action: RunAction) => dispatch(action), [])
-  const newRun = useCallback(() => {
-    const seed = Math.floor(Math.random() * 1_000_000_000)
-    window.history.replaceState(null, '', `?seed=${seed}`)
-    window.location.reload()
-  }, [])
+  const finished = screen.kind === 'gameOver' || screen.kind === 'victory'
+
+  useEffect(() => {
+    if (isSaveable(state)) writeSave(state)
+    else if (state.screen.kind === 'gameOver' || state.screen.kind === 'victory') clearSave()
+  }, [state])
 
   useEffect(() => {
     loadImage(TILESET_URL)
@@ -80,9 +82,11 @@ export function App() {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const key = e.key.toLowerCase()
-      if (key === 'c') return setCrt((on) => !on)
       if (screen.kind === 'battle') return
-      if ((screen.kind === 'gameOver' || screen.kind === 'victory') && key === 'r') return newRun()
+      if (finished) {
+        if (key === 'r') onExit()
+        return
+      }
       if (key === 'tab') {
         e.preventDefault()
         return setShowBoss((open) => screen.kind === 'map' && !open)
@@ -104,12 +108,12 @@ export function App() {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [act, newRun, screen.kind, showBoss])
+  }, [act, finished, onExit, screen.kind, showBoss])
 
   return (
-    <div className="viewport">
-      <div className="stage-wrap" style={{ width: STAGE_W * scale, height: STAGE_H * scale }}>
-        <div className="stage" style={{ transform: `scale(${scale})` }} data-testid="stage">
+    <Stage>
+      {(scale) => (
+        <>
           <aside className="sidebar">
             <StatPanel stats={{ ...stats, health: hero.hp, maxHealth: stats.maxHp, gold: hero.gold }} />
             <Inventory
@@ -189,12 +193,9 @@ export function App() {
               }}
             />
           )}
-          {(screen.kind === 'gameOver' || screen.kind === 'victory') && (
-            <EndScreen victory={screen.kind === 'victory'} week={week} gold={hero.gold} seed={state.seed} onRestart={newRun} />
-          )}
-          {crt && <div className="crt" aria-hidden="true" />}
-        </div>
-      </div>
-    </div>
+          {finished && <EndScreen victory={screen.kind === 'victory'} week={week} gold={hero.gold} seed={state.seed} onRestart={onExit} />}
+        </>
+      )}
+    </Stage>
   )
 }

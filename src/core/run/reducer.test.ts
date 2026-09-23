@@ -348,6 +348,33 @@ describe('blade oil, forge, grave and jewelry box', () => {
   })
 })
 
+describe('rare and better items stay unique at claim time', () => {
+  const heroic = { item: CONTENT.weapons.find((w) => w.id === 'twin-blade')! }
+  const cached = (kind: Poi['kind'], options: Equipped[]) => ({ ...poi(kind, 8, 5), offer: options })
+
+  it('a cached offer drops items the hero has since acquired', () => {
+    const s = createRun(1, CONTENT, { world: world([cached('weaponPile', [heroic, { item: CONTENT.weapons.find((w) => w.id === 'battle-axe')! }])]) })
+    const open = play({ ...s, hero: { ...s.hero, weapon: heroic } }, right)
+    expect(open.screen).toMatchObject({ kind: 'choice' })
+    if (open.screen.kind === 'choice') expect(open.screen.options.map((o) => o.item.id)).toEqual(['battle-axe'])
+  })
+
+  it('an offer with nothing left closes the location', () => {
+    const s = createRun(1, CONTENT, { world: world([cached('weaponPile', [heroic])]) })
+    const open = play({ ...s, hero: { ...s.hero, weapon: heroic } }, right)
+    expect(open.screen).toMatchObject({ kind: 'message' })
+    expect(open.world.pois[0]?.used).toBe(true)
+  })
+
+  it('the merchant will not sell something the hero already has', () => {
+    const s = createRun(1, CONTENT, { world: world([{ ...poi('merchant', 8, 5), stock: [{ equipped: heroic, price: 3, sold: false }], rerollCost: 1 }]) })
+    const open = play({ ...s, hero: { ...s.hero, gold: 20, weapon: heroic } }, right)
+    const after = play(open, { type: 'buy', index: 0 })
+    expect(after.screen).toMatchObject({ kind: 'shop', notice: expect.stringContaining('already') })
+    expect(after.hero.gold).toBe(20)
+  })
+})
+
 describe('reorder', () => {
   it('swaps two slots on the map', () => {
     const s = createRun(1, CONTENT, { world: world() })
