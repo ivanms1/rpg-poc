@@ -3,6 +3,7 @@ import type { BattleEvent, BattleResult, Side } from '../../core/combat/types'
 import { PALETTE } from '../../render/palette'
 import type { IconName } from '../icons'
 import { PixelIcon } from '../PixelIcon'
+import { BossIntro } from './BossIntro'
 import { Fighter, POPUP_MS } from './Fighter'
 import { activePopups, SPEEDS, type Speed } from './playback'
 import { StatusList } from './StatusList'
@@ -16,6 +17,7 @@ export interface BattleView {
   readonly enemyText: string
   readonly boss?: boolean
   readonly goldReward: number
+  readonly intro?: { readonly title: string; readonly subtitle: string }
 }
 
 const SPEED_KEY = 'hic.combatSpeed'
@@ -54,8 +56,9 @@ interface Props {
 export function CombatView({ battle, onFinish }: Props) {
   const [speed, setSpeed] = useState<Speed>(loadSpeed)
   const [paused, setPaused] = useState(false)
+  const [introOpen, setIntroOpen] = useState(Boolean(battle.intro))
   const { events, winner } = battle.result
-  const { index, event, done, skip } = usePlayback(events, speed, paused)
+  const { index, event, done, skip } = usePlayback(events, speed, paused || introOpen)
   const snapshot = (event ?? events[0])?.snapshot
   const popups = activePopups(events, index, speed, POPUP_MS)
 
@@ -67,6 +70,13 @@ export function CombatView({ battle, onFinish }: Props) {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      if (introOpen) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          setIntroOpen(false)
+        }
+        return
+      }
       if (done && (e.key === 'Enter' || e.key === ' ')) {
         e.preventDefault()
         return onFinish()
@@ -82,7 +92,7 @@ export function CombatView({ battle, onFinish }: Props) {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [done, onFinish, skip])
+  }, [done, introOpen, onFinish, skip])
 
   if (!snapshot) return null
   const names: Record<Side, string> = { player: 'Hero', enemy: battle.enemyName }
@@ -159,6 +169,9 @@ export function CombatView({ battle, onFinish }: Props) {
         <h2>{battle.enemyName}</h2>
         <p>{battle.enemyText}</p>
       </aside>
+      {introOpen && battle.intro && (
+        <BossIntro title={battle.intro.title} subtitle={battle.intro.subtitle} text={battle.enemyText} onBegin={() => setIntroOpen(false)} />
+      )}
     </>
   )
 }

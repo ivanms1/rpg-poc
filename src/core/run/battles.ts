@@ -10,7 +10,14 @@ const ENEMY_GOLD = 1
 const BOSS_GOLD = 0
 const SLOTS_PER_BOSS = 2
 
-const battleScreen = (state: RunState, content: Content, creature: CreatureDef, source: BattleInfo['source'], boss: boolean): RunState => {
+const battleScreen = (
+  state: RunState,
+  content: Content,
+  creature: CreatureDef,
+  source: BattleInfo['source'],
+  boss: boolean,
+  intro?: BattleInfo['intro'],
+): RunState => {
   const result = simulateBattle(heroCombatant(state.hero, content.sets), creatureCombatant(creature))
   const tag = source.kind === 'enemy' ? source.entityId : 'boss'
   const battle: BattleInfo = {
@@ -21,6 +28,7 @@ const battleScreen = (state: RunState, content: Content, creature: CreatureDef, 
     boss,
     goldReward: boss ? BOSS_GOLD : ENEMY_GOLD,
     source,
+    ...(intro ? { intro } : {}),
   }
   return { ...state, screen: { kind: 'battle', battle } }
 }
@@ -38,10 +46,16 @@ const bossById = (content: Content, id: string | undefined): BossDef => {
   return boss
 }
 
-/** Fights this week's boss, or a specific one (a boss's second form). */
-export const startBossBattle = (state: RunState, content: Content, bossId: string = state.bosses[state.week - 1] as string): RunState => {
+/** Fights this week's boss, or a specific one (a boss's second form, announced as a transformation of `from`). */
+export const startBossBattle = (
+  state: RunState,
+  content: Content,
+  bossId: string = state.bosses[state.week - 1] as string,
+  from?: string,
+): RunState => {
   const boss = bossById(content, bossId)
-  return battleScreen(state, content, boss, { kind: 'boss', bossId: boss.id }, true)
+  const subtitle = from ? `${from} transforms!` : state.week === 3 ? 'The final battle' : `The week ${state.week} boss arrives`
+  return battleScreen(state, content, boss, { kind: 'boss', bossId: boss.id }, true, { title: boss.name, subtitle })
 }
 
 /** Applies the battle on screen: defeat ends the run; beating a boss advances the week (or brings its next form). */
@@ -59,7 +73,7 @@ export const finishBattle = (state: RunState, content: Content): RunState => {
   }
 
   const next = bossById(content, battle.source.bossId).next
-  if (next) return startBossBattle({ ...state, hero: withHealth(hero, heroMaxHp(hero, content.sets), content.sets) }, content, next)
+  if (next) return startBossBattle({ ...state, hero: withHealth(hero, heroMaxHp(hero, content.sets), content.sets) }, content, next, battle.enemyName)
   if (state.week === 3) return { ...state, hero, screen: { kind: 'victory' } }
   const week = (state.week + 1) as Week
   return {

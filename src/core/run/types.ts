@@ -39,6 +39,8 @@ export interface BattleInfo {
   readonly boss: boolean
   readonly goldReward: number
   readonly source: { readonly kind: 'enemy'; readonly entityId: string } | { readonly kind: 'boss'; readonly bossId: string }
+  /** Boss battles open with a title card. */
+  readonly intro?: { readonly title: string; readonly subtitle: string }
 }
 
 export type Screen =

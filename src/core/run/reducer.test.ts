@@ -207,6 +207,23 @@ describe('the weekly boss', () => {
     expect(s.screen).toMatchObject({ kind: 'battle', battle: { boss: true } })
   })
 
+  it('boss battles come with an intro; regular battles do not', () => {
+    const boss = play(createRun(1, CONTENT, { world: world() }), { type: 'fightBoss' })
+    expect(boss.screen).toMatchObject({ kind: 'battle', battle: { intro: { subtitle: 'The week 1 boss arrives' } } })
+    if (boss.screen.kind === 'battle') expect(boss.screen.battle.intro?.title).toBe(boss.screen.battle.enemyName)
+    const regular = play(createRun(1, CONTENT, { world: world([], [enemy('wolf', 8, 5)]) }), right)
+    if (regular.screen.kind === 'battle') expect(regular.screen.battle.intro).toBeUndefined()
+  })
+
+  it('the finale has its own intro, and the second form announces the transformation', () => {
+    const week3 = { ...strong(createRun(1, CONTENT, { world: world() })), week: 3 as const }
+    const leshen = play(week3, { type: 'fightBoss' })
+    expect(leshen.screen).toMatchObject({ battle: { intro: { title: 'Leshen', subtitle: 'The final battle' } } })
+    expect(play(leshen, { type: 'finishBattle' }).screen).toMatchObject({
+      battle: { intro: { title: 'Woodland Abomination', subtitle: 'Leshen transforms!' } },
+    })
+  })
+
   it('can be fought early', () => {
     const s = play(createRun(1, CONTENT, { world: world() }), { type: 'fightBoss' })
     expect(s.screen).toMatchObject({ kind: 'battle', battle: { boss: true } })
