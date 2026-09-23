@@ -1,7 +1,7 @@
 /** A single run: world, clock, hero and whatever screen is in front. Changed only by `runReducer`. */
 import type { BattleResult } from '../combat/types'
 import type { Equipped } from '../items/loadout'
-import type { BossDef, EnemyDef, ItemDef } from '../items/types'
+import type { BossDef, EdgeDef, EnemyDef, ItemDef, OilKind, SetDef } from '../items/types'
 import type { Rng } from '../rng'
 import type { Point, World } from '../world/types'
 
@@ -11,6 +11,8 @@ export interface Content {
   readonly weapons: readonly ItemDef[]
   readonly enemies: Readonly<Record<string, EnemyDef>>
   readonly bosses: readonly BossDef[]
+  readonly sets: readonly SetDef[]
+  readonly edges: readonly EdgeDef[]
   readonly startingWeapon: ItemDef
 }
 
@@ -21,6 +23,10 @@ export interface Hero {
   /** Length = unlocked slots; `null` = empty. Slot order = trigger order. */
   readonly items: readonly (Equipped | null)[]
   readonly baseHealth: number
+  /** Blade oils applied to the current weapon. */
+  readonly oils: readonly OilKind[]
+  /** Forge edge on the current weapon. */
+  readonly edge: EdgeDef | null
 }
 
 export interface BattleInfo {
@@ -30,7 +36,7 @@ export interface BattleInfo {
   readonly enemyText: string
   readonly boss: boolean
   readonly goldReward: number
-  readonly source: { readonly kind: 'enemy'; readonly entityId: string } | { readonly kind: 'boss' }
+  readonly source: { readonly kind: 'enemy'; readonly entityId: string } | { readonly kind: 'boss'; readonly bossId: string }
 }
 
 export type Screen =
@@ -59,7 +65,7 @@ export interface RunState {
   readonly step: number
   readonly revealed: ReadonlySet<string>
   readonly hero: Hero
-  /** Boss id for each week, fixed at run start so Tab can preview it. */
+  /** Boss id for each week (drawn from that week's pool at run start) so Tab can preview it. */
   readonly bosses: readonly [string, string, string]
   readonly screen: Screen
 }
@@ -70,4 +76,5 @@ export type RunAction =
   | { readonly type: 'choose'; readonly index: number }
   | { readonly type: 'dismiss' }
   | { readonly type: 'discard'; readonly slot: number }
+  | { readonly type: 'reorder'; readonly from: number; readonly to: number }
   | { readonly type: 'fightBoss' }

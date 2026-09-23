@@ -1,11 +1,13 @@
 import { ITEMS_BY_ID } from '../../data/items'
 import { WEAPONS_BY_ID } from '../../data/weapons'
-import { addSlots, discardItem, equipWeapon, heroCombatant, heroMaxHp, placeItem, withHealth } from './hero'
+import { EDGES_BY_ID } from '../../data/edges'
+import { SETS } from '../../data/sets'
+import { addSlots, discardItem, equipWeapon, heroCombatant, heroMaxHp, placeItem, swapSlots, withHealth } from './hero'
 import type { Hero } from './types'
 
 const vest = { item: ITEMS_BY_ID['leather-vest']! }
 const roast = { item: ITEMS_BY_ID['redwood-roast']! }
-const hero: Hero = { hp: 20, gold: 3, weapon: { item: WEAPONS_BY_ID['wooden-stick']! }, items: [null, null, null, null], baseHealth: 20 }
+const hero: Hero = { hp: 20, gold: 3, weapon: { item: WEAPONS_BY_ID['wooden-stick']! }, items: [null, null, null, null], baseHealth: 20, oils: [], edge: null }
 
 describe('hero inventory', () => {
   it('places an item in the first empty slot', () => {
@@ -27,8 +29,32 @@ describe('hero inventory', () => {
     expect(addSlots(hero, 2).items).toHaveLength(6)
   })
 
-  it('replaces the weapon', () => {
-    expect(equipWeapon(hero, { item: WEAPONS_BY_ID['sword-of-the-hero']! }).weapon?.item.id).toBe('sword-of-the-hero')
+  it('replaces the weapon, losing its oils and edge', () => {
+    const upgraded = { ...hero, oils: ['attack' as const], edge: EDGES_BY_ID['razor-edge']! }
+    const next = equipWeapon(upgraded, { item: WEAPONS_BY_ID['sword-of-the-hero']! })
+    expect(next.weapon?.item.id).toBe('sword-of-the-hero')
+    expect(next).toMatchObject({ oils: [], edge: null })
+  })
+
+  it('swaps two slots (including empty ones) and ignores bad indexes', () => {
+    const s = { ...hero, items: [vest, null, roast, null] }
+    expect(swapSlots(s, 0, 2).items).toEqual([roast, null, vest, null])
+    expect(swapSlots(s, 0, 1).items).toEqual([null, vest, roast, null])
+    expect(swapSlots(s, 0, 9)).toBe(s)
+    expect(swapSlots(s, 1, 1)).toBe(s)
+  })
+
+  it('applies oils, edge and complete sets in battle stats', () => {
+    const heroKit: Hero = {
+      ...hero,
+      weapon: { item: WEAPONS_BY_ID['sword-of-the-hero']! },
+      items: [{ item: ITEMS_BY_ID['boots-of-the-hero']! }, { item: ITEMS_BY_ID['shield-of-the-hero']! }],
+      oils: ['speed'],
+      edge: EDGES_BY_ID['razor-edge']!,
+    }
+    const c = heroCombatant(heroKit, SETS)
+    expect(c.stats).toMatchObject({ attack: 5, armor: 5, speed: 5 })
+    expect(c.sources.map((src) => src.kind)).toEqual(['weapon', 'edge', 'item', 'item', 'set'])
   })
 
   it('gear that raises max health also raises current health; losing it caps health', () => {

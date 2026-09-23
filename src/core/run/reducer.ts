@@ -5,40 +5,49 @@ import { generateWorld } from '../world/mapgen'
 import { stepToward } from '../world/pathing'
 import { isWalkable } from '../world/terrain'
 import type { EnemyEntity, Point, World } from '../world/types'
-import { createRng } from '../rng'
+import { createRng, type Rng } from '../rng'
 import { finishBattle, startBossBattle, startEnemyBattle } from './battles'
-import { discardItem } from './hero'
+import { discardItem, swapSlots } from './hero'
 import { chooseOption, interact } from './locations'
 import { drawDistinct } from './loot'
-import type { Content, Hero, RunAction, RunState } from './types'
+import type { Content, Hero, RunAction, RunState, Week } from './types'
 
 export const NORMAL_BASE_HEALTH = 20
 const STARTING_SLOTS = 4
+const WEEKS: readonly Week[] = [1, 2, 3]
 
 export interface RunOptions {
   readonly world?: World
   readonly baseHealth?: number
 }
 
-const pickBosses = (state: Pick<RunState, 'rng'>, content: Content): [RunState['bosses'], RunState['rng']] => {
-  const [firstWeek, rng1] = drawDistinct(state.rng, content.bosses.filter((b) => b.week === 1), 1)
-  const rest = content.bosses.filter((b) => b.id !== firstWeek[0]?.id)
-  const [later, rng2] = drawDistinct(rng1, rest, 2)
-  const ids = [...firstWeek, ...later].map((b) => b.id)
+/** One boss per week from that week's pool (falling back to any unused boss if a pool is empty). */
+const pickBosses = (rng: Rng, content: Content): [RunState['bosses'], Rng] => {
+  const drawable = content.bosses.filter((b) => !b.hidden)
+  const [ids, next] = WEEKS.reduce<[string[], Rng]>(
+    ([picked, r], week) => {
+      const pool = drawable.filter((b) => b.week === week && !picked.includes(b.id))
+      const [drawn, r2] = drawDistinct(r, pool.length > 0 ? pool : drawable.filter((b) => !picked.includes(b.id)), 1)
+      return [[...picked, ...drawn.map((b) => b.id)], r2]
+    },
+    [[], rng],
+  )
   if (ids.length < 3) throw new Error('run: need at least 3 bosses')
-  return [[ids[0]!, ids[1]!, ids[2]!], rng2]
+  return [[ids[0]!, ids[1]!, ids[2]!], next]
 }
 
 export const createRun = (seed: number, content: Content, opts: RunOptions = {}): RunState => {
   const world = opts.world ?? generateWorld(seed)
   const baseHealth = opts.baseHealth ?? NORMAL_BASE_HEALTH
-  const [bosses, rng] = pickBosses({ rng: createRng(seed ^ 0x5eed) }, content)
+  const [bosses, rng] = pickBosses(createRng(seed ^ 0x5eed), content)
   const hero: Hero = {
     hp: baseHealth,
     gold: 0,
     weapon: { item: content.startingWeapon },
     items: Array.from({ length: STARTING_SLOTS }, () => null),
     baseHealth,
+    oils: [],
+    edge: null,
   }
   return {
     seed,
@@ -100,8 +109,17 @@ const dismiss = (state: RunState, content: Content): RunState => {
   return bossIfDue(reveal({ ...state, screen: { kind: 'map' } }), content)
 }
 
+/** Inventory edits are allowed on the map and while a dialog is open, never mid-battle. */
+const canEditInventory = (state: RunState): boolean => state.screen.kind === 'map' || state.screen.kind === 'choice'
+
+const reorder = (state: RunState, from: number, to: number): RunState => {
+  if (!canEditInventory(state)) return state
+  const hero = swapSlots(state.hero, from, to)
+  return hero === state.hero ? state : { ...state, hero }
+}
+
 const discard = (state: RunState, slot: number): RunState => {
-  if (state.screen.kind !== 'map' && state.screen.kind !== 'choice') return state
+  if (!canEditInventory(state)) return state
   const hero = discardItem(state.hero, slot)
   if (hero === state.hero) return state
   const screen = state.screen.kind === 'choice' ? { ...state.screen, notice: undefined } : state.screen
@@ -115,13 +133,15 @@ export const runReducer =
       case 'move':
         return move(state, content, action.dx, action.dy)
       case 'finishBattle':
-        return bossIfDue(finishBattle(state), content)
+        return bossIfDue(finishBattle(state, content), content)
       case 'choose':
         return bossIfDue(chooseOption(state, action.index), content)
       case 'dismiss':
         return dismiss(state, content)
       case 'discard':
         return discard(state, action.slot)
+      case 'reorder':
+        return reorder(state, action.from, action.to)
       case 'fightBoss':
         return state.screen.kind === 'map' ? startBossBattle(state, content) : state
     }

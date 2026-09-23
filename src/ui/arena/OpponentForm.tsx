@@ -26,10 +26,10 @@ export function OpponentForm({ value, onChange }: { readonly value: OpponentChoi
               </option>
             ))}
           </optgroup>
-          <optgroup label="Week 1 bosses">
+          <optgroup label="Bosses">
             {BOSSES.map((b) => (
               <option key={b.id} value={`boss:${b.id}`}>
-                {b.name}
+                {b.name} (week {b.week})
               </option>
             ))}
           </optgroup>

@@ -105,3 +105,55 @@ describe('a realistic week-1 fight', () => {
     expect(dummy().sources).toHaveLength(0)
   })
 })
+
+describe('week 2 bosses', () => {
+  it('Blackbriar King: never strikes, gains 2 thorns when hurt and 4 when wounded', () => {
+    const r = fight(hero('sword-of-the-hero', [], { baseHealth: 60 }), boss('blackbriar-king'), { fatigueStartRound: 30 })
+    expect(strikes(r.events, 'enemy')).toHaveLength(0)
+    const gains = from(r.events, 'Blackbriar King').filter((e) => e.type === 'status').map((e) => e.type === 'status' && e.delta)
+    expect(gains.slice(0, 2)).toEqual([2, 2])
+    expect(gains).toContain(4)
+  })
+
+  it('Frostbite Druid: freezes the player on hit', () => {
+    const r = fight(hero('wooden-stick', [], { baseHealth: 30 }), boss('frostbite-druid'))
+    expect(from(r.events, 'Frostbite Druid')[0]).toMatchObject({ type: 'status', side: 'player', status: 'freeze', delta: 1 })
+  })
+
+  it('Goldwing Monarch: when wounded steals all gold and heals 2 per coin', () => {
+    const r = fight(hero('ironstone-greatsword', [], { baseHealth: 60, gold: 4 }), boss('goldwing-monarch'), { fatigueStartRound: 30 })
+    const own = from(r.events, 'Goldwing Monarch')
+    expect(own.find((e) => e.type === 'gold' && e.side === 'player')).toMatchObject({ delta: -4 })
+    expect(own.find((e) => e.type === 'heal')).toMatchObject({ amount: 8 })
+  })
+
+  it('Mountain Troll: only strikes every other turn', () => {
+    const r = fight(hero('wooden-stick', [], { baseHealth: 200 }), boss('mountain-troll'), { fatigueStartRound: 30 })
+    const trollTurns = r.events.filter((e) => e.type === 'turnStart' && e.side === 'enemy').length
+    expect(strikes(r.events, 'enemy').length).toBe(Math.ceil(trollTurns / 2))
+  })
+
+  it('Redwood Treant: +3 attack while the player has no armor', () => {
+    const r = fight(hero('wooden-stick', [], { baseHealth: 60 }), boss('redwood-treant'))
+    expect(strikes(r.events, 'enemy')[0]).toBe(6)
+    const armored = fight(hero('wooden-stick', ['shield-of-the-hero'], { baseHealth: 60 }), boss('redwood-treant'))
+    expect(strikes(armored.events, 'enemy')[0]).toBe(3)
+  })
+
+  it('Swiftstrike Stag: strikes 3 times per turn', () => {
+    const r = fight(hero('wooden-stick', [], { baseHealth: 60 }), boss('swiftstrike-stag'))
+    expect(strikes(beforeTurn(r.events, 'player', 1), 'enemy')).toHaveLength(3)
+  })
+})
+
+describe('the Leshen finale', () => {
+  it('Leshen is the week 3 boss and turns into the Woodland Abomination', () => {
+    expect(BOSSES_BY_ID['leshen']).toMatchObject({ week: 3, next: 'woodland-abomination' })
+    expect(BOSSES_BY_ID['woodland-abomination']).toMatchObject({ week: 3, hidden: true })
+  })
+
+  it('Woodland Abomination gains 1 attack every turn', () => {
+    const r = fight(hero('wooden-stick', [], { baseHealth: 100 }), boss('woodland-abomination'), { fatigueStartRound: 50 })
+    expect(strikes(r.events, 'enemy').slice(0, 3)).toEqual([1, 2, 3])
+  })
+})

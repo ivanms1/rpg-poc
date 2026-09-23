@@ -35,15 +35,15 @@ describe('createRun', () => {
   it('starts a fresh hero at the start with a Wooden Stick and 4 empty slots', () => {
     const s = createRun(1, CONTENT, { world: world() })
     expect(s).toMatchObject({ player: START, week: 1, step: 0, screen: { kind: 'map' } })
-    expect(s.hero).toMatchObject({ hp: 20, gold: 0, items: [null, null, null, null] })
+    expect(s.hero).toMatchObject({ hp: 20, gold: 0, items: [null, null, null, null], oils: [], edge: null })
     expect(s.hero.weapon?.item.id).toBe('wooden-stick')
     expect(s.revealed.has('7,5')).toBe(true)
   })
 
-  it('picks three distinct bosses, the first from the week 1 pool', () => {
-    const s = createRun(1, CONTENT)
-    expect(new Set(s.bosses).size).toBe(3)
-    expect(CONTENT.bosses.find((b) => b.id === s.bosses[0])?.week).toBe(1)
+  it.each([1, 2, 3, 4, 5])('seed %i: one boss per week from that week’s pool, Leshen last', (seed) => {
+    const s = createRun(seed, CONTENT)
+    expect(s.bosses.map((id) => CONTENT.bosses.find((b) => b.id === id)?.week)).toEqual([1, 2, 3])
+    expect(s.bosses[2]).toBe('leshen')
   })
 
   it('generates a world from the seed by default', () => {
@@ -218,9 +218,15 @@ describe('the weekly boss', () => {
     expect(s.hero.items).toHaveLength(6)
   })
 
-  it('beating the week 3 boss wins the run', () => {
-    const s = play({ ...strong(createRun(1, CONTENT, { world: world() })), week: 3 }, { type: 'fightBoss' }, { type: 'finishBattle' })
-    expect(s.screen.kind).toBe('victory')
+  it('beating Leshen brings the Woodland Abomination at full health; beating that wins the run', () => {
+    const week3 = { ...strong(createRun(1, CONTENT, { world: world() })), week: 3 as const }
+    const leshen = play(week3, { type: 'fightBoss' })
+    expect(leshen.screen).toMatchObject({ kind: 'battle', battle: { enemyName: 'Leshen' } })
+    const abomination = play(leshen, { type: 'finishBattle' })
+    expect(abomination.screen).toMatchObject({ kind: 'battle', battle: { enemyName: 'Woodland Abomination', boss: true } })
+    if (abomination.screen.kind !== 'battle') return
+    expect(abomination.screen.battle.result.events[0]?.snapshot.player.hp).toBe(500)
+    expect(play(abomination, { type: 'finishBattle' }).screen.kind).toBe('victory')
   })
 
   it('taking loot on the last step of the week brings the boss', () => {
@@ -233,6 +239,19 @@ describe('the weekly boss', () => {
     const s = play(at(createRun(1, CONTENT, { world: world([poi('home', 8, 5)]) }), 220), right)
     expect(s.step).toBe(STEPS_PER_WEEK)
     expect(play(s, { type: 'dismiss' }).screen.kind).toBe('battle')
+  })
+})
+
+describe('reorder', () => {
+  it('swaps two slots on the map', () => {
+    const s = createRun(1, CONTENT, { world: world() })
+    const withVest = { ...s, hero: { ...s.hero, items: [vest, null, null, null] } }
+    expect(play(withVest, { type: 'reorder', from: 0, to: 3 }).hero.items[3]).toBe(vest)
+  })
+
+  it('is ignored during battles', () => {
+    const s = play(createRun(1, CONTENT, { world: world([], [enemy('wolf', 8, 5)]) }), right)
+    expect(play(s, { type: 'reorder', from: 0, to: 1 })).toBe(s)
   })
 })
 

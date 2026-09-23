@@ -3,7 +3,9 @@ import { simulateBattle } from '../../core/combat/simulate'
 import type { BattleResult, Combatant } from '../../core/combat/types'
 import { buildPlayer, creatureCombatant, describeItem } from '../../core/items/loadout'
 import { BOSSES_BY_ID } from '../../data/bosses'
+import { EDGES_BY_ID } from '../../data/edges'
 import { ENEMIES_BY_ID, enemyAt } from '../../data/enemies'
+import { SETS } from '../../data/sets'
 import { ITEMS_BY_ID } from '../../data/items'
 import { WEAPONS_BY_ID } from '../../data/weapons'
 import { BattleLog } from './BattleLog'
@@ -13,6 +15,7 @@ import './arena.css'
 
 const INITIAL_LOADOUT: LoadoutChoice = {
   weaponId: 'sword-of-the-hero',
+  edgeId: '',
   slots: [
     { id: 'leather-vest', tier: 'normal' },
     { id: 'horned-helmet', tier: 'normal' },
@@ -36,6 +39,8 @@ const toPlayer = (c: LoadoutChoice): Combatant => {
     baseHealth: c.baseHealth,
     hp: c.hp > 0 ? c.hp : undefined,
     gold: c.gold,
+    edge: EDGES_BY_ID[c.edgeId] ?? null,
+    sets: SETS,
   })
 }
 

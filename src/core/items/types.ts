@@ -31,6 +31,27 @@ export interface ItemDef {
   readonly effect?: (x: Scale) => SourceSpec
 }
 
+/** Blade Oil: +1 to one weapon stat, each at most once per weapon. */
+export type OilKind = 'attack' | 'armor' | 'speed'
+
+/** Forge edge: one per weapon, lost when the weapon is replaced. */
+export interface EdgeDef {
+  readonly id: string
+  readonly name: string
+  readonly text: string
+  readonly effect: () => SourceSpec
+}
+
+/** Bonus that switches on while every part (item, weapon or edge id) is equipped. */
+export interface SetDef {
+  readonly id: string
+  readonly name: string
+  readonly parts: readonly string[]
+  readonly text: string
+  readonly stats?: ItemStats
+  readonly effect?: () => SourceSpec
+}
+
 export interface CreatureDef {
   readonly id: string
   readonly name: string
@@ -48,4 +69,8 @@ export interface EnemyDef {
 
 export interface BossDef extends CreatureDef {
   readonly week: 1 | 2 | 3
+  /** A second form fought right after this one dies (Leshen → Woodland Abomination); the hero is fully healed between. */
+  readonly next?: string
+  /** Only reachable as another boss's `next`, never drawn for a week. */
+  readonly hidden?: boolean
 }

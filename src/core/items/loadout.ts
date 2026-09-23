@@ -1,5 +1,5 @@
 import type { BaseStats, Combatant, Source } from '../combat/types'
-import { TIER_MULTIPLIER, type CreatureDef, type ItemDef, type Tier } from './types'
+import { TIER_MULTIPLIER, type CreatureDef, type EdgeDef, type ItemDef, type ItemStats, type OilKind, type SetDef, type Tier } from './types'
 
 export const HERO_BASE_HEALTH = 10
 
@@ -15,6 +15,10 @@ export interface Loadout {
   readonly hp?: number
   readonly gold?: number
   readonly baseHealth?: number
+  readonly oils?: readonly OilKind[]
+  readonly edge?: EdgeDef | null
+  /** Set definitions to check; the complete ones apply. */
+  readonly sets?: readonly SetDef[]
 }
 
 const scaleOf = (tier: Tier = 'normal') => (n: number) => n * TIER_MULTIPLIER[tier]
@@ -30,28 +34,42 @@ export const toSource = ({ item, tier }: Equipped, slot: number): Source => ({
   ...(item.effect?.(scaleOf(tier)) ?? {}),
 })
 
-const addStats = (base: BaseStats, { item, tier }: Equipped): BaseStats => {
-  const x = scaleOf(tier)
-  const s = item.stats
-  return {
-    maxHp: base.maxHp + x(s.health ?? 0),
-    attack: base.attack + x(s.attack ?? 0),
-    armor: base.armor + x(s.armor ?? 0),
-    speed: base.speed + x(s.speed ?? 0),
-  }
+const addItemStats = (base: BaseStats, s: ItemStats, x: (n: number) => number = (n) => n): BaseStats => ({
+  maxHp: base.maxHp + x(s.health ?? 0),
+  attack: base.attack + x(s.attack ?? 0),
+  armor: base.armor + x(s.armor ?? 0),
+  speed: base.speed + x(s.speed ?? 0),
+})
+
+const equippedIds = (loadout: Loadout): ReadonlySet<string> =>
+  new Set([loadout.weapon?.item.id, ...loadout.items.map((e) => e?.item.id), loadout.edge?.id].filter((id): id is string => id !== undefined))
+
+/** Sets whose every part is currently equipped. */
+export const activeSets = (loadout: Loadout, sets: readonly SetDef[]): readonly SetDef[] => {
+  const ids = equippedIds(loadout)
+  return sets.filter((set) => set.parts.every((part) => ids.has(part)))
 }
 
-/** Sums the hero's base stats from gear and orders sources weapon → items by slot. */
+const SOURCE_ORDER: Record<Source['kind'], number> = { trait: 0, weapon: 1, edge: 2, item: 3, set: 4 }
+
+const OIL_STATS: Record<OilKind, ItemStats> = { attack: { attack: 1 }, armor: { armor: 1 }, speed: { speed: 1 } }
+
+/** Sums base stats from gear, oils and sets; sources are ordered weapon → edge → items by slot → sets. */
 export const buildPlayer = (loadout: Loadout): Combatant => {
   const gear = [loadout.weapon, ...loadout.items].filter((g): g is Equipped => g !== null)
+  const sets = activeSets(loadout, loadout.sets ?? [])
   const start: BaseStats = { maxHp: loadout.baseHealth ?? HERO_BASE_HEALTH, attack: 0, armor: 0, speed: 0 }
-  const stats = gear.reduce(addStats, start)
+  const withGear = gear.reduce((acc, g) => addItemStats(acc, g.item.stats, scaleOf(g.tier)), start)
+  const withOils = (loadout.oils ?? []).reduce((acc, oil) => addItemStats(acc, OIL_STATS[oil]), withGear)
+  const stats = sets.reduce((acc, set) => addItemStats(acc, set.stats ?? {}), withOils)
+  const edge: Source[] = loadout.edge ? [{ id: `edge:${loadout.edge.id}`, name: loadout.edge.name, kind: 'edge', text: loadout.edge.text, ...loadout.edge.effect() }] : []
+  const setSources: Source[] = sets.map((set) => ({ id: `set:${set.id}`, name: set.name, kind: 'set', text: set.text, ...(set.effect?.() ?? {}) }))
   return {
     name: 'Hero',
     stats: { ...stats, maxHp: Math.max(1, stats.maxHp) },
     hp: loadout.hp,
     gold: loadout.gold ?? 0,
-    sources: gear.map((g, slot) => toSource(g, slot)),
+    sources: [...gear.map((g, slot) => toSource(g, slot)), ...edge, ...setSources].sort((a, b) => SOURCE_ORDER[a.kind] - SOURCE_ORDER[b.kind]),
   }
 }
 
@@ -60,3 +78,17 @@ export const creatureCombatant = (def: CreatureDef): Combatant => ({
   stats: def.stats,
   sources: def.trait ? [{ id: def.id, name: def.name, kind: 'trait', text: def.text, ...def.trait }] : [],
 })
+
+export interface SetProgress {
+  readonly set: SetDef
+  readonly owned: number
+  readonly total: number
+}
+
+/** Sets that include `partId`, with how many of their parts are equipped. */
+export const setProgress = (loadout: Loadout, sets: readonly SetDef[], partId: string): readonly SetProgress[] => {
+  const ids = equippedIds(loadout)
+  return sets
+    .filter((set) => set.parts.includes(partId))
+    .map((set) => ({ set, owned: set.parts.filter((p) => ids.has(p)).length, total: set.parts.length }))
+}

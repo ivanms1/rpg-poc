@@ -1,4 +1,5 @@
 import type { Tier } from '../../core/items/types'
+import { EDGES } from '../../data/edges'
 import { ITEMS } from '../../data/items'
 import { WEAPONS } from '../../data/weapons'
 
@@ -9,6 +10,7 @@ export interface SlotChoice {
 
 export interface LoadoutChoice {
   readonly weaponId: string
+  readonly edgeId: string
   readonly slots: readonly SlotChoice[]
   readonly slotCount: 4 | 6 | 8
   readonly hp: number
@@ -44,6 +46,17 @@ export function LoadoutForm({ value, onChange }: Props) {
           {WEAPONS.map((w) => (
             <option key={w.id} value={w.id}>
               {w.name} ({w.rarity})
+            </option>
+          ))}
+        </select>
+      </label>
+      <label className="arena-field">
+        Forge edge
+        <select value={value.edgeId} onChange={(e) => onChange({ ...value, edgeId: e.target.value })}>
+          <option value="">— none —</option>
+          {EDGES.map((edge) => (
+            <option key={edge.id} value={edge.id}>
+              {edge.name}
             </option>
           ))}
         </select>

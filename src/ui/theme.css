@@ -215,6 +215,15 @@ body,
   border-color: var(--attack);
 }
 
+.slot.is-drag-over {
+  border-color: var(--speed);
+  background: #33202a;
+}
+
+.slot[draggable='true'] {
+  cursor: grab;
+}
+
 .slot-locked {
   opacity: 0.25;
   border-style: dashed;
@@ -253,6 +262,12 @@ body,
 
 .tooltip .item-effect {
   margin-bottom: 4px;
+}
+
+.tooltip-extra {
+  margin-bottom: 3px;
+  line-height: 1.3;
+  color: var(--speed);
 }
 
 .tooltip-hint {

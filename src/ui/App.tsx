@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useReducer, useState } from 'react'
+import { setProgress, type Equipped } from '../core/items/loadout'
 import { heroCombatant } from '../core/run/hero'
 import { createRun, runReducer } from '../core/run/reducer'
 import type { RunAction } from '../core/run/types'
@@ -43,7 +44,20 @@ export function App() {
   const [state, dispatch] = useReducer(reducer, undefined, () => createRun(initialSeed(), CONTENT))
   const { hero, screen, week, step } = state
   const time = timeOfWeek(step)
-  const stats = useMemo(() => heroCombatant(hero).stats, [hero])
+  const stats = useMemo(() => heroCombatant(hero, CONTENT.sets).stats, [hero])
+  const describe = useCallback(
+    (equipped: Equipped, isWeapon: boolean): string[] => {
+      const loadout = { weapon: hero.weapon, items: hero.items, edge: hero.edge }
+      const sets = setProgress(loadout, CONTENT.sets, equipped.item.id).map(
+        ({ set, owned, total }) => `${owned === total ? '✓ ' : ''}${set.name} (${owned}/${total}): ${set.text}`,
+      )
+      if (!isWeapon) return sets
+      const edge = hero.edge ? [`Edge — ${hero.edge.name}: ${hero.edge.text}`] : []
+      const oils = hero.oils.length > 0 ? [`Oils: ${hero.oils.map((o) => `+1 ${o}`).join(', ')}`] : []
+      return [...edge, ...oils, ...sets]
+    },
+    [hero],
+  )
   const boss = CONTENT.bosses.find((b) => b.id === state.bosses[week - 1])
 
   const act = useCallback((action: RunAction) => dispatch(action), [])
@@ -92,7 +106,14 @@ export function App() {
         <div className="stage" style={{ transform: `scale(${scale})` }} data-testid="stage">
           <aside className="sidebar">
             <StatPanel stats={{ ...stats, health: hero.hp, maxHealth: stats.maxHp, gold: hero.gold }} />
-            <Inventory weapon={hero.weapon} items={hero.items} total={MAX_SLOTS} onDiscard={(slot) => act({ type: 'discard', slot })} />
+            <Inventory
+              weapon={hero.weapon}
+              items={hero.items}
+              total={MAX_SLOTS}
+              onDiscard={(slot) => act({ type: 'discard', slot })}
+              onReorder={(from, to) => act({ type: 'reorder', from, to })}
+              describe={describe}
+            />
           </aside>
           <header className="panel topbar">
             <span className="week-label">Week {week}</span>

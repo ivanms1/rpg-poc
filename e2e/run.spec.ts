@@ -36,6 +36,16 @@ test.describe('run loop', () => {
     await expect(page.getByLabel('Empty slot')).toHaveCount(4)
   })
 
+  test('dragging an item to another slot reorders it', async ({ page }) => {
+    for (const key of CHEST_PATH) await page.keyboard.press(key)
+    await page.keyboard.press('1')
+    const slots = page.locator('.slot-grid .slot')
+    const label = await slots.nth(0).getAttribute('aria-label')
+    await slots.nth(0).dragTo(slots.nth(2))
+    await expect(slots.nth(0)).toHaveAttribute('aria-label', 'Empty slot')
+    await expect(slots.nth(2)).toHaveAttribute('aria-label', label!)
+  })
+
   test('Tab previews the boss, who can be fought early', async ({ page }) => {
     await page.keyboard.press('Tab')
     const preview = page.getByRole('dialog', { name: 'Boss preview' })
