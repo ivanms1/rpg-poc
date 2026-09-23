@@ -1,0 +1,69 @@
+
+Items that have a similar name will provide a set bonus if the player has at least one of each item from a set. The following itemsets require items that can only be found in Swampland or Kingmaker runs that use Swampland bundles.
+ | Itemset
+ | Items
+ | Effect
+ | [Crystal Mirror.png] Crystal Mirror
+ | [Marble Mirror.png] Marble Mirror
+[Sinful Mirror.png] Sinful Mirror
+ | Currently disabled Whenever you gain a status effect, give it to the enemy as well
+ | [Highborn.png] Highborn
+ | Any 3 rings
+ | Ring items trigger twice
+ | [Basilisk's Gaze.png] Basilisk's Gaze
+ | [Basilisk Fang.png] Basilisk Fang
+[Basilisk Scale.png] Basilisk Scale
+ | Battle Start: Your opponent is stunned [Icon stun.png] for 2 turns
+ | [Champion's Greaves.png] Champion's Greaves
+ | [Champion's Armor.png] Champion's Armor
+[Champion's Blade.png] Champion's Blade
+ | Gain 6 speed [Icon speed.png]
+ | [Deadly Toxin.png] Deadly Toxin
+ | [Nerve Poison.png] Nerve Poison
+[Viper Extract.png] Viper Extract
+ | The first time the enemy gains poison [Icon poison.png]give the enemy 5 acid [Icon acid.png]
+ | [Glasses of the Hero.png] Glasses of the Hero
+ | [Tome of the Hero.png] Tome of the Hero
+[Hero's Crossguard.png] Hero's Crossguard
+ | On Hit: Reduce countdowns by 1.
+ | [Holy Crucifix.png] Holy Crucifix
+ | [Holy Shield.png] Holy Shield
+[Holy Tome.png] Holy Tome
+ | Negates negative base stats
+ | [Ironstone Crest.png] Ironstone Crest
+ | [Forge Hammer.png] Forge Hammer
+[Forge Gauntlet.png] Forge Gauntlet
+ | Turn Start: Steal 2 armor [Icon armor.png] from the enemy
+ | [Ironstone Fang.png] Ironstone Fang
+ | [Crimson Fang.png] Crimson Fang
+[Venomous Fang.png] Venomous Fang
+ | First Turn: Gain 3 armor [Icon armor.png] on hit
+ | [Liquid Metal.png] Liquid Metal
+ | [Rusty Sword.png] Rusty Sword
+[Rusted Plate.png] Rusted Plate
+ | Battle Start: Give the enemy 20 armor [Icon armor.png]
+ | [Marble Anvil.png] Marble Anvil
+ | [Marble Sword.png] Marble Sword
+[Serpent Lyre.png] Serpent Lyre
+ | Battle Start: Trigger Exposed
+ | [Marshlight Aria.png] Marshlight Aria
+ | [Marshlight Lantern.png] Marshlight Lantern
+[Riverflow Violin.png] Riverflow Violin
+ | Exposed: Trigger Symphony 3 times
+ | [Seafood Hotpot.png] Seafood Hotpot
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+[Silverscale Fish.png] Silverscale Fish
+[Sour Lemon.png] Sour Lemon
+ | Battle Start: Gain 2 armor [Icon armor.png] for each speed [Icon speed.png] you have
+ | [Twilight Crest.png] Twilight Crest
+ | [Moonlight Crest.png] Moonlight Crest
+[Sunlight Crest.png] Sunlight Crest
+ | As long as you've below 50% health [Icon health.png] all healing is doubled
+ | [Vampire Cloak.png] Vampire Cloak
+ | [Sanguine Morphosis.png] Sanguine Morphosis
+[Vampiric Stasis.png] Vampiric Stasis
+ | Turn Start: If you are stunned [Icon stun.png], double healing this turn
+ | [Weaver Medallion.png] Weaver Medallion
+ | [Weaver Armor.png] Weaver Armor
+[Weaver Shield.png] Weaver Shield
+ | Gain 5 health [Icon health.png]

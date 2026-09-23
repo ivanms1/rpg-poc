@@ -1,0 +1,22 @@
+
+ | 
+ | Official Community Wiki for He is Coming
+ | 
+[Hooded Horse Publishing]Hooded Horse Publishing
+## About this site
+He is Coming is a roguelite RPG auto battler. Deep in the forgotten corners of the world, a dark force stirs – the Demon King rises once more. Sharpen your wits, seek out powerful artifacts, and stand firm in the face of the apocalypse.
+This wiki's goal is to become the community's repository of knowledge, free and editable by all and useful for newcomers, experienced players, and modders alike.
+If you want to help, log in here and find our chat room on Discord!
+- Steam Page
+- Developer's Discord
+## Important Pages
+Getting Started
+ Beginner's Guide •  Cauldron •  Forge Upgrades •  Tags
+Woodland
+ Items •  Enemies •  Challenges •  Map •  Itemsets
+Swampland
+ Items •  Enemies •  Challenges •  Map •  Itemsets
+Kingmaker
+ Map •  Itemsets •  Strategy Guide
+## Want to help improve the wiki?
+Anyone can contribute to the wiki. If you want to become a contributor please register and check out the work needed page. If you spot anything in need of improvement, don't hesitate to make an edit. If you plan on making any major changes it is recommended you read the style guidelines first.

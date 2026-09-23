@@ -1,0 +1,615 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+This page lists items that grant a **Base Attack** value. Base Attack is the flat attack shown in an item's stats; temporary buffs or conditional gains are not part of base stats.
+Related effects that set, scale, or convert your attack include:
+Prime Form — double attack while health is full
+Battle Axe — while the enemy has armor, double your attack
+Granite Hammer — on hit: convert armor to attack
+Wave Breaker — scales with negative base attack
+Rusty Sword — First Turn: Give acid equal to your attack on hit
+Contents
+1 Standard items
+1.1 Positive Base Attack
+1.2 Negative Base Attack
+2 Weapons
+Standard items
+Positive Base Attack
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Lightning Bottle
+ | Rare 
+ | 1
+ 2
+ | Battle Start: Stun yourself for 1 turn
+ | Swampland 
+ | Poisonous Mushroom
+ | Rare 
+ | 2
+ | Turn Start: Gain 1 poison
+ | Swampland 
+ | Forge Gauntlet
+ | Rare 
+ | 1
+ | Battle Start: Give the enemy 5 armor
+ | Swampland 
+ | Elderwood Necklace
+ | Heroic 
+ | 1
+ 1
+ 1
+ | -
+ | Woodland 
+ | Ruby Crown
+ | Common 
+ | 1 / 2 / 4
+ -1 / -2 / -4
+ | -
+ | Woodland 
+ | Lightning Elixir
+ | Rare 
+ |  3
+ 4
+ | Battle Start: Stun yourself for 2 turns
+ | Swampland
+ | Helmet of Envy
+ | Cursed 
+ | 3
+ | Battle Start: Double the enemy's attack
+ | Swampland
+Negative Base Attack
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Blackbriar Armor
+ | Heroic 
+ | -1
+ | Whenever you take damage, gain 2 thorns
+ | Woodland 
+ | Emerald Crown
+ | Common 
+ | -1 / -2 / -4
+ 8 / 16 / 32
+ | -
+ | Woodland 
+ | Holy Tome
+ | Common 
+ | -1 / -2 / -4
+ | Countdown 6: Gain 3 attack — at Gold: 6 , at Diamond: 12
+ | Swampland 
+ | Holy Shield
+ | Common 
+ | -1 / -2 / -4
+ 6 / 12 / 24
+ -1 / -2 / -4
+ | -
+ | Swampland 
+ | Thunder Cloud
+ | Heroic 
+ | -1
+ | Wounded: Stun the enemy for 3 turns
+ | Swampland 
+ | Weaver Armor
+ | Heroic 
+ | -2
+ | Battle Start: If you have 0 base armor, gain armor equal to current health
+ | Swampland 
+Cauldron 
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Cherry Blade
+ | Grilling Skewer
+ | Cherry Bomb
+ | 3
+ | Battle Start & Exposed: Deal 4 damage
+ | Deathcap Bow
+ | Grilling Skewer
+ | Poisonous Mushroom
+ | 3
+ | Battle Start: Gain 3 poison. Turn Start: If you have poison. Gain 1 additional strike
+ | Ham Bat
+ | Redwood Roast
+ | Grilling Skewer
+ |  3
+ 5
+ | Battle Start: Gain 2 additional strike
+ | Silverscale Swordfish
+ | Grilling Skewer
+ | Silverscale Fish
+ | 2
+ | Battle Start: Gain 1 additional strike. First Turn: Give the enemy 1 riptide on hit
+ | Lemontree Branch
+ | Grilling Skewer
+ | Sour Lemon
+ |  2
+ 4
+ | On Hit: Spend 2 speed and gain 1 additional strike on your next turn
+ | Blackbriar Bow
+ | Grilling Skewer
+ | Spiny Chestnut
+ | 4
+ | Can't Strike Turn Start: Gain thorns equal to your attack
+ | Rocksalt Sword
+ | Grilling Skewer
+ | Stone Steak
+ |  2
+ 6
+ | Turn Start: If your health is full, gain 1 additional strike
+ | Broken Winebottle
+ | Grilling Skewer
+ | Vampiric Wine
+ | 2
+ | Wounded: On your next turn, Keep striking the enemy until they're wounded
+ | Honey-glazed Shroom
+ | Honeycomb
+ | Poisonous Mushroom
+ | 4
+ | Turn Start: Give the enemy 2 poison
+ | Moldy Meat
+ | Poisonous Mushroom
+ | Redwood Roast
+ |  5
+ -5
+ | -
+ | Marble Mushroom
+ | Stone Steak
+ | Poisonous Mushroom
+ |  4
+ 6
+ | Battle Start: Gain 3 poison
+ | Poisonous Lemon
+ | Poisonous Mushroom
+ | Sour Lemon
+ |  3
+ 4
+ | Battle Start: Gain 1 acid and 5 poison
+ | Melonvine Whip
+ | Grilling Skewer
+ | Clearspring Watermelon
+ | 3
+ | On Hit: Decrease 1 random status effect
+ | Bitter Melon
+ | Clearspring Watermelon
+ | Poisonous Mushroom
+ | 3
+ | Turn Start: Convert 1 stack of another status effect to 1 poison
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Ironstone Greatsword
+ | Common 
+ | 4
+ -2
+ | -
+ | Woodland 
+ | Razorthorn Spear
+ | Common 
+ | 1
+ | On Hit: Gain 2 thorns
+ | Woodland 
+ | Redwood Rod
+ | Common 
+ | 2
+ 4
+ | -
+ | Woodland 
+ | Spearshield Lance
+ | Common 
+ | 1
+ 6
+ | -
+ | Woodland 
+ | Woodcutter's Axe
+ | Common 
+ | 1
+ | Gain 2 attack for each empty equipment slot
+ | Woodland 
+ | Boom Stick
+ | Common 
+ | 2
+ | On Hit: Deal 1 damage
+ | Woodland 
+ | Heart Drinker
+ | Common 
+ | 1
+ | On Hit: Restore 1 health
+ | Woodland 
+ | Sword of the Hero
+ | Common 
+ | 3
+ | -
+ | Woodland 
+ | Hidden Dagger
+ | Common 
+ | 2
+ | Gets stronger for every new hidden dagger you find
+ | Woodland 
+ | Brittlebark Bow
+ | Common 
+ | 4
+ | After 3 strikes: Lose 2 attack
+ | Woodland 
+ | Elderwood Staff
+ | Common 
+ | 1
+ 1
+ 1
+ | -
+ | Woodland 
+ | Featherweight Blade
+ | Common 
+ | 2
+ 2
+ | -
+ | Woodland 
+ | Blackbriar Blade
+ | Rare 
+ | 2
+ | Whenever you would gain thorns, gain 1 attack instead
+ | Woodland 
+ | Bejeweled Blade
+ | Rare 
+ | 1
+ | Gain 2 attack for each equipped jewelry item
+ | Woodland 
+ | Ironstone Bow
+ | Rare 
+ | 6
+ 1
+ | On Hit: Lose 1 speed. If your speed is 0 or less, only strike every other turn
+ | Woodland 
+ | Lifeblood Spear
+ | Rare 
+ | 1
+ | Whenever you restore 3 or more health, gain 1 attack
+ | Woodland 
+ | Explosive Sword
+ | Rare 
+ | 3
+ | Whenever a bomb deals 5 or more non-weapon damage, gain 1 additional strike
+ | Woodland 
+ | Icicle Spear
+ | Rare 
+ | 3
+ | Exposed: Give the enemy 2 freeze for each equipped water item
+ | Woodland 
+ | Bloodmoon Dagger
+ | Rare 
+ | 2
+ | Wounded: Gain 5 attack and take 2 damage
+ | Woodland 
+ | Bloodmoon Sickle
+ | Rare 
+ | 5
+ | On Hit: Take 1 damage
+ | Woodland 
+ | Frostbite Dagger
+ | Rare 
+ | 2
+ | First turn: Give the enemy freeze equal to your attack on hit
+ | Woodland 
+ | Swiftstrike Bow
+ | Rare 
+ | 2
+ | Whenever you gain an additional strike, gain twice as many
+ | Woodland 
+ | Swiftstrike Rapier
+ | Rare 
+ | 2
+ | Battle Start: If you have more speed than the enemy, gain 3 additional strikes
+ | Woodland 
+ | Battle Axe
+ | Rare 
+ | 2
+ | While the enemy has armor double your attack
+ | Woodland 
+ | Gemstone Scepter
+ | Heroic 
+ | 2
+ | Gains On Hit effects from emerald, ruby, sapphire, and citrine items
+ | Woodland 
+ | Granite Hammer
+ | Heroic 
+ | 2
+ | On Hit: Convert 1 armor to 2 attack
+ | Woodland 
+ | Granite Lance
+ | Heroic 
+ | 2
+ 1
+ | Your base armor is doubled
+ | Woodland 
+ | Stoneslab Sword
+ | Heroic 
+ | 2
+ | On Hit: Gain 2 armor
+ | Woodland 
+ | Frozen Iceblade
+ | Heroic 
+ | 6
+ | Battle start: Gain 3 freeze
+ | Woodland 
+ | Royal Scepter
+ | Heroic 
+ | 0
+ | Attack is always equal to gold. You cannot have more than 10 gold
+ | Woodland 
+ | Grindstone Club
+ | Heroic 
+ | 1
+ | The next weapon you equip gains 2 attack
+ | Woodland 
+ | Twin Blade
+ | Heroic 
+ | 1
+ | Strike twice
+ | Woodland 
+ | Evergrowth Spear
+ | Heroic 
+ | 3
+ | Every other turn, gain 1 attack and restore 1 health
+ | Woodland 
+ | Lifesteal Scythe
+ | Heroic 
+ | 1
+ | On Hit: If the enemy doesn't have any armor, restore health equal to your attack
+ | Woodland 
+ | Royal Crownblade
+ | Heroic 
+ | 4
+ | On Hit: Gain 1 gold
+ | Woodland 
+ | Brittlebark Club
+ | Heroic 
+ | 7
+ | Exposed & Wounded: Lose 2 attack
+ | Woodland 
+ | Bearclaw Blade
+ | Mythic 
+ | 5
+ | Attack is always equal to missing health
+ | Woodland
+ | Mountain Cleaver
+ | Mythic 
+ | 2
+ | Attack always is equal to base armor
+ | Woodland
+ | Tempest Blade
+ | Mythic 
+ | 2
+ | Attack always is equal to speed
+ | Woodland
+ | Champion's Blade
+ | Common 
+ | 6
+ | -
+ | Swampland 
+ | Forge Hammer
+ | Common 
+ | 4
+ | On Hit: Give the enemy 2 armor
+ | Swampland 
+ | Fungal Rapier
+ | Common 
+ | 3
+ | Battle Start: Gain 1 poison
+ | Swampland 
+ | Gale Staff
+ | Common 
+ | 2
+ 6
+ | On Hit: Lose 1 speed
+ | Swampland 
+ | Grilling Skewer
+ | Common 
+ | 1
+ | Battle Start: Gain 1 additional strike
+ | Swampland 
+ | Ironstone Spear
+ | Common 
+ | 2
+ | While you have armor, temporarily gain 2 attack
+ | Swampland 
+ | Knight's Blade
+ | Common 
+ | 4
+ | Upgrades after you defeat the next boss
+ | Swampland 
+ | Liferoot Staff
+ | Common 
+ | 2
+ | Wounded: Gain 3 regeneration
+ | Swampland 
+ | Marble Sword
+ | Common 
+ | 1
+ 2
+ | Exposed: Gain 3 attack
+ | Swampland 
+ | Pacifist Staff
+ | Common 
+ | 0
+ | On Hit: Gain 1 armor and restore 1 health
+ | Swampland 
+ | Silverscale Dagger
+ | Common 
+ | 2
+ | Battle Start: Give the enemy 1 riptide
+ | Swampland 
+ | Slime Sword
+ | Common 
+ | 2
+ | Battle Start: Give yourself and the enemy 3 acid
+ | Swampland 
+ | Squire's Blade
+ | Common 
+ | 2
+ | Upgrades after you defeat the next boss
+ | Swampland 
+ | Stormcloud Spear
+ | Common 
+ | 2
+ | Every 5 strikes, stun the enemy for 2 turns
+ | Swampland 
+ | Arcane Wand
+ | Rare 
+ | 0
+ | Can't attack. Turn Start: Deal 2 damage. Increase the damage by 1 for each tome equipped
+ | Swampland 
+ | Basilisk Fang
+ | Rare 
+ | 3
+ | On Hit: Decrease your poison by 2 and give it to the enemy
+ | Swampland 
+ | Bubblegloop Staff
+ | Rare 
+ | 0
+ | Can't strike. Turn Start: Spend 1 speed to give the enemy 2 acid and 2 poison
+ | Swampland 
+ | Granite Axe
+ | Rare 
+ | 4
+ | On Hit: Lose 2 health and gain 4 armor
+ | Swampland 
+ | Liferoot Hammer
+ | Rare 
+ | 3
+ | On Hit: If your health is full, spend your regeneration to gain 3 times that amount of armor
+ | Swampland 
+ | Lightning Rod
+ | Rare 
+ | 2
+ | Turn Start: If you're stunned, gain 3 attack
+ | Swampland 
+ | Lightning Whip
+ | Rare 
+ | 3
+ | Turn Start: If the enemy is stunned, gain 1 additional strike
+ | Swampland 
+ | Ring Blades
+ | Rare 
+ | 1
+ | Battle Start: Steal 1 attack from the enemy
+ | Swampland 
+ | Rusty Sword
+ | Rare 
+ | 2
+ | First Turn: Give acid equal to your attack on hit
+ | Swampland 
+ | Sanguine Scepter
+ | Rare 
+ | 1
+ | Healing is doubled
+ | Swampland 
+ | Wave Breaker
+ | Rare 
+ | -2
+ | Can't strike. Battle Start: Give the enemy 2 riptide for each negative base attack you have
+ | Swampland 
+ | Bloodlord's Axe
+ | Heroic 
+ | 4
+ | Battle Start: The enemy loses 5 health and you restore 5 health
+ | Swampland 
+ | Chainmail Sword
+ | Heroic 
+ | 2
+ 2
+ | Exposed: Gain armor equal to base armor
+ | Swampland 
+ | King's Blade
+ | Heroic 
+ | 2
+ | Exposed and Wounded items triggers at battle start instead
+ | Swampland 
+ | Leather Whip
+ | Heroic 
+ | 4
+ 5
+ | Battle Start: Gain 5 max health
+ | Swampland 
+ | Melting Iceblade
+ | Heroic 
+ | 8
+ | On Hit: Lose 1 attack
+ | Swampland 
+ | Moonlight Cleaver
+ | Heroic 
+ | 3
+ | While you are below 50% health, you cannot gain status effects
+ | Swampland 
+ | Purelake Staff
+ | Heroic 
+ | 1
+ | Battle Start: Gain 2 purity. On Hit: Remove 1 purity
+ | Swampland 
+ | Riverflow Rapier
+ | Heroic 
+ | 3
+ | The first time you gain a new status effect, gain 1 additional strike as well
+ | Swampland 
+ | Serpent Dagger
+ | Heroic 
+ | 2
+ | Every 3 strikes, give the enemy 4 poison
+ | Swampland 
+ | Silverscale Trident
+ | Heroic 
+ | 0
+ | On Hit: Give the enemy 1 riptide
+ | Swampland 
+ | Thunderbound Sabre
+ | Heroic 
+ | 6
+ | Battle start: Stun yourself for 2 turns
+ | Swampland 
+ | Ancient Warhammer
+ | Mythic 
+ | 5
+ | On Hit: Remove all of the enemy's armor
+ | Swampland
+ | Dashmaster's Dagger
+ | Mythic 
+ | 2
+ | Battle Start: Gain additional strikes equal to speed
+ | Swampland
+ | Lakebed Sword
+ | Mythic 
+ | 5
+ | Gain double health and attack from purity
+ | Swampland
+ | Cleaver of Wrath
+ | Cursed 
+ | 10
+ | Your max health is always 1
+ | Swampland
+ | Scepter of Greed
+ | Cursed 
+ | 6
+ | You cannot gain gold
+ | Swampland
+ | Sword of Pride
+ | Cursed 
+ |  3
+ 3
+ 3
+ | Battle Start: If the enemy has more attack, armor or speed than you, take 3 damage
+ | Swampland

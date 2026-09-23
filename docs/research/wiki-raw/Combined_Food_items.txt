@@ -1,0 +1,569 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+(Redirected from Combined Food items)
+A visual summary of Cauldron ingredient combinations is available on the dedicated subpage: /CombinationsOverview.
+Combined Foods
+Food items can be combined at a Cauldron, turning them into a single new item with improved, and sometimes completely new, effects. 
+ | Source Item 1
+ | Source Item 2
+ | Outcome Item
+ | Effect
+ | Buff
+ | Cherry Bomb
+ | Clearspring Watermelon
+ | Melon Bomb
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1. Whenever a status effect is decreased, deal 1 damage to the enemy
+ | -
+ | Cherry Bomb
+ | Grilling Skewer
+ | Cherry Blade
+ | Battle Start & Exposed: Deal 4 damage
+ | 3
+ | Cherry Bomb
+ | Honeycomb
+ | Sugar Bomb
+ | Turn Start: Deal 1 damage 3 times
+ | -
+ | Cherry Bomb
+ | Poisonous Mushroom
+ | Toxic Cherry
+ | Turn Start: Gain 1 poison and deal 1 damage to the enemy
+ | 3
+ | Cherry Bomb
+ | Redwood Roast
+ | Explosive Roast
+ | Battle Start: Deal 1 damage 4 times
+ | 5
+ | Cherry Bomb
+ | Silverscale Fish
+ | Explosive Fish
+ | Battle Start: Give the enemy 1 riptide and deal 2 damage to them for each riptide they have
+ | -
+ | Cherry Bomb
+ | Sour Lemon
+ | Combustible Lemon
+ | Turn Start: Spend 1 speed to deal 2 damage
+ | 3
+ | Cherry Bomb
+ | Spiny Chestnut
+ | Trail Mix
+ | Battle Start: Deal 1 damage and gain 1 thorns. Repeat 3 times.
+ | -
+ | Cherry Bomb
+ | Stone Steak
+ | Granite Cherry
+ | If your health is full, gain 2 armor and deal 2 damage. Repeat 3 times
+ | -
+ | Cherry Bomb
+ | Vampiric Wine
+ | Cherry Cocktail
+ | Battle Start & Wounded: Deal 3 damage and restore 3 health
+ | -
+ | Clearspring Watermelon
+ | Cherry Bomb
+ | Melon Bomb
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1. Whenever a status effect is decreased, deal 1 damage to the enemy
+ | -
+ | Clearspring Watermelon
+ | Grilling Skewer
+ | Melonvine Whip
+ | On Hit: Decrease 1 random status effect
+ | 3
+ | Clearspring Watermelon
+ | Honeycomb
+ | Honeydew Melon
+ | Battle Start: Give all your status effects to the enemy
+ | -
+ | Clearspring Watermelon
+ | Poisonous Mushroom
+ | Bitter Melon
+ | Turn Start: Convert 1 stack of another status effect to 1 poison
+ | 3
+ | Clearspring Watermelon
+ | Redwood Roast
+ | Boiled Ham
+ | Battle Start, Exposed & Wounded: Decrease all your status effects by 1
+ | 5
+ | Clearspring Watermelon
+ | Silverscale Fish
+ | Underwater Watermelon
+ | Battle Start, Exposed & Wounded: Decrease 1 random status effect and give the enemy 1 riptide
+ | -
+ | Clearspring Watermelon
+ | Sour Lemon
+ | Melon Lemonade
+ | Battle Start, Exposed & Wounded: Remove all Acid
+ | 3
+ | Clearspring Watermelon
+ | Spiny Chestnut
+ | Horned Melon
+ | Battle Start, Exposed & Wounded: Decrease 2 random status effects by 1 and gain that much thorns
+ | -
+ | Clearspring Watermelon
+ | Stone Steak
+ | Mineral Water
+ | Battle Start & Exposed: If your health is full, decrease a random status effect by 2 and gain 5 armor
+ | -
+ | Clearspring Watermelon
+ | Vampiric Wine
+ | Melon Wine
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1 and restore 3 health
+ | -
+ | Grilling Skewer
+ | Cherry Bomb
+ | Cherry Blade
+ | Battle Start & Exposed: Deal 4 damage
+ | 3
+ | Grilling Skewer
+ | Clearspring Watermelon
+ | Melonvine Whip
+ | On Hit: Decrease 1 random status effect
+ | 3
+ | Grilling Skewer
+ | Honeycomb
+ | Bee Stinger
+ | First Turn: Give the enemy 4 poison, 3 Acid, and 2 stun on hit
+ | 3
+ | Grilling Skewer
+ | Poisonous Mushroom
+ | Deathcap Bow
+ | Battle Start: Gain 3 poison. Turn Start: If you have poison. Gain 1 additional strike
+ | 3
+ | Grilling Skewer
+ | Redwood Roast
+ | Ham Bat
+ | Battle Start: Gain 2 additional strike
+ | 3 5
+ | Grilling Skewer
+ | Silverscale Fish
+ | Silverscale Swordfish
+ | Battle Start: Gain 1 additional strike. First Turn: Give the enemy 1 riptide on hit
+ | 2
+ | Grilling Skewer
+ | Sour Lemon
+ | Lemontree Branch
+ | On Hit: Spend 2 speed and gain 1 additional strike on your next turn
+ | 2 4
+ | Grilling Skewer
+ | Spiny Chestnut
+ | Blackbriar Bow
+ | Can't Strike Turn Start: Gain thorns equal to your attack
+ | 4
+ | Grilling Skewer
+ | Stone Steak
+ | Rocksalt Sword
+ | Turn Start: If your health is full, gain 1 additional strike
+ | 2 6
+ | Grilling Skewer
+ | Vampiric Wine
+ | Broken Winebottle
+ | Wounded: On your next turn, Keep striking the enemy until they're wounded
+ | 2
+ | Honeycomb
+ | Cherry Bomb
+ | Sugar Bomb
+ | Turn Start: Deal 1 damage 3 times
+ | -
+ | Honeycomb
+ | Clearspring Watermelon
+ | Honeydew Melon
+ | Battle Start: Give all your status effects to the enemy
+ | -
+ | Honeycomb
+ | Grilling Skewer
+ | Bee Stinger
+ | First Turn: Give the enemy 4 poison, 3 Acid, and 2 stun on hit
+ | 3
+ | Honeycomb
+ | Poisonous Mushroom
+ | Honey-glazed Shroom
+ | Turn Start: Give the enemy 2 poison
+ | 4
+ | Honeycomb
+ | Redwood Roast
+ | Honey Ham
+ | Double your max health
+ | -
+ | Honeycomb
+ | Silverscale Fish
+ | Honey Caviar
+ | Exposed: Give the enemy 10 riptide
+ | -
+ | Honeycomb
+ | Sour Lemon
+ | Lemon Syrup
+ | Battle Start: Double your speed
+ | 3
+ | Honeycomb
+ | Spiny Chestnut
+ | Candied Nuts
+ | Battle Start: Gain 3 thorns. Thorns deal double damage
+ | -
+ | Honeycomb
+ | Stone Steak
+ | Rock Candy
+ | Battle start: Gain 15 armor. If your health is full, gain an additional 15 armor
+ | -
+ | Honeycomb
+ | Vampiric Wine
+ | Sweet Wine
+ | Wounded: Restore 30 health
+ | -
+ | Poisonous Mushroom
+ | Cherry Bomb
+ | Toxic Cherry
+ | Turn Start: Gain 1 poison and deal 1 damage to the enemy
+ | 3
+ | Poisonous Mushroom
+ | Clearspring Watermelon
+ | Bitter Melon
+ | Turn Start: Convert 1 stack of another status effect to 1 poison
+ | 3
+ | Poisonous Mushroom
+ | Grilling Skewer
+ | Deathcap Bow
+ | Battle Start: Gain 3 poison. Turn Start: If you have poison. Gain 1 additional strike
+ | 3
+ | Poisonous Mushroom
+ | Honeycomb
+ | Honey-glazed Shroom
+ | Turn Start: Give the enemy 2 poison
+ | 4
+ | Poisonous Mushroom
+ | Redwood Roast
+ | Moldy Meat
+ | -
+ | 5 5
+ | Poisonous Mushroom
+ | Silverscale Fish
+ | Poisonous Pufferfish
+ | Battle Start: Gain 3 poison and give the enemy 2 riptide
+ | 3
+ | Poisonous Mushroom
+ | Sour Lemon
+ | Poisonous Lemon
+ | Battle Start: Gain 1 acid and 5 poison
+ | 3 4
+ | Poisonous Mushroom
+ | Spiny Chestnut
+ | Poisonous Durian
+ | Turn Start: Gain 1 poison and 1 thorns
+ | 3
+ | Poisonous Mushroom
+ | Stone Steak
+ | Marble Mushroom
+ | Battle Start: Gain 3 poison
+ | 4 6
+ | Poisonous Mushroom
+ | Vampiric Wine
+ | Mushroom Soup
+ | Turn Start: Gain 1 poison and 1 regeneration
+ | 2
+ | Redwood Roast
+ | Cherry Bomb
+ | Explosive Roast
+ | Battle Start: Deal 1 damage 4 times
+ | 5
+ | Redwood Roast
+ | Clearspring Watermelon
+ | Boiled Ham
+ | Battle Start, Exposed & Wounded: Decrease all your status effects by 1
+ | 5
+ | Redwood Roast
+ | Grilling Skewer
+ | Ham Bat
+ | Battle Start: Gain 2 additional strike
+ | 3 5
+ | Redwood Roast
+ | Honeycomb
+ | Honey Ham
+ | Double your max health
+ | -
+ | Redwood Roast
+ | Poisonous Mushroom
+ | Moldy Meat
+ | -
+ | 5 5
+ | Redwood Roast
+ | Silverscale Fish
+ | Shark Roast
+ | Exposed: Give the enemy 2 riptides
+ | 5
+ | Redwood Roast
+ | Sour Lemon
+ | Lemon Roast
+ | Battle Start: Gain 2 acid
+ | 5 5
+ | Redwood Roast
+ | Spiny Chestnut
+ | Roasted Chestnut
+ | Battle Start: Gain 4 thorns
+ | 5
+ | Redwood Roast
+ | Stone Steak
+ | Rock Roast
+ | -
+ | 6 6
+ | Redwood Roast
+ | Vampiric Wine
+ | Blood Sausage
+ | Wounded: Restore 1 health 5 times
+ | 5
+ | Silverscale Fish
+ | Cherry Bomb
+ | Explosive Fish
+ | Battle Start: Give the enemy 1 riptide and deal 2 damage to them for each riptide they have
+ | -
+ | Silverscale Fish
+ | Clearspring Watermelon
+ | Underwater Watermelon
+ | Battle Start, Exposed & Wounded: Decrease 1 random status effect and give the enemy 1 riptide
+ | -
+ | Silverscale Fish
+ | Grilling Skewer
+ | Silverscale Swordfish
+ | Battle Start: Gain 1 additional strike. First Turn: Give the enemy 1 riptide on hit
+ | 2
+ | Silverscale Fish
+ | Honeycomb
+ | Honey Caviar
+ | Exposed: Give the enemy 10 riptide
+ | -
+ | Silverscale Fish
+ | Poisonous Mushroom
+ | Poisonous Pufferfish
+ | Battle Start: Gain 3 poison and give the enemy 2 riptide
+ | 3
+ | Silverscale Fish
+ | Redwood Roast
+ | Shark Roast
+ | Exposed: Give the enemy 2 riptides
+ | 5
+ | Silverscale Fish
+ | Sour Lemon
+ | Lemon Shark
+ | Battle Start: Gain 1 Acid Exposed: Give the enemy riptide equal to your acid
+ | 3
+ | Silverscale Fish
+ | Spiny Chestnut
+ | Spiny Snapper
+ | Battle Start: Give the enemy 1 riptide. Whenever riptide triggers, gain 3 thorns
+ | -
+ | Silverscale Fish
+ | Stone Steak
+ | Marbled Stonefish
+ | Battle Start & Exposed: If your health is full, gain 5 armor and give the enemy 1 riptide
+ | -
+ | Silverscale Fish
+ | Vampiric Wine
+ | Deepsea Wine
+ | Wounded: Give the enemy 1 riptide. Whenever riptide triggers, restore 3 health
+ | -
+ | Sour Lemon
+ | Cherry Bomb
+ | Combustible Lemon
+ | Turn Start: Spend 1 speed to deal 2 damage
+ | 3
+ | Sour Lemon
+ | Clearspring Watermelon
+ | Melon Lemonade
+ | Battle Start, Exposed & Wounded: Remove all Acid
+ | 3
+ | Sour Lemon
+ | Grilling Skewer
+ | Lemontree Branch
+ | On Hit: Spend 2 speed and gain 1 additional strike on your next turn
+ | 2 4
+ | Sour Lemon
+ | Honeycomb
+ | Lemon Syrup
+ | Battle Start: Double your speed
+ | 3
+ | Sour Lemon
+ | Poisonous Mushroom
+ | Poisonous Lemon
+ | Battle Start: Gain 1 acid and 5 poison
+ | 3 4
+ | Sour Lemon
+ | Redwood Roast
+ | Lemon Roast
+ | Battle Start: Gain 2 acid
+ | 5 5
+ | Sour Lemon
+ | Silverscale Fish
+ | Lemon Shark
+ | Battle Start: Gain 1 Acid Exposed: Give the enemy riptide equal to your acid
+ | 3
+ | Sour Lemon
+ | Spiny Chestnut
+ | Spiny Kiwifruit
+ | Battle Start: Gain 3 acid and gain thorns equal to acid
+ | 3
+ | Sour Lemon
+ | Stone Steak
+ | Limestone Fruit
+ | Battle Start: Gain 8 armor. If your health is not full, gain 8 acid
+ | 3
+ | Sour Lemon
+ | Vampiric Wine
+ | Blood Orange
+ | Battle Start: Gain 3 acid. Wounded: Convert all your acid to regeneration.
+ | 4
+ | Spiny Chestnut
+ | Cherry Bomb
+ | Trail Mix
+ | Battle Start: Deal 1 damage and gain 1 thorns. Repeat 3 times.
+ | -
+ | Spiny Chestnut
+ | Clearspring Watermelon
+ | Horned Melon
+ | Battle Start, Exposed & Wounded: Decrease 2 random status effects by 1 and gain that much thorns
+ | -
+ | Spiny Chestnut
+ | Grilling Skewer
+ | Blackbriar Bow
+ | Can't Strike Turn Start: Gain thorns equal to your attack
+ | 4
+ | Spiny Chestnut
+ | Honeycomb
+ | Candied Nuts
+ | Battle Start: Gain 3 thorns. Thorns deal double damage
+ | -
+ | Spiny Chestnut
+ | Poisonous Mushroom
+ | Poisonous Durian
+ | Turn Start: Gain 1 poison and 1 thorns
+ | 3
+ | Spiny Chestnut
+ | Redwood Roast
+ | Roasted Chestnut
+ | Battle Start: Gain 4 thorns
+ | 5
+ | Spiny Chestnut
+ | Silverscale Fish
+ | Spiny Snapper
+ | Battle Start: Give the enemy 1 riptide. Whenever riptide triggers, gain 3 thorns
+ | -
+ | Spiny Chestnut
+ | Sour Lemon
+ | Spiny Kiwifruit
+ | Battle Start: Gain 3 acid and gain thorns equal to acid
+ | 3
+ | Spiny Chestnut
+ | Stone Steak
+ | Petrified Chestnut
+ | Battle Start: If your health is full, gain 6 thorns and 6 armor
+ | -
+ | Spiny Chestnut
+ | Vampiric Wine
+ | Spiked Wine
+ | Wounded: Restore 5 health and gain 5 thorns
+ | -
+ | Stone Steak
+ | Cherry Bomb
+ | Granite Cherry
+ | If your health is full, gain 2 armor and deal 2 damage. Repeat 3 times
+ | -
+ | Stone Steak
+ | Clearspring Watermelon
+ | Mineral Water
+ | Battle Start & Exposed: If your health is full, decrease a random status effect by 2 and gain 5 armor
+ | -
+ | Stone Steak
+ | Grilling Skewer
+ | Rocksalt Sword
+ | Turn Start: If your health is full, gain 1 additional strike
+ | 2 6
+ | Stone Steak
+ | Honeycomb
+ | Rock Candy
+ | Battle Start: Gain 15 armor. If your health is full, gain an additional 15 armor
+ | -
+ | Stone Steak
+ | Poisonous Mushroom
+ | Marble Mushroom
+ | Battle Start: Gain 3 poison
+ | 4 6
+ | Stone Steak
+ | Redwood Roast
+ | Rock Roast
+ | -
+ | 6 6
+ | Stone Steak
+ | Silverscale Fish
+ | Marbled Stonefish
+ | Battle Start & Exposed: If your health is full, gain 5 armor and give the enemy 1 riptide
+ | -
+ | Stone Steak
+ | Sour Lemon
+ | Limestone Fruit
+ | Battle Start: Gain 8 armor. If your health is not full, gain 8 acid
+ | 3
+ | Stone Steak
+ | Spiny Chestnut
+ | Petrified Chestnut
+ | Battle Start: If your health is full, gain 6 thorns and 6 armor
+ | -
+ | Stone Steak
+ | Vampiric Wine
+ | Bloody Steak
+ | Wounded: Restore 10 health and gain 5 armor
+ | -
+ | Vampiric Wine
+ | Cherry Bomb
+ | Cherry Cocktail
+ | Battle Start & Wounded: Deal 3 damage and restore 3 health
+ | -
+ | Vampiric Wine
+ | Clearspring Watermelon
+ | Melon Wine
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1 and restore 3 health
+ | -
+ | Vampiric Wine
+ | Grilling Skewer
+ | Broken Winebottle
+ | Wounded: On your next turn, keep striking the enemy until they're wounded
+ | 2
+ | Vampiric Wine
+ | Honeycomb
+ | Sweet Wine
+ | Wounded: Restore 30 health
+ | -
+ | Vampiric Wine
+ | Poisonous Mushroom
+ | Mushroom Soup
+ | Turn Start: Gain 1 poison and 1 regeneration
+ | 2
+ | Vampiric Wine
+ | Redwood Roast
+ | Blood Sausage
+ | Wounded: Restore 1 health 5 times
+ | 5
+ | Vampiric Wine
+ | Silverscale Fish
+ | Deepsea Wine
+ | Wounded: Give the enemy 1 riptide. Whenever riptide triggers, restore 3 health
+ | -
+ | Vampiric Wine
+ | Sour Lemon
+ | Blood Orange
+ | Battle Start: Gain 3 acid. Wounded: Convert all your acid to regeneration
+ | 4
+ | Vampiric Wine
+ | Spiny Chestnut
+ | Spiked Wine
+ | Wounded: Restore 5 health and gain 5 thorns
+ | -
+ | Vampiric Wine
+ | Stone Steak
+ | Bloody Steak
+ | Wounded: Restore 10 health and gain 5 armor
+ | -

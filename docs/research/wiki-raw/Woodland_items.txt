@@ -1,0 +1,631 @@
+
+Woodland items can only be found in Woodland or Kingmaker games that use Woodland bundles. Woodland items come in 4 levels of rarity: Common, Rare, Heroic, and Mythic.
+Woodland items may inflict the following status effects on either enemies or the player:
+- [Icon freeze.png] Freeze halves the attack as long as there are freeze stacks and removes 1 freeze stack at the end of the turn
+- [Icon thorns.png] Thorns deals damage equal to the amount of thorns when struck and removes all thorns stacks at the end of the turn
+## Contents
+- 1 Weapons
+- 2 Items
+- 2.1 Jewelry
+- 2.2 Food
+## Weapons
+The player can only have one weapon. Choosing another weapon will destroy the existing one.
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Ironstone Greatsword
+ | [Rarity common.png] Common
+ | [Icon attack.png] 4
+[Icon speed.png] -2
+ | -
+ | Razorthorn Spear
+ | [Rarity common.png] Common
+ | [Icon attack.png] 1
+ | On Hit: Gain 2 thorns
+ | Redwood Rod
+ | [Rarity common.png] Common
+ | [Icon attack.png] 2
+[Icon health.png] 4
+ | -
+ | Spearshield Lance
+ | [Rarity common.png] Common
+ | [Icon attack.png] 1
+[Icon armor.png] 6
+ | -
+ | Woodcutter's Axe
+ | [Rarity common.png] Common
+ | [Icon attack.png] 1
+ | Gain 2 attack for each empty equipment slot
+ | Boom Stick
+ | [Rarity common.png] Common
+ | [Icon attack.png] 2
+ | On Hit: Deal 1 damage
+ | Heart Drinker
+ | [Rarity common.png] Common
+ | [Icon attack.png] 1
+ | On Hit: Restore 1 health
+ | Sword of the Hero
+ | [Rarity common.png] Common
+ | [Icon attack.png] 3
+ | -
+ | Hidden Dagger
+ | [Rarity common.png] Common
+ | [Icon attack.png] 2
+ | Gets stronger for every new hidden dagger you find
+ | Brittlebark Bow
+ | [Rarity common.png] Common
+ | [Icon attack.png] 4
+ | After 3 strikes: Lose 2 attack
+ | Elderwood Staff
+ | [Rarity common.png] Common
+ | [Icon attack.png] 1
+[Icon armor.png] 1
+[Icon speed.png] 1
+ | -
+ | Featherweight Blade
+ | [Rarity common.png] Common
+ | [Icon attack.png] 2
+[Icon speed.png] 2
+ | -
+ | Blackbriar Blade
+ | [Rarity rare.png] Rare
+ | [Icon attack.png] 1
+ | This weapon gains 2 attack for each stack of thorn you have
+ | Bejeweled Blade
+ | [Rarity rare.png] Rare
+ | [Icon attack.png] 1
+ | Gain 2 attack for each equipped jewelry item
+ | Ironstone Bow
+ | [Rarity rare.png] Rare
+ | [Icon attack.png] 6
+[Icon speed.png] 1
+ | On Hit: Lose 1 speed. If your speed is 0 or less, only strike every other turn
+ | Lifeblood Spear
+ | [Rarity rare.png] Rare
+ | [Icon attack.png] 1
+ | Whenever you restore 3 or more health, gain 1 attack
+ | Explosive Sword
+ | [Rarity rare.png] Rare
+ | [Icon attack.png] 3
+ | Whenever a bomb deals 5 or more non-weapon damage, gain 1 additional strike
+ | Icicle Spear
+ | [Rarity rare.png] Rare
+ | [Icon attack.png] 3
+ | Exposed: Give the enemy 2 freeze for each equipped water item
+ | Bloodmoon Dagger
+ | [Rarity rare.png] Rare
+ | [Icon attack.png] 2
+ | Wounded: Gain 5 attack and take 2 damage
+ | Bloodmoon Sickle
+ | [Rarity rare.png] Rare
+ | [Icon attack.png] 5
+ | On Hit: Take 1 damage
+ | Frostbite Dagger
+ | [Rarity rare.png] Rare
+ | [Icon attack.png] 2
+ | First turn: Give the enemy freeze equal to your attack on hit
+ | Swiftstrike Bow
+ | [Rarity rare.png] Rare
+ | [Icon attack.png] 2
+ | Whenever you gain an additional strike, gain twice as many
+ | Swiftstrike Rapier
+ | [Rarity rare.png] Rare
+ | [Icon attack.png] 2
+ | Battle Start: If you have more speed than the enemy, gain 2 additional strikes
+ | Battle Axe
+ | [Rarity rare.png] Rare
+ | [Icon attack.png] 2
+ | While the enemy has armor double your attack
+ | Gemstone Scepter
+ | [Rarity heroic.png] Heroic
+ | [Icon attack.png] 2
+ | Gains On Hit effects from emerald, ruby, sapphire, and citrine items
+ | Granite Hammer
+ | [Rarity heroic.png] Heroic
+ | [Icon attack.png] 2
+ | On Hit: Convert 1 armor to 2 attack
+ | Granite Lance
+ | [Rarity heroic.png] Heroic
+ | [Icon attack.png] 2
+[Icon armor.png] 2
+ | Your base armor is doubled
+ | Stoneslab Sword
+ | [Rarity heroic.png] Heroic
+ | [Icon attack.png] 2
+ | On Hit: Gain 2 armor
+ | Frozen Iceblade
+ | [Rarity heroic.png] Heroic
+ | [Icon attack.png] 7
+ | Battle start: Gain 3 freeze
+ | Royal Scepter
+ | [Rarity heroic.png] Heroic
+ | 
+ | Attack is always equal to gold. You cannot have more than 10 gold
+ | Grindstone Club
+ | [Rarity heroic.png] Heroic
+ | [Icon attack.png] 1
+ | The next weapon you equip gains 2 attack
+ | Twin Blade
+ | [Rarity heroic.png] Heroic
+ | [Icon attack.png] 1
+ | Strike twice
+ | Quickgrowth Spear
+ | [Rarity heroic.png] Heroic
+ | [Icon attack.png] 2
+ | Every other turn, gain 1 attack and restore 1 health
+ | Lifesteal Scythe
+ | [Rarity heroic.png] Heroic
+ | [Icon attack.png] 1
+ | On Hit: If the enemy doesn't have any armor, restore health equal to your attack
+ | Royal Crownblade
+ | [Rarity heroic.png] Heroic
+ | [Icon attack.png] 4
+ | On Hit: Gain 1 gold
+ | Brittlebark Club
+ | [Rarity heroic.png] Heroic
+ | [Icon attack.png] 7
+ | Exposed & Wounded: Lose 2 attack
+ | Bearclaw Blade
+ | [Rarity mythic.png] Mythic
+ | [Icon health.png] 5
+ | Attack is always equal to missing health
+ | Mountain Cleaver
+ | [Rarity mythic.png] Mythic
+ | [Icon armor.png] 2
+ | Attack always is equal to base armor
+ | Tempest Blade
+ | [Rarity mythic.png] Mythic
+ | [Icon speed.png] 2
+ | Attack always is equal to speed
+## Items
+The player starts the game with 4 item slots. Defeating each boss increases the number of item slots by 2.
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Horned Helmet
+ | [Rarity common.png] Common
+ | [Icon armor.png] 2
+ | Battle Start: Gain 1 thorns
+ | Ironstone Bracelet
+ | [Rarity common.png] Common
+ | [Icon speed.png] -1
+ | Enemy strikes deal 1 damage less while you have armor but 1 damage more otherwise
+ | Iceblock Shield
+ | [Rarity common.png] Common
+ | [Icon armor.png] 8
+ | Battle Start: Gain 2 freeze
+ | Redwood Cloak
+ | [Rarity common.png] Common
+ | [Icon health.png] 2
+ | Battle Start: If your health is not full, restore 2 health
+ | Redwood Helmet
+ | [Rarity common.png] Common
+ | [Icon health.png] 1
+[Icon armor.png] 1
+ | Exposed: Restore 3 health
+ | Lifeblood Helmet
+ | [Rarity common.png] Common
+ | 
+ | First Turn: Restore health equal to damage dealt by strikes
+ | Double-plated Armor
+ | [Rarity common.png] Common
+ | [Icon armor.png] 2
+[Icon speed.png] -2
+ | Exposed: Gain 3 armor
+ | Swiftstrike Belt
+ | [Rarity common.png] Common
+ | 
+ | Battle Start: Take 3 damage and gain 1 additional strike
+ | Frostbite Gauntlet
+ | [Rarity common.png] Common
+ | 
+ | Battle Start: Give the enemy 1 freeze
+ | Frostbite Trap
+ | [Rarity common.png] Common
+ | 
+ | Wounded: Give the enemy 3 freeze
+ | Saffron Feather
+ | [Rarity common.png] Common
+ | [Icon speed.png] 1
+ | Turn Start: Convert 1 speed to restore 2 health
+ | Leather Glove
+ | [Rarity common.png] Common
+ | [Icon health.png] 3
+[Icon speed.png] 1
+ | -
+ | Leather Vest
+ | [Rarity common.png] Common
+ | [Icon armor.png] 2
+[Icon speed.png] 1
+ | -
+ | Loose Change
+ | [Rarity common.png] Common
+ | 
+ | Gain 3 gold at the start of every day
+ | Boots of the Hero
+ | [Rarity common.png] Common
+ | [Icon speed.png] 2
+ | -
+ | Shield of the Hero
+ | [Rarity common.png] Common
+ | [Icon armor.png] 3
+ | -
+ | Cracked Whetstone
+ | [Rarity common.png] Common
+ | 
+ | First Turn: Temporarily gain 2 attack
+ | Lifeblood Burst
+ | [Rarity rare.png] Rare
+ | 
+ | Whenever you restore 3 or more health, deal 3 damage
+ | Blackbriar Gauntlet
+ | [Rarity rare.png] Rare
+ | 
+ | Gain 2 thorns for each armor removed by the enemy's first strike
+ | Blackbriar Rose
+ | [Rarity rare.png] Rare
+ | 
+ | Whenever you restore health, gain 2 thorns. You can only equip 1 rose
+ | Bramble Belt
+ | [Rarity rare.png] Rare
+ | 
+ | Battle Start: Gain 1 thorns and give the enemy 1 additional strike
+ | Bramble Buckler
+ | [Rarity rare.png] Rare
+ | [Icon armor.png] 2
+ | Turn Start: Convert 1 armor to 2 thorns
+ | Bramble Talisman
+ | [Rarity rare.png] Rare
+ | 
+ | Whenever you gain thorns, gain 1 armor
+ | Bramble Vest
+ | [Rarity rare.png] Rare
+ | [Icon health.png] 3
+ | The first time you lose thorns, restore health equal to thorns lost
+ | Ice Spikes
+ | [Rarity rare.png] Rare
+ | 
+ | Turn Start: If you have freeze, gain 5 thorns
+ | Ice Tomb
+ | [Rarity rare.png] Rare
+ | 
+ | Turn Start: If you have no armor, gain 3 armor and 1 freeze
+ | Leather Boots
+ | [Rarity rare.png] Rare
+ | 
+ | Battle Start: If you have more speed than the enemy, gain 2 attack
+ | Cracked Bouldershield
+ | [Rarity rare.png] Rare
+ | 
+ | Exposed: Gain 7 armor
+ | Fortified Gauntlet
+ | [Rarity rare.png] Rare
+ | 
+ | Turn Start: If you have armor, gain 1 additional armor
+ | Frostbite Curse
+ | [Rarity rare.png] Rare
+ | 
+ | Battle Start: Give yourself and the enemy 5 freeze each
+ | Ore Heart
+ | [Rarity rare.png] Rare
+ | 
+ | Battle Start: Gain 3 armor for each equipped stone item
+ | Pinecone Breastplate
+ | [Rarity rare.png] Rare
+ | 
+ | Battle Start: If your health is full, gain 1 thorn at turn start for the rest of battle
+ | Thorn Ring
+ | [Rarity rare.png] Rare
+ | 
+ | Battle Start: Take 5 damage and gain 10 thorns
+ | Bomb Bag
+ | [Rarity rare.png] Rare
+ | 
+ | Battle Start, Exposed & Wounded: Spend 3 speed to retrigger a random bomb
+ | Blacksmith Bond
+ | [Rarity rare.png] Rare
+ | 
+ | Exposed can trigger 1 additional time
+ | Blastcap Armor
+ | [Rarity rare.png] Rare
+ | [Icon armor.png] 8
+ | Exposed: Take 5 damage
+ | Energy Drain
+ | [Rarity rare.png] Rare
+ | 
+ | Before any other item triggers, if you have less speed than the enemy, steal all speed from the enemy
+ | Firecracker Belt
+ | [Rarity rare.png] Rare
+ | 
+ | Exposed: Deal 1 damage 4 times
+ | Granite Crown
+ | [Rarity rare.png] Rare
+ | 
+ | Battle Start: Gain max health equal to your base armor
+ | Iron Rose
+ | [Rarity rare.png] Rare
+ | 
+ | Whenever you restore health, gain 1 armor. You can only equip 1 rose
+ | Kindling Bomb
+ | [Rarity rare.png] Rare
+ | 
+ | Battle Start: Deal 1 damage to the enemy. The damage of the next bomb that triggers is increased by 3
+ | Powder Keg
+ | [Rarity rare.png] Rare
+ | 
+ | Battle Start: If you only have 1 bomb item equipped, it triggers 3 times
+ | Double-plated Vest
+ | [Rarity rare.png] Rare
+ | 
+ | The second time you take damage each turn, gain 2 armor
+ | Explosive Powder
+ | [Rarity rare.png] Rare
+ | 
+ | The damage of all bomb items increases by 1
+ | Explosive Surprise
+ | [Rarity rare.png] Rare
+ | 
+ | Exposed: Deal 6 damage
+ | Heart-shaped Acorn
+ | [Rarity rare.png] Rare
+ | 
+ | Battle Start: If you have 0 base armor, restore health to full
+ | Heart-shaped Potion
+ | [Rarity rare.png] Rare
+ | 
+ | When you are reduced to exactly 1 health for the first time, restore health to full
+ | Iron Shrapnel
+ | [Rarity rare.png] Rare
+ | 
+ | Battle start: Deal 3 damage to the enemy, if they don't have armor, double the damage dealt
+ | Oak Heart
+ | [Rarity rare.png] Rare
+ | 
+ | Gain 3 max health for each equipped wood item
+ | Blood Chain
+ | [Rarity rare.png] Rare
+ | 
+ | The first time the enemy becomes wounded, trigger all of your wounded items
+ | Ironstone Sandals
+ | [Rarity rare.png] Rare
+ | [Icon speed.png] -1
+ | While you have armor, temporarily gain 3 attack
+ | Royal Helmet
+ | [Rarity rare.png] Rare
+ | [Icon armor.png] 1
+ | Exposed: If you have more than 20 gold, gain 10 armor
+ | Sanguine Rose
+ | [Rarity rare.png] Rare
+ | 
+ | Whenever you restore health, restore 1 additional health. You can only equip 1 rose
+ | Featherweight Wings
+ | [Rarity rare.png] Rare
+ | 
+ | Battle Start: If you have less speed than the enemy, gain attack equal to your speed
+ | Vampire's Tooth
+ | [Rarity rare.png] Rare
+ | 
+ | If you have exactly 1 sanguine item, double its healing
+ | Brittlebark Buckler
+ | [Rarity rare.png] Rare
+ | [Icon armor.png] 10
+ | Lose all your armor after your enemy's first strike
+ | Featherweight Armor
+ | [Rarity rare.png] Rare
+ | 
+ | Whenever you gain speed, also gain an equal amount of armor
+ | Featherweight Greaves
+ | [Rarity rare.png] Rare
+ | 
+ | Turn Start: If you have 0 speed, gain 1 speed
+ | Featherweight Helmet
+ | [Rarity rare.png] Rare
+ | 
+ | Battle start: Spend 2 armor to gain 3 speed and 1 attack
+ | Frostbite Armor
+ | [Rarity rare.png] Rare
+ | [Icon armor.png] 2
+ | The enemy's first strike deals double damage, afterwards they gain 4 freeze
+ | Plated Greaves
+ | [Rarity rare.png] Rare
+ | 
+ | Exposed: Convert 3 speed to 9 armor
+ | Double Explosion
+ | [Rarity rare.png] Rare
+ | 
+ | The second time you deal non-weapon damage each turn, deal 3 damage
+ | Frostbite Greaves
+ | [Rarity rare.png] Rare
+ | 
+ | Whenever you lose speed, give the enemy 1 freeze
+ | Blackbriar Armor
+ | [Rarity heroic.png] Heroic
+ | [Icon attack.png] -1
+ | Whenever you take damage, gain 2 thorns
+ | Cactus Cap
+ | [Rarity heroic.png] Heroic
+ | 
+ | If the enemy has no armor, thorns deal double damage
+ | Ironstone Armor
+ | [Rarity heroic.png] Heroic
+ | [Icon speed.png] -2
+ | Enemy strikes deal 2 damage less while you have armor
+ | Shield Talisman
+ | [Rarity heroic.png] Heroic
+ | 
+ | Whenever you gain armor, gain 1 additional armor
+ | Moonlight Shield
+ | [Rarity heroic.png] Heroic
+ | 
+ | Turn Start: If you're below 50% health, gain 2 armor
+ | Razor Breastplate
+ | [Rarity heroic.png] Heroic
+ | [Icon armor.png] 3
+ | Wounded: Gain thorns equal to enemy attack
+ | Brittlebark Armor
+ | [Rarity heroic.png] Heroic
+ | [Icon health.png] 12
+ | Whenever you take damage, take 1 additional damage
+ | Druid's Cloak
+ | [Rarity heroic.png] Heroic
+ | 
+ | Whenever you lose health, gain that much armor. You cannot restore health
+ | Studded Gauntlet
+ | [Rarity heroic.png] Heroic
+ | 
+ | On Hit: Deal 1 damage
+ | Sword Talisman
+ | [Rarity heroic.png] Heroic
+ | 
+ | Whenever you deal non-weapon damage to the enemy, deal 1 additional damage
+ | Time Bomb
+ | [Rarity heroic.png] Heroic
+ | 
+ | Exposed: Deal 1 damage. Turn start: This item gains 2 damage
+ | Assault Greaves
+ | [Rarity heroic.png] Heroic
+ | 
+ | Whenever you take damage, deal 1 damage
+ | Ironskin Potion
+ | [Rarity heroic.png] Heroic
+ | 
+ | Battle Start: Gain armor equal to lost health
+ | Crimson Cloak
+ | [Rarity heroic.png] Heroic
+ | 
+ | Whenever you take damage, restore 1 health
+ | Iron Transfusion
+ | [Rarity heroic.png] Heroic
+ | 
+ | Turn Start: Gain 2 armor and lose 1 health
+ | Lifeblood Armor
+ | [Rarity heroic.png] Heroic
+ | 
+ | Battle Start: Convert 50% of your current health to that amount of armor
+ | Royal Shield
+ | [Rarity heroic.png] Heroic
+ | 
+ | Turn Start: Convert 1 gold to 3 armor
+ | Swiftstrike Cloak
+ | [Rarity heroic.png] Heroic
+ | [Icon speed.png] 1
+ | Battle Start: If you have more speed than the enemy, gain 1 additional strike
+ | Swiftstrike Gauntlet
+ | [Rarity heroic.png] Heroic
+ | 
+ | Wounded: Gain 2 additional strikes
+ | Chainmail Armor
+ | [Rarity heroic.png] Heroic
+ | 
+ | Wounded: Regain your base armor
+ | Elderwood Necklace
+ | [Rarity heroic.png] Heroic
+ | [Icon attack.png] 1
+[Icon armor.png] 1
+[Icon speed.png] 1
+ | -
+ | Bloodmoon Armor
+ | [Rarity mythic.png] Mythic
+ | [Icon armor.png] 6
+ | Whenever you would take damage from your own items, the enemy takes that damage instead
+ | Cold Resistance
+ | [Rarity mythic.png] Mythic
+ | 
+ | Freeze doubles your attack instead of halving it
+ | Granite Thorns
+ | [Rarity mythic.png] Mythic
+ | 
+ | You don't lose any thorns on the enemy's first 3 strikes
+ | Razor Scales
+ | [Rarity mythic.png] Mythic
+ | 
+ | Whenever you lose armor, deal that much damage
+ | Chainlink Medallion
+ | [Rarity mythic.png] Mythic
+ | 
+ | Your On Hit effects trigger twice
+ | Twinfuse Knot
+ | [Rarity mythic.png] Mythic
+ | 
+ | Your bomb items trigger twice
+## Jewelry
+Jewelry items can be obtained from Jewelry Boxes.
+ | Item
+ | Rarity
+ | Effect
+ | Citrine Earring
+ | [Rarity common.png] Common
+ | Gain 1 speed every other turn
+ | Emerald Earring
+ | [Rarity common.png] Common
+ | Restore 1 health every other turn
+ | Ruby Earring
+ | [Rarity common.png] Common
+ | Deal 1 damage every other turn
+ | Sapphire Earring
+ | [Rarity common.png] Common
+ | Gain 1 armor every other turn
+ | Emerald Crown
+ | [Rarity common.png] Common
+ | Gain 8 health and lose 1 attack
+ | Ruby Crown
+ | [Rarity common.png] Common
+ | Gain 1 attack and lose 1 speed
+ | Sapphire Crown
+ | [Rarity common.png] Common
+ | Gain 5 armor and lose 2 health
+ | Emerald Ring
+ | [Rarity common.png] Common
+ | Battle Start: Restore 3 health
+ | Ruby Ring
+ | [Rarity common.png] Common
+ | Battle Start: Gain 2 attack and take 3 damage
+ | Sapphire Ring
+ | [Rarity common.png] Common
+ | Battle Start: Steal 2 armor from the enemy
+ | Citrine Ring
+ | [Rarity rare.png] Rare
+ | Battle Start: Spend 5 speed to permanently gain 1 additional strike
+ | Gold Ring
+ | [Rarity rare.png] Rare
+ | Battle Start: Gain 1 gold
+ | Citrine Gemstone
+ | [Rarity heroic.png] Heroic
+ | Your base speed stat is inverted
+ | Emerald Gemstone
+ | [Rarity heroic.png] Heroic
+ | Overhealing is dealt as damage
+ | Ruby Gemstone
+ | [Rarity heroic.png] Heroic
+ | If your attack is exactly 1, deal 4 damage on hit
+ | Sapphire Gemstone
+ | [Rarity heroic.png] Heroic
+ | Whenever you lose armor, restore that much health
+## Food
+Food items can be combined at a Cauldron to create a single item with both effects. They can also be combined at a Cauldron with a Honeycomb item, which massively increases their effects.
+ | Item
+ | Rarity
+ | Effect
+ | Cooked with honeycomb effect
+ | Cherry Bomb
+ | [Rarity common.png] Common
+ | Battle Start: Deal 1 damage 2 times
+ | Turn Start: Deal 1 damage 3 times
+ | Redwood Roast
+ | [Rarity common.png] Common
+ | Gain 5 health
+ | Double your max health
+ | Spiny Chestnut
+ | [Rarity common.png] Common
+ | Battle Start: Gain 3 thorns
+ | Battle Start: Gain 3 thorns and thorns do double damage
+ | Vampiric Wine
+ | [Rarity common.png] Common
+ | Wounded: Restore 4 health
+ | Wounded: Restore 30 health
+ | Stone Steak
+ | [Rarity rare.png] Rare
+ | Battle Start: If your health is full, gain 5 armor
+ | Battle Start: Gain 15 armor, if health is full gain another 15 armor

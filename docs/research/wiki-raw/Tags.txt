@@ -1,0 +1,69 @@
+
+## Status effect tags
+Status effect tags describe effects that can be applied to the player or enemies.
+For detailed descriptions, see each individual tag page.
+ | [Icon thorns.png]
+Thorns
+ | [Icon freeze.png]
+Freeze
+ | [Icon regen.png]
+Regeneration
+ | [Icon poison.png]
+Poison
+ | [Icon stun.png]
+Stun
+ | [Icon riptide.png]
+Riptide
+ | [Icon acid.png]
+Acid
+ | [Icon purity.png]
+Purity
+ | General Status Effects
+## Item tags
+Item tags describe the category or property an item belongs to.   
+For detailed descriptions, see each individual tag page.
+ | Stone
+ | Wood
+ | Jewelry
+ | Water
+ | Edge
+ | Sanguine
+ | Ring
+ | Unique
+ | Food
+ | Bomb
+ | Instrument
+ | Tome
+ | Rune
+ | Potion
+ | Crone
+ | Rose
+ | Mythic
+ | 
+## Trigger tags
+Trigger tags describe when or under what conditions an effect is activated.  
+For detailed descriptions, see each individual tag page.
+ | Battle start
+ | Turn start
+ | First turn
+ | Exposed
+ | Wounded
+ | On hit
+ | Countdown
+ | Symphony
+ | Turn end
+ | Next boss
+ | First time
+ | Every other turn
+ | If
+ | While
+ | Whenever
+ | Multi-trigger
+ | Additional strikes
+ | Equal
+ | Double
+ | Each
+ | Convert
+ | Multipliers
+ | 
+ | 

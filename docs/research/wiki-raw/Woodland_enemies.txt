@@ -1,0 +1,209 @@
+
+## Common enemies
+Woodland common enemies only appear in Woodland and Kingmaker maps. They spawn only in certain biomes and their stats increase each week.
+ | Enemy
+ | Level 1
+ | Level 2
+ | Level 3
+ | Trait
+ | Biomes
+ | [Enemy bear.png] Bear
+ | [Icon health.png] 3 Health
+[Icon attack.png] 1 Attack
+[Icon armor.png] 2 Armor
+[Icon speed.png] 0 speed
+ | [Icon health.png] 5 Health
+[Icon attack.png] 2 Attack
+[Icon armor.png] 3 Armor
+[Icon speed.png] 1 speed
+ | [Icon health.png] 7 Health
+[Icon attack.png] 3 Attack
+[Icon armor.png] 4 Armor
+[Icon speed.png] 2 speed
+ | Bear gains 3/4/5 additional attack while the player has armor
+ | Starting Area
+Forest
+ | [Enemy spider.png] Spider
+ | [Icon health.png] 2 Health
+[Icon attack.png] 1 Attack
+[Icon armor.png] 0 Armor
+[Icon speed.png] 2 speed
+ | [Icon health.png] 3 Health
+[Icon attack.png] 1 Attack
+[Icon armor.png] 0 Armor
+[Icon speed.png] 3 speed
+ | [Icon health.png] 4 Health
+[Icon attack.png] 1 Attack
+[Icon armor.png] 0 Armor
+[Icon speed.png] 4 speed
+ | Battle Start: If Spider has more speed than the player, it deals 3/4/5 damage
+ | Starting Area
+Flower Glade
+ | [Enemy wolf.png] Wolf
+ | [Icon health.png] 3 Health
+[Icon attack.png] 1 Attack
+[Icon armor.png] 0 Armor
+[Icon speed.png] 1 speed
+ | [Icon health.png] 6 Health
+[Icon attack.png] 2 Attack
+[Icon armor.png] 0 Armor
+[Icon speed.png] 2 speed
+ | [Icon health.png] 9 Health
+[Icon attack.png] 2 Attack
+[Icon armor.png] 0 Armor
+[Icon speed.png] 3 speed
+ | Wolf gains 2/3/4 additional attack while the player has 5 or less health
+ | Starting Area
+Rocky Plains
+ | [Enemy bat.png] Bat
+ | [Icon health.png] 4 Health
+[Icon attack.png] 1 Attack
+[Icon armor.png] 0 Armor
+[Icon speed.png] 2 speed
+ | [Icon health.png] 6 Health
+[Icon attack.png] 2 Attack
+[Icon armor.png] 0 Armor
+[Icon speed.png] 3 speed
+ | [Icon health.png] 8 Health
+[Icon attack.png] 3 Attack
+[Icon armor.png] 0 Armor
+[Icon speed.png] 4 speed
+ | Every other strike Bat gains 1/2/3 health on hit
+ | Forest
+ | [Enemy hedgehog.png] Hedgehog
+ | [Icon health.png] 1 Health
+[Icon attack.png] 1 Attack
+[Icon armor.png] 1 Armor
+[Icon speed.png] 0 speed
+ | [Icon health.png] 2 Health
+[Icon attack.png] 1 Attack
+[Icon armor.png] 2 Armor
+[Icon speed.png] 0 speed
+ | [Icon health.png] 7 Health
+[Icon attack.png] 1 Attack
+[Icon armor.png] 3 Armor
+[Icon speed.png] 0 speed
+ | Battle Start: Hedgehog gains 3/4/5 thorns
+ | Flower Glade
+ | [Enemy crow.png] Raven
+ | [Icon health.png] 3 Health
+[Icon attack.png] 0 Attack
+[Icon armor.png] 0 Armor
+[Icon speed.png] 2 speed
+ | [Icon health.png] 5 Health
+[Icon attack.png] 0 Attack
+[Icon armor.png] 0 Armor
+[Icon speed.png] 3 speed
+ | [Icon health.png] 7 Health
+[Icon attack.png] 0 Attack
+[Icon armor.png] 0 Armor
+[Icon speed.png] 4 speed
+ | Oh hit Raven seals 1/2/3 gold
+ | Rocky Plains
+## Bosses
+Woodland bosses appear at the end of the week in Woodland maps. The week's boss and its stats can be seen in advance by pressing Tab.
+ | Boss
+ | [Icon health.png] Health
+ | [Icon attack.png] Attack
+ | [Icon armor.png] Armor
+ | [Icon speed.png] Speed
+ | Trait
+ | Week
+ | [Bosssprite knight.png] Black Knight
+ | 10
+ | 0
+ | 5
+ | 0
+ | Battle Start: Black Knight gains attack equal to the Player's attack plus 2
+ | 1
+ | [Bosssprite werewolf.png] Bloodmoon Werewolf
+ | 20
+ | 3
+ | 0
+ | 1
+ | While player is below 50% health, Bloodmoon werewolf has 5 additional attack
+ | 1
+ | [Bosssprite beast.png] Brittlebark Beast
+ | 50
+ | 3
+ | 0
+ | 2
+ | Whenever Brittlebark Beast takes damage, he takes 3 additional damage
+ | 1
+ | [Bosssprite golem.png] Ironstone Golem
+ | 5
+ | 4
+ | 15
+ | 0
+ | Exposed: Ironstone Golem loses 3 attack
+ | 1
+ | [Bosssprite bear.png] Razorclaw Grizzly
+ | 10
+ | 3
+ | 5
+ | 2
+ | Razorclaw Grizzly's attacks ignore armor
+ | 1
+ | [Bosssprite hog.png] Razortusk Hog
+ | 5
+ | 4
+ | 0
+ | 4
+ | If Razortusk Hog has more speed than you, his first strike deals 10 additional damage
+ | 1
+ | [Bosssprite king.png] Blackbriar King
+ | 50
+ | 0
+ | 0
+ | 0
+ | Can't attack but when taking damage it gains 2 thorns and when wounded gains 4 thorns
+ | 2
+ | [Bosssprite frostbite.png] Frostbite Druid
+ | 10
+ | 3
+ | 20
+ | 4
+ | On hit: Give the player 1 freeze
+ | 2
+ | [Bosssprite monarch.png] Goldwing Monarch
+ | 40
+ | 3
+ | 0
+ | 4
+ | Wounded: Steals all the players gold and restores 2 health per gold stolen
+ | 2
+ | [Bosssprite troll.png] Mountain Troll
+ | 20
+ | 10
+ | 10
+ | 0
+ | Mountain Troll only strikes every other turn
+ | 2
+ | [Bosssprite treant.png] Redwood Treant
+ | 25
+ | 3
+ | 15
+ | 0
+ | Redwood Treant gains 3 attack if the player has no armor
+ | 2
+ | [Bosssprite stag.png] Swiftstrike Stag
+ | 10
+ | 3
+ | 10
+ | 5
+ | Swiftstrike Stag strikes 3 times per turn
+ | 2
+ | [Bosssprite leshen.png] Leshen
+ | 50
+ | 7
+ | 0
+ | 3
+ | Upon death turns into Woodland Abomination and player recovers health and armor
+ | 3
+ | [Bosssprite leshen.png] Woodland Abomination
+ | 100
+ | 0
+ | 0
+ | 3
+ | Woodland Abomination gains 1 attack each turn
+ | 3

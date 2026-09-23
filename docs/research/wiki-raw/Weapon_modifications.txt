@@ -1,0 +1,80 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Weapons can be modified by acquiring one whilst the other is already equipped, then selecting the option to modify the weapon once it appears.
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Combination
+ | Brittlebark Blade
+ | Heroic 
+ |  12
+ | On Hit: Lose 2 attack
+ | Woodland 
+ | Brittlebark Club + Brittlebark Bow
+ | Galestrike Rapier
+ | Heroic 
+ |  2
+ 7
+ | Battle Start: If you have more speed than the enemy, gain 3 additional strikes. On Hit: Lose 1 speed
+ | Swampland 
+Woodland 
+ | Gale Staff
+ Swiftstrike Rapier
+ | Liferoot Dagger
+ | Heroic 
+ |  2
+ | Wounded: Take 2 damage, then gain 3 regeneration and 5 attack
+ | Swampland 
+Woodland 
+ | Liferoot Staff + Bloodmoon Dagger
+ | Perfect Iceblade
+ | Heroic 
+ |  7
+ | You cannot gain freeze
+ | Swampland 
+Woodland 
+ | Melting Iceblade + Frozen Iceblade
+ | Boom Spear
+ | Heroic 
+ | 1
+ | On Hit: Gain 2 thorns and deal 2 damage
+ | Woodland 
+ | Boom Stick + Razorthorn Spear
+ | Spear of the Hero
+ | Heroic 
+ |  3
+ | Every other turn, gain 1 attack and restore 1 health
+ | Woodland 
+ | Evergrowth Spear + Sword of the Hero
+ | Stonesnake Sword
+ | Heroic 
+ |  2
+ | On Hit: Give the enemy 2 poison and gain 2 armor
+ | Woodland 
+Swampland 
+ | Stoneslab Sword + Serpent Dagger
+ | Bloodlord's Whip
+ | Heroic 
+ |  5
+ 4
+ | Battle Start: Gain 5 max health and steal 5 health from the enemy
+ | Swampland 
+ | Bloodlord's Axe 
+ Leather Whip
+ | Pacifist Trident
+ | Heroic 
+ | 0
+ | On Hit: Give the enemy 1 riptide and gain 1 armor and restore 1 health
+ | Swampland 
+ | Pacifist Staff
+ Silverscale Trident

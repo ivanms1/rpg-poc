@@ -1,0 +1,158 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Trigger when Wounded is applied.
+Blood Chain: The first time the enemy becomes Wounded, trigger all of your Wounded items.
+King's Blade: Exposed and Wounded items trigger at Battle Start instead.
+Wounded is part of the Trigger tags.
+Items that trigger Wounded
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Bloodmoon Dagger
+ | Rare 
+ | 2
+ | Wounded: Gain 5 attack and take 2 damage
+ | Woodland 
+ | Liferoot Staff
+ | Common 
+ | 2
+ | Wounded: Gain 3 regeneration
+ | Swampland 
+ | Brittlebark Club
+ | Heroic 
+ | 7
+ | Exposed & Wounded: Lose 2 attack
+ | Woodland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Vampiric Wine
+ | Common 
+ | -
+ | Wounded: Restore 4 health — at Gold: 8 , at Diamond: 16
+ | Woodland 
+ | Blood Chain
+ | Rare 
+ | -
+ | The first time the enemy becomes wounded, trigger all of your wounded items
+ | Woodland 
+ | Swiftstrike Gauntlet
+ | Heroic 
+ | -
+ | Wounded: Gain 2 additional strikes
+ | Woodland 
+ | Chainmail Armor
+ | Heroic 
+ | -
+ | Wounded: Regain your base armor
+ | Woodland 
+ | Razor Breastplate
+ | Heroic 
+ | 3
+ | Wounded: Gain thorns equal to enemy attack
+ | Woodland 
+ | Slime Potion
+ | Rare 
+ | -
+ | Wounded: Gain armor equal to lost health and gain 5 acid
+ | Swampland 
+ | Thunder Cloud
+ | Heroic 
+ | -1
+ | Wounded: Stun the enemy for 3 turns
+ | Swampland 
+ | Petrifying Flask
+ | Common 
+ | -
+ | Wounded: Gain 10 armor and stun yourself for 2 turns — at Gold: 20 4, at Diamond: 40 8
+ | Swampland 
+ | Royal Horn
+ | Common 
+ | -
+ | Wounded: Gain 2 gold. Symphony
+ | Swampland 
+ | Liferoot Lute
+ | Heroic 
+ | -
+ | Wounded: Gain 3 regeneration. Symphony
+ | Swampland 
+ | Stormcloud Drum
+ | Heroic 
+ | -
+ | Wounded: Stun the enemy for 1 turn. Symphony
+ | Swampland 
+ | Blood Rune
+ | Heroic 
+ | -
+ | Wounded: Re-trigger the last triggered wounded item
+ | Swampland
+ | Echo Rune
+ | Heroic 
+ | -
+ | Wounded: Re-trigger a random battle start item
+ | Swampland
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Cherry Cocktail
+ | Cherry Bomb
+ | Vampiric Wine
+ | -
+ | Battle Start & Wounded: Deal 3 damage and restore 3 health
+ | Deepsea Wine
+ | Silverscale Fish
+ | Vampiric Wine
+ | -
+ | Wounded: Give the enemy 1 riptide. Whenever riptide triggers, restore 3 health
+ | Bloody Steak
+ | Vampiric Wine
+ | Stone Steak
+ | -
+ | Wounded: Restore 10 health and gain 5 armor
+ | Blood Sausage
+ | Redwood Roast
+ | Vampiric Wine
+ | 5
+ | Wounded: Restore 1 health 5 times
+ | Spiked Wine
+ | Spiny Chestnut
+ | Vampiric Wine
+ | -
+ | Wounded: Restore 5 health and gain 5 thorns
+ | Sweet Wine
+ | Honeycomb
+ | Vampiric Wine
+ | -
+ | Wounded: Restore 30 health
+ | Broken Winebottle
+ | Grilling Skewer
+ | Vampiric Wine
+ | 2
+ | Wounded: On your next turn, Keep striking the enemy until they're wounded
+ | Melon Wine
+ | Clearspring Watermelon
+ | Vampiric Wine
+ | -
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1 and restore 3 health
+ | Blood Orange
+ | Sour Lemon
+ | Vampiric Wine
+ | 4
+ | Battle Start: Gain 3 acid. Wounded: Convert all your acid to regeneration.

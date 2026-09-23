@@ -1,0 +1,187 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+If you have no armor, take damage equal to poison at turn start. Remove 1 stack at turn start.
+Contents
+1 Mechanics
+2 Items
+2.1 Weapons
+2.2 Standard items
+Mechanics
+At the start of your turn, if you have 0 armor, you take damage equal to your current Poison stacks.
+Remove 1 Poison stack at the start of your turn.
+Poison is part of the Status effect tags.
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Fungal Rapier
+ | Common 
+ | 3
+ | Battle Start: Gain 1 poison
+ | Swampland 
+ | Basilisk Fang
+ | Rare 
+ | 3
+ | On Hit: Decrease your poison by 2 and give it to the enemy
+ | Swampland 
+ | Bubblegloop Staff
+ | Rare 
+ | 0
+ | Can't strike. Turn Start: Spend 1 speed to give the enemy 2 acid and 2 poison
+ | Swampland 
+ | Serpent Dagger
+ | Heroic 
+ | 2
+ | Every 3 strikes, give the enemy 4 poison
+ | Swampland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Basilisk Scale
+ | Rare 
+ | -
+ | Battle Start: Gain 5 armor and 5 poison
+ | Swampland 
+ | Venomous Fang
+ | Common 
+ | -
+ | First Turn: Give the enemy 2 poison on hit — at Gold: 4 , at Diamond: 8
+ | Swampland 
+ | Noxious Gas
+ | Heroic 
+ | 6
+ | Turn Start: Both you and the enemy gain 1 poison
+ | Swampland 
+ | Serpent Mask
+ | Heroic 
+ | -
+ | Battle Start: Give the enemy poison equal to your attack
+ | Swampland 
+ | Serpent Lyre
+ | Common 
+ | -
+ | Exposed: Give the enemy 3 poison. Symphony
+ | Swampland 
+ | Poisonous Mushroom
+ | Rare 
+ | 2
+ | Turn Start: Gain 1 poison
+ | Swampland 
+ | Viper Extract
+ | Rare 
+ | -
+ | The first time the enemy gains poison, give them 3 additional poison
+ | Swampland 
+ | Nerve Poison
+ | Rare 
+ | -
+ | The first time the enemy gains poison, stun them for 1 turn
+ | Swampland 
+ | Toxic Rose
+ | Rare 
+ | -
+ | Whenever you restore health, give the enemy 1 poison. You can only equip 1 rose
+ | Swampland 
+ | Toxic Algae
+ | Rare 
+ | -
+ | The first time riptide triggers, give the enemy 5 poison
+ | Swampland 
+ | Caustic Tome
+ | Rare 
+ | -
+ | Countdown 3: Give the enemy 3 acid. If they don't have any armor, give them 5 poison instead
+ | Swampland 
+ | Viper Elixir
+ | Rare 
+ | -
+ | The first time the enemy gains poison, give them 9 additional poison
+ | Swampland
+ | Nerve Elixir
+ | Rare 
+ | -
+ | The first time the enemy gains poison, stun them for 3 turns
+ | Swampland
+ | Mushroom Buckler
+ | Rare 
+ | 3
+ | If you have poison, enemy strikes deal 1 less damage
+ | Swampland 
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Bee Stinger
+ | Grilling Skewer
+ | Honeycomb
+ | 3
+ | First Turn: Give the enemy 4 poison, 3 Acid, and 2 stun on hit
+ | Bitter Melon
+ | Clearspring Watermelon
+ | Poisonous Mushroom
+ | 3
+ | Turn Start: Convert 1 stack of another status effect to 1 poison
+ | Deathcap Bow
+ | Grilling Skewer
+ | Poisonous Mushroom
+ | 3
+ | Battle Start: Gain 3 poison. Turn Start: If you have poison. Gain 1 additional strike
+ | Honey-glazed Shroom
+ | Honeycomb
+ | Poisonous Mushroom
+ | 4
+ | Turn Start: Give the enemy 2 poison
+ | Marble Mushroom
+ | Stone Steak
+ | Poisonous Mushroom
+ |  4
+ 6
+ | Battle Start: Gain 3 poison
+ | Moldy Meat
+ | Poisonous Mushroom
+ | Redwood Roast
+ |  5
+ -5
+ | -
+ | Mushroom Soup
+ | Poisonous Mushroom
+ | Vampiric Wine
+ | 2
+ | Turn Start: Gain 1 poison and 1 regeneration
+ | Poisonous Durian
+ | Poisonous Mushroom
+ | Spiny Chestnut
+ | 3
+ | Turn Start: Gain 1 poison and 1 thorns
+ | Poisonous Lemon
+ | Poisonous Mushroom
+ | Sour Lemon
+ |  3
+ 4
+ | Battle Start: Gain 1 acid and 5 poison
+ | Poisonous Pufferfish
+ | Silverscale Fish
+ | Poisonous Mushroom
+ | 2
+ | Battle Start: Gain 3 poison and give the enemy riptide equal to your poison
+ | Toxic Cherry
+ | Poisonous Mushroom
+ | Cherry Bomb
+ | 3
+ | Turn Start: Gain 1 poison and deal 1 damage to the enemy

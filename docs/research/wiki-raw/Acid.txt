@@ -1,0 +1,172 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Removes armor equal to acid at turn start.
+Contents
+1 Mechanics
+2 Items
+2.1 Weapons
+2.2 Standard items
+Mechanics
+At the start of your turn, lose armor equal to your current Acid stacks.
+If you have less armor than the Acid amount, your armor is reduced to 0.
+Acid is part of the Status effect tags.
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Slime Sword
+ | Common 
+ | 2
+ | Battle Start: Give yourself and the enemy 3 acid
+ | Swampland 
+ | Bubblegloop Staff
+ | Rare 
+ | 0
+ | Can't strike. Turn Start: Spend 1 speed to give the enemy 2 acid and 2 poison
+ | Swampland 
+ | Rusty Sword
+ | Rare 
+ | 2
+ | First Turn: Give acid equal to your attack on hit
+ | Swampland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Rusty Ring
+ | Common 
+ | -
+ | Battle Start: Give the enemy 1 acid — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Slime Armor
+ | Common 
+ | 5 / 10 / 20
+ | Battle Start: Gain 1 acid — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Sour Lemon
+ | Common 
+ | 3 / 6 / 12
+ | Battle Start: Gain 1 acid — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Slime Booster
+ | Rare 
+ | -
+ | Battle Start: Convert 1 acid into 2 attack
+ | Swampland 
+ | Slime Heart
+ | Rare 
+ | -
+ | Wounded: Remove all your acid and restore 2 health for each acid removed
+ | Swampland 
+ | Slime Potion
+ | Rare 
+ | -
+ | Wounded: Gain armor equal to lost health and gain 5 acid
+ | Swampland 
+ | Rusted Plate
+ | Rare 
+ | -
+ | Whenever the enemy loses armor to acid, gain that armor
+ | Swampland 
+ | Acid Mutation
+ | Heroic 
+ | -
+ | Battle Start: Gain 1 acid. While you have acid, temporarily gain attack equal to acid
+ | Swampland 
+ | Acidic Witherleaf
+ | Heroic 
+ | 1
+ | Battle Start: Give the enemy acid equal to your speed
+ | Swampland 
+ | Primordial Soup
+ | Mythic 
+ | -
+ | Acid removes health as well
+ | Swampland
+ | Caustic Tome
+ | Rare 
+ | -
+ | Countdown 3: Give the enemy 3 acid. If they don't have any armor, give them 5 poison instead
+ | Swampland 
+ | Slime Elixir
+ | Rare 
+ | -
+ | Wounded: Gain armor equal to max health and gain 5 acid
+ | Swampland
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Bee Stinger
+ | Grilling Skewer
+ | Honeycomb
+ | 3
+ | First Turn: Give the enemy 4 poison, 3 Acid, and 2 stun on hit
+ | Blood Orange
+ | Sour Lemon
+ | Vampiric Wine
+ | 4
+ | Battle Start: Gain 3 acid. Wounded: Convert all your acid to regeneration.
+ | Combustible Lemon
+ | Cherry Bomb
+ | Sour Lemon
+ | 3
+ | Turn Start: Spend 1 speed to deal 2 damage
+ | Lemon Roast
+ | Sour Lemon
+ | Redwood Roast
+ |  5
+ 5
+ | Battle Start: Gain 2 acid
+ | Lemon Shark
+ | Silverscale Fish
+ | Sour Lemon
+ | 3
+ | Battle Start: Gain 1 Acid Exposed: Give the enemy riptide equal to your acid
+ | Lemon Syrup
+ | Sour Lemon
+ | Honeycomb
+ | 3
+ | Battle Start: Double your speed
+ | Lemontree Branch
+ | Grilling Skewer
+ | Sour Lemon
+ |  2
+ 4
+ | On Hit: Spend 2 speed and gain 1 additional strike on your next turn
+ | Limestone Fruit
+ | Sour Lemon
+ | Stone Steak
+ | 3
+ | Battle Start: Gain 8 armor. If your health is not full, gain 2 acid
+ | Melon Lemonade
+ | Clearspring Watermelon
+ | Sour Lemon
+ | 3
+ | Battle Start, Exposed & Wounded: Remove all Acid
+ | Poisonous Lemon
+ | Poisonous Mushroom
+ | Sour Lemon
+ |  3
+ 4
+ | Battle Start: Gain 1 acid and 5 poison
+ | Spiny Kiwifruit
+ | Spiny Chestnut
+ | Sour Lemon
+ | 3
+ | Battle Start: Gain 3 acid and gain thorns equal to acid

@@ -1,0 +1,37 @@
+
+A Hero's Grave
+The following locations can be found anywhere on the map:
+- [Chest.png] Treasure Chests allow choosing between one of three Common rarity items to add to the inventory. There is a 1/80 chance items will be Golden and a 1/500 chance the items will be Diamond. More common in the Starting Forest biome.
+- [Bladeoil.png] Blade Oils allow choosing between giving the weapon 1 Attack, Armor or Speed. Refreshes if the weapon is changed. Each oil can only be applied once per weapon.
+- [Campfire.png] Campfires can be used at night to wait until the next day and restore 10 Health.
+- [Fortune teller.png] Crystal Balls allow choosing between one of three locations on the map to be revealed. They are always visible when the player is near.
+- [Blacksmith.png] Forges allow choosing between two bonuses to add to the weapon. If weapon already has one it can be replaced for 10 Gold.
+- [Golem.png] Golems can combine two items of the same common or golden item.
+- [Tower.png] Lookout Towers reveal the map in a 13 tile radius around them.
+- [Wandering merchant.png] Traveling Merchants have a selection of 5 Rare and 1 Heroic rarity items that can be bought using gold. Rare items cost 3 or 5 Gold while Heroic items cost 5 or 10 Gold. Their inventory can be replenished at the cost of 1 gold but the replenish cost increases by 1 for each previous replenish.
+- [Waypoint.png] Waypoints allow traveling to them instantly at any point by hovering over them in map mode and pressing Space. They are always visible when the player is near.
+- [Heroic chest.png] Hero's Graves allow choosing between one of three Heroic rarity items to add to the inventory. They always spawn some distance from the house. They usually spawn in an enclosed area where the gates are only open at night.
+The Woodland map is continuous and spread across four biomes. Each biome will spawn specific enemies and locations.
+ | Biome
+ | Enemies
+ | Locations
+ | Starting Area
+ | [Enemy Bear.png] Bear
+[Enemy Spider.png] Spider
+[Enemy Wolf.png] Wolf
+ | [House.png] Home: Spawns next to the player and can be used at night to wait until the next day and restore all health
+ | Flower Glade
+ | [Enemy Hedgehog.png] Hedgehog
+[Enemy Spider.png] Spider
+ | [Fairy.png] Fairy: can transform an item into another item of the same rarity
+[Fairy queen.png] Fairy Queen: can transform all items into other items of higher rarity
+ | Rocky Plains
+ | [Enemy Raven.png] Raven
+[Enemy Wolf.png] Wolf
+ | [Lockbox.png] Jewelry Box: can choose between one of three Jewelry items to add to inventory
+[Well.png] Wishing Well: can throw 5 Gold to gain a Golden item, 10 to gain a Diamond item, or 20  to gain a permanent boon
+ | Forest
+ | [Enemy Bat.png] Bat
+[Enemy Bear.png] Bear
+ | [Cauldron.png] Cauldron: can combine two food items
+[Beehive.png] Beehive: gain a Honeycomb that can be combined with food items at a Cauldron

@@ -1,0 +1,71 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Rings isn’t an official compendium type, but it’s a practical grouping for theorycrafting.
+Highborn item set bonus: Your ring items trigger twice.
+Rings is part of the Item tags.
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Ring Blades
+ | Rare 
+ | 1
+ | Battle Start: Steal 1 attack from the enemy
+ | Swampland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Emerald Ring
+ | Common 
+ | -
+ | Battle Start: Restore 3 health — at Gold: 6 , at Diamond: 12
+ | Woodland 
+ | Ruby Ring
+ | Common 
+ | -
+ | Battle Start: Gain 2 attack and take 3 damage — at Gold: take 6 for 4, at Diamond: take 12 for 8
+ | Woodland 
+ | Sapphire Ring
+ | Common 
+ | -
+ | Battle Start: Steal 2 from the enemy — at Gold: 4 , at Diamond: 8
+ | Woodland 
+ | Citrine Ring
+ | Rare 
+ | -
+ | Battle Start: Spend 5 speed to permanently gain 1 additional strike
+ | Woodland 
+ | Gold Ring
+ | Rare 
+ | -
+ | Battle Start: Gain 1 gold
+ | Woodland 
+ | Bloodstone Ring
+ | Heroic 
+ | -
+ | Battle Start: Gain 5 max health and restore 5 health
+ | Swampland 
+ | Rusty Ring
+ | Common 
+ | -
+ | Battle Start: Give the enemy 1 acid — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Thorn Ring
+ | Rare 
+ | -
+ | Battle Start: Take 5 damage and gain 10 thorns
+ | Woodland 

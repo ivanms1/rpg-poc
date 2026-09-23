@@ -1,0 +1,168 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+The following item explicitly references Sanguine items in its effect:
+Vampire's Tooth — If you have exactly 1 sanguine item, double its healing.
+Sanguine Scepter — Healing is doubled.
+Sanguine is part of the Item tags.
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Heart Drinker
+ | Common 
+ | 1
+ | On Hit: Restore 1 health
+ | Woodland 
+ | Bloodmoon Dagger
+ | Rare 
+ | 2
+ | Wounded: Gain 5 attack and take 2 damage
+ | Woodland 
+ | Bloodmoon Sickle
+ | Rare 
+ | 5
+ | On Hit: Take 1 damage
+ | Woodland 
+ | Lifeblood Spear
+ | Rare 
+ | 1
+ | Whenever you restore 3 or more health, gain 1 attack
+ | Woodland 
+ | Sanguine Scepter
+ | Rare 
+ | 1
+ | Healing is doubled
+ | Swampland 
+ | Bloodlord's Axe
+ | Heroic 
+ | 4
+ | Battle Start: The enemy loses 5 health and you restore 5 health
+ | Swampland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Deviled Egg
+ | Common 
+ | -
+ | Hatches after you defeat the next boss (Into Sanguine Imp)
+ | Swampland 
+ | Vampiric Wine
+ | Common 
+ | -
+ | Wounded: Restore 4 health — at Gold: 8 , at Diamond: 16
+ | Woodland 
+ | Lifeblood Burst
+ | Rare 
+ | -
+ | Whenever you restore 3 or more health, deal 3 damage
+ | Woodland 
+ | Heart-shaped Potion
+ | Rare 
+ | -
+ | When you are reduced to exactly 1 health for the first time, restore health to full
+ | Woodland 
+ | Sanguine Rose
+ | Rare 
+ | -
+ | Whenever you restore health, restore 1 additional health. You can only equip 1 rose
+ | Woodland 
+ | Vampire's Tooth
+ | Rare 
+ | -
+ | If you have exactly 1 sanguine item, double its healing
+ | Woodland 
+ | Blood Chain
+ | Rare 
+ | -
+ | The first time the enemy becomes wounded, trigger all of your wounded items
+ | Woodland 
+ | Crimson Fang
+ | Rare 
+ | -
+ | Battle Start: If your health is full, lose 5 health and gain 2 additional strikes
+ | Swampland 
+ | Bloodstone Ring
+ | Heroic 
+ | -
+ | Battle Start: Gain 5 max health and restore 5 health
+ | Swampland 
+ | Crimson Cloak
+ | Heroic 
+ | -
+ | Whenever you take damage, restore 1 health
+ | Woodland 
+ | Lifeblood Armor
+ | Heroic 
+ | -
+ | Battle Start: Convert 50% of your current health to that amount of armor
+ | Woodland 
+ | Sanguine Imp
+ | Heroic 
+ | -
+ | Turn Start: Deal 1 damage and restore 1 health
+ | Swampland 
+ | Sanguine Morphosis
+ | Heroic 
+ | -
+ | Every 4th turn: Stun yourself for 1 turn and gain 3 regeneration
+ | Swampland 
+ | Heart-shaped Elixir
+ | Rare 
+ | -
+ | When you are reduced below 5 health for the first time, restore health to full
+ | Kingmaker
+ | Sanguine Tome
+ | Rare 
+ | -
+ | Countdown 6: Restore health to full
+ | Swampland 
+ | Vampiric Stasis
+ | Rare 
+ | -
+ | Whenever you skip your strike, restore 3 health
+ | Swampland 
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Cherry Cocktail
+ | Cherry Bomb
+ | Vampiric Wine
+ | -
+ | Battle Start & Wounded: Deal 3 damage and restore 3 health
+ | Broken Winebottle
+ | Grilling Skewer
+ | Vampiric Wine
+ | 2
+ | Wounded: On your next turn, Keep striking the enemy until they're wounded
+ | Blood Sausage
+ | Redwood Roast
+ | Vampiric Wine
+ | 5
+ | Wounded: Restore 1 health 5 times
+ | Blood Orange
+ | Sour Lemon
+ | Vampiric Wine
+ | 4
+ | Battle Start: Gain 3 acid. Wounded: Convert all your acid to regeneration.
+ | Bloody Steak
+ | Vampiric Wine
+ | Stone Steak
+ | -
+ | Wounded: Restore 10 health and gain 5 armor

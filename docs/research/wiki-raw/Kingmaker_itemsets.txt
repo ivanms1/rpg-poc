@@ -1,0 +1,25 @@
+
+Items that have a similar name will provide a set bonus if the player has at least one of each item from a set. Kingmaker itemsets require items that can only be found by starting a run with a combination of Woodland and Swampland item bundles.
+ | Itemset
+ | Items
+ | Effect
+ | [Crystal Mirror.png] Crystal Mirror
+ | [Marble Mirror.png] Marble Mirror
+[Sinful Mirror.png] Sinful Mirror
+ | Currently disabled Whenever you gain a status effect, give it to the enemy as well
+ | [Iron Chain.png] Iron Chain
+ | [Chainmail Sword.png] Chainmail Sword
+[Chainmail Armor.png] Chainmail Armor
+ | Gain 5 armor
+ | [Ironstone Arrowhead.png] Ironstone Arrowhead
+ | [Ironstone Spear.png] Ironstone Spear
+[Ironstone Sandals.png] Ironstone Sandals
+ | On Hit: Gain 1 armor
+ | [Ironstone Ore.png] Ironstone Ore
+ | [Ironstone Bracelet.png] Ironstone Bracelet
+[Petrified Statue.png] Petrified Statue
+ | Gain armor equal to minus speed
+ | [Sanguine Gemstone.png] Sanguine Gemstone
+ | [Sanguine Scepter.png] Sanguine Scepter
+[Ruby Gemstone.png] Ruby Gemstone
+ | If your attack is exactly 1 restore 1 health on hit

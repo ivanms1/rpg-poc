@@ -1,0 +1,75 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Restore health equal to regeneration at turn end, then remove 1 stack.
+Mechanics
+At the end of your turn, you restore health equal to your current Regeneration stacks, then 1 stack is removed.
+If multiple sources grant Regeneration during the same turn, they add together before the end-of-turn heal.
+Regeneration is part of the Status effect tags.
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Liferoot Staff
+ | Common 
+ | 2
+ | Wounded: Gain 3 regeneration
+ | Swampland 
+ | Liferoot Hammer
+ | Rare 
+ | 3
+ | On Hit: If your health is full, spend your regeneration to gain 3 times that amount of armor
+ | Swampland 
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Liferoot Gauntlet
+ | Common 
+ | 3 / 6 / 12
+ | Battle start: Gain 1 regeneration — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Moonlight Crest
+ | Rare 
+ | -
+ | Turn Start: If you're below 50% health, gain 1 regeneration
+ | Swampland 
+ | Muscle Growth
+ | Rare 
+ | -
+ | While you have regeneration, temporarily gain 3 attack
+ | Swampland 
+ | Twisted Root
+ | Rare 
+ | -
+ | Exposed: Gain 1 regeneration for each equipped wood item
+ | Swampland 
+ | Liferoot Beast
+ | Heroic 
+ | -
+ | Turn Start: If you don't have any regeneration, gain 3 regeneration
+ | Swampland 
+ | Liferoot Lute
+ | Heroic 
+ | -
+ | Wounded: Gain 3 regeneration. Symphony
+ | Swampland 
+ | Sanguine Morphosis
+ | Heroic 
+ | -
+ | Every 4th turn: Stun yourself for 1 turn and gain 3 regeneration
+ | Swampland 
+ | Liferoot Tome
+ | Common 
+ | -
+ | Countdown 4: Gain 3 regeneration — at Gold: 6 , at Diamond: 12
+ | Swampland 

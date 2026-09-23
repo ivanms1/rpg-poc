@@ -1,0 +1,160 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+At turn end, remove 1 riptide and take 5 damage.
+Contents
+1 Mechanics
+2 Items
+2.1 Weapons
+2.2 Standard items
+Mechanics
+At the end of the afflicted unit’s turn, Riptide triggers once: they take 5 damage and remove 1 Riptide stack.
+With multiple stacks, Riptide will keep triggering on consecutive turns.
+Effects like Stillwater Pearl can change the number of triggers per turn.
+Riptide is part of the Status effect tags.
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Silverscale Dagger
+ | Common 
+ | 2
+ | Battle Start: Give the enemy 1 riptide
+ | Swampland 
+ | Silverscale Trident
+ | Heroic 
+ | 0
+ | On Hit: Give the enemy 1 riptide
+ | Swampland 
+ | Wave Breaker
+ | Rare 
+ | -2
+ | Can't strike. Battle Start: Give the enemy 2 riptide for each negative base attack you have
+ | Swampland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Silverscale Fish
+ | Common 
+ | -
+ | Exposed: Give the enemy 1 riptide — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Saltcrusted Crown
+ | Rare 
+ | 8
+ | Battle Start: Gain 1 riptide
+ | Swampland 
+ | Silver Anchor
+ | Rare 
+ | -1
+ | Whenever you lose speed, give the enemy 1 riptide
+ | Swampland 
+ | Silverscale Armor
+ | Rare 
+ | -
+ | Whenever riptide triggers, gain 2 armor
+ | Swampland 
+ | Silverscale Greaves
+ | Rare 
+ | 1
+ | Battle Start: If you have more speed than the enemy, give them 2 riptide
+ | Swampland 
+ | Silverscale Gauntlet
+ | Heroic 
+ | -
+ | Give the enemy 1 riptide every other turn
+ | Swampland 
+ | Stillwater Pearl
+ | Rare 
+ | -
+ | Riptide can trigger twice per turn
+ | Swampland 
+ | Spiral Shell
+ | Rare 
+ | -
+ | Turn Start: If you're stunned, give the enemy 1 riptide
+ | Swampland 
+ | Toxic Algae
+ | Rare 
+ | -
+ | The first time riptide triggers, give the enemy 5 poison
+ | Swampland 
+ | Silverscale Tome
+ | Common 
+ | -
+ | Countdown 3: Give the enemy 2 riptide — at Gold: 4 , at Diamond: 8
+ | Swampland 
+ | Stormtide Anchor
+ | Mythic 
+ | -
+ | Whenever riptide triggers, stun the enemy for 1 turn
+ | Swampland
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Deepsea Wine
+ | Silverscale Fish
+ | Vampiric Wine
+ | -
+ | Wounded: Give the enemy 1 riptide. Whenever riptide triggers, restore 3 health
+ | Explosive Fish
+ | Silverscale Fish
+ | Cherry Bomb
+ | -
+ | Battle Start: Give the enemy 2 riptide
+ | Honey Caviar
+ | Silverscale Fish
+ | Honeycomb
+ | -
+ | Exposed: Give the enemy 10 riptide
+ | Lemon Shark
+ | Silverscale Fish
+ | Sour Lemon
+ | 3
+ | Battle Start: Gain 1 Acid Exposed: Give the enemy riptide equal to your acid
+ | Marbled Stonefish
+ | Silverscale Fish
+ | Stone Steak
+ | -
+ | Battle Start & Exposed: If your health is full, gain 5 armor and give the enemy 1 riptide
+ | Poisonous Pufferfish
+ | Silverscale Fish
+ | Poisonous Mushroom
+ | 2
+ | Battle Start: Gain 3 poison and give the enemy riptide equal to your poison
+ | Shark Roast
+ | Silverscale Fish
+ | Redwood Roast
+ | 5
+ | Exposed: Give the enemy 2 riptides
+ | Silverscale Swordfish
+ | Grilling Skewer
+ | Silverscale Fish
+ | 2
+ | Battle Start: Gain 1 additional strike. First Turn: Give the enemy 1 riptide on hit
+ | Spiny Snapper
+ | Silverscale Fish
+ | Spiny Chestnut
+ | -
+ | Battle Start: Give the enemy 1 riptide. Whenever riptide triggers, gain 3 thorns
+ | Underwater Watermelon
+ | Silverscale Fish
+ | Clearspring Watermelon
+ | -
+ | Battle Start, Exposed & Wounded: Decrease 1 random status effect and give the enemy 1 riptide

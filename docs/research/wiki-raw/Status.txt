@@ -1,0 +1,101 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Items here modify status effects in general (e.g., increase, decrease, transfer, or remove stacks). For specific effects like Purity, Acid or Poison, see their individual pages.
+General Status Effect is part of the Status effect tags.
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Moonlight Cleaver
+ | Heroic 
+ | 3
+ | While you are below 50% health, you cannot gain status effects
+ | Swampland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Clearspring Feather
+ | Common 
+ | -
+ | Battle Start: Decrease a random status effect by 1 and give it to the enemy — at Gold: transfer 2 , at Diamond: transfer 4
+ | Swampland 
+ | Clearspring Watermelon
+ | Common 
+ | -
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1 — at Gold: decrease 2 , at Diamond: decrease 4
+ | Swampland 
+ | Clearspring Opal
+ | Rare 
+ | 2
+ | Turn Start: If you have any status effects, spend 1 speed to decrease a random status effect by 1
+ | Swampland 
+ | Clearspring Rose
+ | Rare 
+ | -
+ | Whenever you restore health, decrease a random status effect by 1. You can only equip 1 rose
+ | Swampland 
+ | Clearspring Cloak
+ | Heroic 
+ | -
+ | Exposed: Remove all your status effects and gain 1 armor equal to stacks removed
+ | Swampland 
+ | Clearspring Duck
+ | Heroic 
+ | -
+ | Turn Start: Gain 1 armor and decrease a random status effect by 1
+ | Swampland 
+ | Riverflow Talisman
+ | Rare 
+ | -
+ | Whenever you gain a status effect, gain 1 additional stack
+ | Swampland 
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Melon Bomb
+ | Clearspring Watermelon
+ | Cherry Bomb
+ | -
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1. Whenever a status effect is decreased, deal 1 damage to the enemy
+ | Melonvine Whip
+ | Grilling Skewer
+ | Clearspring Watermelon
+ | 3
+ | On Hit: Decrease 1 random status effect
+ | Underwater Watermelon
+ | Silverscale Fish
+ | Clearspring Watermelon
+ | -
+ | Battle Start, Exposed & Wounded: Decrease 1 random status effect and give the enemy 1 riptide
+ | Mineral Water
+ | Clearspring Watermelon
+ | Stone Steak
+ | -
+ | Battle Start & Exposed: If your health is full, decrease a random status effect by 2 and gain 5 armor
+ | Honeydew Melon
+ | Clearspring Watermelon
+ | Honeycomb
+ | -
+ | Battle Start: Give all your status effects to the enemy
+ | Bitter Melon
+ | Clearspring Watermelon
+ | Poisonous Mushroom
+ | 3
+ | Turn Start: Convert 1 stack of another status effect to 1 poison

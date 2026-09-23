@@ -1,0 +1,201 @@
+
+Click here to tour the challenge grid, starting at the one you're most likely to unlock!
+Challenges are conditions that unlock new items for all runs once completed. Challenges are displayed in the Compendium, where they are arranged in a 13x5 grid. Their conditions and bonuses are hidden until completed but can be revealed by completing two adjacent challenges. Both maps have 65 challenges each. The following challenges exist for Woodlands:
+ | Challenge
+ | Goal
+ | Reward item
+ | Where Wolf?
+ | Win against Bloodmoon Werewolf for the first time
+ | [Blood Chain.png] Blood Chain
+ | Dethroned
+ | Win against Goldwing Monarch for the first time
+ | [Royal Crownblade.png] Royal Crownblade
+ | Staggering Success
+ | Win against Swiftstrike Stag for the first time
+ | [Featherweight Wings.png] Featherweight Wings
+ | Trollhunter
+ | Win against Mountain Troll for the first time
+ | [Ironstone Greatsword.png] Ironstone Greatsword
+ | Ice Cold Victory
+ | Win against Frostbite Druid for the first time
+ | [Firecracker Belt.png] Firecracker Belt
+ | Give Me Your Money
+ | Win against Black Knight for the first time
+ | [Iron Rose.png] Iron Rose
+ | Rockslide Victory
+ | Win against Ironstone Golem for the first time
+ | [Ironstone Sandals.png] Ironstone Sandals
+ | Hunting Season
+ | Win against Razortusk Hog for the first time
+ | [Icicle Spear.png] Icicle Spear
+ | Timber
+ | Win against Redwood Treant for the first time
+ | [Woodcutter's Axe.png] Woodcutter's Axe
+ | Woodland Horror
+ | Win against Leshen for the first time
+ | [Iron Transfusion.png] Iron Transfusion
+ | Barking Up The Wrong Tree
+ | Win against Brittlebark Beast for the first time
+ | [Brittlebark Armor.png] Brittlebark Armor
+ | Rose And Thorn
+ | Win against Blackbriar King for the first time
+ | [Blackbriar Rose.png] Blackbriar Rose
+ | Unbearable
+ | Win against Razorclaw Grizzly for the first time
+ | [Bramble Buckler.png] Bramble Buckler
+ | Double K.O.
+ | Die on the same turn as a boss does
+ | [Double-plated Vest.png] Double-plated Vest
+ | Insomniac
+ | Defeat Leshen in a run without sleeping
+ | [Stoneslab Sword.png] Stoneslab Sword
+ | All That Glitters
+ | Have 3 golden items in your inventory
+ | [Gemstone Scepter.png] Gemstone Scepter
+ | Faster Than Light
+ | Outspeed a Spider
+ | [Agile Edge.png] Agile Edge
+ | Home Sweet Home
+ | Sleep in your house
+ | [Grindstone Club.png] Grindstone Club
+ | Shellshock
+ | Trigger Exposed with 0 base armor
+ | [Blacksmith Bond.png] Blacksmith Bond
+ | Journey's Beginning
+ | Lose your first battle
+ | [Horned Helmet.png] Horned Helmet
+ | The Collector
+ | Equip 3 copies of the same item
+ | [Freezing Edge.png] Freezing Edge
+ | Underdog
+ | Defeat a boss after starting the battle with less than 50% health
+ | [Crimson Cloak.png] Crimson Cloak
+ | Stop Hitting Yourself
+ | Strike an enemy 2 times before their turn
+ | [Swiftstrike Cloak.png] Swiftstrike Cloak
+ | Big Spender
+ | Spend a total of 30 gold in a single run
+ | [Gilded Edge.png] Gilded Edge
+ | Well Well Well
+ | Throw a lot of gold (20) into a well
+ | [Royal Shield.png] Royal Shield
+ | Beggars CAN be choosers
+ | Skip a heroes grave
+ | [Iron Shrapnel.png] Iron Shrapnel
+ | Lifeblood Overflow
+ | Overheal 30 or more health in a single battle
+ | [Lifeblood Spear.png] Lifeblood Spear
+ | Battle Medic
+ | Restore 15 or more health in a single turn
+ | [Bramble Vest.png] Bramble Vest
+ | Early Bird
+ | Fight a boss early and win
+ | [Ironstone Bracelet.png] Ironstone Bracelet
+ | Second Wind
+ | Trigger 4 different wounded items at the same time
+ | [Lifeblood Armor.png] Lifeblood Armor
+ | Nocturnal Predator
+ | Defeat 5 enemies during a single night
+ | [Studded Gauntlet.png] Studded Gauntlet
+ | Get Dunked On
+ | Die to the first strike of a boss
+ | [Double Explosion.png] Double Explosion
+ | Near-Death Experience
+ | Win a battle with 1 health remaining
+ | [Heart-shaped Potion.png] Heart-shaped Potion
+ | Less Is More
+ | Defeat the first boss with only Common items in your inventory
+ | [Lifeblood Helmet.png] Lifeblood Helmet
+ | Slowpoke
+ | Start a battle with -5 base speed
+ | [Ironstone Bow.png] Ironstone Bow
+ | It's A Secret To Everybody
+ | Find a hidden itemset
+ | [Hidden Dagger.png] Hidden Dagger
+ | Ouch!
+ | Deal 10 or more damage with thorns in a single turn
+ | [Blackbriar Blade.png] Blackbriar Blade
+ | So I Started Blasting
+ | Deal 10 or more non-weapon damage on your first turn
+ | [Sword Talisman.png] Sword Talisman
+ | Permafrost
+ | Make an enemy have 10 or more freeze
+ | [Frostbite Armor.png] Frostbite Armor
+ | Grave Mistake
+ | Die from your own items
+ | [Cactus Cap.png] Cactus Cap
+ | Edgelord
+ | Reforge your weapon once
+ | [Featherweight Edge.png] Featherweight Edge
+ | Impenetrable Defense
+ | Gain a combined total of 100 armor in a single battle
+ | [Shield Talisman.png] Shield Talisman
+ | Hostile Shrubbery
+ | Have 20 stacks of thorns
+ | [Bramble Talisman.png] Bramble Talisman
+ | Bombastic
+ | Trigger 3 bomb items at the same time on Exposed
+ | [Time Bomb.png] Time Bomb
+ | Sapphire Blue
+ | Start a battle with 20 base armor
+ | [Granite Lance.png] Granite Lance
+ | Emerald Green
+ | Start a battle with 30 or more max health
+ | [Granite Crown.png] Granite Crown
+ | Citrine Yellow
+ | Start a battle with 8 base speed
+ | [Featherweight Greaves.png] Featherweight Greaves
+ | Ruby Red
+ | Start a battle with 8 base attack
+ | [Powder Keg.png] Powder Keg
+ | Planned Pain
+ | Trigger Wounded on your own turn
+ | [Ice Spikes.png] Ice Spikes
+ | My Job Here Is Done
+ | Defeat a boss without striking
+ | [Explosive Powder.png] Explosive Powder
+ | Final Strike
+ | Deal 30 or more damage in a single strike
+ | [Swiftstrike Belt.png] Swiftstrike Belt
+ | Gold Rush
+ | Collect a total of a 80 gold in a single run
+ | [Royal Helmet.png] Royal Helmet
+ | Woodland Mastery
+ | Unlock all other challenges in woodland
+ | [Druid's Cloak.png] Druid's Cloak
+ | Shield Wall
+ | Have a total of 50 or more armor
+ | [Blastcap Armor.png] Blastcap Armor
+ | Shield Splitter
+ | Remove 10 or more armor in a single strike
+ | [Granite Hammer.png] Granite Hammer
+ | Multitasking
+ | Defeat the second boss before the first cycle is over
+ | [Ironstone Armor.png] Ironstone Armor
+ | Test of Strength
+ | Find and challenge a boss in the overworld
+ | [Vampire's Tooth.png] Vampire's Tooth
+ | Cartographer
+ | Unlock 5 different waypoints during a single run
+ | [Frostbite Greaves.png] Frostbite Greaves
+ | Woodland Victory
+ | Defeat Woodland Abomination for the first time
+ | [Twin Blade.png] Twin Blade
+ | Animal Friend
+ | Defeat the first boss before you battle a single enemy
+ | [Razor Breastplate.png] Razor Breastplate
+ | Chain Reaction
+ | 10 or more item effects at battle start
+ | [Bomb Bag.png] Bomb Bag
+ | Masochist
+ | Take 5 or more damage from your own items in a turn
+ | [Blackbriar Gauntlet.png] Blackbriar Gauntlet
+ | Big Stick
+ | Deal 10 damage using the [Wooden Stick.png] Wooden Stick weapon
+ | [Lifesteal Scythe.png] Lifesteal Scythe
+ | Stick Always Wins
+ | Defeat Leshen with a [Wooden Stick.png] Wooden Stick
+ | [Blackbriar Armor.png] Blackbriar Armor
+ | Untouchable
+ | Defeat Leshen in a run where you never lost health
+ | [Bramble Belt.png] Bramble Belt

@@ -1,0 +1,57 @@
+
+The following locations can be found anywhere on the map:
+- [Chest.png] Treasure Chests allow choosing between one of three Common rarity items to add to the inventory. There is a 1/80 chance items will be Golden and a 1/500 chance the items will be Diamond. More common in the Starting Area biome.
+- [Bazaar vendor.png] Bargaining Tents have a selection of 2 Rare rarity items that can be bought for 5 Gold. Can choose to haggle, which has a 75% chance to change the price to 4 and a 25% chance to change the price to 7. Cannot appear on the Starting Island.
+- [Bladeoil.png] Blade Oils allow choosing between giving the weapon 1 Attack, Armor or Speed. Refreshes if the weapon is changed. Each oil can only be applied once per weapon.
+- [Campfire.png] Campfires can be used at night to wait until the next day and restore 10 Health.
+- [Tower.png] Lookout Towers reveal the map in a 13 tile radius around them.
+- [Woodcutter.png] Woodcutters can combine two items into a random item of Heroic rarity.
+- [Summoning circle.png] Scrying Pools reveal a new rare location on the map.
+- [Waypoint.png] Waypoints allow traveling to them instantly at any point by hovering over them in map mode and pressing Space. They are always visible when the player is near.
+- [Donkey carriage.png] Horse Carriages allow traveling to one of three biomes and reveal all tiles along the way.
+The following locations can be found anywhere on the map but are very rare:
+- [Beehive.png] Beehive: gives a Honeycomb that can be combined with food items at a Cauldron but is protected by Honey Bee enemies.
+- [Crone.png] Crone: choose between two cursed items.
+- [Junksmith.png] Junksmith: can choose to copy an item.
+- [Big golem.png] Large Golem: upgrade a regular item into a Golden one or a Golden item into a Diamond one.
+- [Rune carver.png] Rune Stone: can choose between the following items: Blood Rune, Echo Rune, Iron Rune.
+- [Gem expert.png] Gem Stash: can choose between the following items: Ruby Gemstone, Sapphire Gemstone, and Citrine Gemstone. (Need Woodland Blue Bundle)
+- [Fairy queen.png] Fairy Queen: can transform all items into other items of higher rarity
+- [Alchemist.png] Alchemist: Upgrades a selected potion into an elixir.
+- [Shady dealer.png] Rich Merchant: has a selection of 6 Heroic rarity items that can be bought with 5 gold.
+- [Beekeeper.png] Beekeeper: sells 2 honey items for 25 gold each.
+The Kingmaker map is continuous and spread across seven biomes. Each biome will spawn specific enemies and locations.
+ | Biome
+ | Enemies
+ | Locations
+ | Starting Area
+ | [Enemy Frog.png] Frog
+[Enemy Wolf.png] Wolf
+ | [House.png] Home: Spawns next to the player and can be used at night to wait until the next day and restore all health
+ | Blackrock Battlefield
+ | [Enemy Raven.png] Raven
+ | [Blacksmith.png] Forge: can choose between two bonuses to add to the weapon, if weapon already has one it can be replaced for 10 Gold
+[Weapon stash.png] Weapon Pile: can choose between one of three weapons
+ | Cauldron Hollow
+ | [Enemy Bear.png] Bear
+[Enemy Beaver.png] Beaver
+ | [Bonfire.png] Large Bonfire: can be used at night to wait until the next day and restore all Health
+[Cauldron.png] Cauldron: can combine two food items
+ | Elderwood Cemetery
+ | [Enemy Bat.png] Bat
+[Enemy Snake.png] Snake
+ | [Heroic chest.png] Hero's Grave: can choose between three Heroic rarity items to add to the inventory
+[Scroll.png] Ancient Tomes: can choose between one of three tome items (Need Swampland Yellow Bundle)
+ | Farmland Fields
+ | No enemies
+ | [Food vendor.png] Farmer: can choose between three Food items to add to the inventory
+ | Golem Glade
+ | [Enemy Hedgehog.png] Hedgehog
+[Enemy Turtle.png] Turtle
+ | [Fairy.png] Fairy: can transform an item into another item of the same rarity
+[Golem.png] Golem: can combine two items of the same common or golden item
+ | Petrified Forest
+ | [Enemy Slime.png] Slime
+[Enemy Spider.png] Spider
+ | [Lockbox.png] Jewelry Box: can choose between one of three Jewelry items to add to inventory (Need Woodland Blue Bundle)
+[Wandering merchant.png] Traveling Merchant: has a selection of 5 Rare and 1 Heroic rarity items that can be bought using gold

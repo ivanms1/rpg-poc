@@ -1,0 +1,154 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Trigger when your strike hits.
+On hit is part of the Trigger tags.
+Items that trigger On hit
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Razorthorn Spear
+ | Common 
+ | 1
+ | On Hit: Gain 2 thorns
+ | Woodland 
+ | Boom Stick
+ | Common 
+ | 2
+ | On Hit: Deal 1 damage
+ | Woodland 
+ | Heart Drinker
+ | Common 
+ | 1
+ | On Hit: Restore 1 health
+ | Woodland 
+ | Ironstone Bow
+ | Rare 
+ | 6
+ 1
+ | On Hit: Lose 1 speed. If your speed is 0 or less, only strike every other turn
+ | Woodland 
+ | Bloodmoon Sickle
+ | Rare 
+ | 5
+ | On Hit: Take 1 damage
+ | Woodland 
+ | Granite Hammer
+ | Heroic 
+ | 2
+ | On Hit: Convert 1 armor to 2 attack
+ | Woodland 
+ | Stoneslab Sword
+ | Heroic 
+ | 2
+ | On Hit: Gain 2 armor
+ | Woodland 
+ | Lifesteal Scythe
+ | Heroic 
+ | 1
+ | On Hit: If the enemy doesn't have any armor, restore health equal to your attack
+ | Woodland 
+ | Royal Crownblade
+ | Heroic 
+ | 4
+ | On Hit: Gain 1 gold
+ | Woodland 
+ | Forge Hammer
+ | Common 
+ | 4
+ | On Hit: Give the enemy 2 armor
+ | Swampland 
+ | Gale Staff
+ | Common 
+ | 2
+ 6
+ | On Hit: Lose 1 speed
+ | Swampland 
+ | Pacifist Staff
+ | Common 
+ | 0
+ | On Hit: Gain 1 armor and restore 1 health
+ | Swampland 
+ | Basilisk Fang
+ | Rare 
+ | 3
+ | On Hit: Decrease your poison by 2 and give it to the enemy
+ | Swampland 
+ | Liferoot Hammer
+ | Rare 
+ | 3
+ | On Hit: If your health is full, spend your regeneration to gain 3 times that amount of armor
+ | Swampland 
+ | Melting Iceblade
+ | Heroic 
+ | 8
+ | On Hit: Lose 1 attack
+ | Swampland 
+ | Purelake Staff
+ | Heroic 
+ | 1
+ | Battle Start: Gain 2 purity. On Hit: Remove 1 purity
+ | Swampland 
+ | Silverscale Trident
+ | Heroic 
+ | 0
+ | On Hit: Give the enemy 1 riptide
+ | Swampland 
+ | Ancient Warhammer
+ | Mythic 
+ | 5
+ | On Hit: Remove all of the enemy's armor
+ | Swampland
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Studded Gauntlet
+ | Heroic 
+ | -
+ | On Hit: Deal 1 damage
+ | Woodland 
+ | Ruby Gemstone
+ | Heroic 
+ | -
+ | If your attack is exactly 1, deal 4 damage on hit
+ | Woodland 
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Melonvine Whip
+ | Grilling Skewer
+ | Clearspring Watermelon
+ | 3
+ | On Hit: Decrease 1 random status effect
+ | Lemontree Branch
+ | Grilling Skewer
+ | Sour Lemon
+ |  2
+ 4
+ | On Hit: Spend 2 speed and gain 1 additional strike on your next turn
+ | Bee Stinger
+ | Grilling Skewer
+ | Honeycomb
+ | 3
+ | First Turn: Give the enemy 4 poison, 3 Acid, and 2 stun on hit
+ | Silverscale Swordfish
+ | Grilling Skewer
+ | Silverscale Fish
+ | 2
+ | Battle Start: Gain 1 additional strike. First Turn: Give the enemy 1 riptide on hit

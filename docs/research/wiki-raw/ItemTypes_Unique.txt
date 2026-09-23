@@ -1,0 +1,417 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+(Redirected from ItemTypes/Unique)
+Unique isn’t an official compendium type, but it’s useful for theorycrafting.
+All weapons are unique by nature, except hidden dagger (omitted here).
+All Mythic items are also Unique (omitted here).
+Unique is part of the Item tags.
+Items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Acid Mutation
+ | Heroic 
+ | -
+ | Battle Start: Gain 1 acid. While you have acid, temporarily gain attack equal to acid
+ | Swampland 
+ | Acidic Witherleaf
+ | Heroic 
+ | 2
+ | Battle Start: Give the enemy acid equal to half your speed
+ | Swampland 
+ | Arcane Bell
+ | Rare 
+ | -
+ | Battle Start: Decrease all countdowns by 2. Symphony
+ | Swampland 
+ | Assault Greaves
+ | Heroic 
+ | -
+ | Whenever you lose armor, deal 1 damage
+ | Woodland 
+ | Blackbriar Armor
+ | Heroic 
+ | -1
+ | Whenever you lose armor, gain 2 thorns
+ | Woodland 
+ | Blackbriar Rose
+ | Rare 
+ | -
+ | Whenever you restore health, gain 2 thorns. You can only equip 1 rose
+ | Woodland 
+ | Blacksmith Bond
+ | Rare 
+ | -
+ | Exposed can trigger 1 additional time
+ | Woodland 
+ | Blood Chain
+ | Rare 
+ | -
+ | The first time the enemy becomes wounded, trigger all of your wounded items
+ | Woodland 
+ | Bramble Belt
+ | Rare 
+ | -
+ | Battle Start: Gain 1 thorns and give the enemy 1 additional strike
+ | Woodland 
+ | Bramble Talisman
+ | Rare 
+ | -
+ | Whenever you gain thorns, gain 1 armor
+ | Woodland 
+ | Brittlebark Armor
+ | Heroic 
+ | 12
+ | Whenever you lose health, take 1 additional damage
+ | Woodland 
+ | Cactus Cap
+ | Rare 
+ | -
+ | If the enemy has no armor, thorns deal double damage
+ | Woodland 
+ | Citrine Gemstone
+ | Heroic 
+ | -5
+ | Your base speed stat is inverted
+ | Woodland 
+ | Citrine Ring
+ | Rare 
+ | -
+ | Battle Start: Spend 5 speed to permanently gain 1 additional strike
+ | Woodland 
+ | Clearspring Duck
+ | Heroic 
+ | -
+ | Turn Start: Gain 1 armor and decrease a random status effect by 1
+ | Swampland 
+ | Clearspring Rose
+ | Rare 
+ | -
+ | Whenever you restore health, decrease a random status effect by 1. You can only equip 1 rose
+ | Swampland 
+ | Crimson Cloak
+ | Heroic 
+ | -
+ | Whenever you lose health, restore 1 health
+ | Woodland 
+ | Deviled Egg
+ | Common 
+ | -
+ | Hatches after you defeat the next boss (Into Sanguine Imp)
+ | Swampland 
+ | Double-plated Vest
+ | Rare 
+ | -
+ | Every third time you take damage each turn, gain 2 armor
+ | Woodland 
+ | Druid's Cloak
+ | Heroic 
+ | -
+ | Whenever you lose health, gain that much armor. You cannot restore health
+ | Woodland 
+ | Emerald Gemstone
+ | Heroic 
+ | -
+ | Battle Start: If you have less max health than the enemy, set your max health equal to their max health
+ | Woodland 
+ | Energy Drain
+ | Rare 
+ | -
+ | Before any other item triggers, if you have less speed than the enemy, steal 5 speed from the enemy
+ | Woodland 
+ | Explosive Powder
+ | Rare 
+ | -
+ | The damage of all bomb items increases by 1
+ | Woodland 
+ | Featherweight Greaves
+ | Rare 
+ |  1
+ 3
+ | Battle Start: Lose 3 armor
+ | Woodland 
+ | Featherweight Wings
+ | Rare 
+ | 2
+ | Battle Start: If you have less speed than the enemy, gain attack equal to your speed
+ | Woodland 
+ | Grand Tome
+ | Heroic 
+ | -
+ | Countdown 10: Retrigger all your other tomes
+ | Swampland 
+ | Granite Crown
+ | Rare 
+ | -
+ | Battle Start: Gain max health equal to your base armor
+ | Woodland 
+ | Granite Egg
+ | Common 
+ | -
+ | Hatches after you defeat the next boss (Into Stoneborn Turtle)
+ | Swampland 
+ | Heart-shaped Acorn
+ | Rare 
+ | -
+ | Battle Start: If you have 0 base armor, restore health to full
+ | Woodland 
+ | Heart-shaped Potion
+ | Rare 
+ | -
+ | When you are reduced to exactly 1 health for the first time, restore health to full
+ | Woodland 
+ | Iceblock Shield
+ | Rare 
+ | 8
+ | Battle start: Gain 2 freeze
+ | Woodland 
+ | Iron Rose
+ | Rare 
+ | -
+ | Whenever you restore health, gain 1 armor. You can only equip 1 rose
+ | Woodland 
+ | Ironstone Armor
+ | Heroic 
+ | -2
+ | Enemy strikes deal 2 damage less while you have armor
+ | Woodland 
+ | Ironstone Bracelet
+ | Common 
+ | -1
+ | Enemy strikes deal 1 damage less while you have armor but 1 damage more otherwise
+ | Woodland 
+ | Ironskin Elixir
+ | Heroic 
+ | -
+ | Battle Start: Double your max health and gain armor equal to lost health
+ | Kingmaker
+ | Ironskin Potion
+ | Heroic 
+ | -
+ | Battle Start: Gain armor equal to lost health
+ | Woodland 
+ | Life Zap
+ | Heroic 
+ | -
+ | Battle Start: Lose all your health except 1 and stun the enemy for 2 turns
+ | Swampland 
+ | Liferoot Beast
+ | Heroic 
+ | -
+ | Turn Start: If you don't have any regeneration, gain 3 regeneration
+ | Swampland 
+ | Lifeblood Helmet
+ | Common 
+ | -
+ | First Turn: Restore health equal to damage dealt by strikes
+ | Woodland 
+ | Lightspeed Potion
+ | Common 
+ | 1
+ | Battle Start: Restore health equal to speed
+ | Swampland 
+ | Marble Mirror
+ | Heroic 
+ | -
+ | Battle Start: Gain armor equal to your opponent’s armor
+ | Swampland 
+ | Moonlight Crest
+ | Rare 
+ | -
+ | Turn Start: If you're below 50% health, gain 1 regeneration
+ | Swampland 
+ | Oak Heart
+ | Rare 
+ | -
+ | Gain 3 max health for each equipped wood item
+ | Woodland 
+ | Ore Heart
+ | Rare 
+ | -
+ | Battle Start: Gain 3 armor for each equipped stone item
+ | Woodland 
+ | Petrified Statue
+ | Heroic 
+ | -2
+ | Battle Start: Give the enemy 1 stun for each equipped stone item
+ | Swampland 
+ | Plated Shield
+ | Rare 
+ | -1
+ | The first time you gain armor, double it
+ | Swampland 
+ | Powder Keg
+ | Rare 
+ | -
+ | Battle Start: If you only have 1 bomb item equipped, it triggers 3 times
+ | Woodland 
+ | Purelake Elixir
+ | Rare 
+ | -
+ | Battle start: Lose 5 armor and gain 5 purity
+ | Swampland
+ | Purelake Potion
+ | Rare 
+ | -
+ | Battle start: Remove all your armor and gain 3 purity
+ | Swampland 
+ | Riverflow Talisman
+ | Rare 
+ | -
+ | Whenever you gain a status effect, gain 1 additional stack
+ | Swampland 
+ | Riverflow Violin
+ | Rare 
+ | -
+ | Exposed: Gain 6 armor. Symphony
+ | Swampland 
+ | Royal Horn
+ | Common 
+ | -
+ | Wounded: Gain 2 gold. Symphony
+ | Swampland 
+ | Ruby Gemstone
+ | Heroic 
+ | -
+ | If your attack is exactly 1, deal 4 damage on hit
+ | Woodland 
+ | Sapphire Gemstone
+ | Heroic 
+ | -
+ | Whenever you lose armor, restore that much health
+ | Woodland 
+ | Sanguine Imp
+ | Heroic 
+ | -
+ | Turn Start: Deal 1 damage and restore 1 health
+ | Swampland 
+ | Sanguine Morphosis
+ | Heroic 
+ | -
+ | Every 4th turn: Stun yourself for 1 turn and gain 3 regeneration
+ | Swampland 
+ | Sanguine Rose
+ | Rare 
+ | -
+ | Whenever you restore health, increase health restored by 1. You can only equip 1 rose
+ | Woodland 
+ | Sanguine Tome
+ | Rare 
+ | -
+ | Countdown 6: Restore health to full
+ | Swampland 
+ | Serpent Lyre
+ | Rare 
+ | -
+ | Exposed: Give the enemy 4 poison. Symphony
+ | Swampland 
+ | Sheet Music
+ | Heroic 
+ | -
+ | Countdown 6: Trigger Symphony 3 times
+ | Swampland 
+ | Shield Talisman
+ | Heroic 
+ | -
+ | Whenever you gain armor, gain 1 additional armor
+ | Woodland 
+ | Silverscale Gauntlet
+ | Heroic 
+ | -
+ | Give the enemy 1 riptide every other turn
+ | Swampland 
+ | Sinful Mirror
+ | Rare 
+ | -
+ | Wounded: Remove all your purity
+ | Swampland 
+ | Slime Elixir
+ | Rare 
+ | -
+ | Wounded: Gain armor equal to max health and gain 5 acid
+ | Swampland
+ | Slime Heart
+ | Rare 
+ | -
+ | Wounded: Remove all your acid and restore 2 health for each acid removed
+ | Swampland 
+ | Slime Potion
+ | Rare 
+ | -
+ | Wounded: Gain armor equal to lost health and gain 5 acid
+ | Swampland 
+ | Stillwater Pearl
+ | Rare 
+ | -
+ | Riptide can trigger twice per turn
+ | Swampland 
+ | Stoneborn Turtle
+ | Heroic 
+ | -
+ | Turn start: Restore 1 health. If your health is full, gain 2 armor instead
+ | Swampland 
+ | Stormcloud Drum
+ | Heroic 
+ | -
+ | Wounded: Stun the enemy for 1 turn. Symphony
+ | Swampland 
+ | Sunlight Crest
+ | Heroic 
+ | -
+ | Turn Start: If you're above 50% health, lose 3 health and gain 1 attack
+ | Swampland 
+ | Sword Talisman
+ | Heroic 
+ | -
+ | Whenever you deal non-weapon damage to the enemy, deal 1 additional damage
+ | Woodland 
+ | Thorn Ring
+ | Rare 
+ | -
+ | Battle Start: Take 5 damage and gain 10 thorns
+ | Woodland 
+ | Thunder Cloud
+ | Heroic 
+ | -1
+ | Wounded: Stun the enemy for 3 turns
+ | Swampland 
+ | Tome of the Hero
+ | Heroic 
+ | -
+ | Countdown 8: Gain 4 attack, 4 armor and 4 speed
+ | Swampland 
+ | Toxic Rose
+ | Rare 
+ | -
+ | Whenever you restore health, give the enemy 1 poison. You can only equip 1 rose
+ | Swampland 
+ | Treebark Egg
+ | Common 
+ | -
+ | Hatches after you defeat the next boss (Into Liferoot Beast)
+ | Swampland 
+ | Twisted Root
+ | Rare 
+ | -
+ | Exposed: Gain 1 regeneration for each equipped wood item
+ | Swampland 
+ | Vampire's Tooth
+ | Rare 
+ | -
+ | If you have exactly 1 sanguine item, it triggers 1 additional time
+ | Woodland 
+ | Wet Egg
+ | Common 
+ | -
+ | Hatches after you defeat the next boss (Into Clearspring Duck)
+ | Swampland 

@@ -1,0 +1,363 @@
+From He is Coming Official Wiki
+Namespaces
+User page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+User contributions
+< User:76561198383650553
+The player can only have one weapon. Choosing another weapon will destroy the existing one.
+Woodland
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Ironstone Greatsword
+ | Common
+ | 4
+ -2
+ | -
+ | Razorthorn Spear
+ | Common
+ | 1
+ | On Hit: Gain 2 thorns
+ | Redwood Rod
+ | Common
+ | 2
+ 4
+ | -
+ | Spearshield Lance
+ | Common
+ | 1
+ 6
+ | -
+ | Woodcutter's Axe
+ | Common
+ | 1
+ | Gain 2 attack for each empty equipment slot
+ | Boom Stick
+ | Common
+ | 2
+ | On Hit: Deal 1 damage
+ | Heart Drinker
+ | Common
+ | 1
+ | On Hit: Restore 1 health
+ | Sword of the Hero
+ | Common
+ | 3
+ | -
+ | Hidden Dagger
+ | Common
+ | 2
+ | Gets stronger for every new hidden dagger you find
+ | Brittlebark Bow
+ | Common
+ | 4
+ | After 3 strikes: Lose 2 attack
+Set Bonus: Strike count no longer triggers penalty when equipped with Brittlebark Armor and Brittlebark Buckler
+ | Elderwood Staff
+ | Common
+ | 1
+ 1
+ 1
+ | -
+ | Featherweight Blade
+ | Common
+ | 2
+ 2
+ | -
+ | Blackbriar Blade
+ | Rare
+ | 1
+ | This weapon gains 2 attack for each stack of thorn you have
+ | Bejeweled Blade
+ | Rare
+ | 1
+ | Gain 2 attack for each equipped jewelry item
+ | Ironstone Bow
+ | Rare
+ | 6
+ 1
+ | On Hit: Lose 1 speed. If your speed is 0 or less, only strike every other turn
+ | Lifeblood Spear
+ | Rare
+ | 1
+ | Whenever you restore 3 or more health, gain 1 attack
+ | Explosive Sword
+ | Rare
+ | 3
+ | Whenever a bomb deals 5 or more non-weapon damage, gain 1 additional strike
+ | Icicle Spear
+ | Rare
+ | 3
+ | Exposed: Give the enemy 2 freeze for each equipped water item
+ | Bloodmoon Dagger
+ | Rare
+ | 2
+ | Wounded: Gain 5 attack and take 2 damage
+Set Bonus: Wounded: Restore health equal to damage dealt by strikes on your next turn
+ | Bloodmoon Sickle
+ | Rare
+ | 5
+ | On Hit: Take 1 damage
+ | Frostbite Dagger
+ | Rare
+ | 2
+ | First turn: Give the enemy freeze equal to your attack on hit
+ | Swiftstrike Bow
+ | Rare
+ | 2
+ | Whenever you gain an additional strike, gain twice as many
+ | Swiftstrike Rapier
+ | Rare
+ | 2
+ | Battle Start: If you have more speed than the enemy, gain 2 additional strikes
+ | Battle Axe
+ | Rare
+ | 2
+ | While the enemy has armor double your attack
+ | Gemstone Scepter
+ | Heroic
+ | 2
+ | Gains On Hit effects from emerald, ruby, sapphire, and citrine items
+ | Granite Hammer
+ | Heroic
+ | 2
+ | On Hit: Convert 1 armor to 2 attack
+ | Granite Lance
+ | Heroic
+ | 2
+ 2
+ | Your base armor is doubled
+ | Stoneslab Sword
+ | Heroic
+ | 2
+ | On Hit: Gain 2 armor
+ | Frozen Iceblade
+ | Heroic
+ | 7
+ | Battle start: Gain 3 freeze
+ | Royal Scepter
+ | Heroic
+ | 
+ | Attack is always equal to gold. You cannot have more than 10 gold
+ | Grindstone Club
+ | Heroic
+ | 1
+ | The next weapon you equip gains 2 attack
+ | Twin Blade
+ | Heroic
+ | 1
+ | Strike twice
+ | Quickgrowth Spear
+ | Heroic
+ | 2
+ | Every other turn, gain 1 attack and restore 1 health
+ | Lifesteal Scythe
+ | Heroic
+ | 1
+ | On Hit: If the enemy doesn't have any armor, restore health equal to your attack
+ | Royal Crownblade
+ | Heroic
+ | 4
+ | On Hit: Gain 1 gold
+ | Brittlebark Club
+ | Heroic
+ | 7
+ | Exposed & Wounded: Lose 2 attack
+ | Bearclaw Blade
+ | Mythic
+ | 5
+ | Attack is always equal to missing health
+ | Mountain Cleaver
+ | Mythic
+ | 2
+ | Attack always is equal to base armor
+ | Tempest Blade
+ | Mythic
+ | 2
+ | Attack always is equal to speed
+Swampland
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Liferoot Staff
+ | Common
+ | 2
+ | Wounded: Gain 3 regeneration
+ | Champion's Blade
+ | Common
+ | 6
+ | -
+ | Fungal Rapier
+ | Common
+ | 3
+ | Battle Start: Gain 1 poison
+ | Knight's Blade
+ | Common
+ | 4
+ | Upgrades after you defeat the next boss
+ | Silverscale Dagger
+ | Common
+ | 2
+ | Battle Start: Give the enemy 1 riptide
+ | Squire's Blade
+ | Common
+ | 2
+ | Upgrades after you defeat the next boss
+ | Forge Hammer
+ | Common
+ | 4
+ | On Hit: Give the enemy 2 armor
+ | Grilling Skewer
+ | Common
+ | 1
+ | Battle Start: Gain 1 additional strike
+ | Ironstone Spear
+ | Common
+ | 2
+ | While you have armor, temporarily gain 2 attack
+ | Marble Sword
+ | Common
+ | 1
+ 2
+ | Exposed: Gain 3 attack
+ | Stormcloud Spear
+ | Common
+ | 2
+ | Every 5 strikes, stun the enemy for 2 turns
+ | Gale Staff
+ | Common
+ | 2
+ 6
+ | On Hit: Lose 1 speed
+ | Pacifist Staff
+ | Common
+ | 
+ | On Hit: Gain 1 armor and restore 1 health
+ | Slime Sword
+ | Common
+ | 2
+ | Battle Start: Give yourself and the enemy 3 acid
+ | Basilisk Fang
+ | Rare
+ | 3
+ | On Hit: Decrease your poison by 2 and give it to the enemy
+ | Liferoot Hammer
+ | Rare
+ | 3
+ | Regeneration that triggers overheal increases max health
+ | Bubblegloop Staff
+ | Rare
+ | 
+ | Can't strike. Turn Start: Spend 1 speed to give the enemy 1 acid and 2 poison
+ | Lightning Whip
+ | Rare
+ | 3
+ | Turn Start: If the enemy is stunned, gain 1 additional strike
+ | Rusty Sword
+ | Rare
+ | 2
+ | On hit: If the enemy has no armor, deal additional damage equal to enemy acid
+ | Wave Breaker
+ | Rare
+ | -2
+ | Can't strike. Battle Start: Give the enemy 2 riptide for each negative base attack you have
+ | Arcane Wand
+ | Rare
+ | 
+ | Can't attack. Turn Start: Deal 2 damage. Increase the damage by 1 for each tome equipped
+ | Granite Axe
+ | Rare
+ | 4
+ | On Hit: Lose 2 health and gain 4 armor
+ | Lightning Rod
+ | Rare
+ | 2
+ | Turn Start: If you're stunned, gain 1 attack
+ | Sanguine Scepter
+ | Rare
+ | 1
+ | Healing is doubled
+ | Ring Blades
+ | Rare
+ | 1
+ | Battle Start: Steal 1 attack from the enemy
+ | Chainmail Sword
+ | Heroic
+ | 2
+ 2
+ | Exposed: Gain armor equal to base armor
+ | Serpent Dagger
+ | Heroic
+ | 2
+ | Every 3 strikes, give the enemy 4 poison
+ | Silverscale Trident
+ | Heroic
+ | 
+ | On Hit: Give the enemy 1 riptide
+ | Melting Iceblade
+ | Heroic
+ | 7
+ | On Hit: Lose 1 attack
+ | King's Blade
+ | Heroic
+ | 2
+ | Exposed and Wounded items triggers at battle start instead
+ | Moonlight Cleaver
+ | Heroic
+ | 3
+ | While you are below 50% health, you cannot gain status effects
+ | Leather Whip
+ | Heroic
+ | 4
+ 5
+ | Battle Start: Gain 5 max health
+ | Bloodlord's Axe
+ | Heroic
+ | 4
+ | Battle Start: The enemy loses 5 health and you restore 5 health
+ | Purelake Staff
+ | Heroic
+ | 1
+ | Battle Start: Gain 2 purity. On Hit: Remove 1 purity
+ | Riverflow Rapier
+ | Heroic
+ | 3
+ | The first time you gain a new status effect, gain 1 additional strike as well
+ | Thunderbound Sabre
+ | Heroic
+ | 6
+ | Battle start: Stun yourself for 2 turns
+ | Ancient Warhammer
+ | Mythic
+ | 5
+ | On Hit: Remove all of the enemy's armor
+ | Dashmaster's Dagger
+ | Mythic
+ | 2
+ | Battle Start: Gain additional strikes equal to speed
+ | Lakebed Sword
+ | Mythic
+ | 5
+ | Gain double health and attack from purity
+ | Cleaver of Wrath
+ | Cursed
+ | 10
+ | Your max health is always 1
+ | Scepter of Greed
+ | Cursed
+ | 6
+ | You cannot gain gold
+ | Sword of Pride
+ | Cursed
+ | 3
+ 3
+ 3
+ | Battle Start: If the enemy has more attack, armor or speed than you, take 3 damage

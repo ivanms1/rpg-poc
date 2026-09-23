@@ -1,0 +1,81 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Effects that scale “for each …” (equipped tag, stack count, stat unit, etc.).
+Each is part of Multipliers.
+Contents
+1 Items
+1.1 Weapons
+1.2 Standard items
+1.3 Cauldron
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Bejeweled Blade
+ | Rare 
+ | 1
+ | Gain 2 attack for each equipped jewelry item
+ | Woodland 
+ | Icicle Spear
+ | Rare 
+ | 3
+ | Exposed: Give the enemy 2 freeze for each equipped water item
+ | Woodland 
+ | Wave Breaker
+ | Rare 
+ | -2
+ | Can't strike. Battle Start: Give the enemy 2 riptide for each negative base attack you have
+ | Swampland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Ore Heart
+ | Rare 
+ | -
+ | Battle Start: Gain 3 armor for each equipped stone item
+ | Woodland 
+ | Leather Waterskin
+ | Rare 
+ | -
+ | Exposed: Gain 2 purity for each equipped water item
+ | Swampland 
+ | Twisted Root
+ | Rare 
+ | -
+ | Exposed: Gain 1 regeneration for each equipped wood item
+ | Swampland 
+ | Oak Heart
+ | Rare 
+ | -
+ | Gain 3 max health for each equipped wood item
+ | Woodland 
+ | Petrified Statue
+ | Heroic 
+ | -2
+ | Battle Start: Give the enemy 1 stun for each equipped stone item
+ | Swampland 
+Cauldron
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Explosive Fish
+ | Silverscale Fish
+ | Cherry Bomb
+ | -
+ | Battle Start: Give the enemy 2 riptide

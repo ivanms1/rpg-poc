@@ -1,0 +1,475 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Items here multiply values or scale effects: they double stats, multiply triggers, add strike count, scale “per X”, or map one resource proportionally to another.
+Multipliers is part of the Tags.
+Contents
+1 Double
+2 Multi-trigger
+3 Additional strikes
+4 Equal
+5 Convert
+6 Each
+Double
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Granite Lance
+ | Heroic 
+ | 2
+ 1
+ | Your base armor is doubled
+ | Woodland 
+ | Lakebed Sword
+ | Mythic 
+ | 5
+ | Gain double health and attack from purity
+ | Swampland
+ | Sanguine Scepter
+ | Rare 
+ | 1
+ | Healing is doubled
+ | Swampland 
+ | Cactus Cap
+ | Heroic 
+ | -
+ | If the enemy has no armor, thorns deal double damage
+ | Woodland 
+ | Leather Belt
+ | Common 
+ | 3 / 6 / 12
+ | If you have 0 base armor, double this item's max health — at Gold: x 4 =  12, at Diamond: x 8 =  24
+ | Swampland 
+ | Cold Resistance
+ | Mythic 
+ | -
+ | Freeze doubles your attack instead of halving it
+ | Woodland
+ | Prime Form
+ | Mythic 
+ | -
+ | Double attack while your health is full
+ | Swampland
+ | Iron Shrapnel
+ | Rare 
+ | -
+ | Battle start: Deal 3 damage to the enemy, if they don't have armor, double the damage dealt
+ | Woodland 
+ | Lemon Syrup
+ | Sour Lemon
+ | Honeycomb
+ | 3
+ | Battle Start: Double your speed
+ | Honey Ham
+ | Honeycomb
+ | Redwood Roast
+ | -
+ | Double your max health
+ | Candied Nuts
+ | Honeycomb
+ | Spiny Chestnut
+ | -
+ | Battle Start: Gain 3 thorns. Thorns deal double damage
+Multi-trigger
+Items that make things trigger **twice/thrice** (or trigger many at once), or cause **N times** effects.
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Chainlink Medallion
+ | Mythic 
+ | -
+ | Your On Hit effects trigger twice
+ | Woodland
+ | Twinfuse Knot
+ | Mythic 
+ | -
+ | Your bomb items trigger twice
+ | Woodland
+ | Stillwater Pearl
+ | Rare 
+ | -
+ | Riptide can trigger twice per turn
+ | Swampland 
+ | Arcane Lens
+ | Rare 
+ | -
+ | If you have exactly 1 tome equipped, it triggers thrice
+ | Swampland 
+ | Iron Rune
+ | Heroic 
+ | -
+ | If you have exactly 1 item with exposed, it triggers thrice
+ | Swampland
+ | Powder Keg
+ | Rare 
+ | -
+ | Battle Start: If you only have 1 bomb item equipped, it triggers 3 times
+ | Woodland 
+ | Sheet Music
+ | Heroic 
+ | -
+ | Countdown 6: Trigger Symphony 3 times
+ | Swampland 
+ | Hero's Crossguard
+ | Rare 
+ | -
+ | First Turn: Your On Hit effects trigger twice
+ | Swampland 
+ | Grand Crescendo
+ | Mythic 
+ | -
+ | Symphony triggers all your other instruments
+ | Swampland
+ | Grand Tome
+ | Heroic 
+ | -
+ | Countdown 10: Retrigger all your other tomes
+ | Swampland 
+ | Blood Rune
+ | Heroic 
+ | -
+ | Wounded: Re-trigger the last triggered wounded item
+ | Swampland
+ | Echo Rune
+ | Heroic 
+ | -
+ | Wounded: Re-trigger a random battle start item
+ | Swampland
+ | Cherry Bomb
+ | Common 
+ | -
+ | Battle Start: Deal 1 / 2 / 4 damage 2 times
+ | Woodland 
+ | Sugar Bomb
+ | Honeycomb
+ | Cherry Bomb
+ | -
+ | Turn Start: Deal 1 damage 3 times
+ | Explosive Roast
+ | Cherry Bomb
+ | Redwood Roast
+ | 5
+ | Battle Start: Deal 1 damage 3 times
+ | Trail Mix
+ | Spiny Chestnut
+ | Cherry Bomb
+ | -
+ | Battle Start: Deal 1 damage and gain 1 thorns. Repeat 2 times.
+Additional strikes
+Items that grant or multiply **additional strikes**.
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Swiftstrike Rapier
+ | Rare 
+ | 2
+ | Battle Start: If you have more speed than the enemy, gain 3 additional strikes
+ | Woodland 
+ | Swiftstrike Bow
+ | Rare 
+ | 2
+ | Whenever you gain an additional strike, gain twice as many
+ | Woodland 
+ | Dashmaster's Dagger
+ | Mythic 
+ | 2
+ | Battle Start: Gain additional strikes equal to speed
+ | Swampland
+ | Grilling Skewer
+ | Common 
+ | 1
+ | Battle Start: Gain 1 additional strike
+ | Swampland 
+ | Lightning Whip
+ | Rare 
+ | 3
+ | Turn Start: If the enemy is stunned, gain 1 additional strike
+ | Swampland 
+ | Citrine Ring
+ | Rare 
+ | -
+ | Battle Start: Spend 5 speed to permanently gain 1 additional strike
+ | Woodland 
+ | Riverflow Rapier
+ | Heroic 
+ | 3
+ | The first time you gain a new status effect, gain 1 additional strike as well
+ | Swampland 
+ | Swiftstrike Cloak
+ | Heroic 
+ | 1
+ | Battle Start: If you have more speed than the enemy, gain 1 additional strike
+ | Woodland 
+ | Swiftstrike Gauntlet
+ | Heroic 
+ | -
+ | Wounded: Gain 2 additional strikes
+ | Woodland 
+ | Crimson Fang
+ | Rare 
+ | -
+ | Battle Start: If your health is full, lose 5 health and gain 2 additional strikes
+ | Swampland 
+ | Explosive Sword
+ | Rare 
+ | 3
+ | Whenever a bomb deals 5 or more non-weapon damage, gain 1 additional strike
+ | Woodland 
+ | Ham Bat
+ | Redwood Roast
+ | Grilling Skewer
+ |  3
+ 5
+ | Battle Start: Gain 2 additional strike
+ | Silverscale Swordfish
+ | Grilling Skewer
+ | Silverscale Fish
+ | 2
+ | Battle Start: Gain 1 additional strike. First Turn: Give the enemy 1 riptide on hit
+ | Rocksalt Sword
+ | Grilling Skewer
+ | Stone Steak
+ |  2
+ 6
+ | Turn Start: If your health is full, gain 1 additional strike
+ | Deathcap Bow
+ | Grilling Skewer
+ | Poisonous Mushroom
+ | 3
+ | Battle Start: Gain 3 poison. Turn Start: If you have poison. Gain 1 additional strike
+ | Lemontree Branch
+ | Grilling Skewer
+ | Sour Lemon
+ |  2
+ 4
+ | On Hit: Spend 2 speed and gain 1 additional strike on your next turn
+ | Twin Blade
+ | Heroic 
+ | 1
+ | Strike twice
+ | Woodland 
+Equal
+Effects that set one value **equal to** another (or “gain X equal to Y”).
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Royal Scepter
+ | Heroic 
+ | 0
+ | Attack is always equal to gold. You cannot have more than 10 gold
+ | Woodland 
+ | Bearclaw Blade
+ | Mythic 
+ | 5
+ | Attack is always equal to missing health
+ | Woodland
+ | Mountain Cleaver
+ | Mythic 
+ | 2
+ | Attack always is equal to base armor
+ | Woodland
+ | Tempest Blade
+ | Mythic 
+ | 2
+ | Attack always is equal to speed
+ | Woodland
+ | Granite Crown
+ | Rare 
+ | -
+ | Battle Start: Gain max health equal to your base armor
+ | Woodland 
+ | Marble Mirror
+ | Heroic 
+ | -
+ | Battle Start: Gain armor equal to your opponent’s armor
+ | Swampland 
+ | Featherweight Wings
+ | Rare 
+ | -
+ | Battle Start: If you have less speed than the enemy, gain attack equal to your speed
+ | Woodland 
+ | Sapphire Gemstone
+ | Heroic 
+ | -
+ | Whenever you lose armor, restore that much health
+ | Woodland 
+ | Razor Breastplate
+ | Heroic 
+ | 3
+ | Wounded: Gain thorns equal to enemy attack
+ | Woodland 
+ | Serpent Mask
+ | Heroic 
+ | -
+ | Battle Start: Give the enemy poison equal to your attack
+ | Swampland 
+ | Acid Mutation
+ | Heroic 
+ | -
+ | Battle Start: Gain 1 acid. While you have acid, temporarily gain attack equal to acid
+ | Swampland 
+ | Rusted Plate
+ | Rare 
+ | -
+ | Whenever the enemy loses armor to acid, gain that armor
+ | Swampland 
+ | Featherweight Armor
+ | Rare 
+ | -
+ | Whenever you gain speed, also gain an equal amount of armor
+ | Woodland 
+ | Blackbriar Bow
+ | Grilling Skewer
+ | Spiny Chestnut
+ | 4
+ | Can't Strike Turn Start: Gain thorns equal to your attack
+ | Spiny Kiwifruit
+ | Spiny Chestnut
+ | Sour Lemon
+ | 3
+ | Battle Start: Gain 3 acid and gain thorns equal to acid
+ | Lemon Shark
+ | Silverscale Fish
+ | Sour Lemon
+ | 3
+ | Battle Start: Gain 1 Acid Exposed: Give the enemy riptide equal to your acid
+ | Poisonous Pufferfish
+ | Silverscale Fish
+ | Poisonous Mushroom
+ | 2
+ | Battle Start: Gain 3 poison and give the enemy riptide equal to your poison
+ | Chainmail Sword
+ | Heroic 
+ | 2
+ 2
+ | Exposed: Gain armor equal to base armor
+ | Swampland 
+ | Weaver Armor
+ | Heroic 
+ | -2
+ | Battle Start: If you have 0 base armor, gain armor equal to current health
+ | Swampland 
+Convert
+Effects that **convert** one resource/stat to another at some rate (e.g., “convert 1 A to 2 B”, “spend X to gain Y”).
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Saffron Feather
+ | Common 
+ | 1 / 2 / 4
+ | Turn Start: Convert 1 speed to restore 2 health — at Gold: -2 for 4, at Diamond: -4 for 8
+ | Woodland 
+ | Bramble Buckler
+ | Rare 
+ | 2
+ | Turn Start: Convert 1 armor to 2 thorns
+ | Woodland 
+ | Plated Greaves
+ | Rare 
+ | -
+ | Exposed: Convert 3 speed to 9 armor
+ | Woodland 
+ | Royal Shield
+ | Heroic 
+ | -
+ | Turn Start: Convert 1 gold to 3 armor
+ | Woodland 
+ | Granite Hammer
+ | Heroic 
+ | 2
+ | On Hit: Convert 1 armor to 2 attack
+ | Woodland 
+ | Liferoot Hammer
+ | Rare 
+ | 3
+ | On Hit: If your health is full, spend your regeneration to gain 3 times that amount of armor
+ | Swampland 
+ | Slime Booster
+ | Rare 
+ | -
+ | Battle Start: Convert 1 acid into 2 attack
+ | Swampland 
+ | Soap Stone
+ | Rare 
+ | -
+ | First turn: Spend 2 speed to temporarily gain 4 attack
+ | Swampland 
+ | Featherweight Helmet
+ | Rare 
+ | -
+ | Battle start: Spend 2 armor to gain 3 speed and 1 attack
+ | Woodland 
+ | Slime Heart
+ | Rare 
+ | -
+ | Wounded: Remove all your acid and restore 2 health for each acid removed
+ | Swampland 
+Each
+Effects that scale **“for each …”** (equipped tag, stack, stat unit, etc.).
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Bejeweled Blade
+ | Rare 
+ | 1
+ | Gain 2 attack for each equipped jewelry item
+ | Woodland 
+ | Ore Heart
+ | Rare 
+ | -
+ | Battle Start: Gain 3 armor for each equipped stone item
+ | Woodland 
+ | Leather Waterskin
+ | Rare 
+ | -
+ | Exposed: Gain 2 purity for each equipped water item
+ | Swampland 
+ | Icicle Spear
+ | Rare 
+ | 3
+ | Exposed: Give the enemy 2 freeze for each equipped water item
+ | Woodland 
+ | Twisted Root
+ | Rare 
+ | -
+ | Exposed: Gain 1 regeneration for each equipped wood item
+ | Swampland 
+ | Oak Heart
+ | Rare 
+ | -
+ | Gain 3 max health for each equipped wood item
+ | Woodland 
+ | Petrified Statue
+ | Heroic 
+ | -2
+ | Battle Start: Give the enemy 1 stun for each equipped stone item
+ | Swampland 
+ | Explosive Fish
+ | Silverscale Fish
+ | Cherry Bomb
+ | -
+ | Battle Start: Give the enemy 2 riptide
+ | Wave Breaker
+ | Rare 
+ | -2
+ | Can't strike. Battle Start: Give the enemy 2 riptide for each negative base attack you have
+ | Swampland 

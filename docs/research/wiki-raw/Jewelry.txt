@@ -1,0 +1,125 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+The following items explicitly reference Jewelry in their effect:
+Bejeweled Blade — Gain 2 attack for each equipped jewelry item.
+Gemstone Scepter — Gains On Hit effects from emerald, ruby, sapphire, and citrine items.
+Jewelry is part of the Item tags.
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Bejeweled Blade
+ | Rare 
+ | 1
+ | Gain 2 attack for each equipped jewelry item
+ | Woodland 
+ | Gemstone Scepter
+ | Heroic 
+ | 2
+ | Gains On Hit effects from emerald, ruby, sapphire, and citrine items
+ | Woodland 
+ | Royal Scepter
+ | Heroic 
+ | 0
+ | Attack is always equal to gold. You cannot have more than 10 gold
+ | Woodland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Citrine Earring
+ | Common 
+ | -
+ | Gain 1 speed every other turn — at Gold: 2 , at Diamond: 4
+ | Woodland 
+ | Emerald Earring
+ | Common 
+ | -
+ | Restore 1 health every other turn — at Gold: 2 , at Diamond: 4
+ | Woodland 
+ | Ruby Earring
+ | Common 
+ | -
+ | Deal 1 damage every other turn — at Gold: deal 2 , at Diamond: deal 4
+ | Woodland 
+ | Sapphire Earring
+ | Common 
+ | -
+ | Gain 1 armor every other turn — at Gold: 2 , at Diamond: 4
+ | Woodland 
+ | Emerald Crown
+ | Common 
+ | -1 / -2 / -4
+ 8 / 16 / 32
+ | -
+ | Woodland 
+ | Ruby Crown
+ | Common 
+ | 1 / 2 / 4
+ -1 / -2 / -4
+ | -
+ | Woodland 
+ | Sapphire Crown
+ | Common 
+ | -2 / -4 / -8
+ 5 / 10 / 20
+ | -
+ | Woodland 
+ | Emerald Ring
+ | Common 
+ | -
+ | Battle Start: Restore 3 health — at Gold: 6 , at Diamond: 12
+ | Woodland 
+ | Ruby Ring
+ | Common 
+ | -
+ | Battle Start: Gain 2 attack and take 3 damage — at Gold: take 6 for 4, at Diamond: take 12 for 8
+ | Woodland 
+ | Sapphire Ring
+ | Common 
+ | -
+ | Battle Start: Steal 2 from the enemy — at Gold: 4 , at Diamond: 8
+ | Woodland 
+ | Citrine Ring
+ | Rare 
+ | -
+ | Battle Start: Spend 5 speed to permanently gain 1 additional strike
+ | Woodland 
+ | Gold Ring
+ | Rare 
+ | -
+ | Battle Start: Gain 1 gold
+ | Woodland 
+ | Citrine Gemstone
+ | Heroic 
+ | -
+ | Your base speed stat is inverted
+ | Woodland 
+ | Emerald Gemstone
+ | Heroic 
+ | -
+ | Battle Start: If you have less max health than the enemy, set your max health equal to their max health
+ | Woodland 
+ | Ruby Gemstone
+ | Heroic 
+ | -
+ | If your attack is exactly 1, deal 4 damage on hit
+ | Woodland 
+ | Sapphire Gemstone
+ | Heroic 
+ | -
+ | Whenever you lose armor, restore that much health
+ | Woodland 

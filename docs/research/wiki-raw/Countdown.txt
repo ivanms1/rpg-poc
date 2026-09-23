@@ -1,0 +1,101 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Trigger when a countdown effect reaches zero.
+Arcane Shield: Triggers when any countdown effect triggers and grants armor.
+Arcane Cloak: Triggers after countdown effects resolve and then resets them.
+Countdown is part of the Trigger tags.
+Items that trigger Countdown
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Granite Tome
+ | Common 
+ | -
+ | Countdown 4: Gain 6 armor — at Gold: 12 , at Diamond: 24
+ | Swampland 
+ | Holy Tome
+ | Common 
+ | -1 / -2 / -4
+ | Countdown 6: Gain 3 attack — at Gold: 6 , at Diamond: 12
+ | Swampland 
+ | Liferoot Tome
+ | Common 
+ | -
+ | Countdown 4: Gain 3 regeneration — at Gold: 6 , at Diamond: 12
+ | Swampland 
+ | Silverscale Tome
+ | Common 
+ | -
+ | Countdown 3: Give the enemy 2 riptide — at Gold: 4 , at Diamond: 8
+ | Swampland 
+ | Stormcloud Tome
+ | Common 
+ | -
+ | Countdown 4: Stun the enemy for 1 turn — at Gold: 2 turns, at Diamond: 4 turns
+ | Swampland 
+ | Caustic Tome
+ | Rare 
+ | -
+ | Countdown 3: Give the enemy 3 acid. If they don't have any armor, give them 5 poison instead
+ | Swampland 
+ | Flameburst Tome
+ | Rare 
+ | -
+ | Countdown 4: Deal 4 damage and reset countdown
+ | Swampland 
+ | Purelake Tome
+ | Rare 
+ | -
+ | Countdown 3: If you have purity, remove 1 purity. Otherwise, gain 1 purity. Reset countdown
+ | Swampland 
+ | Sanguine Tome
+ | Rare 
+ | -
+ | Countdown 6: Restore health to full
+ | Swampland 
+ | Grand Tome
+ | Heroic 
+ | -
+ | Countdown 10: Retrigger all your other tomes
+ | Swampland 
+ | Tome of the Hero
+ | Heroic 
+ | -
+ | Countdown 8: Gain 4 attack, 4 armor and 4 speed
+ | Swampland 
+ | Sheet Music
+ | Heroic 
+ | -
+ | Countdown 6: Trigger Symphony 3 times
+ | Swampland 
+Other items triggered by Countdown
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Arcane Shield
+ | Rare 
+ | -
+ | Whenever a countdown effect triggers, gain 3 armor
+ | Swampland 
+ | Arcane Bell
+ | Common 
+ | -
+ | Battle Start: Decrease all countdowns by 1. Symphony
+ | Swampland 
+ | Arcane Cloak
+ | Mythic 
+ | -
+ | Reset countdowns after they trigger
+ | Swampland

@@ -1,0 +1,526 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Triggers at the very beginning of combat, before any actions are taken.
+King's Blade: Moves Exposed and Wounded triggers to Battle Start.
+Marble Anvil: At Battle Start, triggers Exposed.
+Battle Start is part of the Trigger tags.
+Contents
+1 Items that trigger Battle Start
+1.1 Weapons
+1.2 Standard items
+1.3 Cauldron items
+Items that trigger Battle Start
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Bloodlord's Axe
+ | Heroic 
+ | 4
+ | Battle Start: The enemy loses 5 health and you restore 5 health
+ | Swampland 
+ | Dashmaster's Dagger
+ | Mythic 
+ | 2
+ | Battle Start: Gain additional strikes equal to speed
+ | Swampland
+ | Frozen Iceblade
+ | Heroic 
+ | 6
+ | Battle start: Gain 3 freeze
+ | Woodland 
+ | Fungal Rapier
+ | Common 
+ | 3
+ | Battle Start: Gain 1 poison
+ | Swampland 
+ | Grilling Skewer
+ | Common 
+ | 1
+ | Battle Start: Gain 1 additional strike
+ | Swampland 
+ | Leather Whip
+ | Heroic 
+ | 4
+ 5
+ | Battle Start: Gain 5 max health
+ | Swampland 
+ | Purelake Staff
+ | Heroic 
+ | 1
+ | Battle Start: Gain 2 purity. On Hit: Remove 1 purity
+ | Swampland 
+ | Ring Blades
+ | Rare 
+ | 1
+ | Battle Start: Steal 1 attack from the enemy
+ | Swampland 
+ | Silverscale Dagger
+ | Common 
+ | 2
+ | Battle Start: Give the enemy 1 riptide
+ | Swampland 
+ | Slime Sword
+ | Common 
+ | 2
+ | Battle Start: Give yourself and the enemy 3 acid
+ | Swampland 
+ | Swiftstrike Rapier
+ | Rare 
+ | 2
+ | Battle Start: If you have more speed than the enemy, gain 3 additional strikes
+ | Woodland 
+ | Sword of Pride
+ | Cursed 
+ |  3
+ 3
+ 3
+ | Battle Start: If the enemy has more attack, armor or speed than you, take 3 damage
+ | Swampland
+ | Thunderbound Sabre
+ | Heroic 
+ | 6
+ | Battle start: Stun yourself for 2 turns
+ | Swampland 
+ | Wave Breaker
+ | Rare 
+ | -2
+ | Can't strike. Battle Start: Give the enemy 2 riptide for each negative base attack you have
+ | Swampland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Acid Mutation
+ | Heroic 
+ | -
+ | Battle Start: Gain 1 acid. While you have acid, temporarily gain attack equal to acid
+ | Swampland 
+ | Acidic Witherleaf
+ | Heroic 
+ | 1
+ | Battle Start: Give the enemy acid equal to your speed
+ | Swampland 
+ | Arcane Bell
+ | Common 
+ | -
+ | Battle Start: Decrease all countdowns by 1. Symphony
+ | Swampland 
+ | Arcane Gauntlet
+ | Rare 
+ | -
+ | Battle Start: Halve all countdowns
+ | Swampland 
+ | Basilisk Scale
+ | Rare 
+ | -
+ | Battle Start: Gain 5 armor and 5 poison
+ | Swampland 
+ | Bomb Bag
+ | Rare 
+ | -
+ | Battle Start, Exposed & Wounded: Spend 3 speed to retrigger a random bomb
+ | Woodland 
+ | Bramble Belt
+ | Rare 
+ | -
+ | Battle Start: Gain 1 thorns and give the enemy 1 additional strike
+ | Woodland 
+ | Clearspring Feather
+ | Common 
+ | -
+ | Battle Start: Decrease a random status effect by 1 and give it to the enemy — at Gold: transfer 2 , at Diamond: transfer 4
+ | Swampland 
+ | Clearspring Watermelon
+ | Common 
+ | -
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1 — at Gold: decrease 2 , at Diamond: decrease 4
+ | Swampland 
+ | Corroded Bone
+ | Rare 
+ | -
+ | Battle Start: Convert 50% of the enemy's health into armor
+ | Swampland 
+ | Crimson Fang
+ | Rare 
+ | -
+ | Battle Start: If your health is full, lose 5 health and gain 2 additional strikes
+ | Swampland 
+ | Emerald Gemstone
+ | Heroic 
+ | -
+ | Battle Start: If you have less max health than the enemy, set your max health equal to their max health
+ | Woodland 
+ | Emerald Ring
+ | Common 
+ | -
+ | Battle Start: Restore 3 health — at Gold: 6 , at Diamond: 12
+ | Woodland 
+ | Featherweight Helmet
+ | Rare 
+ | -
+ | Battle start: Spend 2 armor to gain 3 speed and 1 attack
+ | Woodland 
+ | Featherweight Wings
+ | Rare 
+ | -
+ | Battle Start: If you have less speed than the enemy, gain attack equal to your speed
+ | Woodland 
+ | Forge Gauntlet
+ | Rare 
+ | 1
+ | Battle Start: Give the enemy 5 armor
+ | Swampland 
+ | Frostbite Gauntlet
+ | Common 
+ | -
+ | Battle Start: Give the enemy 1 freeze — at Gold: 2 , at Diamond: 4
+ | Woodland 
+ | Frostbite Curse
+ | Rare 
+ | -
+ | Battle Start: Give yourself and the enemy 5 freeze each
+ | Woodland 
+ | Gold Ring
+ | Rare 
+ | -
+ | Battle Start: Gain 1 gold
+ | Woodland 
+ | Granite Crown
+ | Rare 
+ | -
+ | Battle Start: Gain max health equal to your base armor
+ | Woodland 
+ | Heart-shaped Acorn
+ | Rare 
+ | -
+ | Battle Start: If you have 0 base armor, restore health to full
+ | Woodland 
+ | Horned Helmet
+ | Common 
+ | 2 / 4 / 8
+ | Battle Start: Gain 1 stack of thorns — at Gold: 2 , at Diamond: 4
+ | Woodland 
+ | Iceblock Shield
+ | Common 
+ | 8
+ | Battle Start: Gain 2 freeze
+ | Woodland 
+ | Iron Shrapnel
+ | Rare 
+ | -
+ | Battle start: Deal 3 damage to the enemy, if they don't have armor, double the damage dealt
+ | Woodland 
+ | Liferoot Gauntlet
+ | Common 
+ | 3 / 6 / 12
+ | Battle start: Gain 1 regeneration — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Lifeblood Armor
+ | Heroic 
+ | -
+ | Battle Start: Convert 50% of your current health to that amount of armor
+ | Woodland 
+ | Lightspeed Potion
+ | Common 
+ | 1
+ | Battle Start: Restore health equal to speed
+ | Swampland 
+ | Lightning Bottle
+ | Rare 
+ | 1
+ 2
+ | Battle Start: Stun yourself for 1 turn
+ | Swampland 
+ | Marble Mirror
+ | Heroic 
+ | -
+ | Battle Start: Gain armor equal to your opponent’s armor
+ | Swampland 
+ | Ore Heart
+ | Rare 
+ | -
+ | Battle Start: Gain 3 armor for each equipped stone item
+ | Woodland 
+ | Pinecone Breastplate
+ | Rare 
+ | -
+ | Battle Start: If your health is full, gain 1 thorn at turn start for the rest of battle
+ | Woodland 
+ | Purelake Helmet
+ | Common 
+ | 2 / 4 / 8
+ | Battle Start: Gain 1 Purity — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Purelake Potion
+ | Rare 
+ | -
+ | Battle start: Remove all your armor and gain 3 purity
+ | Swampland 
+ | Ruby Ring
+ | Common 
+ | -
+ | Battle Start: Gain 2 attack and take 3 damage — at Gold: take 6 for 4, at Diamond: take 12 for 8
+ | Woodland 
+ | Rusty Ring
+ | Common 
+ | -
+ | Battle Start: Give the enemy 1 acid — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Saltcrusted Crown
+ | Rare 
+ | 8
+ | Battle Start: Gain 1 riptide
+ | Swampland 
+ | Sapphire Ring
+ | Common 
+ | -
+ | Battle Start: Steal 2 from the enemy — at Gold: 4 , at Diamond: 8
+ | Woodland 
+ | Silverscale Greaves
+ | Rare 
+ | 1
+ | Battle Start: If you have more speed than the enemy, give them 2 riptide
+ | Swampland 
+ | Slime Armor
+ | Common 
+ | 5 / 10 / 20
+ | Battle Start: Gain 1 acid — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Slime Booster
+ | Rare 
+ | -
+ | Battle Start: Convert 1 acid into 2 attack
+ | Swampland 
+ | Sour Lemon
+ | Common 
+ | 3 / 6 / 12
+ | Battle Start: Gain 1 acid — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Spiritual Balance
+ | Rare 
+ | -
+ | Battle Start: If your speed is equal to your attack, gain 3 attack
+ | Swampland 
+ | Stormcloud Armor
+ | Rare 
+ | 3
+ | Battle Start: If you have more speed than armor, stun the enemy for 2 turns
+ | Swampland 
+ | Stormcloud Curse
+ | Rare 
+ | -
+ | Battle Start: Stun the enemy and yourself for 2 turns
+ | Swampland 
+ | Swiftstrike Belt
+ | Common 
+ | -
+ | Battle Start: Take 3 damage and gain 1 additional strike — at Gold: take 6 for 2, at Diamond: take 12 for 4
+ | Woodland 
+ | Swiftstrike Cloak
+ | Heroic 
+ | 1
+ | Battle Start: If you have more speed than the enemy, gain 1 additional strike
+ | Woodland 
+ | Thorn Ring
+ | Rare 
+ | -
+ | Battle Start: Take 5 damage and gain 10 thorns
+ | Woodland 
+ | Weaver Shield
+ | Common 
+ | -
+ | Battle Start: If you have 0 base armor, gain 4 armor — at Gold: 8 , at Diamond: 16
+ | Swampland 
+ | Weaver Armor
+ | Heroic 
+ | -2
+ | Battle Start: If you have 0 base armor, gain armor equal to current health
+ | Swampland 
+ | Kindling Bomb
+ | Rare 
+ | -
+ | Battle Start: Deal 1 damage to the enemy. The damage of the next bomb that triggers is increased by 3
+ | Woodland 
+ | Powder Keg
+ | Rare 
+ | -
+ | Battle Start: If you only have 1 bomb item equipped, it triggers 3 times
+ | Woodland 
+ | Friendship Bracelet
+ | Rare 
+ | -1
+ | Battle Start: The enemy loses 1 attack
+ | Swampland 
+Cauldron items
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Melon Bomb
+ | Clearspring Watermelon
+ | Cherry Bomb
+ | -
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1. Whenever a status effect is decreased, deal 1 damage to the enemy
+ | Cherry Blade
+ | Grilling Skewer
+ | Cherry Bomb
+ | 3
+ | Battle Start & Exposed: Deal 4 damage
+ | Explosive Roast
+ | Cherry Bomb
+ | Redwood Roast
+ | 5
+ | Battle Start: Deal 1 damage 3 times
+ | Explosive Fish
+ | Silverscale Fish
+ | Cherry Bomb
+ | -
+ | Battle Start: Give the enemy 2 riptide
+ | Trail Mix
+ | Spiny Chestnut
+ | Cherry Bomb
+ | -
+ | Battle Start: Deal 1 damage and gain 1 thorns. Repeat 2 times.
+ | Granite Cherry
+ | Stone Steak
+ | Cherry Bomb
+ | -
+ | Battle Start: If your health is full, gain 2 armor and deal 2 damage. Repeat 2 times
+ | Cherry Cocktail
+ | Cherry Bomb
+ | Vampiric Wine
+ | -
+ | Battle Start & Wounded: Deal 3 damage and restore 3 health
+ | Honeydew Melon
+ | Clearspring Watermelon
+ | Honeycomb
+ | -
+ | Battle Start: Give all your status effects to the enemy
+ | Boiled Ham
+ | Clearspring Watermelon
+ | Redwood Roast
+ | 5
+ | Battle Start, Exposed & Wounded: Decrease all your status effects by 1
+ | Underwater Watermelon
+ | Silverscale Fish
+ | Clearspring Watermelon
+ | -
+ | Battle Start, Exposed & Wounded: Decrease 1 random status effect and give the enemy 1 riptide
+ | Melon Lemonade
+ | Clearspring Watermelon
+ | Sour Lemon
+ | 3
+ | Battle Start, Exposed & Wounded: Remove all Acid
+ | Horned Melon
+ | Spiny Chestnut
+ | Clearspring Watermelon
+ | -
+ | Battle Start, Exposed & Wounded: Decrease 2 random status effects by 1 and gain that much thorns
+ | Mineral Water
+ | Clearspring Watermelon
+ | Stone Steak
+ | -
+ | Battle Start & Exposed: If your health is full, decrease a random status effect by 2 and gain 5 armor
+ | Melon Wine
+ | Clearspring Watermelon
+ | Vampiric Wine
+ | -
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1 and restore 3 health
+ | Ham Bat
+ | Redwood Roast
+ | Grilling Skewer
+ |  3
+ 5
+ | Battle Start: Gain 2 additional strike
+ | Silverscale Swordfish
+ | Grilling Skewer
+ | Silverscale Fish
+ | 2
+ | Battle Start: Gain 1 additional strike. First Turn: Give the enemy 1 riptide on hit
+ | Lemon Syrup
+ | Sour Lemon
+ | Honeycomb
+ | 3
+ | Battle Start: Double your speed
+ | Candied Nuts
+ | Honeycomb
+ | Spiny Chestnut
+ | -
+ | Battle Start: Gain 3 thorns. Thorns deal double damage
+ | Rock Candy
+ | Honeycomb
+ | Stone Steak
+ | -
+ | Battle start: Gain 15 armor. If your health is full, gain an additional 15 armor
+ | Poisonous Pufferfish
+ | Silverscale Fish
+ | Poisonous Mushroom
+ | 2
+ | Battle Start: Gain 3 poison and give the enemy riptide equal to your poison
+ | Poisonous Lemon
+ | Poisonous Mushroom
+ | Sour Lemon
+ |  3
+ 4
+ | Battle Start: Gain 1 acid and 5 poison
+ | Marble Mushroom
+ | Stone Steak
+ | Poisonous Mushroom
+ |  4
+ 6
+ | Battle Start: Gain 3 poison
+ | Lemon Roast
+ | Sour Lemon
+ | Redwood Roast
+ |  5
+ 5
+ | Battle Start: Gain 2 acid
+ | Roasted Chestnut
+ | Redwood Roast
+ | Spiny Chestnut
+ | 5
+ | Battle Start: Gain 4 thorns
+ | Lemon Shark
+ | Silverscale Fish
+ | Sour Lemon
+ | 3
+ | Battle Start: Gain 1 Acid Exposed: Give the enemy riptide equal to your acid
+ | Spiny Snapper
+ | Silverscale Fish
+ | Spiny Chestnut
+ | -
+ | Battle Start: Give the enemy 1 riptide. Whenever riptide triggers, gain 3 thorns
+ | Marbled Stonefish
+ | Silverscale Fish
+ | Stone Steak
+ | -
+ | Battle Start & Exposed: If your health is full, gain 5 armor and give the enemy 1 riptide
+ | Limestone Fruit
+ | Sour Lemon
+ | Stone Steak
+ | 3
+ | Battle Start: Gain 8 armor. If your health is not full, gain 2 acid
+ | Blood Orange
+ | Sour Lemon
+ | Vampiric Wine
+ | 4
+ | Battle Start: Gain 3 acid. Wounded: Convert all your acid to regeneration.
+ | Petrified Chestnut
+ | Spiny Chestnut
+ | Stone Steak
+ | -
+ | Battle Start: If your health is full, gain 6 thorns and 6 armor

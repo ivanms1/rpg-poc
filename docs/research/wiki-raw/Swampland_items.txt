@@ -1,0 +1,1026 @@
+
+Swampland items can only be found in Swampland or Kingmaker games that use Swampland bundles. Swampland items come in 5 levels of rarity: Common, Rare, Heroic, Mythic, and Cursed. Items with Cursed rarity can only be obtained from a Crone.
+Swampland items may inflict the following status effects on either enemies or the player:
+- [Icon acid.png] Acid removes armor equal to acid at the start of the turn
+- [Icon poison.png] Poison deals damage equal to the amount of poison at turn start if you have no armor and removes 1 poison stack at the start of the turn
+- [Icon regen.png] Regeneration restores health equal to the amount of regeneration at turn end and removes 1 regeneration at the end of the turn
+- [Icon riptide.png] Riptide deals 5 damage at the end of the turn and removes 1 riptide at the end of the turn
+- [Icon stun.png] Stun skips the attack and removes 1 stun at the end of the turn
+- [Icon purity.png] Purity gives 1 attack per stack and restores 3 health when removed
+## Contents
+- 1 Weapons
+- 2 Items
+- 2.1 Tomes
+- 2.2 Elixirs
+- 2.3 Food
+- 2.4 Food Combined
+## Weapons
+The player can only have one weapon. Choosing another weapon will destroy the existing one.
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | [Champion's Blade.png] Champion's Blade
+ | Common [Rarity common.png]
+ | [Icon attack.png] 6
+ | -
+ | Swampland [Banner swamp red.png]
+ | [Forge Hammer.png] Forge Hammer
+ | Common [Rarity common.png]
+ | [Icon attack.png] 4
+ | On Hit: Give the enemy 2 armor
+ | Swampland [Banner swamp yellow.png]
+ | [Fungal Rapier.png] Fungal Rapier
+ | Common [Rarity common.png]
+ | [Icon attack.png] 3
+ | Battle Start: Gain 1 poison
+ | Swampland [Banner swamp blue.png]
+ | [Gale Staff.png] Gale Staff
+ | Common [Rarity common.png]
+ | [Icon attack.png] 2
+[Icon speed.png] 6
+ | On Hit: Lose 1 speed
+ | Swampland [Banner swamp blue.png]
+ | [Grilling Skewer.png] Grilling Skewer
+ | Common [Rarity common.png]
+ | [Icon attack.png] 1
+ | Battle Start: Gain 1 additional strike
+ | Swampland [Banner swamp yellow.png]
+ | [Ironstone Spear.png] Ironstone Spear
+ | Common [Rarity common.png]
+ | [Icon attack.png] 2
+ | While you have armor, temporarily gain 2 attack
+ | Swampland [Banner swamp yellow.png]
+ | [Knight's Blade.png] Knight's Blade
+ | Common [Rarity common.png]
+ | [Icon attack.png] 4
+ | Upgrades after you defeat the next boss
+ | Swampland [Banner swamp red.png]
+ | [Liferoot Staff.png] Liferoot Staff
+ | Common [Rarity common.png]
+ | [Icon attack.png] 2
+ | Wounded: Gain 3 regeneration
+ | Swampland [Banner swamp red.png]
+ | [Marble Sword.png] Marble Sword
+ | Common [Rarity common.png]
+ | [Icon attack.png] 1
+[Icon armor.png] 2
+ | Exposed: Gain 3 attack
+ | Swampland [Banner swamp yellow.png]
+ | [Pacifist Staff.png] Pacifist Staff
+ | Common [Rarity common.png]
+ | [Icon attack.png] 0
+ | On Hit: Gain 1 armor and restore 1 health
+ | Swampland [Banner swamp blue.png]
+ | [Silverscale Dagger.png] Silverscale Dagger
+ | Common [Rarity common.png]
+ | [Icon attack.png] 2
+ | Battle Start: Give the enemy 1 riptide
+ | Swampland [Banner swamp red.png]
+ | [Slime Sword.png] Slime Sword
+ | Common [Rarity common.png]
+ | [Icon attack.png] 2
+ | Battle Start: Give yourself and the enemy 3 acid
+ | Swampland [Banner swamp blue.png]
+ | [Squire's Blade.png] Squire's Blade
+ | Common [Rarity common.png]
+ | [Icon attack.png] 2
+ | Upgrades after you defeat the next boss
+ | Swampland [Banner swamp red.png]
+ | [Stormcloud Spear.png] Stormcloud Spear
+ | Common [Rarity common.png]
+ | [Icon attack.png] 2
+ | Every 5 strikes, stun the enemy for 2 turns
+ | Swampland [Banner swamp blue.png]
+ | [Arcane Wand.png] Arcane Wand
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 0
+ | Can't attack. Turn Start: Deal 2 damage. Increase the damage by 1 for each tome equipped
+ | Swampland [Banner swamp yellow.png]
+ | [Basilisk Fang.png] Basilisk Fang
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 3
+ | On Hit: Decrease your poison by 2 and give it to the enemy
+ | Swampland [Banner swamp blue.png]
+ | [Bubblegloop Staff.png] Bubblegloop Staff
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 0
+ | Can't strike. Turn Start: Spend 1 speed to give the enemy 2 acid and 2 poison
+ | Swampland [Banner swamp yellow.png]
+ | [Granite Axe.png] Granite Axe
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 4
+ | On Hit: Lose 2 health and gain 4 armor
+ | Swampland [Banner swamp blue.png]
+ | [Liferoot Hammer.png] Liferoot Hammer
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 3
+ | On Hit: If your health is full, spend your regeneration to gain 3 times that amount of armor
+ | Swampland [Banner swamp red.png]
+ | [Lightning Rod.png] Lightning Rod
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 2
+ | Turn Start: If you're stunned, gain 3 attack
+ | Swampland [Banner swamp blue.png]
+ | [Lightning Whip.png] Lightning Whip
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 3
+ | Turn Start: If the enemy is stunned, gain 1 additional strike
+ | Swampland [Banner swamp yellow.png]
+ | [Ring Blades.png] Ring Blades
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 1
+ | Battle Start: Steal 1 attack from the enemy
+ | Swampland [Banner swamp red.png]
+ | [Rusty Sword.png] Rusty Sword
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 2
+ | First Turn: Give acid equal to your attack on hit
+ | Swampland [Banner swamp yellow.png]
+ | [Sanguine Scepter.png] Sanguine Scepter
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 1
+ | Healing is doubled
+ | Swampland [Banner swamp blue.png]
+ | [Wave Breaker.png] Wave Breaker
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] -2
+ | Can't strike. Battle Start: Give the enemy 2 riptide for each negative base attack you have
+ | Swampland [Banner swamp red.png]
+ | [Bloodlord's Axe.png] Bloodlord's Axe
+ | Heroic [Rarity heroic.png]
+ | [Icon attack.png] 4
+ | Battle Start: The enemy loses 5 health and you restore 5 health
+ | Swampland [Banner swamp blue.png]
+ | [Chainmail Sword.png] Chainmail Sword
+ | Heroic [Rarity heroic.png]
+ | [Icon attack.png] 2
+[Icon armor.png] 2
+ | Exposed: Gain armor equal to base armor
+ | Swampland [Banner swamp red.png]
+ | [King's Blade.png] King's Blade
+ | Heroic [Rarity heroic.png]
+ | [Icon attack.png] 2
+ | Exposed and Wounded items triggers at battle start instead
+ | Swampland [Banner swamp yellow.png]
+ | [Leather Whip.png] Leather Whip
+ | Heroic [Rarity heroic.png]
+ | [Icon attack.png] 4
+[Icon health.png] 5
+ | Battle Start: Gain 5 max health
+ | Swampland [Banner swamp yellow.png]
+ | [Melting Iceblade.png] Melting Iceblade
+ | Heroic [Rarity heroic.png]
+ | [Icon attack.png] 8
+ | On Hit: Lose 1 attack
+ | Swampland [Banner swamp red.png]
+ | [Moonlight Cleaver.png] Moonlight Cleaver
+ | Heroic [Rarity heroic.png]
+ | [Icon attack.png] 3
+ | While you are below 50% health, you cannot gain status effects
+ | Swampland [Banner swamp yellow.png]
+ | [Purelake Staff.png] Purelake Staff
+ | Heroic [Rarity heroic.png]
+ | [Icon attack.png] 1
+ | Battle Start: Gain 2 purity. On Hit: Remove 1 purity
+ | Swampland [Banner swamp blue.png]
+ | [Riverflow Rapier.png] Riverflow Rapier
+ | Heroic [Rarity heroic.png]
+ | [Icon attack.png] 3
+ | The first time you gain a new status effect, gain 1 additional strike as well
+ | Swampland [Banner swamp blue.png]
+ | [Serpent Dagger.png] Serpent Dagger
+ | Heroic [Rarity heroic.png]
+ | [Icon attack.png] 2
+ | Every 3 strikes, give the enemy 4 poison
+ | Swampland [Banner swamp red.png]
+ | [Silverscale Trident.png] Silverscale Trident
+ | Heroic [Rarity heroic.png]
+ | [Icon attack.png] 0
+ | On Hit: Give the enemy 1 riptide
+ | Swampland [Banner swamp red.png]
+ | [Thunderbound Sabre.png] Thunderbound Sabre
+ | Heroic [Rarity heroic.png]
+ | [Icon attack.png] 6
+ | Battle start: Stun yourself for 2 turns
+ | Swampland [Banner swamp blue.png]
+ | [Ancient Warhammer.png] Ancient Warhammer
+ | Mythic [Rarity mythic.png]
+ | [Icon attack.png] 5
+ | On Hit: Remove all of the enemy's armor
+ | Swampland
+ | [Dashmaster's Dagger.png] Dashmaster's Dagger
+ | Mythic [Rarity mythic.png]
+ | [Icon attack.png] 2
+ | Battle Start: Gain additional strikes equal to speed
+ | Swampland
+ | [Lakebed Sword.png] Lakebed Sword
+ | Mythic [Rarity mythic.png]
+ | [Icon attack.png] 5
+ | Gain double health and attack from purity
+ | Swampland
+ | [Cleaver of Wrath.png] Cleaver of Wrath
+ | Cursed [Rarity Cursed 16x.png]
+ | [Icon attack.png] 10
+ | Your max health is always 1
+ | Swampland
+ | [Scepter of Greed.png] Scepter of Greed
+ | Cursed [Rarity Cursed 16x.png]
+ | [Icon attack.png] 6
+ | You cannot gain gold
+ | Swampland
+ | [Sword of Pride.png] Sword of Pride
+ | Cursed [Rarity Cursed 16x.png]
+ | [Icon attack.png] 3
+[Icon armor.png] 3
+[Icon speed.png] 3
+ | Battle Start: If the enemy has more attack, armor or speed than you, take 3 damage
+ | Swampland
+## Items
+The player starts the game with 4 item slots. Defeating each boss increases the number of item slots by 2.
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | [Arcane Bell.png] Arcane Bell
+ | Common [Rarity common.png]
+ | -
+ | Battle Start: Decrease all countdowns by 1. Symphony
+ | Swampland [Banner swamp yellow.png]
+ | [Champion's Armor.png] Champion's Armor
+ | Common [Rarity common.png]
+ | [Icon armor.png] 6 / 12 / 24
+ | -
+ | Swampland [Banner swamp red.png]
+ | [Clearspring Feather.png] Clearspring Feather
+ | Common [Rarity common.png]
+ | -
+ | Battle Start: Decrease a random status effect by 1 and give it to the enemy — at Gold:  transfer 2 , at Diamond:  transfer 4
+ | Swampland [Banner swamp blue.png]
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | Common [Rarity common.png]
+ | -
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1 — at Gold:  decrease 2 , at Diamond:  decrease 4
+ | Swampland [Banner swamp blue.png]
+ | [Deviled Egg.png] Deviled Egg
+ | Common [Rarity common.png]
+ | -
+ | Hatches after you defeat the next boss (Into [Sanguine Imp.png] Sanguine Imp)
+ | Swampland [Banner swamp red.png]
+ | [Granite Egg.png] Granite Egg
+ | Common [Rarity common.png]
+ | -
+ | Hatches after you defeat the next boss (Into [Stoneborn Turtle.png] Stoneborn Turtle)
+ | Swampland [Banner swamp yellow.png]
+ | [Holy Shield.png] Holy Shield
+ | Common [Rarity common.png]
+ | [Icon attack.png] -1 / -2 / -4
+[Icon armor.png] 6 / 12 / 24
+[Icon speed.png] -1 / -2 / -4
+ | -
+ | Swampland [Banner swamp yellow.png]
+ | [Knight's Armor.png] Knight's Armor
+ | Common [Rarity common.png]
+ | [Icon armor.png] 4 / 8 / 16
+ | Upgrades after you defeat the next boss
+ | Swampland [Banner swamp red.png]
+ | [Leather Belt.png] Leather Belt
+ | Common [Rarity common.png]
+ | [Icon health.png] 3 / 6 / 12
+ | If you have 0 base armor, double this item's max health — at Gold:  x 4 = [Icon health.png] 12, at Diamond:  x 8 = [Icon health.png] 24
+ | Swampland [Banner swamp yellow.png]
+ | [Liferoot Gauntlet.png] Liferoot Gauntlet
+ | Common [Rarity common.png]
+ | [Icon health.png] 3 / 6 / 12
+ | Battle start: Gain 1 regeneration — at Gold:  [Icon regen.png] 2 , at Diamond:  [Icon regen.png] 4
+ | Swampland [Banner swamp red.png]
+ | [Lightspeed Potion.png] Lightspeed Potion
+ | Common [Rarity common.png]
+ | [Icon speed.png] 1
+ | Battle Start: Restore health equal to speed
+ | Swampland [Banner swamp yellow.png]
+ | [Muscle Potion.png] Muscle Potion
+ | Common [Rarity common.png]
+ | -
+ | Every 3 strikes: Gain 1 attack — at Gold:  [Icon attack.png] 2 , at Diamond:  [Icon attack.png] 4
+ | Swampland [Banner swamp blue.png]
+ | [Petrifying Flask.png] Petrifying Flask
+ | Common [Rarity common.png]
+ | -
+ | Wounded: Gain 10 armor and stun yourself for 2 turns — at Gold:  [Icon armor.png] 20 [Icon stun.png] 4, at Diamond:  [Icon armor.png] 40 [Icon stun.png] 8
+ | Swampland [Banner swamp blue.png]
+ | [Purelake Helmet.png] Purelake Helmet
+ | Common [Rarity common.png]
+ | [Icon armor.png] 2 / 4 / 8
+ | Battle Start: Gain 1 Purity — at Gold:  [Icon purity.png] 2 , at Diamond:  [Icon purity.png] 4
+ | Swampland [Banner swamp blue.png]
+ | [Royal Horn.png] Royal Horn
+ | Common [Rarity common.png]
+ | -
+ | Wounded: Gain 2 gold. Symphony
+ | Swampland [Banner swamp blue.png]
+ | [Rusty Ring.png] Rusty Ring
+ | Common [Rarity common.png]
+ | -
+ | Battle Start: Give the enemy 1 acid — at Gold:  [Icon acid.png] 2 , at Diamond:  [Icon acid.png] 4
+ | Swampland [Banner swamp yellow.png]
+ | [Serpent Lyre.png] Serpent Lyre
+ | Common [Rarity common.png]
+ | -
+ | Exposed: Give the enemy 3 poison. Symphony
+ | Swampland [Banner swamp red.png]
+ | [Silverscale Fish.png] Silverscale Fish
+ | Common [Rarity common.png]
+ | -
+ | Exposed: Give the enemy 1 riptide — at Gold:  [Icon riptide.png] 2 , at Diamond:  [Icon riptide.png] 4
+ | Swampland [Banner swamp red.png]
+ | [Slime Armor.png] Slime Armor
+ | Common [Rarity common.png]
+ | [Icon armor.png] 5 / 10 / 20
+ | Battle Start: Gain 1 acid — at Gold:  [Icon acid.png] 2 , at Diamond:  [Icon acid.png] 4
+ | Swampland [Banner swamp blue.png]
+ | [Sour Lemon.png] Sour Lemon
+ | Common [Rarity common.png]
+ | [Icon speed.png] 3 / 6 / 12
+ | Battle Start: Gain 1 acid — at Gold:  [Icon acid.png] 2 , at Diamond:  [Icon acid.png] 4
+ | Swampland [Banner swamp blue.png]
+ | [Squire's Armor.png] Squire's Armor
+ | Common [Rarity common.png]
+ | [Icon armor.png] 2 / 4 / 8
+ | Upgrades after you defeat the next boss
+ | Swampland [Banner swamp red.png]
+ | [Treebark Egg.png] Treebark Egg
+ | Common [Rarity common.png]
+ | -
+ | Hatches after you defeat the next boss (Into [Liferoot Beast.png] Liferoot Beast)
+ | Swampland [Banner swamp red.png]
+ | [Venomous Fang.png] Venomous Fang
+ | Common [Rarity common.png]
+ | -
+ | First Turn: Give the enemy 2 poison on hit — at Gold:  [Icon poison.png] 4 , at Diamond:  [Icon poison.png] 8
+ | Swampland [Banner swamp red.png]
+ | [Weaver Shield.png] Weaver Shield
+ | Common [Rarity common.png]
+ | -
+ | Battle Start: If you have 0 base armor, gain 4 armor — at Gold:  [Icon armor.png] 8 , at Diamond:  [Icon armor.png] 16
+ | Swampland [Banner swamp yellow.png]
+ | [Wet Egg.png] Wet Egg
+ | Common [Rarity common.png]
+ | -
+ | Hatches after you defeat the next boss (Into [Clearspring Duck.png] Clearspring Duck)
+ | Swampland [Banner swamp blue.png]
+ | [Arcane Gauntlet.png] Arcane Gauntlet
+ | Rare [Rarity rare.png]
+ | -
+ | Battle Start: Halve all countdowns
+ | Swampland [Banner swamp yellow.png]
+ | [Arcane Lens.png] Arcane Lens
+ | Rare [Rarity rare.png]
+ | -
+ | If you have exactly 1 tome equipped, it triggers thrice
+ | Swampland [Banner swamp yellow.png]
+ | [Arcane Shield.png] Arcane Shield
+ | Rare [Rarity rare.png]
+ | -
+ | Whenever a countdown effect triggers, gain 3 armor
+ | Swampland [Banner swamp yellow.png]
+ | [Basilisk Scale.png] Basilisk Scale
+ | Rare [Rarity rare.png]
+ | -
+ | Battle Start: Gain 5 armor and 5 poison
+ | Swampland [Banner swamp blue.png]
+ | [Chainmail Cloak.png] Chainmail Cloak
+ | Rare [Rarity rare.png]
+ | [Icon armor.png] 2
+ | Turn Start: If you have armor, restore 2 health
+ | Swampland [Banner swamp yellow.png]
+ | [Clearspring Opal.png] Clearspring Opal
+ | Rare [Rarity rare.png]
+ | [Icon speed.png] 2
+ | Turn Start: If you have any status effects, spend 1 speed to decrease a random status effect by 1
+ | Swampland [Banner swamp blue.png]
+ | [Clearspring Rose.png] Clearspring Rose
+ | Rare [Rarity rare.png]
+ | -
+ | Whenever you restore health, decrease a random status effect by 1. You can only equip 1 rose
+ | Swampland [Banner swamp blue.png]
+ | [Corroded Bone.png] Corroded Bone
+ | Rare [Rarity rare.png]
+ | -
+ | Battle Start: Convert 50% of the enemy's health into armor
+ | Swampland [Banner swamp yellow.png]
+ | [Crimson Fang.png] Crimson Fang
+ | Rare [Rarity rare.png]
+ | -
+ | Battle Start: If your health is full, lose 5 health and gain 2 additional strikes
+ | Swampland [Banner swamp red.png]
+ | [Forge Gauntlet.png] Forge Gauntlet
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 1
+ | Battle Start: Give the enemy 5 armor
+ | Swampland [Banner swamp yellow.png]
+ | [Friendship Bracelet.png] Friendship Bracelet
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] -1
+ | Battle Start: The enemy loses 1 attack
+ | Swampland [Banner swamp red.png]
+ | [Granite Fungi.png] Granite Fungi
+ | Rare [Rarity rare.png]
+ | -
+ | Turn End: Gain 2 armor and give the enemy 2 armor
+ | Swampland [Banner swamp yellow.png]
+ | [Hero's Crossguard.png] Hero's Crossguard
+ | Rare [Rarity rare.png]
+ | -
+ | First Turn: Your On Hit effects trigger twice
+ | Swampland [Banner swamp red.png]
+ | [Impressive Physique.png] Impressive Physique
+ | Rare [Rarity rare.png]
+ | [Icon speed.png] 2
+ | Exposed: Stun the enemy for 1 turn
+ | Swampland [Banner swamp yellow.png]
+ | [Leather Waterskin.png] Leather Waterskin
+ | Rare [Rarity rare.png]
+ | -
+ | Exposed: Gain 2 purity for each equipped water item
+ | Swampland [Banner swamp blue.png]
+ | [Lightning Bottle.png] Lightning Bottle
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 1
+[Icon speed.png] 2
+ | Battle Start: Stun yourself for 1 turn
+ | Swampland [Banner swamp blue.png]
+ | [Marshlight Lantern.png] Marshlight Lantern
+ | Rare [Rarity rare.png]
+ | -
+ | Exposed: Lose 3 health and gain 8 armor
+ | Swampland [Banner swamp blue.png]
+ | [Moonlight Crest.png] Moonlight Crest
+ | Rare [Rarity rare.png]
+ | -
+ | Turn Start: If you're below 50% health, gain 1 regeneration
+ | Swampland [Banner swamp red.png]
+ | [Muscle Growth.png] Muscle Growth
+ | Rare [Rarity rare.png]
+ | -
+ | While you have regeneration, temporarily gain 3 attack
+ | Swampland [Banner swamp red.png]
+ | [Mushroom Buckler.png] Mushroom Buckler
+ | Rare [Rarity rare.png]
+ | [Icon armor.png] 3
+ | If you have poison, enemy strikes deal 1 less damage
+ | Swampland [Banner swamp blue.png]
+ | [Nerve Poison.png] Nerve Poison
+ | Rare [Rarity rare.png]
+ | -
+ | The first time the enemy gains poison, stun them for 1 turn
+ | Swampland [Banner swamp red.png]
+ | [Plated Shield.png] Plated Shield
+ | Rare [Rarity rare.png]
+ | [Icon speed.png] -1
+ | The first time you gain armor, double it
+ | Swampland [Banner swamp blue.png]
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 2
+ | Turn Start: Gain 1 poison
+ | Swampland [Banner swamp blue.png]
+ | [Purelake Armor.png] Purelake Armor
+ | Rare [Rarity rare.png]
+ | -
+ | Exposed: Remove 1 purity to gain 5 armor
+ | Swampland [Banner swamp blue.png]
+ | [Purelake Potion.png] Purelake Potion
+ | Rare [Rarity rare.png]
+ | -
+ | Battle start: Remove all your armor and gain 3 purity
+ | Swampland [Banner swamp blue.png]
+ | [Riverflow Talisman.png] Riverflow Talisman
+ | Rare [Rarity rare.png]
+ | -
+ | Whenever you gain a status effect, gain 1 additional stack
+ | Swampland [Banner swamp blue.png]
+ | [Riverflow Violin.png] Riverflow Violin
+ | Rare [Rarity rare.png]
+ | -
+ | Exposed: Gain 4 armor. Symphony
+ | Swampland [Banner swamp blue.png]
+ | [Rusted Plate.png] Rusted Plate
+ | Rare [Rarity rare.png]
+ | -
+ | Whenever the enemy loses armor to acid, gain that armor
+ | Swampland [Banner swamp yellow.png]
+ | [Saltcrusted Crown.png] Saltcrusted Crown
+ | Rare [Rarity rare.png]
+ | [Icon health.png] 8
+ | Battle Start: Gain 1 riptide
+ | Swampland [Banner swamp blue.png]
+ | [Silver Anchor.png] Silver Anchor
+ | Rare [Rarity rare.png]
+ | [Icon speed.png] -1
+ | Whenever you lose speed, give the enemy 1 riptide
+ | Swampland [Banner swamp red.png]
+ | [Silverscale Armor.png] Silverscale Armor
+ | Rare [Rarity rare.png]
+ | -
+ | Whenever riptide triggers, gain 2 armor
+ | Swampland [Banner swamp red.png]
+ | [Silverscale Greaves.png] Silverscale Greaves
+ | Rare [Rarity rare.png]
+ | [Icon speed.png] 1
+ | Battle Start: If you have more speed than the enemy, give them 2 riptide
+ | Swampland [Banner swamp red.png]
+ | [Sinful Mirror.png] Sinful Mirror
+ | Rare [Rarity rare.png]
+ | -
+ | Wounded: Remove all your purity
+ | Swampland [Banner swamp blue.png]
+ | [Slime Booster.png] Slime Booster
+ | Rare [Rarity rare.png]
+ | -
+ | Battle Start: Convert 1 acid into 2 attack
+ | Swampland [Banner swamp blue.png]
+ | [Slime Heart.png] Slime Heart
+ | Rare [Rarity rare.png]
+ | -
+ | Wounded: Remove all your acid and restore 2 health for each acid removed
+ | Swampland [Banner swamp blue.png]
+ | [Slime Potion.png] Slime Potion
+ | Rare [Rarity rare.png]
+ | -
+ | Wounded: Gain armor equal to lost health and gain 5 acid
+ | Swampland [Banner swamp blue.png]
+ | [Soap Stone.png] Soap Stone
+ | Rare [Rarity rare.png]
+ | -
+ | First turn: Spend 2 speed to temporarily gain 4 attack
+ | Swampland [Banner swamp red.png]
+ | [Spiral Shell.png] Spiral Shell
+ | Rare [Rarity rare.png]
+ | -
+ | Turn Start: If you're stunned, give the enemy 1 riptide
+ | Swampland [Banner swamp blue.png]
+ | [Spiritual Balance.png] Spiritual Balance
+ | Rare [Rarity rare.png]
+ | -
+ | Battle Start: If your speed is equal to your attack, gain 3 attack
+ | Swampland [Banner swamp red.png]
+ | [Stillwater Pearl.png] Stillwater Pearl
+ | Rare [Rarity rare.png]
+ | -
+ | Riptide can trigger twice per turn
+ | Swampland [Banner swamp red.png]
+ | [Stormcloud Armor.png] Stormcloud Armor
+ | Rare [Rarity rare.png]
+ | [Icon armor.png] 3
+ | Battle Start: If you have more speed than armor, stun the enemy for 2 turns
+ | Swampland [Banner swamp yellow.png]
+ | [Stormcloud Curse.png] Stormcloud Curse
+ | Rare [Rarity rare.png]
+ | -
+ | Battle Start: Stun the enemy and yourself for 2 turns
+ | Swampland [Banner swamp blue.png]
+ | [Toxic Algae.png] Toxic Algae
+ | Rare [Rarity rare.png]
+ | -
+ | The first time riptide triggers, give the enemy 5 poison
+ | Swampland [Banner swamp red.png]
+ | [Toxic Rose.png] Toxic Rose
+ | Rare [Rarity rare.png]
+ | -
+ | Whenever you restore health, give the enemy 1 poison. You can only equip 1 rose
+ | Swampland [Banner swamp red.png]
+ | [Twisted Root.png] Twisted Root
+ | Rare [Rarity rare.png]
+ | -
+ | Exposed: Gain 1 regeneration for each equipped wood item
+ | Swampland [Banner swamp red.png]
+ | [Vampiric Stasis.png] Vampiric Stasis
+ | Rare [Rarity rare.png]
+ | -
+ | Whenever you skip your strike, restore 3 health
+ | Swampland [Banner swamp blue.png]
+ | [Viper Extract.png] Viper Extract
+ | Rare [Rarity rare.png]
+ | -
+ | The first time the enemy gains poison, give them 3 additional poison
+ | Swampland [Banner swamp red.png]
+ | [Acid Mutation.png] Acid Mutation
+ | Heroic [Rarity heroic.png]
+ | -
+ | Battle Start: Gain 1 acid. While you have acid, temporarily gain attack equal to acid
+ | Swampland [Banner swamp blue.png]
+ | [Acidic Witherleaf.png] Acidic Witherleaf
+ | Heroic [Rarity heroic.png]
+ | [Icon speed.png] 1
+ | Battle Start: Give the enemy acid equal to your speed
+ | Swampland [Banner swamp yellow.png]
+ | [Bloodstone Ring.png] Bloodstone Ring
+ | Heroic [Rarity heroic.png]
+ | -
+ | Battle Start: Gain 5 max health and restore 5 health
+ | Swampland [Banner swamp blue.png]
+ | [Clearspring Cloak.png] Clearspring Cloak
+ | Heroic [Rarity heroic.png]
+ | -
+ | Exposed: Remove all your status effects and gain 1 armor equal to stacks removed
+ | Swampland [Banner swamp red.png]
+ | [Clearspring Duck.png] Clearspring Duck
+ | Heroic [Rarity heroic.png]
+ | -
+ | Turn Start: Gain 1 armor and decrease a random status effect by 1
+ | Swampland [Banner swamp blue.png]
+ | [Explosive Arrow.png] Explosive Arrow
+ | Heroic [Rarity heroic.png]
+ | -
+ | Turn Start: If the enemy doesn't have any armor, deal 3 damage
+ | Swampland [Banner swamp red.png]
+ | [Life Zap.png] Life Zap
+ | Heroic [Rarity heroic.png]
+ | -
+ | Battle Start: Lose all your health except 1 and stun the enemy for 2 turns
+ | Swampland [Banner swamp yellow.png]
+ | [Liferoot Beast.png] Liferoot Beast
+ | Heroic [Rarity heroic.png]
+ | -
+ | Turn Start: If you don't have any regeneration, gain 3 regeneration
+ | Swampland [Banner swamp red.png]
+ | [Liferoot Lute.png] Liferoot Lute
+ | Heroic [Rarity heroic.png]
+ | -
+ | Wounded: Gain 3 regeneration. Symphony
+ | Swampland [Banner swamp red.png]
+ | [Marble Mirror.png] Marble Mirror
+ | Heroic [Rarity heroic.png]
+ | -
+ | Battle Start: Gain armor equal to your opponent’s armor
+ | Swampland [Banner swamp yellow.png]
+ | [Mist Armor.png] Mist Armor
+ | Heroic [Rarity heroic.png]
+ | [Icon health.png] 10
+[Icon speed.png] 2
+ | Enemy strikes ignore armor
+ | Swampland [Banner swamp yellow.png]
+ | [Noxious Gas.png] Noxious Gas
+ | Heroic [Rarity heroic.png]
+ | [Icon armor.png] 6
+ | Turn Start: Both you and the enemy gain 1 poison
+ | Swampland [Banner swamp red.png]
+ | [Petrified Statue.png] Petrified Statue
+ | Heroic [Rarity heroic.png]
+ | [Icon speed.png] -2
+ | Battle Start: Give the enemy 1 stun for each equipped stone item
+ | Swampland [Banner swamp yellow.png]
+ | [Purelake Chalice.png] Purelake Chalice
+ | Heroic [Rarity heroic.png]
+ | -
+ | Gain 1 purity every other turn
+ | Swampland [Banner swamp blue.png]
+ | [Sanguine Imp.png] Sanguine Imp
+ | Heroic [Rarity heroic.png]
+ | -
+ | Turn Start: Deal 1 damage and restore 1 health
+ | Swampland [Banner swamp red.png]
+ | [Sanguine Morphosis.png] Sanguine Morphosis
+ | Heroic [Rarity heroic.png]
+ | -
+ | Every 4th turn: Stun yourself for 1 turn and gain 3 regeneration
+ | Swampland [Banner swamp blue.png]
+ | [Serpent Mask.png] Serpent Mask
+ | Heroic [Rarity heroic.png]
+ | -
+ | Battle Start: Give the enemy poison equal to your attack
+ | Swampland [Banner swamp red.png]
+ | [Silverscale Gauntlet.png] Silverscale Gauntlet
+ | Heroic [Rarity heroic.png]
+ | -
+ | Give the enemy 1 riptide every other turn
+ | Swampland [Banner swamp red.png]
+ | [Stoneborn Turtle.png] Stoneborn Turtle
+ | Heroic [Rarity heroic.png]
+ | -
+ | Turn start: Restore 1 health. If your health is full, gain 2 armor instead
+ | Swampland [Banner swamp yellow.png]
+ | [Stormcloud Drum.png] Stormcloud Drum
+ | Heroic [Rarity heroic.png]
+ | -
+ | Wounded: Stun the enemy for 1 turn. Symphony
+ | Swampland [Banner swamp yellow.png]
+ | [Sunlight Crest.png] Sunlight Crest
+ | Heroic [Rarity heroic.png]
+ | -
+ | Turn Start: If you're above 50% health, lose 3 health and gain 1 attack
+ | Swampland [Banner swamp red.png]
+ | [Thunder Cloud.png] Thunder Cloud
+ | Heroic [Rarity heroic.png]
+ | [Icon attack.png] -1
+ | Wounded: Stun the enemy for 3 turns
+ | Swampland [Banner swamp yellow.png]
+ | [Weaver Armor.png] Weaver Armor
+ | Heroic [Rarity heroic.png]
+ | [Icon attack.png] -2
+ | Battle Start: If you have 0 base armor, gain armor equal to current health
+ | Swampland [Banner swamp yellow.png]
+ | [Blood Rune.png] Blood Rune
+ | Heroic [Rarity heroic.png]
+ | -
+ | Wounded: Re-trigger the last triggered wounded item
+ | Swampland
+ | [Echo Rune.png] Echo Rune
+ | Heroic [Rarity heroic.png]
+ | -
+ | Wounded: Re-trigger a random battle start item
+ | Swampland
+ | [Iron Rune.png] Iron Rune
+ | Heroic [Rarity heroic.png]
+ | -
+ | If you have exactly 1 item with exposed, it triggers thrice
+ | Swampland
+ | [Arcane Cloak.png] Arcane Cloak
+ | Mythic [Rarity mythic.png]
+ | -
+ | Reset countdowns after they trigger
+ | Swampland
+ | [Grand Crescendo.png] Grand Crescendo
+ | Mythic [Rarity mythic.png]
+ | -
+ | Symphony triggers all your other instruments
+ | Swampland
+ | [Prime Form.png] Prime Form
+ | Mythic [Rarity mythic.png]
+ | -
+ | Double attack while your health is full
+ | Swampland
+ | [Primordial Soup.png] Primordial Soup
+ | Mythic [Rarity mythic.png]
+ | -
+ | Acid removes health as well
+ | Swampland
+ | [Serpent Scalemail.png] Serpent Scalemail
+ | Mythic [Rarity mythic.png]
+ | [Icon armor.png] 4
+ | Whenever you lose armor, give the enemy 2 poison
+ | Swampland
+ | [Stormtide Anchor.png] Stormtide Anchor
+ | Mythic [Rarity mythic.png]
+ | -
+ | Whenever riptide triggers, stun the enemy for 1 turn
+ | Swampland
+ | [Belt of Gluttony.png] Belt of Gluttony
+ | Cursed [Rarity Cursed 16x.png]
+ | [Icon health.png] 15
+ | Your health is hidden
+ | Swampland
+ | [Boots of Sloth.png] Boots of Sloth
+ | Cursed [Rarity Cursed 16x.png]
+ | [Icon speed.png] 10
+ | You lose more time per step
+ | Swampland
+ | [Chest of Lust.png] Chest of Lust
+ | Cursed [Rarity Cursed 16x.png]
+ | [Icon armor.png] 8
+ | Monsters always hunt you
+ | Swampland
+ | [Helmet of Envy.png] Helmet of Envy
+ | Cursed [Rarity Cursed 16x.png]
+ | [Icon attack.png] 3
+ | Battle Start: Double the enemy's attack
+ | Swampland
+## Tomes
+Tome items can be obtained from Ancient Tomes.
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | [Granite Tome.png] Granite Tome
+ | Common [Rarity common.png]
+ | -
+ | Countdown 4: Gain 6 armor — at Gold:  [Icon armor.png] 12 , at Diamond:  [Icon armor.png] 24
+ | Swampland [Banner swamp yellow.png]
+ | [Holy Tome.png] Holy Tome
+ | Common [Rarity common.png]
+ | [Icon attack.png] -1 / -2 / -4
+ | Countdown 6: Gain 3 attack — at Gold:  [Icon attack.png] 6 , at Diamond:  [Icon attack.png] 12
+ | Swampland [Banner swamp yellow.png]
+ | [Liferoot Tome.png] Liferoot Tome
+ | Common [Rarity common.png]
+ | -
+ | Countdown 4: Gain 3 regeneration — at Gold:  [Icon regen.png] 6 , at Diamond:  [Icon regen.png] 12
+ | Swampland [Banner swamp yellow.png]
+ | [Silverscale Tome.png] Silverscale Tome
+ | Common [Rarity common.png]
+ | -
+ | Countdown 3: Give the enemy 2 riptide — at Gold:  [Icon riptide.png] 4 , at Diamond:  [Icon riptide.png] 8
+ | Swampland [Banner swamp yellow.png]
+ | [Stormcloud Tome.png] Stormcloud Tome
+ | Common [Rarity common.png]
+ | -
+ | Countdown 4: Stun the enemy for 1 turn — at Gold:  2 turns, at Diamond:  4 turns
+ | Swampland [Banner swamp yellow.png]
+ | [Caustic Tome.png] Caustic Tome
+ | Rare [Rarity rare.png]
+ | -
+ | Countdown 3: Give the enemy 3 acid. If they don't have any armor, give them 5 poison instead
+ | Swampland [Banner swamp yellow.png]
+ | [Cookbook.png] Cookbook
+ | Rare [Rarity rare.png]
+ | -
+ | Replace this item with a random cauldron item after you defeat the next boss
+ | Swampland [Banner swamp yellow.png]
+ | [Flameburst Tome.png] Flameburst Tome
+ | Rare [Rarity rare.png]
+ | -
+ | Countdown 4: Deal 4 damage and reset countdown
+ | Swampland [Banner swamp yellow.png]
+ | [Purelake Tome.png] Purelake Tome
+ | Rare [Rarity rare.png]
+ | -
+ | Countdown 3: If you have purity, remove 1 purity. Otherwise, gain 1 purity. Reset countdown
+ | Swampland [Banner swamp yellow.png]
+ | [Sanguine Tome.png] Sanguine Tome
+ | Rare [Rarity rare.png]
+ | -
+ | Countdown 6: Restore health to full
+ | Swampland [Banner swamp yellow.png]
+ | [Grand Tome.png] Grand Tome
+ | Heroic [Rarity heroic.png]
+ | -
+ | Countdown 10: Retrigger all your other tomes
+ | Swampland [Banner swamp yellow.png]
+ | [Tome of the Hero.png] Tome of the Hero
+ | Heroic [Rarity heroic.png]
+ | -
+ | Countdown 8: Gain 4 attack, 4 armor and 4 speed
+ | Swampland [Banner swamp yellow.png]
+ | [Sheet Music.png] Sheet Music
+ | Heroic [Rarity heroic.png]
+ | -
+ | Countdown 6: Trigger Symphony 3 times
+ | Swampland [Banner swamp yellow.png]
+## Elixirs
+Elixir items can be obtained from Potion Maker.
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | [Lightspeed Elixir.png] Lightspeed Elixir
+ | Common [Rarity common.png]
+ | [Icon speed.png] 1
+ | Battle Start: Gain max health equal to your speed and then restore health equal to your speed
+ | Swampland
+ | [Muscle Elixir.png] Muscle Elixir
+ | Common [Rarity common.png]
+ | -
+ | Every 3 strikes: Gain 1 attack, 1 armor and 1 speed — at Gold:  [Icon attack.png][Icon armor.png][Icon speed.png] 2 , at Diamond:  [Icon attack.png][Icon armor.png][Icon speed.png] 4
+ | Swampland
+ | [Petrifying Elixir.png] Petrifying Elixir
+ | Common [Rarity common.png]
+ | -
+ | Wounded: Gain 10 armor and stun yourself and the enemy for 2 turns — at Gold:  [Icon armor.png] 20 [Icon stun.png] 4, at Diamond:  [Icon armor.png] 40 [Icon stun.png] 8
+ | Swampland
+ | [Lightning Elixir.png] Lightning Elixir
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 3
+[Icon speed.png] 4
+ | Battle Start: Stun yourself for 2 turns
+ | Swampland
+ | [Nerve Elixir.png] Nerve Elixir
+ | Rare [Rarity rare.png]
+ | -
+ | The first time the enemy gains poison, stun them for 3 turns
+ | Swampland
+ | [Purelake Elixir.png] Purelake Elixir
+ | Rare [Rarity rare.png]
+ | -
+ | Battle start: Lose 5 armor and gain 5 purity
+ | Swampland
+ | [Slime Elixir.png] Slime Elixir
+ | Rare [Rarity rare.png]
+ | -
+ | Wounded: Gain armor equal to max health and gain 5 acid
+ | Swampland
+ | [Viper Elixir.png] Viper Elixir
+ | Rare [Rarity rare.png]
+ | -
+ | The first time the enemy gains poison, give them 9 additional poison
+ | Swampland
+## Food
+Food items can be combined at a Cauldron to create a single item with both effects. They can also be combined at a Cauldron with a Honeycomb item, which massively increases their effects.
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | Common [Rarity common.png]
+ | -
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1 — at Gold:  decrease 2 , at Diamond:  decrease 4
+ | Swampland [Banner swamp blue.png]
+ | [Sour Lemon.png] Sour Lemon
+ | Common [Rarity common.png]
+ | [Icon speed.png] 3 / 6 / 12
+ | Battle Start: Gain 1 acid — at Gold:  [Icon acid.png] 2 , at Diamond:  [Icon acid.png] 4
+ | Swampland [Banner swamp blue.png]
+ | [Silverscale Fish.png] Silverscale Fish
+ | Common [Rarity common.png]
+ | -
+ | Exposed: Give the enemy 1 riptide — at Gold:  [Icon riptide.png] 2 , at Diamond:  [Icon riptide.png] 4
+ | Swampland [Banner swamp red.png]
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | Rare [Rarity rare.png]
+ | [Icon attack.png] 2
+ | Turn Start: Gain 1 poison
+ | Swampland [Banner swamp blue.png]
+ | [Grilling Skewer.png] Grilling Skewer
+ | Common [Rarity common.png]
+ | [Icon attack.png] 1
+ | Battle Start: Gain 1 additional strike
+ | Swampland [Banner swamp yellow.png]
+## Food Combined
+Food items can be combined at a Cauldron to create a single item with both effects. They can also be combined at a Cauldron with a Honeycomb item, which massively increases their effects.
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | [Melonvine Whip.png] Melonvine Whip
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Icon attack.png] 3
+ | On Hit: Decrease 1 random status effect
+ | [Silverscale Swordfish.png] Silverscale Swordfish
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Icon attack.png] 2
+ | Battle Start: Gain 1 additional strike. First Turn: Give the enemy 1 riptide on hit
+ | [Lemontree Branch.png] Lemontree Branch
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Sour Lemon.png] Sour Lemon
+ | [Icon attack.png] 2
+[Icon speed.png] 4
+ | On Hit: Spend 2 speed and gain 1 additional strike on your next turn
+ | [Deathcap Bow.png] Deathcap Bow
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Icon attack.png] 3
+ | Battle Start: Gain 3 poison. Turn Start: If you have poison. Gain 1 additional strike
+ | [Bee Stinger.png] Bee Stinger
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Honeycomb.png] Honeycomb
+ | [Icon attack.png] 3
+ | First Turn: Give the enemy 4 poison, 3 Acid, and 2 stun on hit
+ | [Underwater Watermelon.png] Underwater Watermelon
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | -
+ | Battle Start, Exposed & Wounded: Decrease 1 random status effect and give the enemy 1 riptide
+ | [Melon Lemonade.png] Melon Lemonade
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Sour Lemon.png] Sour Lemon
+ | [Icon speed.png] 3
+ | Battle Start, Exposed & Wounded: Remove all Acid
+ | [Bitter Melon.png] Bitter Melon
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Icon attack.png] 3
+ | Turn Start: Convert 1 stack of another status effect to 1 poison
+ | [Honeydew Melon.png] Honeydew Melon
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Honeycomb.png] Honeycomb
+ | -
+ | Battle Start: Give all your status effects to the enemy
+ | [Lemon Shark.png] Lemon Shark
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Sour Lemon.png] Sour Lemon
+ | [Icon speed.png] 3
+ | Battle Start: Gain 1 Acid Exposed: Give the enemy riptide equal to your acid
+ | [Poisonous Pufferfish.png] Poisonous Pufferfish
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Icon attack.png] 2
+ | Battle Start: Gain 3 poison and give the enemy riptide equal to your poison
+ | [Honey Caviar.png] Honey Caviar
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Honeycomb.png] Honeycomb
+ | -
+ | Exposed: Give the enemy 10 riptide
+ | [Poisonous Lemon.png] Poisonous Lemon
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Sour Lemon.png] Sour Lemon
+ | [Icon attack.png] 3
+[Icon speed.png] 4
+ | Battle Start: Gain 1 acid and 5 poison
+ | [Lemon Syrup.png] Lemon Syrup
+ | [Sour Lemon.png] Sour Lemon
+ | [Honeycomb.png] Honeycomb
+ | [Icon speed.png] 3
+ | Battle Start: Double your speed
+ | [Honey-glazed Shroom.png] Honey-glazed Shroom
+ | [Honeycomb.png] Honeycomb
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Icon attack.png] 4
+ | Turn Start: Give the enemy 2 poison

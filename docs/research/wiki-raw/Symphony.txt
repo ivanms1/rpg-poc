@@ -1,0 +1,65 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Trigger the effect of another random Instrument item.
+Symphony is part of the Trigger tags.
+Items that trigger Symphony
+Instruments (all have Symphony)
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Royal Horn
+ | Common 
+ | -
+ | Wounded: Gain 2 gold. Symphony
+ | Swampland 
+ | Serpent Lyre
+ | Common 
+ | -
+ | Exposed: Give the enemy 3 poison. Symphony
+ | Swampland 
+ | Riverflow Violin
+ | Rare 
+ | -
+ | Exposed: Gain 4 armor. Symphony
+ | Swampland 
+ | Arcane Bell
+ | Common 
+ | -
+ | Battle Start: Decrease all countdowns by 1. Symphony
+ | Swampland 
+ | Liferoot Lute
+ | Heroic 
+ | -
+ | Wounded: Gain 3 regeneration. Symphony
+ | Swampland 
+ | Stormcloud Drum
+ | Heroic 
+ | -
+ | Wounded: Stun the enemy for 1 turn. Symphony
+ | Swampland 
+Other items with Symphony
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Sheet Music
+ | Heroic 
+ | -
+ | Countdown 6: Trigger Symphony 3 times
+ | Swampland 
+ | Grand Crescendo
+ | Mythic 
+ | -
+ | Symphony triggers all your other instruments
+ | Swampland

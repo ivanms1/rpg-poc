@@ -1,0 +1,182 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Trigger when Exposed is applied.
+King's Blade: Exposed and Wounded items trigger at Battle Start instead.
+Marble Anvil: Battle Start — Trigger Exposed.
+Exposed is part of the Trigger tags.
+Items that trigger Exposed
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Icicle Spear
+ | Rare 
+ | 3
+ | Exposed: Give the enemy 2 freeze for each equipped water item
+ | Woodland 
+ | Marble Sword
+ | Common 
+ | 1
+ 2
+ | Exposed: Gain 3 attack
+ | Swampland 
+ | Chainmail Sword
+ | Heroic 
+ | 2
+ 2
+ | Exposed: Gain armor equal to base armor
+ | Swampland 
+ | Brittlebark Club
+ | Heroic 
+ | 7
+ | Exposed & Wounded: Lose 2 attack
+ | Woodland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Redwood Helmet
+ | Common 
+ | 1 / 2 / 4
+ 1 / 2 / 4
+ | Exposed: Restore 3 health — at Gold: 6 , at Diamond: 12
+ | Woodland 
+ | Double-plated Armor
+ | Common 
+ | 2 / 4 / 8
+ -2 / -4 / -8
+ | Exposed: Gain 3 armor — at Gold: 6 , at Diamond: 12
+ | Woodland 
+ | Cracked Bouldershield
+ | Rare 
+ | -
+ | Exposed: Gain 7 armor
+ | Woodland 
+ | Firecracker Belt
+ | Rare 
+ | -
+ | Exposed: Deal 1 damage 4 times
+ | Woodland 
+ | Blastcap Armor
+ | Rare 
+ | 8
+ | Exposed: Take 5 damage
+ | Woodland 
+ | Explosive Surprise
+ | Rare 
+ | -
+ | Exposed: Deal 6 damage
+ | Woodland 
+ | Plated Greaves
+ | Rare 
+ | -
+ | Exposed: Convert 3 speed to 9 armor
+ | Woodland 
+ | Time Bomb
+ | Heroic 
+ | -
+ | Exposed: Deal 1 damage. Turn start: This item gains 2 damage
+ | Woodland 
+ | Royal Helmet
+ | Rare 
+ | 1
+ | Exposed: If you have more than 20 gold, gain 10 armor
+ | Woodland 
+ | Leather Waterskin
+ | Rare 
+ | -
+ | Exposed: Gain 2 purity for each equipped water item
+ | Swampland 
+ | Marshlight Lantern
+ | Rare 
+ | -
+ | Exposed: Lose 3 health and gain 8 armor
+ | Swampland 
+ | Purelake Armor
+ | Rare 
+ | -
+ | Exposed: Remove 1 purity to gain 5 armor
+ | Swampland 
+ | Riverflow Violin
+ | Rare 
+ | -
+ | Exposed: Gain 4 armor. Symphony
+ | Swampland 
+ | Silverscale Fish
+ | Common 
+ | -
+ | Exposed: Give the enemy 1 riptide — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Twisted Root
+ | Rare 
+ | -
+ | Exposed: Gain 1 regeneration for each equipped wood item
+ | Swampland 
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Melon Bomb
+ | Clearspring Watermelon
+ | Cherry Bomb
+ | -
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1. Whenever a status effect is decreased, deal 1 damage to the enemy
+ | Cherry Blade
+ | Grilling Skewer
+ | Cherry Bomb
+ | 3
+ | Battle Start & Exposed: Deal 4 damage
+ | Underwater Watermelon
+ | Silverscale Fish
+ | Clearspring Watermelon
+ | -
+ | Battle Start, Exposed & Wounded: Decrease 1 random status effect and give the enemy 1 riptide
+ | Melon Lemonade
+ | Clearspring Watermelon
+ | Sour Lemon
+ | 3
+ | Battle Start, Exposed & Wounded: Remove all Acid
+ | Horned Melon
+ | Spiny Chestnut
+ | Clearspring Watermelon
+ | -
+ | Battle Start, Exposed & Wounded: Decrease 2 random status effects by 1 and gain that much thorns
+ | Mineral Water
+ | Clearspring Watermelon
+ | Stone Steak
+ | -
+ | Battle Start & Exposed: If your health is full, decrease a random status effect by 2 and gain 5 armor
+ | Shark Roast
+ | Silverscale Fish
+ | Redwood Roast
+ | 5
+ | Exposed: Give the enemy 2 riptides
+ | Lemon Shark
+ | Silverscale Fish
+ | Sour Lemon
+ | 3
+ | Battle Start: Gain 1 Acid Exposed: Give the enemy riptide equal to your acid
+ | Marbled Stonefish
+ | Silverscale Fish
+ | Stone Steak
+ | -
+ | Battle Start & Exposed: If your health is full, gain 5 armor and give the enemy 1 riptide
+ | Honey Caviar
+ | Silverscale Fish
+ | Honeycomb
+ | -
+ | Exposed: Give the enemy 10 riptide

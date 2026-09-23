@@ -1,0 +1,181 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Trigger whenever a specified event occurs (e.g., taking damage, gaining armor, restoring health, riptide triggering).
+Whenever is part of the Trigger tags.
+Items that trigger Whenever
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Blackbriar Blade
+ | Rare 
+ | 2
+ | Whenever you would gain thorns, gain 1 attack instead
+ | Woodland 
+ | Lifeblood Spear
+ | Rare 
+ | 1
+ | Whenever you restore 3 or more health, gain 1 attack
+ | Woodland 
+ | Swiftstrike Bow
+ | Rare 
+ | 2
+ | Whenever you gain an additional strike, gain twice as many
+ | Woodland 
+ | Explosive Sword
+ | Rare 
+ | 3
+ | Whenever a bomb deals 5 or more non-weapon damage, gain 1 additional strike
+ | Woodland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Lifeblood Burst
+ | Rare 
+ | -
+ | Whenever you restore 3 or more health, deal 3 damage
+ | Woodland 
+ | Blackbriar Rose
+ | Rare 
+ | -
+ | Whenever you restore health, gain 2 thorns. You can only equip 1 rose
+ | Woodland 
+ | Iron Rose
+ | Rare 
+ | -
+ | Whenever you restore health, gain 1 armor. You can only equip 1 rose
+ | Woodland 
+ | Sanguine Rose
+ | Rare 
+ | -
+ | Whenever you restore health, restore 1 additional health. You can only equip 1 rose
+ | Woodland 
+ | Clearspring Rose
+ | Rare 
+ | -
+ | Whenever you restore health, decrease a random status effect by 1. You can only equip 1 rose
+ | Swampland 
+ | Shield Talisman
+ | Heroic 
+ | -
+ | Whenever you gain armor, gain 1 additional armor
+ | Woodland 
+ | Sword Talisman
+ | Heroic 
+ | -
+ | Whenever you deal non-weapon damage to the enemy, deal 1 additional damage
+ | Woodland 
+ | Assault Greaves
+ | Heroic 
+ | -
+ | Whenever you take damage, deal 1 damage
+ | Woodland 
+ | Crimson Cloak
+ | Heroic 
+ | -
+ | Whenever you take damage, restore 1 health
+ | Woodland 
+ | Druid's Cloak
+ | Heroic 
+ | -
+ | Whenever you lose health, gain that much armor. You cannot restore health
+ | Woodland 
+ | Blackbriar Armor
+ | Heroic 
+ | -1
+ | Whenever you take damage, gain 2 thorns
+ | Woodland 
+ | Brittlebark Armor
+ | Heroic 
+ | 12
+ | Whenever you take damage, take 1 additional damage
+ | Woodland 
+ | Riverflow Talisman
+ | Rare 
+ | -
+ | Whenever you gain a status effect, gain 1 additional stack
+ | Swampland 
+ | Rusted Plate
+ | Rare 
+ | -
+ | Whenever the enemy loses armor to acid, gain that armor
+ | Swampland 
+ | Silver Anchor
+ | Rare 
+ | -1
+ | Whenever you lose speed, give the enemy 1 riptide
+ | Swampland 
+ | Silverscale Armor
+ | Rare 
+ | -
+ | Whenever riptide triggers, gain 2 armor
+ | Swampland 
+ | Frostbite Greaves
+ | Rare 
+ | -
+ | Whenever you lose speed, give the enemy 1 freeze
+ | Woodland 
+ | Featherweight Armor
+ | Rare 
+ | -
+ | Whenever you gain speed, also gain an equal amount of armor
+ | Woodland 
+ | Vampiric Stasis
+ | Rare 
+ | -
+ | Whenever you skip your strike, restore 3 health
+ | Swampland 
+ | Bloodmoon Armor
+ | Mythic 
+ | 6
+ | Whenever you would take damage from your own items, the enemy takes that damage instead
+ | Woodland
+ | Razor Scales
+ | Mythic 
+ | -
+ | Whenever you lose armor, deal that much damage
+ | Woodland
+ | Serpent Scalemail
+ | Mythic 
+ | 4
+ | Whenever you lose armor, give the enemy 2 poison
+ | Swampland
+ | Stormtide Anchor
+ | Mythic 
+ | -
+ | Whenever riptide triggers, stun the enemy for 1 turn
+ | Swampland
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Melon Bomb
+ | Clearspring Watermelon
+ | Cherry Bomb
+ | -
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1. Whenever a status effect is decreased, deal 1 damage to the enemy
+ | Spiny Snapper
+ | Silverscale Fish
+ | Spiny Chestnut
+ | -
+ | Battle Start: Give the enemy 1 riptide. Whenever riptide triggers, gain 3 thorns
+ | Deepsea Wine
+ | Silverscale Fish
+ | Vampiric Wine
+ | -
+ | Wounded: Give the enemy 1 riptide. Whenever riptide triggers, restore 3 health

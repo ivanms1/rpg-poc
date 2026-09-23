@@ -1,0 +1,199 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+The following items explicitly reference Water items in their effect:
+Icicle Spear — Exposed: Give the enemy 2 Freeze for each equipped water item.
+Leather Waterskin — Exposed: Gain 2 Purity. Repeat this for each equipped water item.
+Water is part of the Item tags.
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Frozen Iceblade
+ | Heroic 
+ | 6
+ | Battle start: Gain 3 freeze
+ | Woodland 
+ | Melting Iceblade
+ | Heroic 
+ | 8
+ | On Hit: Lose 1 attack
+ | Swampland 
+ | Frostbite Dagger
+ | Rare 
+ | 2
+ | First turn: Give the enemy freeze equal to your attack on hit
+ | Woodland 
+ | Icicle Spear
+ | Rare 
+ | 3
+ | Exposed: Give the enemy 2 freeze for each equipped water item
+ | Woodland 
+ | Purelake Staff
+ | Heroic 
+ | 1
+ | Battle Start: Gain 2 purity. On Hit: Remove 1 purity
+ | Swampland 
+ | Riverflow Rapier
+ | Heroic 
+ | 3
+ | The first time you gain a new status effect, gain 1 additional strike as well
+ | Swampland 
+ | Lakebed Sword
+ | Mythic 
+ | 5
+ | Gain double health and attack from purity
+ | Swampland
+Standard items
+Clearspring Tome
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Iceblock Shield
+ | Common 
+ | 8
+ | Battle Start: Gain 2 freeze
+ | Woodland 
+ | Frostbite Gauntlet
+ | Common 
+ | -
+ | Battle Start: Give the enemy 1 freeze — at Gold: 2 , at Diamond: 4
+ | Woodland 
+ | Frostbite Trap
+ | Common 
+ | -
+ | Wounded: Give the enemy 3 Freeze — at Gold: 6 , at Diamond: 12
+ | Woodland 
+ | Ice Spikes
+ | Rare 
+ | -
+ | Turn Start: If you have freeze, gain 5 thorns
+ | Woodland 
+ | Ice Tomb
+ | Rare 
+ | -
+ | Turn Start: If you have no armor, gain 3 armor and 1 freeze
+ | Woodland 
+ | Frostbite Armor
+ | Rare 
+ | 2
+ | The enemy's first strike deals double damage, afterwards they gain 4 freeze
+ | Woodland 
+ | Frostbite Greaves
+ | Rare 
+ | -
+ | Whenever you lose speed, give the enemy 1 freeze
+ | Woodland 
+ | Clearspring Feather
+ | Common 
+ | -
+ | Battle Start: Decrease a random status effect by 1 and give it to the enemy — at Gold: transfer 2 , at Diamond: transfer 4
+ | Swampland 
+ | Clearspring Watermelon
+ | Common 
+ | -
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1 — at Gold: decrease 2 , at Diamond: decrease 4
+ | Swampland 
+ | Clearspring Opal
+ | Rare 
+ | 2
+ | Turn Start: If you have any status effects, spend 1 speed to decrease a random status effect by 1
+ | Swampland 
+ | Clearspring Rose
+ | Rare 
+ | -
+ | Whenever you restore health, decrease a random status effect by 1. You can only equip 1 rose
+ | Swampland 
+ | Clearspring Cloak
+ | Heroic 
+ | -
+ | Exposed: Remove all your status effects and gain 1 armor equal to stacks removed
+ | Swampland 
+ | Clearspring Duck
+ | Heroic 
+ | -
+ | Turn Start: Gain 1 armor and decrease a random status effect by 1
+ | Swampland 
+ | Purelake Helmet
+ | Common 
+ | 2 / 4 / 8
+ | Battle Start: Gain 1 Purity — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Purelake Armor
+ | Rare 
+ | -
+ | Exposed: Remove 1 purity to gain 5 armor
+ | Swampland 
+ | Purelake Potion
+ | Rare 
+ | -
+ | Battle start: Remove all your armor and gain 3 purity
+ | Swampland 
+ | Purelake Elixir
+ | Rare 
+ | -
+ | Battle start: Lose 5 armor and gain 5 purity
+ | Swampland
+ | Purelake Chalice
+ | Heroic 
+ | -
+ | Gain 1 purity every other turn
+ | Swampland 
+ | Riverflow Talisman
+ | Rare 
+ | -
+ | Whenever you gain a status effect, gain 1 additional stack
+ | Swampland 
+ | Purelake Tome
+ | Rare 
+ | -
+ | Countdown 3: If you have purity, remove 1 purity. Otherwise, gain 1 purity. Reset countdown
+ | Swampland 
+ | Riverflow Violin
+ | Rare 
+ | -
+ | Exposed: Gain 4 armor. Symphony
+ | Swampland 
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Melon Bomb
+ | Clearspring Watermelon
+ | Cherry Bomb
+ | -
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1. Whenever a status effect is decreased, deal 1 damage to the enemy
+ | Melonvine Whip
+ | Grilling Skewer
+ | Clearspring Watermelon
+ | 3
+ | On Hit: Decrease 1 random status effect
+ | Boiled Ham
+ | Clearspring Watermelon
+ | Redwood Roast
+ | 5
+ | Battle Start, Exposed & Wounded: Decrease all your status effects by 1
+ | Melon Wine
+ | Clearspring Watermelon
+ | Vampiric Wine
+ | -
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1 and restore 3 health
+ | Mineral Water
+ | Clearspring Watermelon
+ | Stone Steak
+ | -
+ | Battle Start & Exposed: If your health is full, decrease a random status effect by 2 and gain 5 armor

@@ -1,0 +1,76 @@
+
+An island
+The following locations can be found anywhere on the map:
+- [Chest.png] Treasure Chests allow choosing between one of three Common rarity items to add to the inventory. There is a 1/80 chance items will be Golden and a 1/500 chance the items will be Diamond. More common in the Starting Forest biome.
+- [Event ferryman.png] Ferryman takes you to one of three other islands. Each island will have one, which is always visible when the player is near.
+- [Bazaar vendor.png] Bargaining Tents have a selection of 2 Rare rarity items that can be bought for 5 Gold. Can choose to haggle, which has a 75% chance to change the price to 4 and a 25% chance to change the price to 7. Cannot appear on the Starting Island.
+- [Bladeoil.png] Blade Oils allow choosing between giving the weapon 1 Attack, Armor or Speed. Refreshes if the weapon is changed. Each oil can only be applied once per weapon.
+- [Campfire.png] Campfires can be used at night to wait until the next day and restore 10 Health.
+- [Blacksmith.png] Forges allow choosing between two bonuses to add to the weapon. If weapon already has one it can be replaced for 10 Gold.
+- [Sinkhole.png] Sinkhole takes you to a random island. Cannot appear on the Starting Island.
+The Swampland map is divided into islands accessible via the Ferryman. Each island will spawn specific enemies and locations.
+ | Island
+ | Enemies
+ | Locations
+ | Starting Island
+ | [Enemy Frog.png] Frog
+[Enemy Snake.png] Snake
+ | [House.png] Home: Spawns next to the player and can be used at night to wait until the next day and restore all health
+ | Abandoned Quarry
+ | [Enemy Beaver.png] Beaver
+[Enemy Frog.png] Frog
+ | [Weapon stash.png] Weapon Pile: can choose between one of three weapons
+ | Glyph Ruins
+ | [Enemy Beaver.png] Beaver
+[Enemy Turtle.png] Turtle
+ | [Scroll.png] Ancient Tomes: can choose between one of three tome items
+[Rune carver.png] Rune Stone: can choose between the following items: Blood Rune, Echo Rune, Iron Rune
+ | Golem Home
+ | [Enemy Beaver.png] Beaver
+[Enemy Slime.png] Slime
+ | [Golem.png] Golem: can combine two items of the same common or golden item.
+[Big golem.png] Large Golem: upgrade a regular item into a Golden one or a Golden item into a Diamond one
+ | Lushwood Grove
+ | [Enemy Honey Bee.png] Honey Bee
+ | [Fairy.png] Fairy: can transform an item into another item of the same rarity
+[Lush chest.png] Lush Chest: can choose between one of four Common rarity items to add to the inventory, 1/100 chance to be golden
+[Beehive.png] Beehive: gain a Honeycomb that can be combined with food items at a Cauldron but is protected by Honey Bee enemies
+ | Scorched Hill
+ | [Enemy Dragonfly.png] Dragonfly
+[Enemy Slime.png] Slime
+ | [Woodcutter.png] Woodcutter: can combine two items into a random item of Heroic rarity
+[Bonfire.png] Large Bonfire: can be used at night to wait until the next day and restore all Health
+ | Sunken Palace
+ | [Enemy Palace Guard.png] Palace Guard
+ | [Treasury.png] Gold: gain 3 Gold
+ | Witch Marsh
+ | [Enemy Dragonfly.png] Dragonfly
+[Enemy Frog.png] Frog
+ | [Cauldron.png] Cauldron: can combine two food items
+[Crone.png] Crone: choose between two cursed items
+ | Serpent Basin
+ | [Enemy Snake.png] Snake
+ | [Alchemist.png] Alchemist: Upgrades a selected potion into an elixir.
+ | Boneyard Bog
+ | [Enemy Snake.png] Snake
+[Enemy Turtle.png] Turtle
+ | [Heroic chest.png] Hero's grave: choose between one of three Heroic rarity items to add to the inventory.
+ | Merchant Isle
+ | [Enemy Dragonfly.png] Dragonfly
+[Enemy Turtle.png] Turtle
+ | [Wandering merchant.png] Traveling Merchants have a selection of 5 Rare and 1 Heroic rarity items that can be bought using gold.
+ [Shady dealer.png] Rich Merchants have a selection of 6 Heroic rarity items that can be bought with 5 gold.
+ | Misplaced Mire
+ | [Enemy Raccoon.png] Raccoon
+ | [Trash heap.png] Trash Heap: contains 3 items of random rarity which you skipped in previous chests
+[Junksmith.png] Junksmith: create a copy of a non-unique item. 
+ Note: Only spawns after you've discarded 15 or so items (i.e. items you didn't pick from chests)
+ | Coven Lair
+ | [Bosssprite Coven Plaguemother.png] Coven Plaguemother
+ | 
+ | Murkwater Bayou
+ | [Bosssprite Murkwater Gator.png] Murkwater Gator
+ | 
+ | Castle Grounds
+ | [Bosssprite Palace Sentinel.png] Palace Sentinel
+ | 

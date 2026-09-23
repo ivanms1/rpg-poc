@@ -1,0 +1,175 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Deal damage equal to your thorns when struck. Then remove those thorns at turn end.
+Contents
+1 Mechanics
+2 Items
+2.1 Weapons
+2.2 Standard items
+Mechanics
+When the player is struck, damage is dealt equal to the current number of Thorns stacks.
+Thorns are only removed at the end of the turn if they have been triggered.
+If the enemy is stunned or otherwise skips their strike, Thorns remain into the next round.
+Thorns is part of the Status effect tags.
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Blackbriar Blade
+ | Rare 
+ | 2
+ | Whenever you would gain thorns, gain 1 attack instead
+ | Woodland 
+ | Razorthorn Spear
+ | Common 
+ | 1
+ | On Hit: Gain 2 thorns
+ | Woodland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Horned Helmet
+ | Common 
+ | 2 / 4 / 8
+ | Battle Start: Gain 1 stack of thorns — at Gold: 2 , at Diamond: 4
+ | Woodland 
+ | Spiny Chestnut
+ | Common 
+ | -
+ | Battle Start: Gain 3 thorns — at Gold: 6 , at Diamond: 12
+ | Woodland 
+ | Blackbriar Gauntlet
+ | Rare 
+ | -
+ | Gain 2 thorns for each armor removed by the enemy's first strike
+ | Woodland 
+ | Blackbriar Rose
+ | Rare 
+ | -
+ | Whenever you restore health, gain 2 thorns. You can only equip 1 rose
+ | Woodland 
+ | Bramble Belt
+ | Rare 
+ | -
+ | Battle Start: Gain 1 thorns and give the enemy 1 additional strike
+ | Woodland 
+ | Bramble Buckler
+ | Rare 
+ | 2
+ | Turn Start: Convert 1 armor to 2 thorns
+ | Woodland 
+ | Bramble Talisman
+ | Rare 
+ | -
+ | Whenever you gain thorns, gain 1 armor
+ | Woodland 
+ | Bramble Vest
+ | Rare 
+ | 3
+ | The first time you lose thorns, restore health equal to thorns lost
+ | Woodland 
+ | Ice Spikes
+ | Rare 
+ | -
+ | Turn Start: If you have freeze, gain 5 thorns
+ | Woodland 
+ | Pinecone Breastplate
+ | Rare 
+ | -
+ | Battle Start: If your health is full, gain 1 thorn at turn start for the rest of battle
+ | Woodland 
+ | Thorn Ring
+ | Rare 
+ | -
+ | Battle Start: Take 5 damage and gain 10 thorns
+ | Woodland 
+ | Blackbriar Armor
+ | Heroic 
+ | -1
+ | Whenever you take damage, gain 2 thorns
+ | Woodland 
+ | Cactus Cap
+ | Heroic 
+ | -
+ | If the enemy has no armor, thorns deal double damage
+ | Woodland 
+ | Razor Breastplate
+ | Heroic 
+ | 3
+ | Wounded: Gain thorns equal to enemy attack
+ | Woodland 
+ | Granite Thorns
+ | Mythic 
+ | -
+ | You don't lose any thorns on the enemy's first 3 strikes
+ | Woodland
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Blackbriar Bow
+ | Grilling Skewer
+ | Spiny Chestnut
+ | 4
+ | Can't Strike Turn Start: Gain thorns equal to your attack
+ | Candied Nuts
+ | Honeycomb
+ | Spiny Chestnut
+ | -
+ | Battle Start: Gain 3 thorns. Thorns deal double damage
+ | Horned Melon
+ | Spiny Chestnut
+ | Clearspring Watermelon
+ | -
+ | Battle Start, Exposed & Wounded: Decrease 2 random status effects by 1 and gain that much thorns
+ | Petrified Chestnut
+ | Spiny Chestnut
+ | Stone Steak
+ | -
+ | Battle Start: If your health is full, gain 6 thorns and 6 armor
+ | Poisonous Durian
+ | Poisonous Mushroom
+ | Spiny Chestnut
+ | 3
+ | Turn Start: Gain 1 poison and 1 thorns
+ | Roasted Chestnut
+ | Redwood Roast
+ | Spiny Chestnut
+ | 5
+ | Battle Start: Gain 4 thorns
+ | Spiked Wine
+ | Spiny Chestnut
+ | Vampiric Wine
+ | -
+ | Wounded: Restore 5 health and gain 5 thorns
+ | Spiny Kiwifruit
+ | Spiny Chestnut
+ | Sour Lemon
+ | 3
+ | Battle Start: Gain 3 acid and gain thorns equal to acid
+ | Spiny Snapper
+ | Silverscale Fish
+ | Spiny Chestnut
+ | -
+ | Battle Start: Give the enemy 1 riptide. Whenever riptide triggers, gain 3 thorns
+ | Trail Mix
+ | Spiny Chestnut
+ | Cherry Bomb
+ | -
+ | Battle Start: Deal 1 damage and gain 1 thorns. Repeat 2 times.

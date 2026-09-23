@@ -1,0 +1,147 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+While stunned, you skip your strike, then remove 1 stun.
+Contents
+1 Mechanics
+2 Items
+2.1 Weapons
+2.2 Standard items
+Mechanics
+Stun prevents your strike on that turn.
+After the skipped strike, remove 1 Stun stack. Multiple stacks will cause multiple skipped strikes across turns.
+Non-strike item effects (e.g., Battle Start, Turn Start, Countdown) can still trigger while stunned.
+Stun is part of the Status effect tags.
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Stormcloud Spear
+ | Common 
+ | 2
+ | Every 5 strikes, stun the enemy for 2 turns
+ | Swampland 
+ | Lightning Rod
+ | Rare 
+ | 2
+ | Turn Start: If you're stunned, gain 3 attack
+ | 
+ | Lightning Whip
+ | Rare 
+ | 3
+ | Turn Start: If the enemy is stunned, gain 1 additional strike
+ | Swampland 
+ | Thunderbound Sabre
+ | Heroic 
+ | 6
+ | Battle start: Stun yourself for 2 turns
+ | Swampland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Petrifying Flask
+ | Common 
+ | -
+ | Wounded: Gain 10 armor and stun yourself for 2 turns — at Gold: 20 4, at Diamond: 40 8
+ | Swampland 
+ | Lightning Bottle
+ | Rare 
+ | 1
+ 2
+ | Battle Start: Stun yourself for 1 turn
+ | Swampland 
+ | Impressive Physique
+ | Rare 
+ | 2
+ | Exposed: Stun the enemy for 1 turn
+ | Swampland 
+ | Nerve Poison
+ | Rare 
+ | -
+ | The first time the enemy gains poison, stun them for 1 turn
+ | Swampland 
+ | Spiral Shell
+ | Rare 
+ | -
+ | Turn Start: If you're stunned, give the enemy 1 riptide
+ | Swampland 
+ | Stormcloud Armor
+ | Rare 
+ | 3
+ | Battle Start: If you have more speed than armor, stun the enemy for 2 turns
+ | Swampland 
+ | Stormcloud Curse
+ | Rare 
+ | -
+ | Battle Start: Stun the enemy and yourself for 2 turns
+ | Swampland 
+ | Life Zap
+ | Heroic 
+ | -
+ | Battle Start: Lose all your health except 1 and stun the enemy for 2 turns
+ | Swampland 
+ | Sanguine Morphosis
+ | Heroic 
+ | -
+ | Every 4th turn: Stun yourself for 1 turn and gain 3 regeneration
+ | Swampland 
+ | Stormcloud Drum
+ | Heroic 
+ | -
+ | Wounded: Stun the enemy for 1 turn. Symphony
+ | Swampland 
+ | Thunder Cloud
+ | Heroic 
+ | -1
+ | Wounded: Stun the enemy for 3 turns
+ | Swampland 
+ | Petrified Statue
+ | Heroic 
+ | -2
+ | Battle Start: Give the enemy 1 stun for each equipped stone item
+ | Swampland 
+ | Stormtide Anchor
+ | Mythic 
+ | -
+ | Whenever riptide triggers, stun the enemy for 1 turn
+ | Swampland
+ | Stormcloud Tome
+ | Common 
+ | -
+ | Countdown 4: Stun the enemy for 1 turn — at Gold: 2 turns, at Diamond: 4 turns
+ | Swampland 
+ | Lightning Elixir
+ | Rare 
+ |  3
+ 4
+ | Battle Start: Stun yourself for 2 turns
+ | Swampland
+ | Nerve Elixir
+ | Rare 
+ | -
+ | The first time the enemy gains poison, stun them for 3 turns
+ | Swampland
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Bee Stinger
+ | Grilling Skewer
+ | Honeycomb
+ | 3
+ | First Turn: Give the enemy 4 poison, 3 Acid, and 2 stun on hit

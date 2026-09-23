@@ -1,0 +1,559 @@
+
+A visual summary of Cauldron ingredient combinations is available on the dedicated subpage: /CombinationsOverview.
+## Combined Foods
+Food items can be combined at a Cauldron, turning them into a single new item with improved, and sometimes completely new, effects. 
+ | Source Item 1
+ | Source Item 2
+ | Outcome Item
+ | Effect
+ | Buff
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Melon Bomb.png] Melon Bomb
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1. Whenever a status effect is decreased, deal 1 damage to the enemy
+ | -
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Cherry Blade.png] Cherry Blade
+ | Battle Start & Exposed: Deal 4 damage
+ | [Icon attack.png] 3
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Honeycomb.png] Honeycomb
+ | [Sugar Bomb.png] Sugar Bomb
+ | Turn Start: Deal 1 damage 3 times
+ | -
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Toxic Cherry.png] Toxic Cherry
+ | Turn Start: Gain 1 poison and deal 1 damage to the enemy
+ | [Icon attack.png] 3
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Redwood Roast.png] Redwood Roast
+ | [Explosive Roast.png] Explosive Roast
+ | Battle Start: Deal 1 damage 3 times
+ | [Icon health.png] 5
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Explosive Fish.png] Explosive Fish
+ | Battle Start: Give the enemy 1 riptide and deal 2 damage to them for each riptide they have
+ | -
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Sour Lemon.png] Sour Lemon
+ | [Combustible Lemon.png] Combustible Lemon
+ | Turn Start: Spend 1 speed to deal 2 damage
+ | [Icon speed.png] 3
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Trail Mix.png] Trail Mix
+ | Battle Start: Deal 1 damage and gain 1 thorns. Repeat 2 times.
+ | -
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Stone Steak.png] Stone Steak
+ | [Granite Cherry.png] Granite Cherry
+ | Battle Start: If your health is full, gain 2 armor and deal 2 damage. Repeat 3 times
+ | -
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Cherry Cocktail.png] Cherry Cocktail
+ | Battle Start & Wounded: Deal 3 damage and restore 3 health
+ | -
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Melon Bomb.png] Melon Bomb
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1. Whenever a status effect is decreased, deal 1 damage to the enemy
+ | -
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Melonvine Whip.png] Melonvine Whip
+ | On Hit: Decrease 1 random status effect
+ | [Icon attack.png] 3
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Honeycomb.png] Honeycomb
+ | [Honeydew Melon.png] Honeydew Melon
+ | Battle Start: Give all your status effects to the enemy
+ | -
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Bitter Melon.png] Bitter Melon
+ | Turn Start: Convert 1 stack of another status effect to 1 poison
+ | [Icon attack.png] 3
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Redwood Roast.png] Redwood Roast
+ | [Boiled Ham.png] Boiled Ham
+ | Battle Start, Exposed & Wounded: Decrease all your status effects by 1
+ | [Icon health.png] 5
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Underwater Watermelon.png] Underwater Watermelon
+ | Battle Start, Exposed & Wounded: Decrease 1 random status effect and give the enemy 1 riptide
+ | -
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Sour Lemon.png] Sour Lemon
+ | [Melon Lemonade.png] Melon Lemonade
+ | Battle Start, Exposed & Wounded: Remove all Acid
+ | [Icon speed.png] 3
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Horned Melon.png] Horned Melon
+ | Battle Start, Exposed & Wounded: Decrease 2 random status effects by 1 and gain that much thorns
+ | -
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Stone Steak.png] Stone Steak
+ | [Mineral Water.png] Mineral Water
+ | Battle Start & Exposed: If your health is full, decrease a random status effect by 2 and gain 5 armor
+ | -
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Melon Wine.png] Melon Wine
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1 and restore 3 health
+ | -
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Cherry Blade.png] Cherry Blade
+ | Battle Start & Exposed: Deal 4 damage
+ | [Icon attack.png] 3
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Melonvine Whip.png] Melonvine Whip
+ | On Hit: Decrease 1 random status effect
+ | [Icon attack.png] 3
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Honeycomb.png] Honeycomb
+ | [Bee Stinger.png] Bee Stinger
+ | First Turn: Give the enemy 4 poison, 3 Acid, and 2 stun on hit
+ | [Icon attack.png] 3
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Deathcap Bow.png] Deathcap Bow
+ | Battle Start: Gain 3 poison. Turn Start: If you have poison. Gain 1 additional strike
+ | [Icon attack.png] 3
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Redwood Roast.png] Redwood Roast
+ | [Ham Bat.png] Ham Bat
+ | Battle Start: Gain 2 additional strike
+ | [Icon attack.png] 3 [Icon health.png] 5
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Silverscale Swordfish.png] Silverscale Swordfish
+ | Battle Start: Gain 1 additional strike. First Turn: Give the enemy 1 riptide on hit
+ | [Icon attack.png] 2
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Sour Lemon.png] Sour Lemon
+ | [Lemontree Branch.png] Lemontree Branch
+ | On Hit: Spend 2 speed and gain 1 additional strike on your next turn
+ | [Icon attack.png] 2 [Icon speed.png] 4
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Blackbriar Bow.png] Blackbriar Bow
+ | Can't Strike Turn Start: Gain thorns equal to your attack
+ | [Icon attack.png] 4
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Stone Steak.png] Stone Steak
+ | [Rocksalt Sword.png] Rocksalt Sword
+ | Turn Start: If your health is full, gain 1 additional strike
+ | [Icon attack.png] 2 [Icon armor.png] 6
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Broken Winebottle.png] Broken Winebottle
+ | Wounded: On your next turn, Keep striking the enemy until they're wounded
+ | [Icon attack.png] 2
+ | [Honeycomb.png] Honeycomb
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Sugar Bomb.png] Sugar Bomb
+ | Turn Start: Deal 1 damage 3 times
+ | -
+ | [Honeycomb.png] Honeycomb
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Honeydew Melon.png] Honeydew Melon
+ | Battle Start: Give all your status effects to the enemy
+ | -
+ | [Honeycomb.png] Honeycomb
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Bee Stinger.png] Bee Stinger
+ | First Turn: Give the enemy 4 poison, 3 Acid, and 2 stun on hit
+ | [Icon attack.png] 3
+ | [Honeycomb.png] Honeycomb
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Honey-glazed Shroom.png] Honey-glazed Shroom
+ | Turn Start: Give the enemy 2 poison
+ | [Icon attack.png] 4
+ | [Honeycomb.png] Honeycomb
+ | [Redwood Roast.png] Redwood Roast
+ | [Honey Ham.png] Honey Ham
+ | Double your max health
+ | -
+ | [Honeycomb.png] Honeycomb
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Honey Caviar.png] Honey Caviar
+ | Exposed: Give the enemy 10 riptide
+ | -
+ | [Honeycomb.png] Honeycomb
+ | [Sour Lemon.png] Sour Lemon
+ | [Lemon Syrup.png] Lemon Syrup
+ | Battle Start: Double your speed
+ | [Icon speed.png] 3
+ | [Honeycomb.png] Honeycomb
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Candied Nuts.png] Candied Nuts
+ | Battle Start: Gain 3 thorns. Thorns deal double damage
+ | -
+ | [Honeycomb.png] Honeycomb
+ | [Stone Steak.png] Stone Steak
+ | [Rock Candy.png] Rock Candy
+ | Battle start: Gain 15 armor. If your health is full, gain an additional 15 armor
+ | -
+ | [Honeycomb.png] Honeycomb
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Sweet Wine.png] Sweet Wine
+ | Wounded: Restore 30 health
+ | -
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Toxic Cherry.png] Toxic Cherry
+ | Turn Start: Gain 1 poison and deal 1 damage to the enemy
+ | [Icon attack.png] 3
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Bitter Melon.png] Bitter Melon
+ | Turn Start: Convert 1 stack of another status effect to 1 poison
+ | [Icon attack.png] 3
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Deathcap Bow.png] Deathcap Bow
+ | Battle Start: Gain 3 poison. Turn Start: If you have poison. Gain 1 additional strike
+ | [Icon attack.png] 3
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Honeycomb.png] Honeycomb
+ | [Honey-glazed Shroom.png] Honey-glazed Shroom
+ | Turn Start: Give the enemy 2 poison
+ | [Icon attack.png] 4
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Redwood Roast.png] Redwood Roast
+ | [Moldy Meat.png] Moldy Meat
+ | -
+ | [Icon attack.png] 5 [Icon health.png] -5
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Poisonous Pufferfish.png] Poisonous Pufferfish
+ | Battle Start: Gain 3 poison and give the enemy riptide equal to your poison
+ | [Icon attack.png] 2
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Sour Lemon.png] Sour Lemon
+ | [Poisonous Lemon.png] Poisonous Lemon
+ | Battle Start: Gain 1 acid and 5 poison
+ | [Icon attack.png] 3 [Icon speed.png] 4
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Poisonous Durian.png] Poisonous Durian
+ | Turn Start: Gain 1 poison and 1 thorns
+ | [Icon attack.png] 3
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Stone Steak.png] Stone Steak
+ | [Marble Mushroom.png] Marble Mushroom
+ | Battle Start: Gain 3 poison
+ | [Icon attack.png] 4 [Icon armor.png] 6
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Mushroom Soup.png] Mushroom Soup
+ | Turn Start: Gain 1 poison and 1 regeneration
+ | [Icon attack.png] 2
+ | [Redwood Roast.png] Redwood Roast
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Explosive Roast.png] Explosive Roast
+ | Battle Start: Deal 1 damage 4 times
+ | [Icon health.png] 5
+ | [Redwood Roast.png] Redwood Roast
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Boiled Ham.png] Boiled Ham
+ | Battle Start, Exposed & Wounded: Decrease all your status effects by 1
+ | [Icon health.png] 5
+ | [Redwood Roast.png] Redwood Roast
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Ham Bat.png] Ham Bat
+ | Battle Start: Gain 2 additional strike
+ | [Icon attack.png] 3 [Icon health.png] 5
+ | [Redwood Roast.png] Redwood Roast
+ | [Honeycomb.png] Honeycomb
+ | [Honey Ham.png] Honey Ham
+ | Double your max health
+ | -
+ | [Redwood Roast.png] Redwood Roast
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Moldy Meat.png] Moldy Meat
+ | -
+ | [Icon attack.png] 5 [Icon health.png] -5
+ | [Redwood Roast.png] Redwood Roast
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Shark Roast.png] Shark Roast
+ | Exposed: Give the enemy 2 riptides
+ | [Icon health.png] 5
+ | [Redwood Roast.png] Redwood Roast
+ | [Sour Lemon.png] Sour Lemon
+ | [Lemon Roast.png] Lemon Roast
+ | Battle Start: Gain 2 acid
+ | [Icon health.png] 5 [Icon speed.png] 5
+ | [Redwood Roast.png] Redwood Roast
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Roasted Chestnut.png] Roasted Chestnut
+ | Battle Start: Gain 4 thorns
+ | [Icon health.png] 5
+ | [Redwood Roast.png] Redwood Roast
+ | [Stone Steak.png] Stone Steak
+ | [Rock Roast.png] Rock Roast
+ | -
+ | [Icon health.png] 6 [Icon armor.png] 6
+ | [Redwood Roast.png] Redwood Roast
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Blood Sausage.png] Blood Sausage
+ | Wounded: Restore 1 health 5 times
+ | [Icon health.png] 5
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Explosive Fish.png] Explosive Fish
+ | Battle Start: Give the enemy 1 riptide and deal 2 damage to them for each riptide they have
+ | -
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Underwater Watermelon.png] Underwater Watermelon
+ | Battle Start, Exposed & Wounded: Decrease 1 random status effect and give the enemy 1 riptide
+ | -
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Silverscale Swordfish.png] Silverscale Swordfish
+ | Battle Start: Gain 1 additional strike. First Turn: Give the enemy 1 riptide on hit
+ | [Icon attack.png] 2
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Honeycomb.png] Honeycomb
+ | [Honey Caviar.png] Honey Caviar
+ | Exposed: Give the enemy 10 riptide
+ | -
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Poisonous Pufferfish.png] Poisonous Pufferfish
+ | Battle Start: Gain 3 poison and give the enemy riptide equal to your poison
+ | [Icon attack.png] 2
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Redwood Roast.png] Redwood Roast
+ | [Shark Roast.png] Shark Roast
+ | Exposed: Give the enemy 2 riptides
+ | [Icon health.png] 5
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Sour Lemon.png] Sour Lemon
+ | [Lemon Shark.png] Lemon Shark
+ | Battle Start: Gain 1 Acid Exposed: Give the enemy riptide equal to your acid
+ | [Icon speed.png] 3
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Spiny Snapper.png] Spiny Snapper
+ | Battle Start: Give the enemy 1 riptide. Whenever riptide triggers, gain 3 thorns
+ | -
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Stone Steak.png] Stone Steak
+ | [Marbled Stonefish.png] Marbled Stonefish
+ | Battle Start & Exposed: If your health is full, gain 5 armor and give the enemy 1 riptide
+ | -
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Deepsea Wine.png] Deepsea Wine
+ | Wounded: Give the enemy 1 riptide. Whenever riptide triggers, restore 3 health
+ | -
+ | [Sour Lemon.png] Sour Lemon
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Combustible Lemon.png] Combustible Lemon
+ | Turn Start: Spend 1 speed to deal 2 damage
+ | [Icon speed.png] 3
+ | [Sour Lemon.png] Sour Lemon
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Melon Lemonade.png] Melon Lemonade
+ | Battle Start, Exposed & Wounded: Remove all Acid
+ | [Icon speed.png] 3
+ | [Sour Lemon.png] Sour Lemon
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Lemontree Branch.png] Lemontree Branch
+ | On Hit: Spend 2 speed and gain 1 additional strike on your next turn
+ | [Icon attack.png] 2 [Icon speed.png] 4
+ | [Sour Lemon.png] Sour Lemon
+ | [Honeycomb.png] Honeycomb
+ | [Lemon Syrup.png] Lemon Syrup
+ | Battle Start: Double your speed
+ | [Icon speed.png] 3
+ | [Sour Lemon.png] Sour Lemon
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Poisonous Lemon.png] Poisonous Lemon
+ | Battle Start: Gain 1 acid and 5 poison
+ | [Icon attack.png] 3 [Icon speed.png] 4
+ | [Sour Lemon.png] Sour Lemon
+ | [Redwood Roast.png] Redwood Roast
+ | [Lemon Roast.png] Lemon Roast
+ | Battle Start: Gain 2 acid
+ | [Icon health.png] 5 [Icon speed.png] 5
+ | [Sour Lemon.png] Sour Lemon
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Lemon Shark.png] Lemon Shark
+ | Battle Start: Gain 1 Acid Exposed: Give the enemy riptide equal to your acid
+ | [Icon speed.png] 3
+ | [Sour Lemon.png] Sour Lemon
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Spiny Kiwifruit.png] Spiny Kiwifruit
+ | Battle Start: Gain 3 acid and gain thorns equal to acid
+ | [Icon speed.png] 3
+ | [Sour Lemon.png] Sour Lemon
+ | [Stone Steak.png] Stone Steak
+ | [Limestone Fruit.png] Limestone Fruit
+ | Battle Start: Gain 8 armor. If your health is not full, gain 2 acid
+ | [Icon speed.png] 3
+ | [Sour Lemon.png] Sour Lemon
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Blood Orange.png] Blood Orange
+ | Battle Start: Gain 3 acid. Wounded: Convert all your acid to regeneration.
+ | [Icon speed.png] 4
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Trail Mix.png] Trail Mix
+ | Battle Start: Deal 1 damage and gain 1 thorns. Repeat 3 times.
+ | -
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Horned Melon.png] Horned Melon
+ | Battle Start, Exposed & Wounded: Decrease 2 random status effects by 1 and gain that much thorns
+ | -
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Blackbriar Bow.png] Blackbriar Bow
+ | Can't Strike Turn Start: Gain thorns equal to your attack
+ | [Icon attack.png] 4
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Honeycomb.png] Honeycomb
+ | [Candied Nuts.png] Candied Nuts
+ | Battle Start: Gain 3 thorns. Thorns deal double damage
+ | -
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Poisonous Durian.png] Poisonous Durian
+ | Turn Start: Gain 1 poison and 1 thorns
+ | [Icon attack.png] 3
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Redwood Roast.png] Redwood Roast
+ | [Roasted Chestnut.png] Roasted Chestnut
+ | Battle Start: Gain 4 thorns
+ | [Icon health.png] 5
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Spiny Snapper.png] Spiny Snapper
+ | Battle Start: Give the enemy 1 riptide. Whenever riptide triggers, gain 3 thorns
+ | -
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Sour Lemon.png] Sour Lemon
+ | [Spiny Kiwifruit.png] Spiny Kiwifruit
+ | Battle Start: Gain 3 acid and gain thorns equal to acid
+ | [Icon speed.png] 3
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Stone Steak.png] Stone Steak
+ | [Petrified Chestnut.png] Petrified Chestnut
+ | Battle Start: If your health is full, gain 6 thorns and 6 armor
+ | -
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Spiked Wine.png] Spiked Wine
+ | Wounded: Restore 5 health and gain 5 thorns
+ | -
+ | [Stone Steak.png] Stone Steak
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Granite Cherry.png] Granite Cherry
+ | If your health is full, gain 2 armor and deal 2 damage. Repeat 3 times
+ | -
+ | [Stone Steak.png] Stone Steak
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Mineral Water.png] Mineral Water
+ | Battle Start & Exposed: If your health is full, decrease a random status effect by 2 and gain 5 armor
+ | -
+ | [Stone Steak.png] Stone Steak
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Rocksalt Sword.png] Rocksalt Sword
+ | Turn Start: If your health is full, gain 1 additional strike
+ | [Icon attack.png] 2 [Icon armor.png] 6
+ | [Stone Steak.png] Stone Steak
+ | [Honeycomb.png] Honeycomb
+ | [Rock Candy.png] Rock Candy
+ | Battle Start: Gain 15 armor. If your health is full, gain an additional 15 armor
+ | -
+ | [Stone Steak.png] Stone Steak
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Marble Mushroom.png] Marble Mushroom
+ | Battle Start: Gain 3 poison
+ | [Icon attack.png] 4 [Icon armor.png] 6
+ | [Stone Steak.png] Stone Steak
+ | [Redwood Roast.png] Redwood Roast
+ | [Rock Roast.png] Rock Roast
+ | -
+ | [Icon health.png] 6 [Icon armor.png] 6
+ | [Stone Steak.png] Stone Steak
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Marbled Stonefish.png] Marbled Stonefish
+ | Battle Start & Exposed: If your health is full, gain 5 armor and give the enemy 1 riptide
+ | -
+ | [Stone Steak.png] Stone Steak
+ | [Sour Lemon.png] Sour Lemon
+ | [Limestone Fruit.png] Limestone Fruit
+ | Battle Start: Gain 8 armor. If your health is not full, gain 2 acid
+ | [Icon speed.png] 3
+ | [Stone Steak.png] Stone Steak
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Petrified Chestnut.png] Petrified Chestnut
+ | Battle Start: If your health is full, gain 6 thorns and 6 armor
+ | -
+ | [Stone Steak.png] Stone Steak
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Bloody Steak.png] Bloody Steak
+ | Wounded: Restore 10 health and gain 5 armor
+ | -
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Cherry Bomb.png] Cherry Bomb
+ | [Cherry Cocktail.png] Cherry Cocktail
+ | Battle Start & Wounded: Deal 3 damage and restore 3 health
+ | -
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Clearspring Watermelon.png] Clearspring Watermelon
+ | [Melon Wine.png] Melon Wine
+ | Battle Start, Exposed & Wounded: Decrease a random status effect by 1 and restore 3 health
+ | -
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Grilling Skewer.png] Grilling Skewer
+ | [Broken Winebottle.png] Broken Winebottle
+ | Wounded: On your next turn, keep striking the enemy until they're wounded
+ | [Icon attack.png] 2
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Honeycomb.png] Honeycomb
+ | [Sweet Wine.png] Sweet Wine
+ | Wounded: Restore 30 health
+ | -
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Poisonous Mushroom.png] Poisonous Mushroom
+ | [Mushroom Soup.png] Mushroom Soup
+ | Turn Start: Gain 1 poison and 1 regeneration
+ | [Icon attack.png] 2
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Redwood Roast.png] Redwood Roast
+ | [Blood Sausage.png] Blood Sausage
+ | Wounded: Restore 1 health 5 times
+ | [Icon health.png] 5
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Silverscale Fish.png] Silverscale Fish
+ | [Deepsea Wine.png] Deepsea Wine
+ | Wounded: Give the enemy 1 riptide. Whenever riptide triggers, restore 3 health
+ | -
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Sour Lemon.png] Sour Lemon
+ | [Blood Orange.png] Blood Orange
+ | Battle Start: Gain 3 acid. Wounded: Convert all your acid to regeneration
+ | [Icon speed.png] 4
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Spiny Chestnut.png] Spiny Chestnut
+ | [Spiked Wine.png] Spiked Wine
+ | Wounded: Restore 5 health and gain 5 thorns
+ | -
+ | [Vampiric Wine.png] Vampiric Wine
+ | [Stone Steak.png] Stone Steak
+ | [Bloody Steak.png] Bloody Steak
+ | Wounded: Restore 10 health and gain 5 armor
+ | -

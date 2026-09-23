@@ -1,0 +1,363 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Contents
+1 Scale with base speed
+2 Weapons — Base Speed
+3 Standard items — Base Speed
+4 Cauldron — Base Speed
+Scale with base speed
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Tempest Blade
+ | Mythic 
+ | 2
+ | Attack always is equal to speed
+ | Woodland
+ | Featherweight Wings
+ | Rare 
+ | -
+ | Battle Start: If you have less speed than the enemy, gain attack equal to your speed
+ | Woodland 
+ | Citrine Ring
+ | Rare 
+ | -
+ | Battle Start: Spend 5 speed to permanently gain 1 additional strike
+ | Woodland 
+ | Ironstone Bow
+ | Rare 
+ | 6
+ 1
+ | On Hit: Lose 1 speed. If your speed is 0 or less, only strike every other turn
+ | Woodland 
+ | Featherweight Armor
+ | Rare 
+ | -
+ | Whenever you gain speed, also gain an equal amount of armor
+ | Woodland 
+ | Featherweight Greaves
+ | Rare 
+ | -
+ | Turn Start: If you have 0 speed, gain 1 speed
+ | Woodland 
+ | Frostbite Greaves
+ | Rare 
+ | -
+ | Whenever you lose speed, give the enemy 1 freeze
+ | Woodland 
+ | Energy Drain
+ | Rare 
+ | -
+ | Before any other item triggers, if you have less speed than the enemy, steal 5 speed from the enemy
+ | Woodland 
+ | Swiftstrike Rapier
+ | Rare 
+ | 2
+ | Battle Start: If you have more speed than the enemy, gain 3 additional strikes
+ | Woodland 
+ | Swiftstrike Cloak
+ | Heroic 
+ | 1
+ | Battle Start: If you have more speed than the enemy, gain 1 additional strike
+ | Woodland 
+ | Citrine Gemstone
+ | Heroic 
+ | -
+ | Your base speed stat is inverted
+ | Woodland 
+ | Dashmaster's Dagger
+ | Mythic 
+ | 2
+ | Battle Start: Gain additional strikes equal to speed
+ | Swampland
+ | Lightspeed Potion
+ | Common 
+ | 1
+ | Battle Start: Restore health equal to speed
+ | Swampland 
+ | Lightspeed Elixir
+ | Common 
+ | 1
+ | Battle Start: Gain max health equal to your speed and then restore health equal to your speed
+ | Swampland
+ | Bubblegloop Staff
+ | Rare 
+ | 0
+ | Can't strike. Turn Start: Spend 1 speed to give the enemy 2 acid and 2 poison
+ | Swampland 
+ | Gale Staff
+ | Common 
+ | 2
+ 6
+ | On Hit: Lose 1 speed
+ | Swampland 
+ | Silver Anchor
+ | Rare 
+ | -1
+ | Whenever you lose speed, give the enemy 1 riptide
+ | Swampland 
+ | Silverscale Greaves
+ | Rare 
+ | 1
+ | Battle Start: If you have more speed than the enemy, give them 2 riptide
+ | Swampland 
+ | Stormcloud Armor
+ | Rare 
+ | 3
+ | Battle Start: If you have more speed than armor, stun the enemy for 2 turns
+ | Swampland 
+ | Spiritual Balance
+ | Rare 
+ | -
+ | Battle Start: If your speed is equal to your attack, gain 3 attack
+ | Swampland 
+ | Soap Stone
+ | Rare 
+ | -
+ | First turn: Spend 2 speed to temporarily gain 4 attack
+ | Swampland 
+Weapons — Base Speed
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Ironstone Greatsword
+ | Common 
+ | 4
+ -2
+ | -
+ | Woodland 
+ | Elderwood Staff
+ | Common 
+ | 1
+ 1
+ 1
+ | -
+ | Woodland 
+ | Featherweight Blade
+ | Common 
+ | 2
+ 2
+ | -
+ | Woodland 
+ | Ironstone Bow
+ | Rare 
+ | 6
+ 1
+ | On Hit: Lose 1 speed. If your speed is 0 or less, only strike every other turn
+ | Woodland 
+ | Tempest Blade
+ | Mythic 
+ | 2
+ | Attack always is equal to speed
+ | Woodland
+ | Gale Staff
+ | Common 
+ | 2
+ 6
+ | On Hit: Lose 1 speed
+ | Swampland 
+ | Sword of Pride
+ | Cursed 
+ |  3
+ 3
+ 3
+ | Battle Start: If the enemy has more attack, armor or speed than you, take 3 damage
+ | Swampland
+Standard items — Base Speed
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Ironstone Bracelet
+ | Common 
+ | -1
+ | Enemy strikes deal 1 damage less while you have armor but 1 damage more otherwise
+ | Woodland 
+ | Saffron Feather
+ | Common 
+ | 1 / 2 / 4
+ | Turn Start: Convert 1 speed to restore 2 health — at Gold: -2 for 4, at Diamond: -4 for 8
+ | Woodland 
+ | Leather Glove
+ | Common 
+ | 3 / 6 / 12
+ 1 / 2 / 4
+ | -
+ | Woodland 
+ | Leather Vest
+ | Common 
+ | 2 / 4 / 8
+ 1 / 2 / 4
+ | -
+ | Woodland 
+ | Boots of the Hero
+ | Common 
+ | 2 / 4 / 8
+ | -
+ | Woodland 
+ | Double-plated Armor
+ | Common 
+ | 2 / 4 / 8
+ -2 / -4 / -8
+ | Exposed: Gain 3 armor — at Gold: 6 , at Diamond: 12
+ | Woodland 
+ | Ruby Crown
+ | Common 
+ | 1 / 2 / 4
+ -1 / -2 / -4
+ | -
+ | Woodland 
+ | Ironstone Sandals
+ | Rare 
+ | -1
+ | While you have armor, temporarily gain 2 attack
+ | Woodland 
+ | Ironstone Armor
+ | Heroic 
+ | -2
+ | Enemy strikes deal 2 damage less while you have armor
+ | Woodland 
+ | Elderwood Necklace
+ | Heroic 
+ | 1
+ 1
+ 1
+ | -
+ | Woodland 
+ | Swiftstrike Cloak
+ | Heroic 
+ | 1
+ | Battle Start: If you have more speed than the enemy, gain 1 additional strike
+ | Woodland 
+ | Holy Shield
+ | Common 
+ | -1 / -2 / -4
+ 6 / 12 / 24
+ -1 / -2 / -4
+ | -
+ | Swampland 
+ | Lightspeed Potion
+ | Common 
+ | 1
+ | Battle Start: Restore health equal to speed
+ | Swampland 
+ | Sour Lemon
+ | Common 
+ | 3 / 6 / 12
+ | Battle Start: Gain 1 acid — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Clearspring Opal
+ | Rare 
+ | 2
+ | Turn Start: If you have any status effects, spend 1 speed to decrease a random status effect by 1
+ | Swampland 
+ | Lightning Bottle
+ | Rare 
+ | 1
+ 2
+ | Battle Start: Stun yourself for 1 turn
+ | Swampland 
+ | Plated Shield
+ | Rare 
+ | -1
+ | The first time you gain armor, double it
+ | Swampland 
+ | Silverscale Greaves
+ | Rare 
+ | 1
+ | Battle Start: If you have more speed than the enemy, give them 2 riptide
+ | Swampland 
+ | Mist Armor
+ | Heroic 
+ | 10
+ 2
+ | Enemy strikes ignore armor
+ | Swampland 
+ | Petrified Statue
+ | Heroic 
+ | -2
+ | Battle Start: Give the enemy 1 stun for each equipped stone item
+ | Swampland 
+ | Lightning Elixir
+ | Rare 
+ |  3
+ 4
+ | Battle Start: Stun yourself for 2 turns
+ | Swampland
+ | Lightspeed Elixir
+ | Common 
+ | 1
+ | Battle Start: Gain max health equal to your speed and then restore health equal to your speed
+ | Swampland
+ | Boots of Sloth
+ | Cursed 
+ | 10
+ | You lose more time per step
+ | Swampland
+Cauldron — Base Speed
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Combustible Lemon
+ | Cherry Bomb
+ | Sour Lemon
+ | 3
+ | Turn Start: Spend 1 speed to deal 2 damage
+ | Lemontree Branch
+ | Grilling Skewer
+ | Sour Lemon
+ |  2
+ 4
+ | On Hit: Spend 2 speed and gain 1 additional strike on your next turn
+ | Lemon Syrup
+ | Sour Lemon
+ | Honeycomb
+ | 3
+ | Battle Start: Double your speed
+ | Melon Lemonade
+ | Clearspring Watermelon
+ | Sour Lemon
+ | 3
+ | Battle Start, Exposed & Wounded: Remove all Acid
+ | Lemon Shark
+ | Silverscale Fish
+ | Sour Lemon
+ | 3
+ | Battle Start: Gain 1 Acid Exposed: Give the enemy riptide equal to your acid
+ | Lemon Roast
+ | Sour Lemon
+ | Redwood Roast
+ |  5
+ 5
+ | Battle Start: Gain 2 acid
+ | Limestone Fruit
+ | Sour Lemon
+ | Stone Steak
+ | 3
+ | Battle Start: Gain 8 armor. If your health is not full, gain 2 acid
+ | Spiny Kiwifruit
+ | Spiny Chestnut
+ | Sour Lemon
+ | 3
+ | Battle Start: Gain 3 acid and gain thorns equal to acid
+ | Poisonous Lemon
+ | Poisonous Mushroom
+ | Sour Lemon
+ |  3
+ 4
+ | Battle Start: Gain 1 acid and 5 poison

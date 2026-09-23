@@ -1,0 +1,220 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Trigger when a specified condition is true (e.g., health/armor/speed thresholds, enemy state, inventory conditions).
+If is part of the Trigger tags.
+Items that trigger If
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Swiftstrike Rapier
+ | Rare 
+ | 2
+ | Battle Start: If you have more speed than the enemy, gain 3 additional strikes
+ | Woodland 
+ | Ironstone Bow
+ | Rare 
+ | 6
+ 1
+ | On Hit: Lose 1 speed. If your speed is 0 or less, only strike every other turn
+ | Woodland 
+ | Lifesteal Scythe
+ | Heroic 
+ | 1
+ | On Hit: If the enemy doesn't have any armor, restore health equal to your attack
+ | Woodland 
+ | Liferoot Hammer
+ | Rare 
+ | 3
+ | On Hit: If your health is full, spend your regeneration to gain 3 times that amount of armor
+ | Swampland 
+ | Lightning Rod
+ | Rare 
+ | 2
+ | Turn Start: If you're stunned, gain 3 attack
+ | 
+ | Lightning Whip
+ | Rare 
+ | 3
+ | Turn Start: If the enemy is stunned, gain 1 additional strike
+ | Swampland 
+ | Sword of Pride
+ | Cursed 
+ |  3
+ 3
+ 3
+ | Battle Start: If the enemy has more attack, armor or speed than you, take 3 damage
+ | Swampland
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Leather Boots
+ | Rare 
+ | -
+ | Battle Start: If you have more speed than the enemy, gain 2 attack
+ | Woodland 
+ | Featherweight Wings
+ | Rare 
+ | -
+ | Battle Start: If you have less speed than the enemy, gain attack equal to your speed
+ | Woodland 
+ | Silverscale Greaves
+ | Rare 
+ | 1
+ | Battle Start: If you have more speed than the enemy, give them 2 riptide
+ | Swampland 
+ | Fortified Gauntlet
+ | Rare 
+ | -
+ | Turn Start: If you have armor, gain 1 additional armor
+ | Woodland 
+ | Moonlight Shield
+ | Heroic 
+ | -
+ | Turn Start: If you're below 50% health, gain 2 armor
+ | Woodland 
+ | Sunlight Crest
+ | Heroic 
+ | -
+ | Turn Start: If you're above 50% health, lose 3 health and gain 1 attack
+ | Swampland 
+ | Spiral Shell
+ | Rare 
+ | -
+ | Turn Start: If you're stunned, give the enemy 1 riptide
+ | Swampland 
+ | Clearspring Opal
+ | Rare 
+ | 2
+ | Turn Start: If you have any status effects, spend 1 speed to decrease a random status effect by 1
+ | Swampland 
+ | Explosive Arrow
+ | Heroic 
+ | -
+ | Turn Start: If the enemy doesn't have any armor, deal 3 damage
+ | Swampland 
+ | Arcane Lens
+ | Rare 
+ | -
+ | If you have exactly 1 tome equipped, it triggers thrice
+ | Swampland 
+ | Emerald Gemstone
+ | Heroic 
+ | -
+ | Battle Start: If you have less max health than the enemy, set your max health equal to their max health
+ | Woodland 
+ | Ruby Gemstone
+ | Heroic 
+ | -
+ | If your attack is exactly 1, deal 4 damage on hit
+ | Woodland 
+ | Iron Rune
+ | Heroic 
+ | -
+ | If you have exactly 1 item with exposed, it triggers thrice
+ | Swampland
+ | Vampire's Tooth
+ | Rare 
+ | -
+ | If you have exactly 1 sanguine item, double its healing
+ | Woodland 
+ | Spiritual Balance
+ | Rare 
+ | -
+ | Battle Start: If your speed is equal to your attack, gain 3 attack
+ | Swampland 
+ | Weaver Armor
+ | Heroic 
+ | -2
+ | Battle Start: If you have 0 base armor, gain armor equal to current health
+ | Swampland 
+ | Weaver Shield
+ | Common 
+ | -
+ | Battle Start: If you have 0 base armor, gain 4 armor — at Gold: 8 , at Diamond: 16
+ | Swampland 
+ | Stoneborn Turtle
+ | Heroic 
+ | -
+ | Turn start: Restore 1 health. If your health is full, gain 2 armor instead
+ | Swampland 
+ | Pinecone Breastplate
+ | Rare 
+ | -
+ | Battle Start: If your health is full, gain 1 thorn at turn start for the rest of battle
+ | Woodland 
+ | Heart-shaped Acorn
+ | Rare 
+ | -
+ | Battle Start: If you have 0 base armor, restore health to full
+ | Woodland 
+ | Royal Helmet
+ | Rare 
+ | 1
+ | Exposed: If you have more than 20 gold, gain 10 armor
+ | Woodland 
+ | Leather Belt
+ | Common 
+ | 3 / 6 / 12
+ | If you have 0 base armor, double this item's max health — at Gold: x 4 =  12, at Diamond: x 8 =  24
+ | Swampland 
+ | Liferoot Beast
+ | Heroic 
+ | -
+ | Turn Start: If you don't have any regeneration, gain 3 regeneration
+ | Swampland 
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Granite Cherry
+ | Stone Steak
+ | Cherry Bomb
+ | -
+ | Battle Start: If your health is full, gain 2 armor and deal 2 damage. Repeat 2 times
+ | Mineral Water
+ | Clearspring Watermelon
+ | Stone Steak
+ | -
+ | Battle Start & Exposed: If your health is full, decrease a random status effect by 2 and gain 5 armor
+ | Petrified Chestnut
+ | Spiny Chestnut
+ | Stone Steak
+ | -
+ | Battle Start: If your health is full, gain 6 thorns and 6 armor
+ | Marbled Stonefish
+ | Silverscale Fish
+ | Stone Steak
+ | -
+ | Battle Start & Exposed: If your health is full, gain 5 armor and give the enemy 1 riptide
+ | Limestone Fruit
+ | Sour Lemon
+ | Stone Steak
+ | 3
+ | Battle Start: Gain 8 armor. If your health is not full, gain 2 acid
+ | Rock Candy
+ | Honeycomb
+ | Stone Steak
+ | -
+ | Battle start: Gain 15 armor. If your health is full, gain an additional 15 armor
+ | Rocksalt Sword
+ | Grilling Skewer
+ | Stone Steak
+ |  2
+ 6
+ | Turn Start: If your health is full, gain 1 additional strike

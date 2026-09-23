@@ -1,0 +1,316 @@
+
+## Contents
+- 1 Common enemies
+- 2 Bosses
+- 2.1 Swampland Hydra
+- 3 Mini Bosses
+## Common enemies
+Swampland common enemies only appear in Swampland and Kingmaker maps. They spawn only in certain islands and their stats increase each time a boss is defeated.
+ | Enemy
+ | Level 1
+ | Level 2
+ | Level 3
+ | Trait
+ | Islands
+ | [Enemy Snake.png] Snake
+ | [Icon health.png] 2
+[Icon attack.png] 1
+[Icon armor.png] 0
+[Icon speed.png] 2
+ | [Icon health.png] 3
+[Icon attack.png] 1
+[Icon armor.png] 0
+[Icon speed.png] 3
+ | [Icon health.png] 4
+[Icon attack.png] 1
+[Icon armor.png] 0
+[Icon speed.png] 4
+ | First Turn: Snake applies 2/3/4 poison on hit
+ | Starting Island
+Boneyard Bog
+ | [Enemy Frog.png] Frog
+ | [Icon health.png] 2
+[Icon attack.png] 1
+[Icon armor.png] 2
+[Icon speed.png] 0
+ | [Icon health.png] 2
+[Icon attack.png] 2
+[Icon armor.png] 3
+[Icon speed.png] 2
+ | [Icon health.png] 2
+[Icon attack.png] 3
+[Icon armor.png] 4
+[Icon speed.png] 3
+ | When exposed Frog gains 1/2/3 armor
+ | Starting Island
+Abandoned Quarry
+Witch Marsh
+ | [Enemy Beaver.png] Beaver
+ | [Icon health.png] 4
+[Icon attack.png] 1
+[Icon armor.png] 0
+[Icon speed.png] 1
+ | [Icon health.png] 6
+[Icon attack.png] 2
+[Icon armor.png] 0
+[Icon speed.png] 2
+ | [Icon health.png] 8
+[Icon attack.png] 3
+[Icon armor.png] 0
+[Icon speed.png] 3
+ | Battle Start: Beaver gains 3/4/5 regeneration
+ | Abandoned Quarry
+Glyph Ruins
+Golem Home
+ | [Enemy Dragonfly.png] Dragonfly
+ | [Icon health.png] 2
+[Icon attack.png] 0
+[Icon armor.png] 0
+[Icon speed.png] 3
+ | [Icon health.png] 3
+[Icon attack.png] 0
+[Icon armor.png] 0
+[Icon speed.png] 5
+ | [Icon health.png] 4
+[Icon attack.png] 0
+[Icon armor.png] 0
+[Icon speed.png] 7
+ | Battle Start: If Dragonfly has more speed it gains attack equal to the difference
+ | Scorched Hill
+Witch Marsh
+ | [Enemy Palace Guard.png] Palace Guard
+ | [Icon health.png] 2
+[Icon attack.png] 3
+[Icon armor.png] 10
+[Icon speed.png] 0
+ | [Icon health.png] 2
+[Icon attack.png] 6
+[Icon armor.png] 15
+[Icon speed.png] 0
+ | [Icon health.png] 2
+[Icon attack.png] 9
+[Icon armor.png] 20
+[Icon speed.png] 0
+ | -
+ | Sunken Palace
+ | [Enemy Slime.png] Slime
+ | [Icon health.png] 2
+[Icon attack.png] 2
+[Icon armor.png] 2
+[Icon speed.png] 0
+ | [Icon health.png] 2
+[Icon attack.png] 2
+[Icon armor.png] 4
+[Icon speed.png] 0
+ | [Icon health.png] 2
+[Icon attack.png] 2
+[Icon armor.png] 6
+[Icon speed.png] 0
+ | Battle Start: Give the player 4/6/8 acid
+ | Golem Home
+Scorched Hill
+ | [Enemy Turtle.png] Turtle
+ | [Icon health.png] 1
+[Icon attack.png] 3
+[Icon armor.png] 15
+[Icon speed.png] 0
+ | [Icon health.png] 1
+[Icon attack.png] 6
+[Icon armor.png] 15
+[Icon speed.png] 0
+ | [Icon health.png] 1
+[Icon attack.png] 9
+[Icon armor.png] 15
+[Icon speed.png] 0
+ | Turtle loses all armor upon taking damage
+ | Glyph Ruins
+ | [Enemy Honey Bee.png] Honey Bee
+ | [Icon health.png] 6
+[Icon attack.png] 2
+[Icon armor.png] 15
+[Icon speed.png] 2
+ | [Icon health.png] 10
+[Icon attack.png] 2
+[Icon armor.png] 15
+[Icon speed.png] 4
+ | [Icon health.png] 14
+[Icon attack.png] 2
+[Icon armor.png] 15
+[Icon speed.png] 6
+ | First Turn: Give the player 3/4/5 poison, 2/3/4 acid and 1/2/3 stun
+ | Lushwood Grove
+ | [Enemy Raccoon.png] Raccoon
+ | [Icon health.png] 4
+[Icon attack.png] 2
+[Icon armor.png] 0
+[Icon speed.png] 2
+ | [Icon health.png] 6
+[Icon attack.png] 3
+[Icon armor.png] 0
+[Icon speed.png] 3
+ | [Icon health.png] 8
+[Icon attack.png] 4
+[Icon armor.png] 0
+[Icon speed.png] 4
+ | Steals 1/2/3 random items from the player
+ | Misplaced Mire
+## Bosses
+Swampland bosses appear at the end of the week in Swampland maps. The week's boss and its stats can be seen in advance by pressing Tab.
+ | Boss
+ | [Icon health.png] Health
+ | [Icon attack.png] Attack
+ | [Icon armor.png] Armor
+ | [Icon speed.png] Speed
+ | Trait
+ | Week
+ | [Bosssprite Carnivorous Slime.png] Carnivorous Slime
+ | [Icon health.png] 20
+ | [Icon attack.png] 1
+ | [Icon armor.png] 5
+ | [Icon speed.png] 5
+ | Battle Start: Give 3 acid to the player and convert all player health except 1 to armor
+ | 1
+ | [Bosssprite Fungal Giant.png] Fungal Giant
+ | [Icon health.png] 30
+ | [Icon attack.png] 3
+ | [Icon armor.png] 0
+ | [Icon speed.png] 0
+ | Battle Start: Fungal Giant gains 1 poison for each status effect the player has
+ | 1
+ | [Bosssprite Ironshell Snail.png] Ironshell Snail
+ | [Icon health.png] 5
+ | [Icon attack.png] 3
+ | [Icon armor.png] 50
+ | [Icon speed.png] -1
+ | Battle Start: Ironshell Snail gains 5 acid
+ | 1
+ | [Bosssprite Stormcloud Druid.png] Stormcloud Druid
+ | [Icon health.png] 20
+ | [Icon attack.png] 2
+ | [Icon armor.png] 0
+ | [Icon speed.png] 2
+ | Every Other Strike: Stun the player for 1 turn
+ | 1
+ | [Bosssprite Swampsong Siren.png] Swampsong Siren
+ | [Icon health.png] 15
+ | [Icon attack.png] 3
+ | [Icon armor.png] 0
+ | [Icon speed.png] 2
+ | Battle Start: Swampsong Siren gives the player -2 attack
+ | 1
+ | [Bosssprite Toxic Miretoad.png] Toxic Miretoad
+ | [Icon health.png] 20
+ | [Icon attack.png] 2
+ | [Icon armor.png] 0
+ | [Icon speed.png] 3
+ | Battle Start: Toxic Miretoad steals all of the player's armor and gives them 3 poison
+ | 1
+ | [Bosssprite Clearspring Spirit.png] Clearspring Spirit
+ | [Icon health.png] 30
+ | [Icon attack.png] 3
+ | [Icon armor.png] 0
+ | [Icon speed.png] 2
+ | Battle Start: Gain 10 purity and on hit randomly decrease a status effect on itself or the player by 1
+ | 2
+ | [Bosssprite Granite Griffin.png] Granite Griffin
+ | [Icon health.png] 20
+ | [Icon attack.png] 5
+ | [Icon armor.png] 10
+ | [Icon speed.png] 0
+ | Wounded: Granite Griffin gains 40 armor and gets stunned for 4 turns
+ | 2
+ | [Bosssprite Liferoot Experiment.png] Liferoot Experiment
+ | [Icon health.png] 40
+ | [Icon attack.png] 3
+ | [Icon armor.png] 0
+ | [Icon speed.png] 0
+ | Battle Start: Liferoot Experiment gains 10 regeneration
+ | 2
+ | [Bosssprite Silverscale Shark.png] Silverscale Shark
+ | [Icon health.png] 15
+ | [Icon attack.png] 0
+ | [Icon armor.png] 10
+ | [Icon speed.png] 3
+ | Turn Start: Give the player 2 riptide and gain 1 attack for each riptide the player has
+ | 2
+ | [Bosssprite Stonescale Basilisk.png] Stonescale Basilisk
+ | [Icon health.png] 10
+ | [Icon attack.png] 4
+ | [Icon armor.png] 20
+ | [Icon speed.png] 2
+ | Stonescale Basilisk gives 2 poison on hit
+ | 2
+ | [Bosssprite Rockshell Tortoise.png] Rockshell Tortoise
+ | [Icon health.png] 20
+ | [Icon attack.png] 4
+ | [Icon armor.png] 10
+ | [Icon speed.png] 0
+ | Whenever Rockshell Tortoise is struck, it gains 4 armor
+ | 2
+## Swampland Hydra
+The final fight on the Swampland maps is against 3 out of 4 Swampland Hydra heads, in a predefined order. Before the fight the player will be shown all four heads and asked to remove one of them. The player will not recover health or lose status effects between the fights. The next Hydra head will keep the previous one's status effects also.
+ | Head
+ | [Icon health.png] Health
+ | [Icon attack.png] Attack
+ | [Icon armor.png] Armor
+ | [Icon speed.png] Speed
+ | Trait
+ | Fight
+ | [Bosssprite Acid Head.png] Acid Head
+ | [Icon health.png] 10
+ | [Icon attack.png] 3
+ | [Icon armor.png] 30
+ | [Icon speed.png] 4
+ | On Hit: Give the player 1 acid
+ | 1
+ | [Bosssprite Riptide Head.png] Riptide Head
+ | [Icon health.png] 30
+ | [Icon attack.png] 5
+ | [Icon armor.png] 0
+ | [Icon speed.png] -1
+ | On Hit: Give the player 1 riptide
+ | 2
+ | [Bosssprite Poison Head.png] Poison Head
+ | [Icon health.png] 50
+ | [Icon attack.png] 2
+ | [Icon armor.png] 0
+ | [Icon speed.png] 2
+ | On Hit: Give the player 2 poison
+ | 3
+ | [Bosssprite Stun Head.png] Stun Head
+ | [Icon health.png] 20
+ | [Icon attack.png] 5
+ | [Icon armor.png] 30
+ | [Icon speed.png] 5
+ | Battle Start: Give the player 3 stun
+ | 4
+## Mini Bosses
+Mini Bosses islands can be accessed through [Event ferryman.png] Ferryman or [Sinkhole.png] Sinkhole
+ | Mini Boss
+ | [Icon health.png] Health
+ | [Icon attack.png] Attack
+ | [Icon armor.png] Armor
+ | [Icon speed.png] Speed
+ | Trait
+ | Island
+ | [Bosssprite Coven Plaguemother.png] Coven Plaguemother
+ | [Icon health.png] 30
+ | [Icon attack.png] 3
+ | [Icon armor.png] 10
+ | [Icon speed.png] 2
+ | On Hit: Give the player 2 stacks of a random status effect that they don't already have
+ | Coven Lair
+ | [Bosssprite Murkwater Gator.png] Murkwater Gator
+ | [Icon health.png] 20
+ | [Icon attack.png] 4
+ | [Icon armor.png] 15
+ | [Icon speed.png] 3
+ | Battle Start: Murkwater Gator gives the player riptide equal to the player's attack
+ | Murkwater Bayou
+ | [Bosssprite Palace Sentinel.png] Palace Sentinel
+ | [Icon health.png] 20
+ | [Icon attack.png] 7
+ | [Icon armor.png] 20
+ | [Icon speed.png] 0
+ | Turn Start: If Palace Sentinel has less speed than player, he stuns himself for 1 turn and gains 2 speed
+ | Castle Grounds

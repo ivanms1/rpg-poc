@@ -1,0 +1,70 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Trigger after you defeat the next boss (one-time).
+Next boss is part of the Trigger tags.
+Items that trigger Next boss
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Knight's Blade
+ | Common 
+ | 4
+ | Upgrades after you defeat the next boss
+ | Swampland 
+ | Squire's Blade
+ | Common 
+ | 2
+ | Upgrades after you defeat the next boss
+ | Swampland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Deviled Egg
+ | Common 
+ | -
+ | Hatches after you defeat the next boss (Into Sanguine Imp)
+ | Swampland 
+ | Granite Egg
+ | Common 
+ | -
+ | Hatches after you defeat the next boss (Into Stoneborn Turtle)
+ | Swampland 
+ | Treebark Egg
+ | Common 
+ | -
+ | Hatches after you defeat the next boss (Into Liferoot Beast)
+ | Swampland 
+ | Wet Egg
+ | Common 
+ | -
+ | Hatches after you defeat the next boss (Into Clearspring Duck)
+ | Swampland 
+ | Knight's Armor
+ | Common 
+ | 4 / 8 / 16
+ | Upgrades after you defeat the next boss
+ | Swampland 
+ | Squire's Armor
+ | Common 
+ | 2 / 4 / 8
+ | Upgrades after you defeat the next boss
+ | Swampland 
+ | Cookbook
+ | Rare 
+ | -
+ | Replace this item with a random cauldron item after you defeat the next boss
+ | Swampland 

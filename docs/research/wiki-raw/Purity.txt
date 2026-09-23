@@ -1,0 +1,78 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+When removed, gain 1 attack per stack and restore 3 health.
+Contents
+1 Mechanics
+2 Items
+2.1 Weapons
+2.2 Standard items
+Mechanics
+Purity does not decay on its own. You gain its benefits when an effect removes Purity.
+For each Purity stack removed: +1 attack** and **restore 3 health (effects may modify this, e.g. doubling).
+Purity is part of the Status effect tags.
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Purelake Staff
+ | Heroic 
+ | 1
+ | Battle Start: Gain 2 purity. On Hit: Remove 1 purity
+ | Swampland 
+ | Lakebed Sword
+ | Mythic 
+ | 5
+ | Gain double health and attack from purity
+ | Swampland
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Purelake Helmet
+ | Common 
+ | 2 / 4 / 8
+ | Battle Start: Gain 1 Purity — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Leather Waterskin
+ | Rare 
+ | -
+ | Exposed: Gain 2 purity for each equipped water item
+ | Swampland 
+ | Purelake Armor
+ | Rare 
+ | -
+ | Exposed: Remove 1 purity to gain 5 armor
+ | Swampland 
+ | Purelake Potion
+ | Rare 
+ | -
+ | Battle start: Remove all your armor and gain 3 purity
+ | Swampland 
+ | Purelake Chalice
+ | Heroic 
+ | -
+ | Gain 1 purity every other turn
+ | Swampland 
+ | Purelake Tome
+ | Rare 
+ | -
+ | Countdown 3: If you have purity, remove 1 purity. Otherwise, gain 1 purity. Reset countdown
+ | Swampland 
+ | Purelake Elixir
+ | Rare 
+ | -
+ | Battle start: Lose 5 armor and gain 5 purity
+ | Swampland

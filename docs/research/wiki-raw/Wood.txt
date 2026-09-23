@@ -1,0 +1,186 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+The following items explicitly reference Wood items in their effect:
+Oak Heart — Gain 3 max health for each equipped wood item.
+Twisted Root — Exposed: Gain 1 regeneration for each equipped wood item.
+Wood is part of the Item tags.
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Elderwood Staff
+ | Common 
+ | 1
+ 1
+ 1
+ | -
+ | Woodland 
+ | Redwood Rod
+ | Common 
+ | 2
+ 4
+ | -
+ | Woodland 
+ | Brittlebark Bow
+ | Common 
+ | 4
+ | After 3 strikes: Lose 2 attack
+ | Woodland 
+ | Brittlebark Club
+ | Heroic 
+ | 7
+ | Exposed & Wounded: Lose 2 attack
+ | Woodland 
+ | Liferoot Staff
+ | Common 
+ | 2
+ | Wounded: Gain 3 regeneration
+ | Swampland 
+ | Liferoot Hammer
+ | Rare 
+ | 3
+ | On Hit: If your health is full, spend your regeneration to gain 3 times that amount of armor
+ | Swampland 
+ | Quickgrowth Spear
+ | Heroic 
+ | 3
+ | Every other turn, gain 1 attack and restore 1 health
+ | Woodland 
+ | Pacifist Staff
+ | Common 
+ | 0
+ | On Hit: Gain 1 armor and restore 1 health
+ | Swampland 
+ | Arcane Wand
+ | Rare 
+ | 0
+ | Can't attack. Turn Start: Deal 2 damage. Increase the damage by 1 for each tome equipped
+ | Swampland 
+ | Woodcutter's Axe
+ | Common 
+ | 1
+ | Gain 2 attack for each empty equipment slot
+ | Woodland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Redwood Cloak
+ | Common 
+ | 2 / 4 / 8
+ | Battle Start: If your health is not full, restore 2 health — at Gold: 4 , at Diamond: 8
+ | Woodland 
+ | Redwood Helmet
+ | Common 
+ | 1 / 2 / 4
+ 1 / 2 / 4
+ | Exposed: Restore 3 health — at Gold: 6 , at Diamond: 12
+ | Woodland 
+ | Redwood Roast
+ | Common 
+ | 5 / 10 / 20
+ | -
+ | Woodland 
+ | Liferoot Gauntlet
+ | Common 
+ | 3 / 6 / 12
+ | Battle start: Gain 1 regeneration — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Pinecone Breastplate
+ | Rare 
+ | -
+ | Battle Start: If your health is full, gain 1 thorn at turn start for the rest of battle
+ | Woodland 
+ | Heart-shaped Acorn
+ | Rare 
+ | -
+ | Battle Start: If you have 0 base armor, restore health to full
+ | Woodland 
+ | Oak Heart
+ | Rare 
+ | -
+ | Gain 3 max health for each equipped wood item
+ | Woodland 
+ | Brittlebark Buckler
+ | Rare 
+ | 10
+ | Lose all your armor after your enemy's first strike
+ | Woodland 
+ | Brittlebark Armor
+ | Heroic 
+ | 12
+ | Whenever you take damage, take 1 additional damage
+ | Woodland 
+ | Elderwood Necklace
+ | Heroic 
+ | 1
+ 1
+ 1
+ | -
+ | Woodland 
+ | Twisted Root
+ | Rare 
+ | -
+ | Exposed: Gain 1 regeneration for each equipped wood item
+ | Swampland 
+ | Treebark Egg
+ | Common 
+ | -
+ | Hatches after you defeat the next boss (Into Liferoot Beast)
+ | Swampland 
+ | Liferoot Beast
+ | Heroic 
+ | -
+ | Turn Start: If you don't have any regeneration, gain 3 regeneration
+ | Swampland 
+ | Liferoot Lute
+ | Heroic 
+ | -
+ | Wounded: Gain 3 regeneration. Symphony
+ | Swampland 
+ | Muscle Growth
+ | Rare 
+ | -
+ | While you have regeneration, temporarily gain 3 attack
+ | Swampland 
+ | Liferoot Tome
+ | Common 
+ | -
+ | Countdown 4: Gain 3 regeneration — at Gold: 6 , at Diamond: 12
+ | Swampland 
+Cauldron 
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Ham Bat
+ | Redwood Roast
+ | Grilling Skewer
+ |  3
+ 5
+ | Battle Start: Gain 2 additional strike
+ | Lemontree Branch
+ | Grilling Skewer
+ | Sour Lemon
+ |  2
+ 4
+ | On Hit: Spend 2 speed and gain 1 additional strike on your next turn
+ | Mushroom Soup
+ | Poisonous Mushroom
+ | Vampiric Wine
+ | 2
+ | Turn Start: Gain 1 poison and 1 regeneration

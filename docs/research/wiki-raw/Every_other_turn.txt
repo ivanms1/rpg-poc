@@ -1,0 +1,91 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Triggers every second turn (turns 2, 4, 6, ...).
+Every other turn is part of the Trigger tags.
+Contents
+1 Items that trigger Every other turn
+1.1 Weapons
+1.2 Standard items
+2 Items that trigger Every N strikes
+Items that trigger Every other turn
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Evergrowth Spear
+ | Heroic 
+ | 3
+ | Every other turn, gain 1 attack and restore 1 health
+ | Woodland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Citrine Earring
+ | Common 
+ | -
+ | Gain 1 speed every other turn — at Gold: 2 , at Diamond: 4
+ | Woodland 
+ | Emerald Earring
+ | Common 
+ | -
+ | Restore 1 health every other turn — at Gold: 2 , at Diamond: 4
+ | Woodland 
+ | Ruby Earring
+ | Common 
+ | -
+ | Deal 1 damage every other turn — at Gold: deal 2 , at Diamond: deal 4
+ | Woodland 
+ | Sapphire Earring
+ | Common 
+ | -
+ | Gain 1 armor every other turn — at Gold: 2 , at Diamond: 4
+ | Woodland 
+ | Purelake Chalice
+ | Heroic 
+ | -
+ | Gain 1 purity every other turn
+ | Swampland 
+ | Silverscale Gauntlet
+ | Heroic 
+ | -
+ | Give the enemy 1 riptide every other turn
+ | Swampland 
+Items that trigger Every N strikes
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Serpent Dagger
+ | Heroic 
+ | 2
+ | Every 3 strikes, give the enemy 4 poison
+ | Swampland 
+ | Stormcloud Spear
+ | Common 
+ | 2
+ | Every 5 strikes, stun the enemy for 2 turns
+ | Swampland 
+ | Muscle Potion
+ | Common 
+ | -
+ | Every 3 strikes: Gain 1 attack — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Muscle Elixir
+ | Common 
+ | -
+ | Every 3 strikes: Gain 1 attack, 1 armor and 1 speed — at Gold: 2 , at Diamond: 4
+ | Swampland

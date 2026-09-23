@@ -1,0 +1,161 @@
+/* Debug arena: a normal scrolling page, not the 480×270 stage. */
+.arena {
+  min-height: 100%;
+  padding: 16px 24px 48px;
+  background: var(--bg);
+  color: var(--frame);
+  font: 14px/1.4 ui-monospace, 'SF Mono', Menlo, monospace;
+  overflow: auto;
+  height: 100%;
+}
+
+.arena header {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+}
+
+.arena h1 {
+  font-family: var(--font-title);
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0 0 12px;
+}
+
+.arena a {
+  color: var(--armor);
+}
+
+.arena-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .arena-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.arena-box {
+  border: 1px solid var(--frame);
+  padding: 10px 12px;
+  margin: 0 0 12px;
+  min-width: 0;
+}
+
+.arena-box legend {
+  padding: 0 6px;
+  font-family: var(--font-title);
+  font-size: 20px;
+}
+
+.arena-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.arena-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.arena select,
+.arena input {
+  width: 100%;
+  font: inherit;
+  color: var(--frame);
+  background: #33202a;
+  border: 1px solid var(--muted);
+  padding: 3px 4px;
+  min-width: 0;
+}
+
+.arena-slots {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.arena-slots li {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.arena-stats {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.arena-effects {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 12px;
+  color: #cfc6b0;
+}
+
+.arena-log h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.arena-log h2.win {
+  color: var(--health);
+}
+
+.arena-log h2.loss {
+  color: var(--enemy);
+}
+
+.arena-log table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.arena-log th {
+  text-align: left;
+  color: var(--muted);
+  border-bottom: 1px solid var(--muted);
+}
+
+.arena-log td {
+  padding: 1px 6px 1px 0;
+  vertical-align: top;
+}
+
+.arena-log td:nth-child(n + 2) {
+  white-space: nowrap;
+  color: var(--muted);
+}
+
+.arena-log .ev-turnStart td {
+  padding-top: 8px;
+  color: var(--speed);
+}
+
+.arena-log .ev-trigger td:first-child {
+  color: var(--gold);
+}
+
+.arena-log .ev-strike.side-player td:first-child,
+.arena-log .ev-death.side-enemy td:first-child {
+  color: var(--health);
+}
+
+.arena-log .ev-strike.side-enemy td:first-child,
+.arena-log .ev-death.side-player td:first-child {
+  color: var(--enemy);
+}
+
+.arena-error {
+  color: var(--enemy);
+}

@@ -1,0 +1,21 @@
+
+The structure of each week
+Combat encounter
+An early game inventory
+On the game map time is divided into days and night and weeks. A week has 3 days and 3 nights, followed by a boss fight. Each day lasts until the player has moved 50 tiles on the map and each night lasts until the player has moved 30 tiles on the map. During the day the player has a sight radius of 5 tiles in each direction and during the night the sight radius is decreases to 3 tiles. If an enemy is seen during the night, the enemy will move towards the player at the same speed as the player. Defeating a boss unlocks two additional item slots. Bosses can be fought early by opening the pause menu and selecting Fight Boss. Fighting a boss early does not advance the game to the next week early.
+Enemies appear as a red icon on the world map and must be defeated in auto battle if they touch the player. During the day enemies are static but during the night they will move towards the player if they see each other. Enemies move at the same speed as the player on the map. Each enemy has a different trait that gives them a bonus in battle. Defeating an enemy gives 1 gold.
+Battles resolve automatically. You and your opponent take turns attacking each other. Both you and your opponent have 4 stats:
+- [Icon health.png] Health: The fighter whose health reaches 0 loses.
+- [Icon attack.png] Attack: How much damage each fighter does each turn.
+- [Icon armor.png] Armor: Absorbs damage before Health and replenishes between battles.
+- [Icon speed.png] Speed: The fighter who has higher Speed has the first turn. In case of a tie the player has the first turn.
+Pressing CTRL enables quickbattle mode. In quickbattle mode battles are resolved automatically.
+The game has three possible modes, each one with different enemies, items and itemsets available:
+- Woodland: The bosses are powerful enemies. Winning a run in unlocks Swampland.
+- Swampland: The bosses are powerful enemies. Unlocked by winning a run in Woodland.
+- Kingmaker: The bosses are other players' builds from defeated heroes and the mode uses all enemies available in both Woodland and Swampland. Before the run you must choose 3 out of 6 item bundles: 3 from Woodland and 3 from Swampland. Defeating 5 bosses gives a crown, and crowns can be spent to unlock new skins for the character.
+The first run on the game will have the Fired Up buff, which gives +10 Health and +1 Attack. The buff can be enabled on all Woodland and Swampland runs from the settings menu but will not take effect on Kingmaker runs.
+Item slots are numbered and will trigger sequentially. Items can be moved around at any point.
+- Countdown effects triggers when the countdown reaches 0
+- Exposed effects triggers when the player loses all armor for the first time
+- Wounded effects triggers when the player loses half of its health for the first time

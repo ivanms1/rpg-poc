@@ -1,0 +1,127 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Potions is part of the Item tags.
+Items
+Potions
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Heart-shaped Potion
+ | Rare 
+ | -
+ | When you are reduced to exactly 1 health for the first time, restore health to full
+ | Woodland 
+ | Ironskin Potion
+ | Heroic 
+ | -
+ | Battle Start: Gain armor equal to lost health
+ | Woodland 
+ | Lightspeed Potion
+ | Common 
+ | 1
+ | Battle Start: Restore health equal to speed
+ | Swampland 
+ | Lightning Bottle
+ | Rare 
+ | 1
+ 2
+ | Battle Start: Stun yourself for 1 turn
+ | Swampland 
+ | Muscle Potion
+ | Common 
+ | -
+ | Every 3 strikes: Gain 1 attack — at Gold: 2 , at Diamond: 4
+ | Swampland 
+ | Nerve Poison
+ | Rare 
+ | -
+ | The first time the enemy gains poison, stun them for 1 turn
+ | Swampland 
+ | Petrifying Flask
+ | Common 
+ | -
+ | Wounded: Gain 10 armor and stun yourself for 2 turns — at Gold: 20 4, at Diamond: 40 8
+ | Swampland 
+ | Purelake Potion
+ | Rare 
+ | -
+ | Battle start: Remove all your armor and gain 3 purity
+ | Swampland 
+ | Slime Potion
+ | Rare 
+ | -
+ | Wounded: Gain armor equal to lost health and gain 5 acid
+ | Swampland 
+ | Viper Extract
+ | Rare 
+ | -
+ | The first time the enemy gains poison, give them 3 additional poison
+ | Swampland 
+Elixirs
+Elixirs are crafted when you meet the Potion Maker.
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Heart-shaped Elixir
+ | Rare 
+ | -
+ | When you are reduced below 5 health for the first time, restore health to full
+ | Kingmaker
+ | Ironskin Elixir
+ | Heroic 
+ | -
+ | Battle Start: Double your max health and gain armor equal to lost health
+ | Kingmaker
+ | Lightning Elixir
+ | Rare 
+ |  3
+ 4
+ | Battle Start: Stun yourself for 2 turns
+ | Swampland
+ | Lightspeed Elixir
+ | Common 
+ | 1
+ | Battle Start: Gain max health equal to your speed and then restore health equal to your speed
+ | Swampland
+ | Muscle Elixir
+ | Common 
+ | -
+ | Every 3 strikes: Gain 1 attack, 1 armor and 1 speed — at Gold: 2 , at Diamond: 4
+ | Swampland
+ | Nerve Elixir
+ | Rare 
+ | -
+ | The first time the enemy gains poison, stun them for 3 turns
+ | Swampland
+ | Petrifying Elixir
+ | Common 
+ | -
+ | Wounded: Gain 10 armor and stun yourself and the enemy for 2 turns — at Gold: 20 4, at Diamond: 40 8
+ | Swampland
+ | Purelake Elixir
+ | Rare 
+ | -
+ | Battle start: Lose 5 armor and gain 5 purity
+ | Swampland
+ | Slime Elixir
+ | Rare 
+ | -
+ | Wounded: Gain armor equal to max health and gain 5 acid
+ | Swampland
+ | Viper Elixir
+ | Rare 
+ | -
+ | The first time the enemy gains poison, give them 9 additional poison
+ | Swampland

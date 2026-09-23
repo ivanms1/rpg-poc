@@ -1,0 +1,201 @@
+
+Click here to tour the challenge grid, starting at the one you're most likely to unlock!
+Challenges are conditions that unlock new items for all runs once completed. Challenges are displayed in the Compendium, where they are arranged in a 13x5 grid. Their conditions and bonuses are hidden until completed but can be revealed by completing two adjacent challenges. Both maps have 65 challenges each. The following challenges exist for Swampland:
+ | Challenge
+ | Goal
+ | Reward item
+ | Eye Of The Storm
+ | Win against Stormcloud Druid for the first time
+ |  Stormcloud Spear
+ | Rock Solid
+ | Win against Granite Griffin for the first time
+ |  Petrifying Flask
+ | Sticky Situation
+ | Win against Carnivorous Slime for the first time
+ |  Corroded Bone
+ | Shark Tanked
+ | Win against Silverscale Shark for the first time
+ |  Whirlpool Edge
+ | Spore Loser
+ | Win against Fungal Giant for the first time
+ |  Nerve Poison
+ | Hard Shell, Soft Center
+ | Win against Rockshell Tortoise for the first time
+ |  Forge Hammer
+ | Spring Cleaning
+ | Win against Clearspring Spirit for the first time
+ |  Clearspring Feather
+ | Toxic Relationship
+ | Win against Stonescale Basilisk for the first time
+ |  Basilisk Fang
+ | Croaked
+ | Win against Toxic Miretoad for the first time
+ |  Bubblegloop Staff
+ | Tone Deaf
+ | Win against Swampsong Siren for the first time
+ |  Sunlight Crest
+ | Root Out The Weeds
+ | Win against Liferoot Experiment for the first time
+ |  Muscle Growth
+ | Snail Mail
+ | Win against Ironshell Snail for the first time
+ |  Weaver Shield
+ | Head Hunter
+ | Defeat the Swampland Hydra for the first time
+ |  Riverflow Rapier
+ | One Of A Kind
+ | Have 4 different unique items in your inventory
+ |  Twisted Root
+ | Don't Judge A Book By Its Rarity
+ | Have a diamond tome
+ |  Arcane Lens
+ | I'm Gonna Live Forever!
+ | Have 5 or more regeneration in a battle
+ |  Sanguine Morphosis
+ | Encore
+ | Trigger Symphony 3 times in a battle
+ |  Liferoot Lute
+ | Fungal Fiend
+ | Have 10 or more poison in battle
+ |  Noxious Gas
+ | Too Easy
+ | Defeat the first boss with 1 or more empty item slots
+ |  Liferoot Gauntlet
+ | Oiled Up
+ | Collect 3 blade oils on a single weapon
+ |  Stormcloud Edge
+ | Perfectly Balanced
+ | Start a battle where your base attack, base armor and base speed are equal
+ |  Spiritual Balance
+ | A Tree Falls In The Forest
+ | Combine 2 items with the Woodcutter
+ |  Explosive Arrow
+ | What Doesn't Kill You
+ | Equip a Crone item
+ |  Purelake Potion
+ | Extra Provisions
+ | Have 2 cooked Cauldron items in your inventory
+ |  Grilling Skewer
+ | Rust In Peace
+ | Lose 20 armor to acid in a battle
+ |  Slime Potion
+ | Grave Robber
+ | Visit Boneyard Bog 3 times in a single run
+ |  Bloodlord's Axe
+ | One Man's Trash
+ | Travel to Misplaced Mire through a sinkhole
+ |  Rusty Sword
+ | Tis But A Scratch
+ | Take a total of 100 or more damage in a battle and win it
+ |  Chainmail Sword
+ | Warm & Cozy
+ | Heal over 20 health using a bonfire
+ |  Crimson Fang
+ | One-Man Band
+ | Have 4 different instruments equipped
+ |  Sheet Music
+ | Sink Or Swim
+ | Make an enemy have 5 or more riptide
+ |  Silver Anchor
+ | Stunlock
+ | Stun an enemy 5 or more times in a battle
+ |  Thunder Cloud
+ | AFK
+ | Have 3 or more stun
+ |  Spiral Shell
+ | Debuff Buffet
+ | Give the enemy 3 or more different status effects in a battle
+ |  Toxic Algae
+ | Peaceful Ways
+ | Win a battle with 0 base attack
+ |  Holy Shield
+ | 20 Minute Adventure
+ | Enter 5 or more sinkholes in a single run
+ |  Silverscale Armor
+ | Pure And Simple
+ | Remove 10 or more of your own purity in a single battle
+ |  Cleansing Edge
+ | Can't Catch Me
+ | Gain 4 or more additional strikes in a battle
+ |  Stillwater Pearl
+ | Isle Be Back
+ | Return to the same island 3 or more times during a single run
+ |  Liferoot Hammer
+ | Welcome Back
+ | Equip the same weapon you discarded earlier in the same run
+ |  Stormcloud Armor
+ | Homebody
+ | Defeat the first boss without leaving the starting island
+ |  Arcane Gauntlet
+ | Buzzkill
+ | Defeat a Honey Bee
+ |  Clearspring Rose
+ | Swimming Lesson
+ | Defeat a boss with riptide damage
+ |  Silverscale Trident
+ | Lord Of Blood
+ | Restore 40 or more health in a single battle
+ |  Bloodstone Ring
+ | Silver-Tongue
+ | Manage to haggle twice in a row without failing
+ |  Liferoot Staff
+ | Breaking Rank
+ | Defeat a Palace Guard
+ |  Slime Booster
+ | Diamond In The Rough
+ | Combine 2 golden items using a golem
+ |  Leather Waterskin
+ | Walking Library
+ | Equip 4 or more tomes
+ |  Arcane Shield
+ | Down With The Sickness
+ | Have 5 unique status effects at the same time
+ |  Riverflow Talisman
+ | Float Like A Butterfly
+ | Discover a honey weapon
+ |  Life Zap
+ | Game Set Match
+ | Have 2 itemsets active at the same time
+ |  Plated Shield
+ | Mama Hen
+ | Hatch all 4 eggs at least once
+ |  Petrified Edge
+ | Swamp Mastery
+ | Unlock all other challenges in swamp
+ |  Hero's Crossguard
+ | Get Ahead
+ | Defeat the swampland hydra after cutting off the Riptide Head at the start of battle
+ |  Weaver Armor
+ | Headstart
+ | Defeat the swampland hydra after cutting off the Acid Head at the start of battle
+ |  Acid Mutation
+ | Sunny Side Up
+ | Hatch 2 eggs in a single run
+ |  Serpent Mask
+ | Undiscovered Lands
+ | Travel to an island with a boss encounter
+ |  Serpent Dagger
+ | Exterminator
+ | Defeat every enemy on an island
+ |  Wave Breaker
+ | Bare Essentials
+ | Defeat the Swampland Hydra without any oils or edges
+ |  Moonlight Cleaver
+ | Bubbling Brew
+ | Give a potion to the potion maker
+ |  King's Blade
+ | Chain Of Command
+ | Have Champion’s Armor, Knight’s Armor, and Squire’s Armor equipped at the same time
+ |  Purelake Staff
+ | Armored Up
+ | Gain 40 armor in a single instance
+ |  Soap Stone
+ | Head’s Up
+ | Defeat the swampland hydra after cutting off the Poison Head at the start of battle
+ |  Petrified Statue
+ | Head In The Clouds
+ | Defeat the swampland hydra after cutting off the Stun Head at the start of battle
+ |  Mist Armor
+ | Taking Out The Trash
+ | Get defeated by a Raccoon
+ |  Rusted Plate

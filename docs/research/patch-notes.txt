@@ -1,0 +1,903 @@
+
+##### 2024-06-11 DEMO PATCH #1
+  Added:  
+ 
+  Mouse controls
+  Popup when applying edge and oil
+  Reroll mechanic
+ 
+
+  Changed:  
+ 
+  Updated boss art
+  Ui improvements
+  Faster x3 times battle speed
+  Faster quickbattle
+  Briar rose
+ 
+
+  Fixes:  
+ 
+  Sped up world generation
+  Sword talisman going infinite against brittlebark beast
+  Grindstone club carryover
+  Titans edge and mountain troll self stun
+  Cracked wheatstone wrong timing
+  Golden ítem sprite in combat
+ 
+
+##### 2024-06-26 DEMO PATCH #2
+  Added:  
+ 
+  Item set recipes unlocked after finding each item set the first time
+  Animations and QoL
+  Increased world size
+ 
+
+  Changed:  
+ 
+  Black Knight 15 -> 10 health
+  Bearserker 3 -> 4 attack
+  Granite Griffin 20 -> gain 30 armor
+  Reroll moved from chests to merchants
+  Clarification of Werewolf effect
+  Revert briar rose effekt
+  Razorvine talisman, on lose thorns -> on gain thorns
+ 
+
+  Fixed:  
+ 
+  Swapping items left old description
+  Iron transfusion does not show minus
+  Prevent item going infinite
+  Events visible in the corner of the world
+  Challenge "All that glitters" wrong trigger
+  Buying multiple unique items
+  Fairy generating unique duplicates
+ 
+
+##### 2024-07-08 Patch 0.2.31
+A small patch mostly to make the first ever run experience better.
+
+ 
+  New player first challenge experience
+  Golden items have better descriptions
+  Leshen transform animation
+  Item information available in battle
+  Itemsets visible in battle
+ 
+
+
+##### 2024-07-12 Patch 0.2.32
+Some buggfixes for the selector going out of bounds when playing with controller.
+
+Simplified chinese language support.
+
+##### 2024-08-11 DEMO PATCH #3
+We're happy to see a lot of new players have found He is coming. This patch is looking to address the most common bugs and introduce some events to make the map more interactive. 
+
+Thanks for playing!
+
+EDIT: Issue with Cauldrons has been resolved.
+
+  Added:  
+ 
+  Item - Brittlebark buckler added
+  Item - Blood bond added
+  Item - Plated greaves added
+  Item - Ruby gemstone added
+  4 new itemsets added
+  New event - Fortune Teller
+  New event - Cauldron
+  Diamond rarity items
+ 
+
+  Changed:  
+ 
+  Woodcutters axe changed from After 5 strikes: Gain 4 attack -> On hit: Reduce the enemy max health by 2
+  Salesman event spawnrate reduced
+  Artisan event spawnrate increased
+  Reroll cost decreased from 1-2-4-8-16 to 1-2-3-4-5
+  Scrap eater renamed to Sapphire gemstone
+  Emerald pendant renamed to Heart-shaped potion
+  Bloodlash gemstone renamed to Emerald gemstone
+  Stormcloud gemstone renamed to Citrine gemstone
+  Mending Kit Removed
+  Citrine Pendant removed
+  Ruby pendant removed
+  Sapphire pendant removed
+ 
+
+  Fixed:  
+ 
+  Challenges not unlocking
+  Item descriptions showing wrong numbers
+ 
+
+##### 2024-08-12 Hotfix 0.2.49
+Hotfix for the map being all Cauldrons and Woodland Abomination dealing no damage.
+
+##### 2024-09-05 DEMO PATCH #4
+This update focuses on speed items and making the event and item spawning feel better.
+
+A number of changes has been made to the world generation to avoid getting bad RNG with event spawns as well as some improvements to which items are offered to the player.
+
+New items means we had to move around the rewards for some challenges.
+
+  Added:  
+ 
+  New keyword Initiative - Triggers after Battle Start. Has a speed theme.
+  New food item - Honey
+  New food item - Cherry Bomb
+  New item - Boss Contract
+  New item - Saffron Feather
+  New item - Cirtine Earring
+  New item - Rabbit Doll
+  New item - Energy Crystal
+  New item - Swiftstrike Cloak
+  New item - Bloodthief Needle
+  New item - Heart-shaped Acorn
+  New edge - Featherweight Edge
+  7 new cauldron combination items
+  Item tags to cauldron items
+  1 New itemset
+ 
+
+  Changed:  
+ 
+  Stone steak: Common -> Rare
+  Wolf +1 speed
+  Increased hidden dagger droprate
+  Dont offer same edge twice in a row
+  Leshen health lowered to 40 and 10 armor
+  Explosive sword: "Exposed: Deal 6 damage and set attack to 1" -> "Exposed & Wounded: Deal 3 damage"
+  Removed item - Bearpelt plate
+  Removed item - Phantom Armor
+  Moved around challenge item rewards
+  Briar rose: Gain 1 thorns -> Gain 2 thorns
+  Wounded now triggers AT 50% or less health
+  Temporarily removed chinese translation
+  Tempest Blade: Rare -> Heroic
+  3 crown items reworked to give base stats
+  Plated Greaves: Exposed: Convert all your speed to armor - > Exposed: Convert 3 speed to 9 armor
+  Thorn ring: Battle start: Gain 6 thorns and lose 1 health - > Battle start: Gain 6 thorns
+  Removed citrine crown
+  Granite griffin nerfed
+  Brittlebark beast nerfed
+  Woodcutter's axe effect changed
+  Golden food components can no longer be used in cauldron
+ 
+
+  Fixed:  
+ 
+  Golden earrings only triggerd once
+  Duplicate weapon in merchant
+  Clarified fairy event
+ 
+
+##### 2024-09-28 DEMO PATCH #5
+This update adds some further improvements to the overworld map, a new waypoint event for quick travel, the ability to hover over enemies and events on the map to get more information as well as some overworld biomes that affect where some events are more likely to spawn.
+
+It also introduces an item compendium listing all unlocked items.
+
+Going forward we will continue to iterate on the overworld map as well as start development of the next area of the game. Thanks for playing!
+
+  Added:  
+ 
+  Added item - Energy drain
+  Added item - Stone thorns
+  Added 2 itemsets
+  Added event: Waypoint
+  Added Merchant sales
+  Overworld biomes
+  Item compendium
+  Itemset list
+  Hover enemies and events to see info
+  CRT filter setting
+ 
+
+  Changed:  
+ 
+  Spearshield Lance: 4->6 armor
+  Razortusk hog: 4->5 speed
+  Granite griffin: Gain 20->30 armor
+  Gentle giant: 40->50 health
+  Brittlebark beast: 50->40 health
+  Ore heart: Gain 2->3 armor
+  Blood bond: Epic->Rare
+  Brittlebark buckler: Epic->Rare
+  Stormcloud spear: Stun for 2->3 turns
+  Swiftstrike cloak: Rare->Epic
+  Battle medic challenge: Overheal 80->30 health
+  Removed item - Petrifying flask
+  Removed item - Hook blade
+  Removed itemset - Nova strike
+ 
+
+##### 2024-10-27 DEMO PATCH #6
+Greetings! We are hard at work on the next area of the game so this patch is a bit light on demo content.
+
+ 
+  The settings menu has been revamped to include settings for borderless and windowed mode.
+  There's a few bugfixes and item renamings.
+ 
+
+##### 2024-12-20 DEMO PATCH #7
+Holiday Greetings!
+
+This patch introduces miniboss encounters, some new rare events, clearer biome separations and many new items. It's a big patch so apologies if we missed to list anything.
+
+While working on the next area we have made some pretty major changes to the itempool of Woodland. Mainly moving all Stun items to the next area along with some other items that fit other areas better, flavor wise. To compensate for the items moved out of Woodland we've added some more bomb synergies and a new status keyword, "Powder" among other things.
+
+These changes are in line with our full vision for the game beyond the demo. If you have any feedback on items, bosses or gameplay in general we'd love to hear it.
+
+  General changes:  
+Initiative -> Battle Start
+Stun status effect moved to the next area
+Powder status effect added
+Minibosses added
+Mythic tier items added
+Wishing well event added
+Fairy queen event added
+Challenge and Compendium screens combined
+
+  Boss changes:  
+Granite Griffin: Moved to the next area
+Stormcloud Druid: Moved to the next area
+Swiftstrike stag added
+Goldwing monarch added
+Bearserker: Tier 2 -> Tier 1
+Hothead: Tier 1 -> Tier 2
+Hothead: Effect changed
+Razortusk Hog: Tier 2 -> Tier 1
+Razortusk Hog: Effect changed (old hothead effect)
+Lifeblood Count miniboss added
+Silkweaver Queen miniboss added
+Ironshell Beetle miniboss added
+
+  Changed items:  
+Horned helmet: 2 thorn -> 1 thorn
+Saffron feather: restore 1 health -> restore 2 health
+Lifeblood armor: "Battle Start: Convert 5 health to 10 armor" -> "Battle Start: Convert 50% of your current health to armor"
+Thorn ring: "Battle start: Gain 6 thorns" -> Battle Start: Take 1 damage and gain thorns equal to missing health
+Heart drinker: 2 base attack -> 1 base attack
+Explosive sword: deal 3 damage -> deal 2 damage
+Cherry Bomb: Battle Start: deal 2 damage -> Battle Start: Deal 1 damage and give 1 powder
+Firecracker belt: common -> rare
+Ruby ring: gain 1 attack and take 1 damage -> gain 2 attack and take 3 damage
+Tempest blade: Heroic -> Mythic
+Granite Thorns: Rare -> Mythic
+Razor Scales: Rare -> Mythic
+Emergency shield: 4 armor -> 5 armor
+
+  Added Items:  
+Smoking Edge
+Lifeblood Helmet
+Loose Change
+Powder Plate
+Spiky Chestnut
+Powder Keg
+Twinfuse knot
+Bloodmoon armor
+Armor regrowth
+Featherweight Armor
+Featherweight Helmet
+Granite Crown
+Grimblade Curse
+Iron Shrapnel
+Lifeblood Gauntlet
+Burning Match
+Royal Helmet
+Smoke Bomb
+Swiftstrike Crown
+Mountain Cleaver
+Spiky Club
+Featherweight greaves
+Royal Crownblade
+Quickgrowth spear
+Granite Lance
+Spiky Chestnut
+Swiftstrike belt
+Razorthorn spear
+Boom stick
+5 Cauldron items
+2 new itemsets
+
+  Moved items to coming areas:  
+Bonespine Whip
+Melting iceblade
+Shadow cloak
+Duelist gauntlet
+Warding charm
+Marble mirror
+Stormcloud spear
+Lightning edge
+Titans edge
+Impressive Physique
+
+  Removed items:  
+Sticky Web
+Energy Crystal
+Rabbit doll
+Bloodmoon thorns
+Black powder
+Boss contract
+Bloodmoon armor set
+
+##### 2025-01-14 DEMO PATCH #8
+Hello!
+
+This is a small balance patch and a fix to a challenge that was broken.
+
+We're about ready to start playtests on the next area of the game. If you're interested in giving feedback and participating, we will share the details on our  discord  in the near future.
+
+ Fixed: 
+Challenge "Beggars CAN be choosers" fixed
+
+ Items: 
+Redwood Cloak restore 1 health -> restore 2 health
+Armor Regrowth, regain 2x armor -> regain 1x armor 
+
+ Bosses: 
+Ironshell beetle, 8 atk -> 7 atk
+Blazing Hothead 1 base atk -> 2 base atk
+swiftstrike stag 2 base atk -> 3 base atk
+
+##### 2025-02-10 He is Coming Joins the Hooded Horse Family!
+We’re incredibly excited to partner with Hooded Horse, known for their dedication to quality and innovation, to bring He is Coming to players worldwide. With their expertise and support, we will deliver a retro-inspired experience filled with depth, strategy, and plenty of surprises for players to enjoy.
+
+ He is Coming  is a roguelike RPG autobattler where every decision matters. Every three days, a new boss arrives — whether you’re ready or not. Players must gather weapons, stack item effects, and plan ahead to survive the escalating challenge.
+
+We can’t wait to share more as we approach Steam Early Access in 2025! Check out our brand-new trailer, too.
+
+  
+https://store.steampowered.com/app/2824490/He_is_coming/
+
+##### 2025-02-13 DEMO PATCH #9
+Greetings fellow gamers!
+
+This patch adds all the languages. Them being:
+
+ 
+  Simplified Chinese
+  Traditional Chinese
+  Japanese
+  Korean
+  German
+  Spanish
+  French
+  Portuguese
+  Polish
+  Russian
+  Italian
+  Czech
+  Turkish
+  Ukrainian
+  Hungarian
+ 
+
+##### 2025-02-22 He is coming... to Next Fest
+Hey everyone!
+
+We’re excited to share that He Is Coming will be part of Steam Next Fest! The demo is available to play right now! Featuring the latest updates—including Kingmaker, our new asynchronous multiplayer mode.
+
+In Kingmaker, you’ll face off against the builds of other players instead of bosses. Win three matches in a row, and you’ll earn a Golden Crown, which can be spent on exclusive cosmetic skins. Items you’ve unlocked in Woodland will carry over, so every run is a chance to test your best builds!
+
+With kingmaker going live we've also removed the "High score" mechanic from Woodland Abomination, he is now killable.
+
+We’re looking forward to hearing your thoughts—let us know what you think!
+
+##### 2025-06-09 He is Coming to Early Access on July 17th
+ The world is shrouded in dread — the Demon King approaches, and your time to prepare grows short.  Check out the new trailer, revealed during IGN Live, and prepare yourself for Early Access on July 17th — He is Coming.    You can find us on  Discord  and the  subreddit  if you'd like to discuss strategies, share stories, or see what others are running.  [dynamiclink href="https://store.steampowered.com/app/2824490/He_is_Coming/"][/dynamiclink] 
+
+##### 2025-07-17 He is Coming is Now Available!
+ The sun looks dim, rivers slow to a crawl, and something ancient moves in the woods. From now on, you can find out why.  He Is Coming  is now live with a 35% launch discount and a new trailer that shows what it feels like to be hunted every three in-game days by something worse than the last.
+
+Check out the trailer to see what awaits you. 
+    [dynamiclink href="https://store.steampowered.com/app/2824490/He_is_Coming/"][/dynamiclink]
+ Join the Community     Find us on  Discord  or  Reddit  and let us know how your runs go. Tense boss fights, clever builds, weird moments. 
+
+ Community Wiki & Beginner's Guide     We also have a community  wiki  to help get you started. It includes a beginner's guide to make sure you're ready to venture into the woods. We're always looking for contributors, too. 
+
+ Steam Reviews: Your Voice Matters     It'd mean a lot to our team if you took the time to leave a Steam review. Your honest assessment on what you think about He is Coming and whatever else comes to mind. What we prioritize in updates will, in part, stem from your honest feedback. We're reading everything and we can't wait to see what you think. 
+
+##### 2025-07-19 Patch #01 - Early Fixes, Balance Tweaks, and Localization Pass
+This patch includes balance changes to the Shield Splitter challenge and Hero's set, multiple bug fixes, and adjustments to Chinese translations. These fixes address issues with item effects, replay display, UI elements, missing animations and music, and a mouse jitter bug. It also updates the intro cutscene text, swaps two challenge rewards, and resolves a tracking issue with kingmaker champion wins.
+
+Now that He is Coming is in Early Access, we'd love to know what you think in a Steam review. Whether it's feedback, what you enjoy, or anything that comes to mind. Simply put, that means your voice matters. We're reading through every review to help prioritize our updates.
+
+ Patch #01 - Early Fixes, Balance Tweaks, and Localization Pass    
+  Adjusted Chinese translations
+  Shield splitter challenge reduced 15 -> 10 armor
+  Fixed Cold resistance having the wrong trigger point
+  Fixed Double-plated vest not triggering
+  Adjusted intro cutscene ending text
+  Hero's set 1/1/1 -> 2/2/2
+  Fixed replay displaying the wrong player name
+  Fixed Item description popup stays on screen after challenge reward
+  Fixed Miniboss encounter missing intro animation and unique music
+  Fixed mouse jitter bug
+  Swapped challenge rewards for "Redwood Sentinel" and "Stone Cold"
+  Fixed an issue where the kingmaker champions' wins sometimes would not increment
+ 
+ He is Coming Wiki   If you'd like to learn more about He is Coming, check out our  wiki . If you'd like to become a contributor, contact Marcello (Hooded Horse) in our community Discord.
+
+ How to Report Bugs   If you run into any issues, contact us at:  contact@chronocle.com  or join our  Discord  server where you can report the issue in our bug report forum.
+
+Please describe your issue and provide your save file. Find your save file here:
+
+[code]%UserProfile%/AppData/LocalLow/Chronocle/He Is Coming[/code]
+ He is Coming Community   Join the He is Coming community on  Discord  and  Reddit  to discuss the game, share tips, tricks, and share screenshots.
+
+##### 2025-07-20 Hotfix for challenge screen freeze
+Some players were experiencing the game freezing on the challenge screen after a run.
+
+The patch has been reverted to the previous one while I investigate this issue.
+
+Really sorry for the inconvenience.
+
+##### 2025-07-21 Patch #2 and #3 - Graveyard spawning, item tags
+ The issues from Patch #2 have been resolved and re-added, along with additional bug fixes reported on Discord and community forums. Steam reviews have been an essential resource for understanding what you enjoy, what you'd like to see differently, and how you feel about He is Coming. That's why it would mean a great deal if you could share your thoughts in a Steam review, if you haven't already.
+  Patch #3 Changelog    
+ Added Lifeblood helmet sanguine tag
+ Added Frostbite Dagger water tag
+ Added Acidic witherleaf unique
+ Added Acid Mutation unique
+ Added Liferoot Hammer wood tag
+ Increased lookout tower range 11 -> 13
+ Increased the chance of fortune teller showing rare events
+ Fixed graveyard spawning without connecting roads
+ Fixed tents running out of items
+
+ Re-added from Patch #2: 
+
+ Changed Leshen to be beatable on the first run
+ Fixed vampire cloak giving the wrong multiplier
+ Fixed oils and itemsets not visible during a replay
+ Fixed Arcane gauntlet not triggering
+  He is Coming Wiki    If you'd like to learn more about He is Coming, check out our  wiki . If you'd like to become a contributor, contact Marcello (Hooded Horse) in our community Discord. 
+  How to Report Bugs    If you run into any issues, contact us at:  contact@chronocle.com  or join our  Discord  server where you can report the issue in our bug report forum.
+
+Please describe your issue and provide your save file.     Find your save file here:  [code]%UserProfile%/AppData/LocalLow/Chronocle/He Is Coming[/code] 
+He is Coming Community    Join the He is Coming community on  Discord  and  Reddit  to discuss the game, share tips, tricks, and share screenshots. 
+
+##### 2025-07-21 Patch #04 - First run buff, replay fixes
+This will be the last launch week patch as we take a breather and plan future patches.
+
+Now that He is Coming is in Early Access, we'd love to know what you think in a Steam review. We're reading through every review to help prioritize our updates. 
+
+Top of our list to address is:
+ 
+  Saving runs and continuing later
+  Ways to mitigate RNG and an expanding item pool
+  Mouse only/Keyboard only controls
+ 
+We'll come out with a more detailed roadmap leading up to 1.0 after these initial hurdles have been cleared, thank you for your patience and continued support!
+
+ Patch #04 Changelog    
+  Added +10 Health +1 Attack buff to first run. This buff can also be enabled anytime in the settings
+  Fixed replay not displaying properly
+  Fixed Cauldron recipes not getting added if gotten outside cauldron
+  Fixed Horse carriage running out of options
+  Increased spawnrate of Scrying Pool
+  Updated localizations
+  Horse carriage now sorts his options closest (left) -> furthest (right)
+ 
+ He is Coming Wiki   If you'd like to learn more about He is Coming, check out our  wiki . If you'd like to become a contributor, contact Marcello (Hooded Horse) in our community Discord.
+
+ How to Report Bugs   If you run into any issues, contact us at:  contact@chronocle.com  or join our  Discord  server where you can report the issue in our bug report forum.
+
+Please describe your issue and provide your save file. Find your save file here:
+
+[code]%UserProfile%/AppData/LocalLow/Chronocle/He Is Coming[/code]
+ He is Coming Community   Join the He is Coming community on  Discord  and  Reddit  to discuss the game, share tips, tricks, and share screenshots.
+
+##### 2025-08-01 Fixed Fired Up buff
+Fixed fired up buff not working correctly
+
+##### 2025-08-01 Hotfix for kingmaker balance
+Hello, this is a minor hotfix patch to address kingmaker balance. We aim to release a bigger patch with bugfixes and new features at the end of the week.
+
+Explosive fish and Energy drain currently rules the meta. We wish to change the effects of these to still be viable but while we wait for translations for the new effects, Energy Drain has been disabled from kingmaker and Explosive fish has been given a temporary effect of "Battle Start: Give the enemy 2 riptide".
+
+This patch also implements some anti cheating measures. This is a first step while we work on a more permanent solution but hopefully it raises the barrier to cheat significantly, more to come on this matter in future patches. This has been a much larger problem than we anticipated and we're sorry for any lost runs this have caused.
+
+See you soon.
+
+##### 2025-08-07 Patch #05 - Item Banishes, Droprate Tuning, Battle Step Mode
+Hello, this patch introduces the ability to banish items during a run and updates the logic for which items drop, among other fixes.  Thank you for taking the time to leave Steam reviews, as we do read through them all to see what you'd like added, adjusted, changed, and for what we should prioritize in patches.
+
+ Banishes:   
+Banishes can be used in treasure chests and heroes' graves to remove an item from the pool for the rest of the run and reroll a new option in its place. The number of banishes you get increases the more items you unlock.  
+
+This could be used strategically to remove items you are not interested in playing with this run right away, to increase the droprate of other items from the start of the run, or it could be saved until later in a run when you really need the reroll to find yourself an item to defeat the upcoming boss.
+
+To start, banishes are only available in singleplayer. In Kingmaker, players already have a lot of time to perfect their build so making that gamemode more consistent would just raise the quality of builds neccessary to compete, which is not something we want.
+
+ Item drops:   
+There is a system in place where the game increases the drop rate of items depending on which ones you already have equipped, to try to predict what you want. The game does this depending on the tags and abilities items have, but it's not omnipotent, and it can't always predict what synergies the player intends to create in the future. We've tuned up this system to give better drops in all occurrences, but particularly, Banish rerolls, Merchant rerolls, Fairies, and Fairy Queens have been tuned up significantly. These are instances where players are actively looking for something to save their build and praying for good RNG.  
+
+Overtuning this system would make pivoting difficult, as the game would continue to feed you items that go with your current build, so we want to be careful here.  
+
+This is our first attempt to give more player agency over the item drops. Ultimately, players being able to force their dream build every run and succeed is not something we think sounds fun, so we hope this addition does not lead to that, but that it enables more strategy and a feeling of control.  
+
+Let us know what you think.  
+
+ Patch #05 Changelog    
+  Added the ability to banish items from the pool  
+  Changed the logic of Salesman rerolls, Fairy, and Fairy Queen to give more synergistic items  
+  Moved around bundle items in Kingmaker  
+  Updated Kingmaker champion challenge logic
+  Kingmaker anti-cheat (Part 2)
+  Fixed Kingmaker champions sometimes losing wins
+  Added Step mode setting in battles  
+  Removed mysterious traveller event, boss lore is now visible by default  
+  Chosen kingmaker skin displays in singleplayer as well  
+  Challenge completion condition is now visible in the compendium, also after completion 
+  Fixed player health drop to 0 in case of too many triggered items
+  Fixed non-upgradable items becoming upgraded
+  Gemstone event spawning in wrong kingmaker bundles
+ 
+ Item changes:   
+   
+  Removed Emerald Gemstone
+  Removed Slime Bomb
+  Clearspring cloak rare -> heroic
+  Marble mirror rare -> heroic
+  Marble mirror -2 speed -> 0 speed
+  Caustic tome: 3 poison -> 5 poison  
+  Melting iceblade: 7 atk -> 8 atk  
+  Bubblegloop staff: 1 acid -> 2 acid  
+  Frozen iceblade: 7 atk -> 6 atk  
+  Quickgrowth spear: 2 atk -> 3 atk  
+  Trail mix: repeat 3 times -> repeat 2 times  
+  Explosive roast: deal 1 damage 4 times -> deal 1 damage 3 times  
+  Granite Cherry: repeat 3 times -> repeat 2 times  
+  Deadly toxin 2 acid -> 5 acid
+  Flameburst tome removed bomb tag  
+  Granite crown added unique tag  
+  Ironskin Potion added unique tag  
+  Purelake tome added water tag  
+  Woodcutter's axe added wood tag  
+  Fixed Rocksalt sword giving poison when it should not  
+  Fixed Sanguine gemstone healing the enemy  
+  Fixed Ironskin elixir giving too little armor  
+  Fixed Sword of Pride hiding boss information  
+   
+ He is Coming Wiki   If you'd like to learn more about He is Coming, check out our  wiki . If you'd like to become a contributor, contact Marcello (Hooded Horse) in our community Discord.  
+
+ How to Report Bugs   If you run into any issues, contact us at:  contact@chronocle.com  or join our  Discord  server where you can report the issue in our bug report forum.  
+
+Please describe your issue and provide your save file. Find your save file here:  
+
+[code]%UserProfile%/AppData/LocalLow/Chronocle/He Is Coming[/code]  
+ He is Coming Community   Join the He is Coming community on  Discord  and  Reddit  to discuss the game, share tips, tricks, and share screenshots.
+
+
+##### 2025-08-11 Bugfix - Banish items with controller
+ Quick bugfix for: 
+ 
+  Bugfix for banishing items with controller
+  Bugfix for champion replay random items giving different outcomes
+ 
+
+##### 2025-08-18 Patch #06 - Kingmaker item balance, RNG challenges reworked
+ Hello everyone!
+
+This patch focuses on item balance, with Kingmaker in mind.
+
+Since the last update, a few builds have proven far too strong and unfun to play against, looking at you Sanguine morphosis with Crystal mirror, so we’ve addressed those.  Liferoot Hammer  and  Blackbriar Blade  now have new effects,  Crystal Mirror  has been disabled, along with many other adjustments. Some underpowered items received buffs as well, but since we still haven’t reached the stable meta where multiple strategies can thrive that we are looking for, our main priority for now is bringing the overperformers down to a more manageable level.
+
+We’ve also heard your feedback that certain challenges felt overly difficult due to the heavy reliance on RNG. That kind of frustration isn’t fun, so we’ve reworked the biggest offenders.
+
+And for those of you who managed to complete Stone Cold before the rework, you know who you are. 😉
+
+ Leave a Steam Review: Help Shape the Next Patch!   While we are on the subject of feedback, Steam reviews help a lot. They give other players a clear picture of how the game feels right now, they influence visibility on Steam, and they tell us what to focus on next. If you have a moment after trying this patch, a short, honest review would be genuinely helpful. We read them. 
+
+  We had more things planned for this patch, but felt the meta was in a state that needed change sooner rather than later. What we're working on for next time is being able to save and continue runs between sessions and general kingmaker connection issues.  
+  Patch #06 Changelog       You can now discard items from your inventory by double-clicking them
+     Champions holding a combination of items that are no longer possible in the latest patch retire from rotation with +1 crown after patch release
+     Reworked RNG heavy challenges (Around the World, One-Way Ticket, Redwood Sentinel, Stone Cold and the 6 challenges that required you to face a specific miniboss)
+
+ Item changes:   
+     Glasses of the Hero itemset added
+     Liquid Metal itemset added
+     Disabled crystal mirror
+     Disabled clearspring cloak
+     Swiftstrike rapier 2 additional strikes -> 3 additional strikes
+     Lightning rod gain 1 attack -> gain 3 attack
+     Marshlight Aria trigger symphony 2 times -> 3 times
+     Ironskin Elixir double your max health -> gain 20 max health
+     Energy drain steal all speed -> steal 5 speed
+     Leather waterskin repeat this trigger -> give all at once
+     Poisonous Pufferfish give the enemy 2 riptide -> give riptide equal to your poison
+     Explosive arrow 2 damage -> 3 damage
+     Stone sandals 3 atk -> 2 atk
+     Holy tome countdown 4 -> 6
+     Double-plated Vest new effect
+     Rusty Sword new effect
+     Blackbriar blade new effect
+     Emerald Gemstone new effect
+     Liferoot Hammer new effect
+     Assault Greaves added unique tag
+     Crimson cloak added unique tag
+     Blackbriar Armor added unique tag
+     Thorn ring added unique tag
+     Marble mirror added unique tag
+     Slime potion added unique tag
+     Explosive power added unique tag
+     Blood Chain added sanguine tag
+     Sanguine Morphosis added unique tag
+     Lakebed Sword added water tag
+     Explosive sword removed bomb tag
+     Double explosion remove bomb tag
+     Broken winebottle not triggering correctly
+    He is Coming Wiki    If you'd like to learn more about He is Coming, check out our  wiki . If you'd like to become a contributor, contact Marcello (Hooded Horse) in our community Discord.  
+
+  How to Report Bugs    If you run into any issues, contact us at:  contact@chronocle.com  or join our  Discord  server where you can report the issue in our bug report forum.  
+
+Please describe your issue and provide your save file. Find your save file here:  
+
+ [code]%UserProfile%/AppData/LocalLow/Chronocle/He Is Coming[/code] He is Coming Community    Join the He is Coming community on  Discord  and  Reddit  to discuss the game, share tips, tricks, and share screenshots. 
+
+##### 2025-09-10 Patch #07 - Mid-run saving, Kingmaker item balance
+Hello everyone!
+
+This patch adds mid-run saving and kingmaker balance.
+
+A roadmap will be released shortly with details on what we're working on next :)
+
+ Patch #07 Changelog 
+ 
+  Mid-run saving has been added
+  Additional strikes consume one stun each
+  Exterminator challenge not completing fixed
+  Acid does not trigger take damage effects
+  Thorn does not inflict damage after the owner dies
+  Final Strike Challenge:  Deal 30 damage  -> Deal 20 damage
+  Marble mirror bundle moved: Yellow -> Red
+  Clearspring opal bundle moved: Blue -> Yellow
+  Marble sword bundle moved: Yellow -> Red
+  Trash heap events on Misplaced Mire island now give 1 random rare item
+ 
+ Items changes: 
+ 
+  New item: Frostbite Claws
+  New itemset: Bloodstone Pendant
+  Bramble Talisman: Removed
+  Vampire Cloak: Removed
+  Blackbriar Armor: 
+ [Whenever you take damage, gain 2 thorns]  -> 
+[Whenever you take damage, gain 1 thorns]
+  Granite Hammer: 
+ [On Hit: Convert 1 armor to 2 attack]  -> 
+[On Hit: Convert 1 armor to 1 attack]
+  Caustic Tome: 
+ [Countdown 3: Give the enemy 3 acid. If they don't have any armor, give them 5 poison instead]  -> 
+[Countdown 4: Give the enemy 4 acid. If they don't have any armor, give them 6 poison instead]
+  Clearspring Cloak: 
+ [Exposed: Remove all your status effects and gain 1 armor equal to stacks removed]  -> 
+[Exposed: Remove all your poison and gain 2 armor equal to stacks removed]
+  Explosive Fish: 
+ [Battle Start: Give the enemy 2 riptide]  -> 
+[Battle Start: Give the enemy 1 riptide. Whenever riptide triggers, deal 1 damage 2 times]
+  Sanguine Rose: 
+ [Whenever you restore health, restore 1 additional health. You can only equip 1 rose]  -> 
+[Whenever you restore health, increase health restored by 1. You can only equip 1 rose]
+  Lightning Rod:
+ Whenever you skip your strike when stunned, gain 3 attack  ->
+Whenever you skip your strike when stunned, gain 2 attack
+  King's Blade: Base attack 2 -> Base attack 3
+  Acidic Witherleaf: Base Speed 1 -> Base Speed 0
+  Serpent Mask: Base Attack 0 -> Base Attack 1
+  Saffron Feather: Common -> Rare
+  Rusted Plate: Added unique tag
+  Frostbite Greaves: Added water tag
+  Marbled sword moved bundle swampland yellow to swampland red
+ 
+
+##### 2025-09-11 Bugfix - Additional strikes
+ Quick bugfix for: 
+ 
+  Additional strikes giving too many
+  Rusty Plate not triggering correctly
+ 
+
+##### 2025-09-12 Bugfix - Broken item rarities
+  Fixed a bug involving upgrading rare items to golden
+
+##### 2025-09-15 Early Access Development Roadmap
+ Hello everyone!     Now that you've had some time to experience everything He Is Coming has to offer, we wanted to give you a look at our development roadmap for the rest of the Early Access period. We have lots of exciting stuff on the horizon, including a seasonal event and new PvP mode.     Development Roadmap          During  September , we plan to add:     A new PvE difficulty mode that introduces boss modifiers    Balance changes to Kingmaker    Server-side validation for Kingmaker    Additional quality-of-life patches    In  October , we plan to add:     A seasonal Halloween event    New items    New Kingmaker events    New Kingmaker Biomes    More quality-of-life patches    That takes us deep into  Q4 , when we plan to introduce:    A new PvP game mode    More new items & item sets    More new Kingmaker events    More new Kingmaker Biomes    And even more quality-of-life patches    And that's everything we have in store for 2025!     After that, 2026 is set to be a very big year for He Is Coming.  We plan to launch into our full 1.0 release in 2026.  Exact date is TBD, so keep an eye out for more news on that. In addition to our 1.0 launch, we plan to add:    A new PvE area called Darkland    New Kingmaker bundles    New Kingmaker skins    We hope you're as excited as we are for everything that's coming to the game. And we're very thankful to everyone who has played the game thus far, as well as those of you who offered us your feedback to help us make He Is Coming the best it can be!     Leave A Steam Review    Speaking of feedback, Steam reviews help a lot. They give other players a clear picture of how the game feels right now, they influence visibility on Steam, and they tell us what to focus on next. If you have thoughts on the game and what's ahead, a short, honest review would be genuinely helpful. We read and appreciate them.     He is Coming Community   [p align="start"]Join the He is Coming community on  Discord  and  Reddit  to discuss the game, share tips, tricks, and share screenshots. 
+
+##### 2025-10-02 Patch #08 - New game difficulties, balance changes
+ Hello everyone!
+
+We've heard a lot of feedback on the game being too difficult and punishing at times, this patch adds more ways to choose the right challenge for you, we hope there's something for everyone.
+
+  Steam Reviews: We'd Love To Know What You Think    If you give this patch a try, we’d really appreciate a Steam review. Reviews do a lot: they help other players understand how the game feels right now, they influence how visible the game is on Steam, and they guide us on where to focus next. A short, honest review after playing goes a long way, and we make sure to read them all.
+
+  Normal difficulty:   Start with 20 health, each day have more steps, increased chance to find gold & diamond items.
+
+  Hard difficulty:   Start with 10 health, no added bonuses.
+
+  Very hard difficulty:   Start with 10 health, bosses are more powerful, nights are longer.  
+ Patch #08 Changelog      Added two new difficulty modes in singleplayer     Fired up buff removed    Added achievements for hard & very hard difficulty     Gold & Diamond chest have been removed from kingmaker. This is to balance variance between players and runs and lower the highroll ceiling required to compete with champions     Banishing a weapon rerolls into a new weapon     Fixed a bug where fighting the boss with 0 steps left would skip 1 extra day     Fixed a bug where hidden dagger amounts would not save during exit     Fixed a bug where kingmaker matches would not end    You can no longer face your own champion      Items changes:       Candied Nuts:      \[Battle Start: Gain 3 thorns. Thorns deal double damage]    ->  
+\[Thorns deal double damage]      Crimson Cloak:      \[Whenever you take damage, restore 1 health]    ->    \[Whenever you lose health, restore 1 health]      Assault Greaves:      \[Whenever you take damage, deal 1 damage]    ->    \[Whenever you lose armor, deal 1 damage]      Brittlebark Armor:      \[Whenever you take damage, take 1 additional damage]    ->    \[Whenever you lose health, take 1 additional damage]      Blackbriar Armor:     \[Whenever you take damage, gain 2 thorns]    ->    \[Whenever you lose armor, gain 2 thorns]      Featherweight Edge:      \[On Hit: Convert 1 speed to 1 attack]    ->    \[On Hit: Convert 2 speed to 1 attack]      Lifeblood Burst:      \[Whenever you restore 3 or more health, deal 3 damage]    ->    \[Whenever you restore 5 or more health, deal 5 damage]      Primordial Soup:      \[Acid removes health as well]    ->    \[If the enemy has no armor, acid removes health instead]      Saffron Feather:      \[Turn Start: Spend 1 speed to restore 2 health]    ->    \[Turn Start: If your health is not full, spend 1 speed to restore 2 health]      Spiny Kiwifruit:      \[Battle Start: Gain 3 acid and gain thorns equal to acid]    ->    \[Battle Start: Gain 2 acid and gain thorns equal to acid]      Arcane Gauntlet:      \[Battle Start: Halve all countdowns]    ->    \[Battle Start: Halve all countdowns for the rest of the battle]      Glasses of the Hero:      \[On Hit: Reduce countdowns by 1]    ->    \[On Hit: Reduce all countdowns by 1]      Iron Chain:     \[ 5 armor]  -> 	  \[Exposed & Wounded: Gain 1 attack]      Holy Tome:     \[ Countdown 6: Gain 3 attack]  ->    \[Countdown 4: Gain 4 attack]      Holy Tome:   Common  -> Rare      Sword of Pride:     \[ Battle Start: If the enemy has more attack, armor or speed than you, take 3 damage ]  ->    \[You cannot gain attack, armor or speed in battle]      Sword of Pride:   3 attack 3 armor 3 speed  -> 5 attack 5 armor 5 speed      Chainmail Armor:  0 base attack -> -1 base attack      Limestone Fruit:  3 base speed -> 4 base speed      Helmet of Envy:  3 base attack -> 5 base attack      Featherweight Wings:  0 base speed -> 2 base speed      Blastcap Armor:  8 base armor -> 10 base armor      Brittlebark Buckler:  10 base armor -> 12 base armor      Bloodstone Ring:  Added unique tag      Rock Candy:  Removed stone tag     Clearspring Cloak name changed to Fungal Cloak     Arcane Bell now only decreases countdown by 1 while Arcane Gauntlet halves all countdowns permanently     Bugfix - Frostbite claw only lost 1 attack instead of 3     Bugfix - Double explosion not triggering correctly
+    He is Coming Wiki    If you'd like to learn more about He is Coming, check out our  wiki . If you'd like to become a contributor, contact Marcello (Hooded Horse) in our community Discord.
+
+  How to Report Bugs    If you run into any issues, contact us at:  contact@chronocle.com  or join our  Discord  server where you can report the issue in our bug report forum.
+
+Please describe your issue and provide your save file. Find your save file here:
+
+ [code]%UserProfile%/AppData/LocalLow/Chronocle/He Is Coming[/code] He is Coming Community    Join the He is Coming community on  Discord  and  Reddit  to discuss the game, share tips, tricks, and share screenshots. 
+
+##### 2025-10-02 Bugfix - Font size, hover weapon description
+    Fonts for difficulty displayed incorrectly     Hover box for weapon in game over screen displayed incorrectly   
+
+##### 2025-10-28 Patch #09 - Halloween event, hall of fame, item changes
+ Hello everyone!
+
+This patch celebrates the spooky season with a new miniboss, enemies, items and a limited time only skin. The halloween event will be live for around 2 weeks!
+
+    This patch also contains some other major changes we've wanted to do for a while.      Unique keyword   We've decided to make all rare/heroic items (blue/purple rarity dot) into unique by default, meaning if you already own a copy of an item, you can not find a duplicate of that item.  We've overtime had to make more and more rare/heroics into unique for balance, this change makes it easier to keep track of which items you can get duplicates of and which you can't. With all items above common being unique, no exceptions, we've also removed the tag visually.  We've taken the chance to buff many of the underperforming rare/heroics that were previously not unqiue and we've reworded the few common items that were unique so that they can be upgraded into gold/diamond by the golem.  However we're not doing this solely for balance, we think this will improve build diversity and make players consider to use items they've not used before. Previously, if you had an armor build with 40 base armor and the "Chainmail Armor" item that regains all your base armor as your best item, the next best in slot item you'd look for is of course another "Chainmail Armor", no other item can compete with that. This meant that the next best item for most builds would always be another copy of their current best item.   
+Of course it's fun to win, and the point of the game is to find synergies that make you feel powerful and stomp the competition, we don't want to get away from that or water down the experience, but we think the play pattern of looking for what other items can fit your build instead of rerolling merchants and hoping for good RNG for a duplicate will be more enjoyable in the long run.
+
+ "Trigger twice"   Items that said "Bomb items trigger trice" or "Ring items trigger twice" etc was not able to multiply together how players expected them to. We've changed that so that all such items say "Your bomb items trigger 1 additional time" etc to make them more easily understandable and now they all add their additional triggers independently, making them stack together.     Hall of Fame   When a champion collects 10 wins they will be retired and enter the "Hall of Fame".   Getting a champion into the hall of fame will grant you an additional reward, they will be saved under their own tab in your list of champions and they will also be show to other players in a global hall of fame list.  The reason we're doing this, other than giving kingmaker players a goal to aim towards, is for balance purposes.   There was previously no cap to how many wins a build could get which meant that some builds got the perfect setup and got 50+ or even 100+ wins, greatly accelerating the speed of which meta on new patches got stale. The 100 people that lost against a supercharged version of build X would feel that the meta was full of build X even though it was in some cases just a few instances of that build that got a huge amounts of wins and overstayed their welcome in the pool. This change will self-regulate to take overperformers out of the pool and speed up the rotation of builds going in and out, which we hope increases diversity of opponents you'll face.    Without the cap players were also more incentivized to go for the same highroll build again and again, since uploading even one of those champions would yield many more crowns than trying to be flexible and get up more but weaker champions. That is fine if that's how some players find their fun, but it's not a playstyle we want to reward mechanically.        Patch #09 Changelog      Added halloween event     All rare/heroic items are now unique by default     Added the Hall of Fame     Moved the eggs to their own event (disabled in Kingmaker until next patch)     Changed Junksmith from copying an item to allow 2 edges on a weapon     Removed Beekeeper event from kingmaker     Choosing to fight a champion gives no crowns by default, you only earn crowns for wins your champion gathers     Added new biomes for rare events in kingmaker     Fixed swampland starting on last chosen difficulty instead of normal
+     Items changes:      Featherweight Greaves  - Changed effect: Whenever you lose speed, restore that much health     Briar Greaves  - Changed effect -> Whenever you lose armor, gain 1 thorn     Iron Shrapnel  - Buffed -> Battle start: Deal 4 damage to the enemy, if they don't have armor, tripple the damage dealt     Vampire's Tooth  - Changed effect -> If you have exactly 1 sanguine item, it triggers 1 additional time     Fungal Cloak  - Heroic -> Rare     Mushroom Soup  - Changed effect - > Turn Start: Gain 1 poison and restore 2 health     Melon Bomb  - Changed effect -> Battle Start: Deal 1 damage to the enemy 2 times. Whenever you deal 1 damage, decrease a random status effect by 1     Liferoot Hammer  - Changed effect -> Turn Start: If you have regeneration, gain 1 additional strike     Marbled Stonefish  - Changed effect -> Exposed: Give the enemy 2 riptide and gain 3 armor for each riptide the enemy has     Honey Mead  - Buffed -> Wounded: Restore health to full     Mineral Water  - Changed effect -> Battle Start: Decrease all your status effects by 1 and gain 3 armor for each removed status effect     Boiled Ham  - Changed effect -> Battle Start, Exposed & Wounded: Decrease a random status effect by 2     Frostbite Greaves  - Changed effect -> Battle Start: Give the enemy freeze equal to your speed     Frostbite Greaves  - Rare -> Heroic     Frostbite Claw  - Buffed -> If the enemy has freeze, temporarily gain 3 attack     Iceblock Shield  - Common -> Rare     Swiftstrike Cloak  - Buffed -> Battle Start: Gain 1 additional strike     Chainmail Armor  - Buffed -> Removed -1 base attack     Royal Helmet  - Buffed -> Exposed: If you have more than 20 gold, gain 20 armor     Royal Helmet  - Nerfed -> Removed 1 base armor     Frostbite Armor  - Buffed -> The enemy's first strike deals double damage, afterwards give the enemy 5 freeze     Frostbite Armor  - Nerfed -> Removed 2 base armor     Bramble Vest  - Changed effect -> The first time each turn you gain thorns, restore that much health     Cracked Bouldershield  - Buffed -> Exposed: Gain 10 armor     Explosive Surprise  - Buffed -> Exposed: Deal 8 damage     Firecracker Belt  - Buffed -> Exposed: Deal 1 damage 5 times     Double Explosion  - Changed effect -> The first time the enemy takes damage from a bomb, double it     Basilisk Scale  - Buffed -> Battle Start: Gain 6 armor and 6 poison     Royal Horn  - Changed effect -> Battle Start: Gain 1 gold. Symphony     Royal Horn  - Common -> Rare     Serpent Lyre  - Nerfed -> Exposed: Give the enemy 2 poison. Symphony     Serpent lyre  - Removed unique     Arcane bell  - Removed unique     Explosive Arrow  - Nerfed - > Turn Start: If the enemy doesn't have any armor, deal 2 damage     Explosive Arrow  - Heroic -> Rare     Marshlight Lantern  - Buffed -> Exposed: Lose 5 health and gain 15 armor     Purelake Armor  - Buffed -> Exposed: Remove 1 purity to gain 8 armor     Forge Gauntlet  - Buffed - > 2 base attack     Forge Gauntlet  - Nerfed -> Battle Start: Give the enemy 6 armor     Arcane Shield  - Nerfed -> Whenever a countdown effect triggers, gain 2 armor     Purelake Tome  - Buffed -> Countdown 2: If you have purity, remove 1 purity. Otherwise, gain 1 purity. Reset countdown     Silverscale Greaves  - Buffed -> Battle Start: If you have more speed than the enemy, give them 3 riptide     Silverscale Greaves  - Nerfed -> Removed 1 base speed     Friendship Bracelet  - Buffed -> Battle Start: The enemy loses 2 attack     Friendship Bracelet  - Nerfed -> -2 base attack     Featherweight Armor  - Changed effect -> Turn Start: If you have more speed than the enemy, spend 1 speed to temporarily gain 3 attack until the end of the turn     Acid Mutation  - Nerfed -> While you have acid, temporarily gain attack equal to acid       Echo Rune  - Rewording: Wounded: Trigger a random battle start item     Blacksmith Bond  - Rewording: You can activate Exposed 1 additional time per battle     Kindling Bomb  - Rewording: Battle Start: Deal 1 damage to the enemy and increase the damage of your next bomb that triggers by 3     Twinfuse Knot  - Rewording: Your bomb items trigger 1 additional time     Chainlink Medallion  - Rewording: Your On Hit effects trigger 1 additional time     Hero's Crossguard  - Rewording: First Turn: Your On Hit effects trigger 1 additional time     Stillwater Pearl  - Rewording: Riptide can activate 1 additional time per turn     Iron Rune  - Rewording: If you have exactly 1 item with exposed, it triggers 1 additional time     Arcane Lens  - Rewording: If you have exactly 1 tome equipped, it triggers 1 additional time     Powder Keg  - Rewording: If you have exactly 1 bomb item, it triggers 1 additional time     Grand Tome  - Rewording: Countdown 10: Trigger all your other tomes     Highborn  - Rewording: Your Ring items trigger 1 additional time     Twin Blade  - Rewording: Turn Start: Gain 1 additional strike     Citrine Ring  - Rewording: Battle Start: Spend 5 speed to gain 1 additional strike at turn start for the rest of the battle     Swiftstrike Stag  - Rewording: Turn Start: Swiftstrike Stag gains 2 additional strikes     Bloodlord's Axe  - Rewording: Battle Start: Steal 5 health from the enemy     Lightspeed Potion  - Rewording: Battle Start: Restore 1 health for each speed you have     Lightspeed Potion  - Removed unique     Lightspeed Elixir  - Rewording: Battle Start: Gain 1 max health for each speed that you have then restore that much health     Lightspeed Elixir  - Removed unique     Lifeblood Helmet  - Rewording: First Turn: Restore 1 health for each damage dealt by your strikes     Lifeblood Helmet  - Removed unique     Silver Anchor  - Name change: Silverscale Anchor     Frostbite Claw  - Name change -> Frostbite Shard     Lifeblood Burst  - Name change - > Lifeblood Bomb       Hydra's Eyeball  - New item     Leshen's Shovel  - New item     Bomb Bag  - Removed item     Ironstone Bracelet  - Removed item     Plated Greaves  - Removed item     Druids Cloak  - Removed item     Flameburst tome  - Added bomb tag
+   
+
+##### 2025-10-30 Bugfix - Items, champion challenge
+ Bugfix for arcane bell, brittlebark blessing, featherweight armor, prickly pumpkin, blackbriar gauntlet, citrine ring  Changed 0 / 1 crown for accepting / declining champion challenge to 1 / 2 crowns. 
+
+##### 2025-11-12 Patch #10 - End of Halloween event
+ Hello!  This patch means the end of the halloween event (bye bye Explosive Pumpkin), thank you to everyone who participated!  Not many other changes this time around. We're working on a big patch that will also be out this  November  that adds a new  gamemode  among other things, look out for it!     Changes:     Halloween event removed    Bugfix player getting stuck in graveyard    Bugfix chosing end run -> new run after a kingmaker run not working properly     
+
+##### 2025-11-25 Major Update: Play He is Coming With a Friend!
+ This update brings a different kind of confrontation to Kingmaker, the sort you can’t prepare for by theory alone.   Until now, every fight lived in its own little bottle: builds saved, uploaded, preserved, and faced long after the person behind them had stepped away from the screen. It worked, in the way museum pieces work, but it also left a quiet gap. You never felt the pressure of someone making decisions at the same time you were making yours.  Real-time 1v1 battles step into that gap. Two players, one seed, and a set of choices that begin together but drift apart as soon as the run starts to breathe. You move through five stages, each one its own small test, until one of you reaches three wins.   What you get is simple: Just the steady back-and-forth of two people trying to outthink each other with whatever their run happens to give them.  Now let's get into the details. 
+
+ New Feature: Real-Time 1v1 Battles   This update introduces a major new way to play: real-time 1v1 battles.  Until now, all encounters in the PvP mode, Kingmaker, have been asynchronous, where players faced uploaded builds rather than each other directly.   With this update, you can now challenge a friend and try to outsmart each other in real-time.  Challenge your friend to a friendly or unfriendly duel to see who comes out on top.   Both players start from the same seed, but the path you take and the choices you make will decide the outcome. Battle your friends in 5 stages, where the first player to win 3 battles takes home the victory.        If you have any feedback on the mode or features you'd like to see added to it, please let us know!     Patch #11 Changelog:     Added Friend Battle gamemode    Re-added eggs to Kingmaker    Leshen & Abominations have items on very hard difficulty    Fixed MasterChef steam achievement not triggering    Horses now trigger waypoints    Junksmith no longer allows duplicate of the same edge    Campfires in fog of war now light up in a smaller radius around tiles explored by the player rather than lighting up all over the whole map     Item changes:     Added item - Hard-boiled egg       Serpent Dagger:  New effect -> On hit: Give the enemy 2 poison     Melon Wine:  New effect -> Battle Start: Decrease a random status effect by 1. Whenever a status effect is decreased, restore 1 health     Purelake Armor:    Exposed: Remove 1 purity to gain 8 armor   -> Exposed: Remove 1 purity to gain 5 armor and 2 purity     Melonvine Whip:    On Hit: Decrease 1 random status effect   -> Battle Start: Gain 1 additional strike. On Hit: Decrease 1 random status effect     Frostbite Greaves:    Battle Start: Give the enemy freeze equal to your speed   -> Battle Start: Give the enemy freeze equal to half your speed     Frostbite Greaves:  1 base speed -> 2 base armor     Acidic Witherleaf:  Battle Start:   Give the enemy acid equal to your speed   -> Battle Start: Give the enemy acid equal to half your speed     Acidic Witherleaf:  0 base speed -> 2 base armor     Horned Melon: 	  Battle Start, Exposed & Wounded: Decrease 2 random status effects by 1 and gain that much thorns   -> Battle Start, Exposed & Wounded: Decrease a random status effect by 1 and gain 2 thorns     Marble Mushroom:    Battle start: Gain 3 poison   -> Battle start: Gain 6 armor and 3 poison     Marble Mushroom:  6 base armor -> 0 base armor     Rocksalt Sword:    Turn Start: If your health is full, gain 1 additional strike   -> Turn Start: If your health is full, gain 1 additional strike and 2 armor     Rocksalt Sword:  2 base armor -> 0 base armor     Rock Roast:  New effect -> Battle Start: If your health is full, gain 5 armor and 5 max health     Rock Roast:    6 max health 6 base armor   -> 6 max health 0 base armor     Horned Melon:  Name change -> Melon Seeds     Melon Wine:  Name change -> Melon Sangria     Mushroom soup:  Added sanguine tag     Blood rune : Fixed a bug where it would not trigger for champions       Steam Reviews: We'd Love To Know What You Think    If you give this patch a try, we’d really appreciate a Steam review. Reviews do a lot: they help other players understand how the game feels right now, they influence how visible the game is on Steam, and they guide us on where to focus next. A short, honest review after playing goes a long way, and we make sure to read them all. 
+
+##### 2025-11-25 Nominate He Is Coming for the Steam Awards!
+ Greetings! 
+
+The 2025 Steam Awards have begun! Nominations are open, and we’re hoping you’ll consider nominating He Is Coming in the  Best Game on Steam Deck  category. The competition this year is incredible, and there are so many great games that deserve recognition in this category. But your nomination can help spread the word about He Is Coming and introduce new players to everything it has to offer. 
+
+Here’s a closer look at why we believe He Is Coming is a strong contender for the Best Game on Steam Deck award.
+
+ Why Steam Deck?   He Is Coming was designed around short, meaningful decisions and fast-paced buildcrafting, which naturally lends itself to the Steam Deck’s pick-up-and-play style. Runs are quick, focused, and easy to return to, whether you’re exploring the Woodlands or facing off against undefeated champions in Kingmaker.
+ 
+   Verified for Steam Deck:  All controls, UI elements, and gameplay systems work seamlessly on the Deck without any special setup.
+   Clear and readable:  Item text, menus, and status effects are fully legible on handheld, making it easy to experiment with synergies on the go.
+   Smooth performance:  The game runs well on default settings, keeping encounters fast and responsive without draining the battery.
+   Ideal for flexible play sessions:  Whether you have five minutes or an hour, He Is Coming’s structure makes it easy to jump in, make progress, and step away at any time.
+ These qualities make the Steam Deck a natural home for the game, and many players have told us it has become their preferred way to play.
+
+ What’s New and Coming   Over the course of this year, since our release into Early Access, we’ve delivered multiple updates refining not just the balance and performance, but also adding a bunch of new features as well. Here are a quick overview of some of the things that have been added:
+ 
+  Localization to 16 different languages
+   Item Banishes  in PvE modes
+  The highly requested  mid-run saving 
+   3 difficulty tiers  for each area
+  And most recently, the  Champion Hall of Fame 
+ If you  check out our roadmap , you’ll also see that the latest update comes with a new Friend Battle mode, where you can challenge and battle your friends in real time. And as always, we’re continuing steady development on the upcoming Darklands area of the game.
+
+  
+ Closing Words   We’re incredibly grateful for the support from our community so far and from the feedback in our Discord and Steam forums to sharing your favorite builds and strategies. Your input is helping shape He Is Coming into the best version of itself, and we believe this game really shines on the Steam Deck.
+
+If you'd like to support the game during the Steam Awards, you can nominate He Is Coming by clicking the “Nominate” button that’s part of this post. Nominations help the game gain visibility during the busy holiday season, and they often encourage players to leave thoughtful reviews that play a huge role for small teams like ours. No matter the result, we are grateful for every single vote and for the ongoing support you’ve shown for our team as we continue working on He Is Coming.
+
+Thank you!
+– Simon & Niklas
+
+
+##### 2025-11-26 Bugfix - Friend battle, eggs, achievement
+ Bugfix for more than 2 people joining the same lobby, friend battle freezing on battle screen, eggs showing up as empty in swampland, Masterchef achievements still not triggering, typing game name on steam deck, old items showing up in friend battle bundle screen 
+
+##### 2026-01-13 Bugfix - 0.8.59
+ Some bugfixes while the next patch is being worked on:    Fixed Marble mushroom having the wrong effect    Egg-based cauldron items no longer rolls into honey items with fairy    Echo rune no longer triggers edge instead of items    Fixed merchant items not being available upon save reload    Fixed stun not decreasing for can't strike weapons    Fixed wings not being awarded for HoF entry   
+
+##### 2026-01-17 He Is Coming News Roundup at the Hooded Horse January Publisher Sale
+Spooky season might be long gone, but we've still gotten some scary good updates for He Is Coming. Here's a roundup of all the recent development news that you might have missed. 
+
+He Is Coming is also part of the  Hooded Horse January Publisher Sale  at 50% off. 
+
+ Hooded Horse January Publisher Sale 
+
+  
+ He Is Coming News Recap   While He Is Coming is unique in many respects, the Kingmaker PvP mode is a fan favorite feature that's gotten some serious love in recent updates. In  Patch #11 , the Chronocle Games team introduced a new kind of confrontation for Kingmaker mode: real-time 1v1 battles with friends. 
+
+Prior to this update, all encounters in Kingmaker mode were asynchronous, with players facing uploaded builds rather than battling each other directly. This patch changed all that. Now, you're able to challenge your friend(s) and try to outsmart each other in real time. In 1v1 mode, both players begin their journey from the same seed, but can take different paths and make different choices to influence the outcome. Battles occur in 5 stages, and the first player to take 3 wins is crowned the victor. 
+
+https://steamcommunity.com/games/2824490/announcements/detail/541119816328544290
+The game has also gotten some new content and significant quality-of-life changes in the last few months.  Patch #9  added the Hall of Fame, a unique feature that celebrates winning PvP champions and retires them after reaching 10 victories. This change encouraged players to continue experimenting with new builds in their Kingmaker runs, and revamped the way players approach PvP battles. 
+
+Patch #9 also set all rare & heroic items to be unique by default, and introduced a number of item-related balance changes. These changes helped improved build diversity and encouraged players to try out new items and discover new synergies in their builds. 
+
+https://steamcommunity.com/games/2824490/announcements/detail/541119816328546012
+ More Is Coming    2026 should be a very exciting time for fans of He Is Coming. The Chronocle Games team plans to release the game into 1.0 sometime later this year. They're also working on adding: 
+ 
+  A new PvE area (Darkland)
+  New Kingmaker bundles
+  New Kingmaker skins
+ You can check out the full Early Access development roadmap blog for more details on what's still in store for the game: 
+
+https://store.steampowered.com/news/app/2824490/view/563634739104186372?l=english
+Thanks for reading and happy gaming! 
+- The Hooded Horse Team
+
+##### 2026-03-05 Patch #12 - Woodland update, backpack, weapon modifications
+ Hello everyone!    This patch has been a long time coming, we just could not stop adding stuff to it. The wait until the next patch, which will focus on adding mouse only & keyboard only controls, will not be as long.   
+Woodland update   We've given woodland a visual update, making all biomes more distinguishable as well as assigning a featured event to the 3 regular biomes where Merchants only spawn in the Rocky Plains, golems only spawn in Flower Fields and cauldrons only spawn in Pine Barrens. All rare events also got their own biomes making them stand out more.     Backpack   Players have been asking for a backpack since forever but we've been hesitant, making tough decisions with your limited inventory space is a core mechanic of the game which we like. We don't want players hoarding every item but we also understand it can feel bad to constantly throw away items.  This patch adds 1 non-combat backpack slot (2 if you upgrade it with the Shepherd event!). This still keeps most of the hard prioritization intact while adding an avenue for future planning. The slot can be used to store a rare item from a merchant you intend to use later, temporarily swap out an item countered by the next boss or simply store components for golem or cauldron.     Weapon Modifications   A new weapon type that is acquired like an itemset. Each modification has two different weapons as their components and are unlocked by equipping the weapons one after the other, in any order. So to get Weapon Mod C you could equip:  Weapon A -> Weapon B = Weapon Mod C  Weapon B -> Weapon A = Weapon Mod C     Patch #12 Changelog     3 new weapons - Iron Flail, Conductor's Baton, Golem Scepter    2 new items - Oakheart Shield, Caustic Rose    1 new itemset - Agaric Armor    Added 8 weapon modifications (Boom Spear, Brittlebark Blade, Perfect Iceblade, Spear of the hero, Pacifist Trident, Liferoot Dagger, Stonesnake Sword, Bloodlord's Whip, Galestrike Rapier)    4 removed items - Clearspring rose, Blackbriar armor, Featherweight greaves, Granite crown        Events:      New woodland event: Lost Child - Help her to get a mythic item    New swampland event: Golden Pig - Catch him to get a gold boon    New woodland & swampland event: Beekeeper - Sells honey items    New woodland & swampland event: Hammer Smith - Sells more banishes    Reworked woodland & swampland event: Wishing well - Now it grants upgrades to other events for the rest of the run    New event for all areas: Shepherd - Upgrades your backpack    New kingmaker event: Doomsayer - Lets you reroll a non-champion opponent        Misc:      Increased the odds of finding rare events in the crystal ball    Previously 1 woodland miniboss was present during each run, now all 3 are spawned in    Items can be freely moved to any itemslot (including empty ones)    Removed broken bridges    Muscle potion moved to Swampland Red kingmaker bundle    Sangune morphosis + Vampires tooth triggers correctly    Clearspring spirit very hard item changed from sinful mirror to clearspring opal    Woodland Abomination 0 base attack -> 2 base attack    Changed Blackrock Battlefields target event from Weapon Pile to Forge in Kingmaker    Scrying pools gives 2 options instead of 1    Cursor snaps to events in map mode    Map mode control is a toggle instead of hold    Waypoint display biome names    Weapon piles now only gives rare or heroic weapons    Potions and their elixir upgrades are considered the same item. Meaning duplicates of non-common versions cannot drop and both versions works for fullfilling set bonuses    Stuns gotten in between strikes now apply directly instead of buffering until next turn    Added anvils & racoons to junksmith biome in kingmaker    Using an anvil after adding a second edge with junksmith only replaces the previous anvil edge, the junksmith edge stays intact    Swapped the rewards in the bosslist for beating a boss on hard & very hard. Hard now gives the lore and very hard gives amount of wins. Both now require 1 victory against that boss on that difficulty to unlock    Removed brittlebark bow from brittle bark blessing set        Items changes:       Blackbriar Blade  -  Base attack 2  -> Base attack 1     Lemontree Branch  -  Base speed 4  -> Base speed 3     Blackbriar Bow  -  Base attack 4  -> Base attack 3     Swiftstrike Cloak  -  Base speed 0  -> Base speed 2     Boom Stick  -  Base attack 2  -> Base attack 1     Boom Stick  -  On Hit: Deal 1 damage  -> On Hit: Deal 2 damage     Broken Winebottle  -  Wounded: On your next turn, keep striking the enemy until they're wounded  -> Wounded: Restore 4 health and gain 4 additional strikes     Leather Waterskin  -  Exposed: Gain 2 purity for each equipped water item  -> Exposed: Gain 1 purity for each equipped water item     Frying Pan  -  Exposed: Gain 2 additional strikes  -> Exposed: Gain 3 additional strikes     Featherweight Helmet  -  0 base speed 0 base attack  -> 3 base speed 1 base attack     Featherweight Helmet  -  Battle start: Spend 2 armor to gain 3 speed and 1 attack  -> Battle start: Lose 3 armor     Featherweight Helmet  -  Featherweight Helmet  -> Featherweight Greaves     Featherweight Armor  -  Turn Start: If you have more speed than the enemy, spend 1 speed to temporarily gain 3 attack until the end of the turn  -> Battle Start & Exposed & Wounded: Spend 1 speed to gain 5 armor     Blood rune  - Added sanguine tag     Sinful mirror  - Added water tag      Steam Reviews: We'd Love To Know What You Think    If you’ve been enjoying the game, one of the most impactful ways to support it is by leaving a Steam review. It helps more players discover the game and gives us valuable feedback on what’s working and what could be improved. 
+
+##### 2026-03-07 Bugfix - 0.8.72 - Weapon mods, hidden dagger, and more bug fixes
+ Bugfixes for the following things:    Rerolling weapons with fairy did not offer weapon mod    Bloodmoon strike set did not trigger with Liferoot dagger    Ferryman did not excludes rare islands after you visited them    Well well well challenge now trigger by just visiting the Wishing Well    Mythic items from Lost Child did not display their descriptions    Hidden dagger not working correctly    Changing edge with the Double up boon did not work    Using the cauldron with a weapon mod equipped did not work     
+
+##### 2026-03-13 Bugfix - 0.8.73 - Item, Challenge, and Equipment Fixes
+ More bugfixes from the latest patch, thanks for reporting.    Galestrike rapier lost 3 speed instead of 1    Ironstone bow set attack to 0    Missing sound effect picking up items into backpack    Kingmaker replay could differ    Equipping a weapon mod could re-equip the wrong edge    Broken winebottle did not trigger    Prompt to equip Liferoot staff did not show up    Wishing well boon "Double up" did not work    Challenge "Big spender" did not count money spent on re-rolls    Gold/Diamond items in backpack was downgraded upon save reload    Liferoot dagger gave 2 atk instead of 5   
+
+##### 2026-03-31 Patch #13 Mouse/Keyboard only controls, tome rework
+ Hello everyone!     Controls options   It is now possible to play He is Coming with new controls, "Mouse only", "Keyboard only" as well as "Mouse + Keyboard" which has been the default and only option until now. Feedback on these controls is greatly appreciated, let us know what you like and dislike about it and we'll adjust it to be more intuitive if needed.     Tome rework   We've seen feedback that tomes feels weak and bad to use. Our vision for them was to be an effect that triggers later in the game but has potential to swing the match, not an ongoing value engine like the plethora of "Turn Start" items already in the game. So we've increased the countdowns and made the effects more powerful. With this change we also shifted all tomes to rare rarity and made a new rare event where you can choose 1 of the 3 arcane items to enhance your tomes.    Not many balance changes apart from the tomes this time around, for next time we'll take a look at underperforming items and see which ones need a little boost.     Patch #13 Changelog     Tomes reworked    Cookbook removed    Tome of the Hero removed    Arcane shield removed    Glasses of the hero removed    Arcanomancer event added      New item - Serpent Tome    New item - Death tome    Arcane bell - Common -> Rare    Arcane bell - Decrease countdown by 1 -> 2    Serpent Lyre - Common -> Rare    Serpent Lyre - 2 poison -> 4 poison    Arcane Cloak - Mythic -> Heroic    Cactus cap - Heroic -> Rare    Citrine Gemstone - 0 base speed -> -5 base speed    Perfect iceblade - No ability -> You cannot gain freeze    Arcane Wand - Deal 2 + 1 per tome -> Deal 1 + 2 per tome    Vampiric Stasis fixed to work with multiple stun    Lightning rod fixed to work with multiple stun    Fixed duplicate sets from item swapping    Fixed duplicate ring effects from golem scepter    Turtle not immediately losing his armor    Melon sangria not triggering for some statuses    Blood Rune, Echo Rune, Iron Rune now only trigger inventory items, not sets    Weapon modifications can no longer be rerolled with the fairy    Missing rare events added to scrying pool    Fixed Banished weapons appearing again    Fixed double ui when pressing escape on an event      Steam Reviews: We'd Love To Know What You Think    If you’ve been enjoying the game, one of the most impactful ways to support it is by leaving a Steam review. It helps more players discover the game and gives us valuable feedback on what’s working and what could be improved.     That's all for today, thanks for playing!   / Simon & Niklas 
+
+##### 2026-04-21 He Is Coming News Roundup at the Hooded Horse April Sale
+Since the last roundup, He Is Coming has continued its spooky good development, adding the Woodland Update, reworked tomes, and new control scheme options! Here's a roundup of all the recent development news that you might have missed. 
+
+He Is Coming is also part of the  Hooded Horse April Sale  at 50% off. 
+
+ Hooded Horse April Sale 
+  
+ He Is Coming News Recap    Patch #12 -- The Woodland Patch  gave the woodland a complete visual update, making all biomes more distinguishable. The three regular biomes also now have a featured event, and all rare events have been assigned to a biome, making biomes overall more unique. 
+
+This patch also added a long-requested feature, backpacks. Players now have 1 non-combat backpack slot, which can be upgraded to 2 to allow for future planning while keeping the hard prioritization intact. Weapon Modifications, a new weapon type, was also added; it works like an item set, and each modification is unlocked by equipping weapons one after another in any order. 
+https://steamcommunity.com/games/2824490/announcements/detail/541131149009750048
+ Patch #13  made two changes to He Is Coming. It introduced new control scheme options, allowing players to choose between keyboard-only, mouse-only, or mouse-and-keyboard. The second change is a rework of tomes due to player feedback; overall, these have been buffed. 
+
+https://steamcommunity.com/games/2824490/announcements/detail/499475385191237087
+Thanks for reading and happy gaming! 
+- The Hooded Horse Team
+
+##### 2026-04-21 Bugfix - 0.8.79 - Mouse only controls
+ Bugfixes from the controls update patch:    Mouse only mode sometimes opening duplicate event windows    Frostbite dagger not triggering    Heart-shaped potion triggering incorrectly    Silverscale tome triggering too early    Enemy standing on waypoint blocking travel in mouse only    Both players having blood chain triggering incorrectly    Salesman not saving items on sale between sessions   
+
+##### 2026-05-01 Bugfix - 0.8.80
+ Fixed a bug with duplicate diamond items 
+
+##### 2026-05-22 Bugfix - 0.8.81
+ Fixed a bug where Traditional Chinese was not selectable 
+
+##### 2026-06-11 Patch #14 Cauldron item updates, balance changes
+ Hello everyone!    This patch introduces some new items and reworks many cauldron items that we thought were lackluster. In doing this we've removed the hardboiled egg and it's combinations, we thought it was a bit convoluted to get and the combinations except for Crème Brûlée were not that good or interesting. We still have some room left in the compendium to add a few items per bundle, if you have some interesting ideas for an item you'd like to see, let us know!    We're still working towards the Darkland beta but we're are not there just yet.     There will be a new PvE mode coming in July, look out for it :)     Patch #14 Changelog     7 new items, 2 new weapons, 1 new itemset    Added map zoom to all control schemes    Hardboiled egg removed    Renamed Icicle Spear to Frostbite Dagger and removed the original Frostbite Dagger    Removed Slime Heart    Fixed Golem Scepter upgrading the wrong item    Fixed Scrying pool out of options    Grindstone Club boon now stays on cauldron weapons and weapon modifications    Reworked challenge "Don't judge a book by its rarity"    Fixed some issues with event hover in mouse only mode    Fixed an issue in kingmaker where the pool of champions would be empty and display "No Internet"        Items changes:       Deepsea Wine:  Give 1 riptide -> 2 riptide     Petrified Chestnut:  Gain 6 thorns and 6 armor -> 10 thorns and 10 armor     Roasted Chestnut:  Gain 4 thorns -> 5 thorns     Rock Candy:  Gain 15 armor, 30 if full health -> 20 armor, 50 if full health     Lightning Whip:  Gain 1 additional strike -> 2 additional strikes     Bloody Steak:  Restore 10 health and gain 5 armor -> 10 health and 10 armor     Explosive Arrow:  Deal 2 damage -> 3 damage     Brittlebark Buckler:  12 base armor -> 15 base armor     Soap Stone:  Spend 2 speed -> 1 speed     Mushroom Soup:  Gain 1 poison and restore 2 health -> 2 poison and 5 health     Fortified Gauntlet:  Gain 1 armor -> 2 armor     Mineral Water:  Gain 3 armor for each effect -> 5 armor     Trail Mix:  Same effect, reworded to - Battle Start: Deal 1 damage 3 times and gain 1 thorn 3 times     Silverscale Melon:  Now only gives riptide if effect is cleared - Battle Start, Exposed & Wounded: Decrease 1 random status effect, if you do, give the enemy 2 riptide     Poisonous Durian:  New effect - Battle Start: Gain 2 poison. Whenever you take damage from poison, gain 3 thorns     Blood Orange:  New effect - Battle start: Gain 1 acid. Wounded: Restore 4 health for each acid you have     Honey Mead:  New secondary effect  -  Wounded: Restore health to full and restore 1 health at turn start for the rest of battle     Marble Mushroom:  New effect  -  Turn Start: Gain 1 poison and 3 armor     Rock Roast:  Removed effect - 5 health 5 base armor instead     Combustible Lemon:  New effect  -  Battle start: Gain 1 acid. Deal damage equal to your acid 2 times     Limestone Fruit:  New effect  -  Battle start: Gain 1 acid and 8 armor. If your health is full, gain 2 acid and 16 armor instead     Cherrytree Branch:  New effect  -  Can't strike. Turn Start: Deal 1 damage 1 time. Increase the number of times this triggers by 1 each turn     Granite Cherry:  New effect  -  Battle Start: Deal 1 damage 2 times. Whenever a bomb deals non-weapon damage, gain 1 armor     Toxic Cherry:  New effect  -  Battle Start: Deal 1 damage 2 times. Whenever a bomb deals non-weapon damage, give the enemy 1 poison     Rocksalt Sword:  New effect  -  On Hit: If your health is full, gain 3 armor     Renamed Granite Cherry -> Cherry Steak      Renamed Deepsea Wine -> Crimson Fish      Renamed Spiny Snapper -> Spiny Fish      Renamed Cherry Blade -> Cherrytree Branch      Renamed Toxic Cherry -> Twin Mushroom        Steam Reviews: We'd Love To Know What You Think    If you’ve been enjoying the game, one of the most impactful ways to support it is by leaving a Steam review. It helps more players discover the game and gives us valuable feedback on what’s working and what could be improved.     As always, thanks for playing!   / Simon & Niklas 
+
+##### 2026-06-12 Bugfix - 0.8.84
+ Combustible Lemon was stronger that we anticipated, it has been nerfed :) 
+
+##### 2026-06-18 Bugfix - 0.8.85
+ Cherry steak vs Cherry steak created matches that lasted forever so we've reworked it's ability 
+
+##### 2026-07-11 Patch #15 Gauntlet gamemode
+ Hello everyone!     Gauntlet   The Gauntlet is a fast-paced game mode designed to test your adaptability. You'll choose between a handful of predetermined paths, forcing you to make the most of limited options.  Battle your way through 6 new bosses, each with several possible item loadouts that change from run to run. Every item you've unlocked from previous areas is available from the start, you'll also encounter brand-new events that are exclusive to the Gauntlet.  The Gauntlet is now available as a standalone experience after defeating the Swampland Hydra. It will be fully integrated into the main story with the 1.0 release, currently planned for later this year.         Weapon Mastery   With weapon mastery you can track your progress with different weapons. The three masteries on display are awarded for completing Very Hard difficulty, becoming a champion in Kingmaker and completing the Gauntlet with the weapon.           Patch #15 Changelog     5 new items (Light-weight Tunic, Tiny Mushroom, Swiftstrike Bolas, Beetle Mask, Spiked Earring)    5 new weapons (Purelake Axe, Dry Blade, Soaked Blade, Unnamed Sword, Starcry Sword)    Doomsayer event can now reroll champions as well    Mapmode can be opened from within chests        Items changes:       Vampire Crest : Woodland Yellow -> Swampland Blue     Spore Greatsword : Swampland Yellow -> Swampland Blue     Stormcloud spear : Swampland Blue -> Swampland Yellow     Mist Armor:  Heroic -> Rare     Pinecone Breastplate:    Battle Start: If your health is full, gain 1 thorn at Turn Start for the rest of battle   -> Battle Start: If your health is full, gain 1 thorn whenever the enemy strikes you the rest of battle      Steam Reviews: We'd Love To Know What You Think    If you've been having fun with the game, leaving a review on Steam is one of the best ways you can support us. It helps more people discover the game and lets us know what players enjoy most, as well as where we can continue to improve.     See you next time!   / Simon & Niklas 
+
+##### 2026-07-14 Bugfix - 0.9.22
+ Fixed Hero items did not display their description, golden chest banishes, purelake axe missing water tag 
+
+##### 2026-08-05 Bugfix - 0.9.24
+ This is a bugfix mainly to address an issue with the Doomsayer event in Kingmaker that has caused the Champion pool to become very big and matches for live champions to come very slowly. I added some other minor fixes as well.      Doomsayer rolls into a new live champion instead of a generated one      Close inventory and mapmode with "B" on controls    Visual bug when using the golem before Ironstone Jailer    Starcry blade & Soaked blade keeps their oils & edges after upgrade    Arcane Quill nerfed -> 1 additional strike per trigger    Soaked Blade nerfed -> 1 base attack    Instant Friend not upgrading eggs in inventory    Completing a weapon mastery shows with a gold border (in the compendium only for now)    Secret items are shown in the compendium "Event" filter after they've been obtained once (starting from this patch)    Changed some boss loadouts in the gauntlet to make them more even power level      EDIT: Updating from 0.9.23 -> 0.9.24. Fixed a problem with honey items.    Steam Reviews: We'd Love To Know What You Think    If you've been having fun with the game, leaving a review on Steam is one of the best ways you can support us. It helps more people discover the game and lets us know what players enjoy most, as well as where we can continue to improve.     See you next time!   / Simon & Niklas 
+
+##### 2026-08-29 He Is Coming News Roundup at the Hooded Horse August Publisher Sale
+He is Coming has been continuing its development over the Summer with two new patches since the last roundup. Between the two patches, there have been new items added, a large rework on cauldron items, and a whole new game mode. Let's get into it in the roundup below. 
+
+He is Coming is also part of the   Hooded Horse August Publisher Sale  at 50% off. Check it out, and check out the other games on sale during the Hooded Horse August Publisher Sale.
+
+ Hooded Horse August Publisher Sale 
+  
+
+ He Is Coming News Recap    Patch #14  added some new items and reworked a lot of cauldron items the team felt were lackluster. The hardboiled egg and its combinations have been removed as part of these changes, but seven new items, two new weapons, and one new weapon set were added. There were also many item changes included in this patch, such as Deepsea Wine now giving two riptides or the Petrified Chestnut giving ten thorns and armor instead of six. 
+
+  
+ Patch #15  added an entirely new game mode to He is Coming the Gauntlet. This new mode is currently unlocked by defeating the Swampland Hydra but in the future will be fully integreated into the main story. This new mode introduces six new bosses, each with several possible item loadouots that change run to run. In the Gauntlet, you will also encounter new events that are exclusive to the mode. 
+
+  
+
+Patch #15 also added the Weapon Mastery system. Now you can track your progress with different weapons. The three masteries on display are awarded for completing very hard difficulty, becoming a champion in Kingmaker, and completing the Gauntlet with the weapon. 
+
+Thanks for reading and happy gaming! 
+- The Hooded Horse Team

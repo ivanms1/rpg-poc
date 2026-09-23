@@ -1,0 +1,30 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+ | 
+ | 
+ | 
+ | 
+ | Coven Plaguemother
+ | 
+ | 
+ | 
+ | 
+ | 
+ | Matriarch of the Black Cauldron Crones. A powerful sorceress who can grant your deepest desire. But once marked by her curse, your days are numbered.
+ | Base Stats
+ | 30
+ | 3
+ | 10
+ | 2
+ | Trait
+ | On Hit: Give the player 2 stacks of a random status effect that they don't already have
+ | Island
+ | Coven Lair

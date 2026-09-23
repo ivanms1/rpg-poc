@@ -1,0 +1,63 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+The Crone is a rare encounter that allows the player to choose between two cursed items. 
+Items offered are themed after the seven deadly sins, granting the user a very strong effect and/or stats in exchange for a curse that will remain for as long as the item is equipped.
+Crone is part of the Item tags.
+Items
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Cleaver of Wrath
+ | Cursed 
+ | 10
+ | Your max health is always 1
+ | Swampland
+ | Scepter of Greed
+ | Cursed 
+ | 6
+ | You cannot gain gold
+ | Swampland
+ | Sword of Pride
+ | Cursed 
+ |  3
+ 3
+ 3
+ | Battle Start: If the enemy has more attack, armor or speed than you, take 3 damage
+ | Swampland
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Regions
+ | Belt of Gluttony
+ | Cursed 
+ | 15
+ | Your health is hidden
+ | Swampland
+ | Boots of Sloth
+ | Cursed 
+ | 10
+ | You lose more time per step
+ | Swampland
+ | Chest of Lust
+ | Cursed 
+ | 8
+ | Monsters always hunt you
+ | Swampland
+ | Helmet of Envy
+ | Cursed 
+ | 3
+ | Battle Start: Double the enemy's attack
+ | Swampland

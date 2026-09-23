@@ -1,0 +1,56 @@
+
+Items that have a similar name will provide a set bonus if the player has at least one of each item from a set. The following itemsets require items that can only be found in Woodland or Kingmaker runs that use Woodland bundles.
+ | Itemset
+ | Items
+ | Effect
+ | [Highborn.png] Highborn
+ | Any 3 rings
+ | Ring items trigger twice
+ | [Bloodmoon Strike.png] Bloodmoon Strike
+ | [Bloodmoon Dagger.png] Bloodmoon Dagger
+[Swiftstrike Gauntlet.png] Swiftstrike Gauntlet
+ | Wounded: Restore health equal to damage dealt by strikes on your next turn
+ | [Briar Greaves.png] Briar Greaves
+ | [Assault Greaves.png] Assault Greaves
+[Jagged Edge.png] Jagged Edge
+ | Whenever you take damage, gain 1 thorn
+ | [Brittlebark Blessing.png] Brittlebark Blessing
+ | [Brittlebark Bow.png] Brittlebark Bow
+[Brittlebark Armor.png] Brittlebark Armor
+[Brittlebark Buckler.png] Brittlebark Buckler
+ | Brittlebark items have no effect
+ | [Elderwood Mask.png] Elderwood Mask
+ | [Elderwood Staff.png] Elderwood Staff
+[Elderwood Necklace.png] Elderwood Necklace
+ | Battle Start: Double your base attack, armor and speed
+ | [Hero's Return.png] Hero's Return
+ | [Sword of the Hero.png] Sword of the Hero
+[Boots of the Hero.png] Boots of the Hero
+[Shield of the Hero.png] Shield of the Hero
+ | Gain 2 attack, armor and speed
+ | [Ironbark Shield.png] Ironbark Shield
+ | [Pinecone Breastplate.png] Pinecone Breastplate
+[Stone Steak.png] Stone Steak
+ | Battle start: If your health is full, gain 1 armor each turn
+ | [Lifeblood Transfusion.png] Lifeblood Transfusion
+ | [Iron Transfusion.png] Iron Transfusion
+[Lifeblood Armor.png] Lifeblood Armor
+ | Restore 10 health after every battle
+ | [Raw Hide.png] Raw Hide
+ | [Leather Boots.png] Leather Boots
+[Leather Glove.png] Leather Glove
+[Leather Vest.png] Leather Vest
+ | Gain 1 attack every other turn
+ | [Redwood Crown.png] Redwood Crown
+ | [Redwood Rod.png] Redwood Rod
+[Redwood Cloak.png] Redwood Cloak
+[Redwood Helmet.png] Redwood Helmet
+ | Wounded: Restore health to full
+ | [Saffron Talon.png] Saffron Talon
+ | [Featherweight Blade.png] Featherweight Blade
+[Saffron Feather.png] Saffron Feather
+ | On Hit: Gain 1 speed
+ | [Steelplated Thorns.png] Steelplated Thorns
+ | [Spearshield Lance.png] Spearshield Lance
+[Bramble Buckler.png] Bramble Buckler
+ | Turn Start: If you have less than 10 thorns, double your thorns

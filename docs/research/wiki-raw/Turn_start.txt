@@ -1,0 +1,217 @@
+From He is Coming Official Wiki
+Namespaces
+Page
+Discussion
+More
+More
+Page actions
+Read
+View source
+History
+Triggers at the beginning of your turn, before strikes and other on-turn effects resolve.
+Turn Start is part of the Trigger tags.
+Contents
+1 Items that trigger Turn Start
+1.1 Weapons
+1.2 Standard items
+1.3 Cauldron items
+Items that trigger Turn Start
+Weapons
+ | Weapon
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Arcane Wand
+ | Rare 
+ | 0
+ | Can't attack. Turn Start: Deal 2 damage. Increase the damage by 1 for each tome equipped
+ | Swampland 
+ | Bubblegloop Staff
+ | Rare 
+ | 0
+ | Can't strike. Turn Start: Spend 1 speed to give the enemy 2 acid and 2 poison
+ | Swampland 
+ | Lightning Rod
+ | Rare 
+ | 2
+ | Turn Start: If you're stunned, gain 3 attack
+ | Swampland 
+ | Lightning Whip
+ | Rare 
+ | 3
+ | Turn Start: If the enemy is stunned, gain 1 additional strike
+ | Swampland 
+Standard items
+ | Item
+ | Rarity
+ | Stats
+ | Effect
+ | Region
+ | Saffron Feather
+ | Common 
+ | 1 / 2 / 4
+ | Turn Start: Convert 1 speed to restore 2 health — at Gold: -2 for 4, at Diamond: -4 for 8
+ | Woodland 
+ | Bramble Buckler
+ | Rare 
+ | 2
+ | Turn Start: Convert 1 armor to 2 thorns
+ | Woodland 
+ | Ice Spikes
+ | Rare 
+ | -
+ | Turn Start: If you have freeze, gain 5 thorns
+ | Woodland 
+ | Ice Tomb
+ | Rare 
+ | -
+ | Turn Start: If you have no armor, gain 3 armor and 1 freeze
+ | Woodland 
+ | Fortified Gauntlet
+ | Rare 
+ | -
+ | Turn Start: If you have armor, gain 1 additional armor
+ | Woodland 
+ | Featherweight Greaves
+ | Rare 
+ | -
+ | Turn Start: If you have 0 speed, gain 1 speed
+ | Woodland 
+ | Moonlight Shield
+ | Heroic 
+ | -
+ | Turn Start: If you're below 50% health, gain 2 armor
+ | Woodland 
+ | Poisonous Mushroom
+ | Rare 
+ | 2
+ | Turn Start: Gain 1 poison
+ | Swampland 
+ | Chainmail Cloak
+ | Rare 
+ | 2
+ | Turn Start: If you have armor, restore 2 health
+ | Swampland 
+ | Clearspring Opal
+ | Rare 
+ | 2
+ | Turn Start: If you have any status effects, spend 1 speed to decrease a random status effect by 1
+ | Swampland 
+ | Moonlight Crest
+ | Rare 
+ | -
+ | Turn Start: If you're below 50% health, gain 1 regeneration
+ | Swampland 
+ | Spiral Shell
+ | Rare 
+ | -
+ | Turn Start: If you're stunned, give the enemy 1 riptide
+ | Swampland 
+ | Explosive Arrow
+ | Heroic 
+ | -
+ | Turn Start: If the enemy doesn't have any armor, deal 3 damage
+ | Swampland 
+ | Clearspring Duck
+ | Heroic 
+ | -
+ | Turn Start: Gain 1 armor and decrease a random status effect by 1
+ | Swampland 
+ | Liferoot Beast
+ | Heroic 
+ | -
+ | Turn Start: If you don't have any regeneration, gain 3 regeneration
+ | Swampland 
+ | Noxious Gas
+ | Heroic 
+ | 6
+ | Turn Start: Both you and the enemy gain 1 poison
+ | Swampland 
+ | Sanguine Imp
+ | Heroic 
+ | -
+ | Turn Start: Deal 1 damage and restore 1 health
+ | Swampland 
+ | Stoneborn Turtle
+ | Heroic 
+ | -
+ | Turn start: Restore 1 health. If your health is full, gain 2 armor instead
+ | Swampland 
+ | Sunlight Crest
+ | Heroic 
+ | -
+ | Turn Start: If you're above 50% health, lose 3 health and gain 1 attack
+ | Swampland 
+ | Iron Transfusion
+ | Heroic 
+ | -
+ | Turn Start: Gain 2 armor and lose 1 health
+ | Woodland 
+ | Royal Shield
+ | Heroic 
+ | -
+ | Turn Start: Convert 1 gold to 3 armor
+ | Woodland 
+ | Time Bomb
+ | Heroic 
+ | -
+ | Exposed: Deal 1 damage. Turn start: This item gains 2 damage
+ | Woodland 
+Cauldron items
+ | Item
+ | Ingredient 1
+ | Ingredient 2
+ | Stats
+ | Effect
+ | Sugar Bomb
+ | Honeycomb
+ | Cherry Bomb
+ | -
+ | Turn Start: Deal 1 damage 3 times
+ | Toxic Cherry
+ | Poisonous Mushroom
+ | Cherry Bomb
+ | 3
+ | Turn Start: Gain 1 poison and deal 1 damage to the enemy
+ | Combustible Lemon
+ | Cherry Bomb
+ | Sour Lemon
+ | 3
+ | Turn Start: Spend 1 speed to deal 2 damage
+ | Bitter Melon
+ | Clearspring Watermelon
+ | Poisonous Mushroom
+ | 3
+ | Turn Start: Convert 1 stack of another status effect to 1 poison
+ | Deathcap Bow
+ | Grilling Skewer
+ | Poisonous Mushroom
+ | 3
+ | Battle Start: Gain 3 poison. Turn Start: If you have poison. Gain 1 additional strike
+ | Blackbriar Bow
+ | Grilling Skewer
+ | Spiny Chestnut
+ | 4
+ | Can't Strike Turn Start: Gain thorns equal to your attack
+ | Rocksalt Sword
+ | Grilling Skewer
+ | Stone Steak
+ |  2
+ 6
+ | Turn Start: If your health is full, gain 1 additional strike
+ | Honey-glazed Shroom
+ | Honeycomb
+ | Poisonous Mushroom
+ | 4
+ | Turn Start: Give the enemy 2 poison
+ | Poisonous Durian
+ | Poisonous Mushroom
+ | Spiny Chestnut
+ | 3
+ | Turn Start: Gain 1 poison and 1 thorns
+ | Mushroom Soup
+ | Poisonous Mushroom
+ | Vampiric Wine
+ | 2
+ | Turn Start: Gain 1 poison and 1 regeneration
