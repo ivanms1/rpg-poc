@@ -17,6 +17,7 @@ export interface BattleView {
   readonly result: BattleResult
   readonly enemyName: string
   readonly enemyText: string
+  readonly enemyId: string
   readonly boss?: boolean
   readonly goldReward: number
   readonly intro?: { readonly title: string; readonly subtitle: string }
@@ -119,6 +120,7 @@ export function CombatView({ battle, onFinish, onCue }: Props) {
     <Fighter
       side={side}
       name={names[side]}
+      spriteId={side === 'enemy' ? battle.enemyId : undefined}
       stats={snapshot[side]}
       popups={popups.filter((p) => p.popup.side === side)}
       action={actionOf(event, side)}

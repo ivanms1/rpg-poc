@@ -56,6 +56,8 @@ export interface BattleInfo {
   readonly result: BattleResult
   readonly enemyName: string
   readonly enemyText: string
+  /** Enemy or boss id, for its art. */
+  readonly enemyId: string
   readonly boss: boolean
   readonly goldReward: number
   readonly source: { readonly kind: 'enemy'; readonly entityId: string } | { readonly kind: 'boss'; readonly bossId: string }

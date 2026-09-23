@@ -1,4 +1,5 @@
 import type { FighterVisible, Side } from '../../core/combat/types'
+import { CREATURE_SPRITES } from '../../render/creatures'
 import { PALETTE } from '../../render/palette'
 import { PixelIcon } from '../PixelIcon'
 import { StatRow } from '../StatPanel'
@@ -25,6 +26,8 @@ export const POPUP_MS = 900
 interface Props {
   readonly side: Side
   readonly name: string
+  /** Enemy or boss id whose art to show (falls back to a monogram). */
+  readonly spriteId?: string
   readonly stats: FighterVisible
   readonly popups: readonly ActivePopup[]
   /** Changes whenever this fighter strikes / gets hit, restarting the CSS animation. */
@@ -34,8 +37,13 @@ interface Props {
   readonly big?: boolean
 }
 
-function Sprite({ side, name, big }: Pick<Props, 'side' | 'name' | 'big'>) {
-  if (side === 'player') return <PixelIcon icon="knight" color="#aab0b8" scale={4} />
+/** Art pixels per bitmap pixel in battle, matching the hero. */
+const SPRITE_SCALE = 4
+
+function Sprite({ side, name, spriteId, big }: Pick<Props, 'side' | 'name' | 'spriteId' | 'big'>) {
+  if (side === 'player') return <PixelIcon icon="knight" color="#aab0b8" scale={SPRITE_SCALE} />
+  const sprite = spriteId ? CREATURE_SPRITES[spriteId] : undefined
+  if (sprite) return <PixelIcon bitmap={sprite.bitmap} color={sprite.color} scale={SPRITE_SCALE} />
   return (
     <span className={`monogram${big ? ' monogram-big' : ''}`} aria-hidden="true">
       {name.charAt(0)}
@@ -43,7 +51,7 @@ function Sprite({ side, name, big }: Pick<Props, 'side' | 'name' | 'big'>) {
   )
 }
 
-export function Fighter({ side, name, stats, popups, actionKey, action, dead, big }: Props) {
+export function Fighter({ side, name, spriteId, stats, popups, actionKey, action, dead, big }: Props) {
   return (
     <div className={`fighter fighter-${side}${dead ? ' is-dead' : ''}`} data-testid={`fighter-${side}`}>
       <div className="fighter-figure">
@@ -66,7 +74,7 @@ export function Fighter({ side, name, stats, popups, actionKey, action, dead, bi
           ))}
         </div>
         <div key={actionKey} className={`fighter-sprite${action ? ` do-${action}` : ''}`}>
-          <Sprite side={side} name={name} big={big} />
+          <Sprite side={side} name={name} spriteId={spriteId} big={big} />
         </div>
       </div>
       <div className="fighter-stats">

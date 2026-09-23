@@ -16,6 +16,7 @@ const battleScreen = (
   state: RunState,
   content: Content,
   creature: CreatureDef,
+  enemyId: string,
   source: BattleInfo['source'],
   boss: boolean,
   intro?: BattleInfo['intro'],
@@ -27,6 +28,7 @@ const battleScreen = (
     result,
     enemyName: creature.name,
     enemyText: creature.text,
+    enemyId,
     boss,
     goldReward: boss ? BOSS_GOLD : ENEMY_GOLD,
     source,
@@ -39,7 +41,7 @@ export const startEnemyBattle = (state: RunState, content: Content, entity: Enem
   const def = content.enemies[entity.enemyId]
   if (!def) throw new Error(`run: unknown enemy "${entity.enemyId}"`)
   const creature = def.levels[state.week - 1] as CreatureDef
-  return battleScreen(state, content, creature, { kind: 'enemy', entityId: entity.id }, false)
+  return battleScreen(state, content, creature, def.id, { kind: 'enemy', entityId: entity.id }, false)
 }
 
 const bossById = (content: Content, id: string | undefined): BossDef => {
@@ -57,7 +59,7 @@ export const startBossBattle = (
 ): RunState => {
   const boss = empowerBoss(bossById(content, bossId), state.difficulty)
   const subtitle = from ? `${from} transforms!` : state.week === FINAL_WEEK ? 'The final battle' : `The week ${state.week} boss arrives`
-  return battleScreen(state, content, boss, { kind: 'boss', bossId: boss.id }, true, { title: boss.name, subtitle })
+  return battleScreen(state, content, boss, boss.id, { kind: 'boss', bossId: boss.id }, true, { title: boss.name, subtitle })
 }
 
 /** Applies the battle on screen: defeat ends the run; beating a boss advances the week (or brings its next form). */

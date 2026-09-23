@@ -4,6 +4,7 @@ import { terrainAt } from '../core/world/terrain'
 import type { EnemyEntity, Point, Poi, Terrain, World } from '../core/world/types'
 import type { Atlas } from './atlas'
 import { cameraFor, tileToScreen, type Camera } from './camera'
+import { CREATURE_SPRITES } from './creatures'
 import { maskOf } from './autotile'
 import { PALETTE } from './palette'
 import { TERRAIN_GLYPH } from './terrainStyle'
@@ -94,6 +95,18 @@ const drawBitmap = (ctx: CanvasRenderingContext2D, bitmap: readonly string[], x:
   bitmap.forEach((line, by) => [...line].forEach((ch, bx) => ch === '#' && ctx.fillRect(x + bx * px, y + by * px, px, px)))
 }
 
+/** A live enemy: its red 8×8 sprite on a dark tile, unframed so the art stays legible (a skull if it has no art). */
+const drawEnemy = (ctx: CanvasRenderingContext2D, atlas: Atlas, enemy: EnemyEntity, x: number, y: number, size: number, px: number) => {
+  const sprite = CREATURE_SPRITES[enemy.enemyId]
+  const inner = TILE_SIZE - 2
+  const w = sprite?.bitmap[0]?.length ?? 0
+  // Boss-sized art (12×12) doesn't fit a tile.
+  if (!sprite || w > inner || sprite.bitmap.length > inner) return drawFramed(ctx, atlas, 'skull', PALETTE.enemy, PALETTE.enemy, x, y, size, px)
+  ctx.fillStyle = PALETTE.bg
+  ctx.fillRect(x, y, size, size)
+  drawBitmap(ctx, sprite.bitmap, x + (1 + Math.floor((inner - w) / 2)) * px, y + (1 + Math.floor((inner - sprite.bitmap.length) / 2)) * px, px, PALETTE.enemy)
+}
+
 /** Used locations and fallen enemies leave faint remains, so paths never seem to lead nowhere. */
 const drawRemains = (ctx: CanvasRenderingContext2D, atlas: Atlas, tile: TileName, color: string, x: number, y: number, size: number, px: number) => {
   ctx.globalAlpha = REMAINS_ALPHA
@@ -131,7 +144,7 @@ export const drawWorld = (ctx: CanvasRenderingContext2D, atlas: Atlas, view: Wor
   const visible: readonly EnemyEntity[] = world.enemies.filter((e) => seen(e))
   for (const enemy of visible) {
     const { x, y } = screen(enemy)
-    if (enemy.alive) drawFramed(ctx, atlas, 'skull', PALETTE.enemy, PALETTE.enemy, x, y, size, px)
+    if (enemy.alive) drawEnemy(ctx, atlas, enemy, x, y, size, px)
     else drawRemains(ctx, atlas, 'skull', PALETTE.bone, x, y, size, px)
   }
 

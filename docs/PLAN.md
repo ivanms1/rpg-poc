@@ -1,6 +1,6 @@
 # He is Coming — Browser Clone: Plan
 
-Status: Phase 6 in progress (map clarity, game feel, difficulty done) · 2026-09-23
+Status: Phase 6 in progress (map clarity, game feel, difficulty, creature art done) · 2026-09-23
 
 Reference docs: [research/mechanics.md](research/mechanics.md) (rules spec) ·
 [research/content.md](research/content.md) (items/enemies/bosses/sets data) ·
@@ -170,7 +170,9 @@ Twinfuse Knot, Vampire's Tooth, Cleansing Edge, Fairy Queen, Large Golem, Wishin
   run nears the final boss.
 - ✅ Difficulty modes (Normal / Hard / Very Hard, after the real game's Patch #08; `src/core/run/difficulty.ts`),
   picked on the title screen and remembered, or `?difficulty=` for a `?seed=` run.
-- Creature sprites, mobile/touch layout, deploy (static → Vercel or itch.io).
+- ✅ Placeholder creature art: 8×8 bitmaps for enemies (map and battle), 12×12 for bosses
+  (`src/render/creatures.ts`).
+- Mobile/touch layout, deploy (static → Vercel or itch.io).
 
 ### Later (optional)
 Swampland (island maps, ferryman, 8 new statuses in play, Hydra), challenges + unlocks, an original Demon King
@@ -183,7 +185,7 @@ boss, daily seed.
 | Need | Source | Status |
 |---|---|---|
 | Map terrain, buildings, trees, water, paths, UI frames | Bountiful Bits 10×10 (CC0) | ✅ have |
-| Hero, enemies, bosses | *Missing* — tileset has no creatures | ❓ decide |
+| Hero, enemies, bosses | Hand-drawn 1-bit bitmaps (`src/ui/icons.ts`, `src/render/creatures.ts`) | ✅ placeholders |
 | ~150 item/weapon icons | *Missing* | ❓ decide |
 | Pixel font (gothic/blackletter) | Free pixel fonts, e.g. from Google Fonts or itch.io | ❓ pick in Phase 0 |
 | SFX | jsfxr-generated or a CC0 pack | Phase 6 |
