@@ -1,6 +1,6 @@
 # He is Coming — Browser Clone: Plan
 
-Status: Phase 1 done · 2026-09-23
+Status: Phase 2 done · 2026-09-23
 
 Reference docs: [research/mechanics.md](research/mechanics.md) (rules spec) ·
 [research/content.md](research/content.md) (items/enemies/bosses/sets data) ·
@@ -132,7 +132,7 @@ Each phase ends with something playable or testable.
 - **Done when:** ≥80% coverage on `core/combat`, and hand-checked fights match expected outcomes
   (e.g. Hedgehog thorns, Bear vs armor, Spider speed check).
 
-### Phase 2 — Combat view (1–2 days)
+### Phase 2 — Combat view (1–2 days) ✅
 - CombatView replays events: sprites, stat bars, floating numbers, status counters, speed controls, skip.
 - **Done when:** a fight watched at 1× reads clearly and matches the log.
 

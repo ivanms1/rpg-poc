@@ -18,7 +18,7 @@ interface StatRowProps {
   readonly label: string
 }
 
-function StatRow({ icon, color, value, label }: StatRowProps) {
+export function StatRow({ icon, color, value, label }: StatRowProps) {
   return (
     <div className="stat" style={{ color }} aria-label={`${label} ${value}`}>
       <span className="stat-icon frame-thin" style={{ borderColor: color }}>

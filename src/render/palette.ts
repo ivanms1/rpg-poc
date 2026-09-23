@@ -23,6 +23,15 @@ export const PALETTE = {
   wood: '#a86a3c',
   bone: '#e5ddc8',
   pumpkin: '#e27a16',
+
+  poison: '#7fc03a',
+  acid: '#c8d840',
+  regen: '#9bd040',
+  riptide: '#3f7fd8',
+  freeze: '#9fe0ff',
+  stun: '#fbe666',
+  thorns: '#c08050',
+  purity: '#f4f0ff',
 } as const
 
 export type PaletteColor = keyof typeof PALETTE

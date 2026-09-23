@@ -244,7 +244,7 @@ body,
 .tooltip {
   left: 96px;
   top: 110px;
-  z-index: 10;
+  z-index: 30;
   width: 110px;
   padding: 5px;
   pointer-events: none;
@@ -254,6 +254,12 @@ body,
   font-family: var(--font-title);
   font-size: 9px;
   margin-bottom: 4px;
+}
+
+.tooltip-meta {
+  margin: -2px 0 4px;
+  color: var(--muted);
+  text-transform: capitalize;
 }
 
 .tooltip-stats {
@@ -338,4 +344,31 @@ body,
   position: absolute;
   inset: auto 8px 8px 8px;
   color: var(--enemy);
+}
+
+/* ---------- Game over ---------- */
+.game-over {
+  left: 50%;
+  top: 50%;
+  z-index: 40;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  transform: translate(-50%, -50%);
+}
+
+.game-over-title {
+  font-family: var(--font-title);
+  font-size: 18px;
+  color: var(--enemy);
+}
+
+.game-over button {
+  padding: 2px 8px;
+  border: 1px solid var(--frame);
+  background: none;
+  color: var(--frame);
+  font: inherit;
+  cursor: pointer;
 }

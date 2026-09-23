@@ -1,0 +1,298 @@
+/* Combat screen (art pixels on the 480×270 stage). Replaces the top bar + map and adds a right-hand panel. */
+.combat-backdrop {
+  position: absolute;
+  inset: 0 0 0 92px;
+  z-index: 19;
+  background: var(--bg);
+}
+
+.combat-stage {
+  left: 94px;
+  top: 2px;
+  width: 296px;
+  height: 266px;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.combat-status-box {
+  z-index: 20;
+  padding: 5px;
+}
+
+.combat-status-player {
+  left: 2px;
+  top: 2px;
+  width: 90px;
+  height: 70px;
+}
+
+.combat-status-enemy {
+  left: 392px;
+  top: 2px;
+  width: 86px;
+  height: 70px;
+}
+
+.combat-info {
+  left: 392px;
+  top: 74px;
+  width: 86px;
+  height: 194px;
+  z-index: 20;
+  padding: 10px 6px;
+  text-align: center;
+}
+
+.combat-info h2 {
+  margin: 0 0 8px;
+  font-family: var(--font-title);
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.combat-info p {
+  margin: 0;
+  line-height: 1.35;
+  color: #cfc6b0;
+}
+
+.status-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.status-list li {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--font-title);
+  font-size: 9px;
+}
+
+/* ---------- Header ---------- */
+.combat-gold {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 5px;
+  font-family: var(--font-title);
+  font-size: 9px;
+}
+
+.combat-controls {
+  position: absolute;
+  left: 50%;
+  top: 7px;
+  display: flex;
+  gap: 4px;
+  transform: translateX(-50%);
+}
+
+.combat-controls button {
+  display: grid;
+  place-items: center;
+  height: 12px;
+  padding: 0 2px;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.combat-controls button.is-on,
+.combat-controls button:hover:not(:disabled) {
+  color: var(--frame);
+}
+
+.combat-controls button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* ---------- Fighters ---------- */
+.combat-arena {
+  position: absolute;
+  inset: 30px 0 8px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.fighter {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+}
+
+.fighter-figure {
+  position: relative;
+  align-self: end;
+  margin-bottom: 10px;
+}
+
+.fighter-sprite {
+  display: grid;
+  place-items: end center;
+}
+
+.monogram {
+  font-family: var(--font-title);
+  font-size: 64px;
+  line-height: 0.8;
+  color: var(--enemy);
+}
+
+.monogram-big {
+  font-size: 96px;
+}
+
+.fighter-stats {
+  display: grid;
+  grid-auto-rows: 13px;
+  row-gap: 3px;
+  width: 64px;
+}
+
+.fighter.is-dead .fighter-sprite {
+  opacity: 0.25;
+  filter: grayscale(1);
+  transition: opacity 0.4s;
+}
+
+.do-lunge {
+  animation: lunge 220ms ease-out;
+}
+
+.fighter-player .do-lunge {
+  --lunge: 14px;
+}
+
+.fighter-enemy .do-lunge {
+  --lunge: -14px;
+}
+
+.do-hit {
+  animation: hit 260ms steps(2);
+}
+
+@keyframes lunge {
+  40% {
+    transform: translateX(var(--lunge));
+  }
+}
+
+@keyframes hit {
+  0%,
+  100% {
+    filter: none;
+    transform: none;
+  }
+  50% {
+    filter: brightness(3);
+    transform: translateX(2px);
+  }
+}
+
+/* ---------- Popups ---------- */
+.fighter-popups {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  pointer-events: none;
+  z-index: 2;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--font-title);
+  font-size: 9px;
+  animation-name: popup;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  15% {
+    opacity: 1;
+    transform: none;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+/* ---------- Result ---------- */
+.combat-result {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border: 1px solid var(--frame);
+  background: var(--bg);
+  transform: translate(-50%, -60%);
+  z-index: 5;
+}
+
+.combat-result-title {
+  font-family: var(--font-title);
+  font-size: 18px;
+}
+
+.combat-result.is-win .combat-result-title {
+  color: var(--health);
+}
+
+.combat-result.is-loss .combat-result-title {
+  color: var(--enemy);
+}
+
+.combat-result-reward {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--font-title);
+  font-size: 9px;
+}
+
+.combat-continue {
+  padding: 2px 8px;
+  border: 1px solid var(--frame);
+  background: none;
+  color: var(--frame);
+  font: inherit;
+  cursor: pointer;
+}
+
+.combat-continue:hover,
+.combat-continue:focus-visible {
+  background: #33202a;
+  outline: none;
+}

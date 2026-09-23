@@ -14,7 +14,7 @@ test.describe('layout mock', () => {
   test('renders stats, inventory and a drawn map', async ({ page }) => {
     await page.setViewportSize({ width: 1920, height: 1080 })
     await page.goto('/')
-    await expect(page.getByLabel('Health 16/16')).toBeVisible()
+    await expect(page.getByLabel('Health 12/12')).toBeVisible()
     await expect(page.getByLabel('Horned Helmet')).toBeVisible()
     await expect(page.getByLabel('Locked slot')).toHaveCount(4)
 
@@ -47,8 +47,8 @@ test.describe('layout mock', () => {
     await page.setViewportSize({ width: 1920, height: 1080 })
     await page.goto('/')
     await expect(page.getByText('50 steps left')).toBeVisible()
-    for (let i = 0; i < 25; i++) await page.keyboard.press('d')
-    for (let i = 0; i < 27; i++) await page.keyboard.press('s')
+    // Pace back and forth next to the start, where no enemy stands.
+    for (let i = 0; i < 52; i++) await page.keyboard.press(i % 2 === 0 ? 'd' : 'a')
     await expect(page.getByText('night 1 · 28 steps left')).toBeVisible()
     await page.screenshot({ path: 'test-results/night-1080p.png' })
   })

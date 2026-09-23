@@ -16,7 +16,9 @@ Rules spec: [docs/research/mechanics.md](docs/research/mechanics.md). Content da
   - `items/` — item/creature types, `buildPlayer(loadout)`, tiers (Golden ×2, Diamond ×4 via `x()` and `{n}` text placeholders).
 - `src/data/` — content: weapons, items, enemies (3 levels), bosses. Each effect item has a test in `*.test.ts`.
 - `src/render/` — canvas tileset atlas (Bountiful Bits 1-bit sheet, tinted per tile), palette.
-- `src/ui/` — React components on a 480×270 art-pixel stage scaled by an integer factor. `ui/demo/` is throwaway mock data.
+- `src/ui/` — React components on a 480×270 art-pixel stage scaled by an integer factor.
+  - `combat/` — replays a `BattleResult` event log (`playback.ts` pacing/popups, `usePlayback`, `CombatView`).
+  - `demo/` — throwaway walk-and-fight demo (map scatter, starter loadout, reducer) until the real run loop (Phase 3–4).
 
 ## Conventions
 - Game state is immutable; changes go through reducers. Every random draw takes and returns an `Rng`.

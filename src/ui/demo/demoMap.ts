@@ -1,4 +1,5 @@
-import { createRng, nextFloat, nextInt, type Rng } from '../../core/rng'
+import { createRng, nextFloat, nextInt, pick, type Rng } from '../../core/rng'
+import { ENEMIES } from '../../data/enemies'
 import type { TileName } from '../../render/tiles'
 
 /**
@@ -12,6 +13,8 @@ export interface Poi {
   readonly y: number
   readonly kind: PoiKind
   readonly tile: TileName
+  /** Which regular enemy stands here (enemy POIs only). */
+  readonly enemyId?: string
 }
 
 export interface DemoMap {
@@ -58,17 +61,27 @@ export const createDemoMap = (seed: number, width = 60, height = 40): DemoMap =>
   }
 
   const poiTable: readonly [PoiKind, TileName][] = [
-    ['enemy', 'skull'], ['enemy', 'skull'], ['enemy', 'skull'], ['enemy', 'skull'],
+    ...Array.from({ length: 10 }, () => ['enemy', 'skull'] as [PoiKind, TileName]),
     ['shop', 'chest'], ['shop', 'tent'], ['shrine', 'grave'], ['shop', 'chest'],
   ]
+  const start = { x: Math.floor(width / 2), y: Math.floor(height / 2) }
   const pois: Poi[] = poiTable.map(([kind, tile]) => {
-    const [x, r1] = nextInt(rng, 2, width - 3)
-    const [y, r2] = nextInt(r1, 2, height - 3)
-    rng = r2
-    return { x, y, kind, tile }
+    let x = start.x
+    let y = start.y
+    while (Math.abs(x - start.x) + Math.abs(y - start.y) < 3) {
+      const [nx, r1] = nextInt(rng, 2, width - 3)
+      const [ny, r2] = nextInt(r1, 2, height - 3)
+      x = nx
+      y = ny
+      rng = r2
+    }
+    if (kind !== 'enemy') return { x, y, kind, tile }
+    const [enemy, next] = pick(rng, ENEMIES)
+    rng = next
+    return { x, y, kind, tile, enemyId: enemy.id }
   })
 
-  return { width, height, tiles, pois, start: { x: Math.floor(width / 2), y: Math.floor(height / 2) } }
+  return { width, height, tiles, pois, start }
 }
 
 export const tileAt = (map: DemoMap, x: number, y: number): TileName | null =>
