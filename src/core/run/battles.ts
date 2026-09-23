@@ -19,7 +19,7 @@ const battleScreen = (
   intro?: BattleInfo['intro'],
 ): RunState => {
   const result = simulateBattle(heroCombatant(state.hero, content.sets), creatureCombatant(creature))
-  const tag = source.kind === 'enemy' ? source.entityId : 'boss'
+  const tag = source.kind === 'enemy' ? source.entityId : `boss-${source.bossId}`
   const battle: BattleInfo = {
     id: `w${state.week}-s${state.step}-${tag}`,
     result,

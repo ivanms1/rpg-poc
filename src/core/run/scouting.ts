@@ -116,7 +116,9 @@ export const resolvePick = (state: RunState, content: Content, index: number): R
       const slot = Number(option.id)
       const old = state.hero.items[slot]
       if (!old) return state
-      const [replacement, rng] = randomItem(state.rng, content, old.item.rarity, ownedIds(state.hero), old.item.id)
+      const without = { ...state.hero, items: state.hero.items.map((e, i) => (i === slot ? null : e)) }
+      const accept = (candidate: typeof old.item) => candidate.id !== old.item.id && blockedReason(without, candidate) === null
+      const [replacement, rng] = randomItem(state.rng, content, old.item.rarity, ownedIds(state.hero), accept)
       if (!replacement) return withPickNotice(state, 'The fairy has nothing to turn it into.')
       const items = state.hero.items.map((e, i) => (i === slot ? { item: replacement, tier: old.tier ?? 'normal' } : e))
       return done({ ...state, rng, hero: { ...state.hero, items } }, screen.poiId, true)

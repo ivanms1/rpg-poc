@@ -29,6 +29,7 @@ const PoiSave = Point.extend({
   rerollCost: Int.positive().optional(),
   edgeOffer: z.array(z.string()).optional(),
   haggled: z.boolean().optional(),
+  carve: z.object({ signature: z.string(), results: z.array(Ref) }).optional(),
 })
 
 const SaveData = z.object({
@@ -75,6 +76,7 @@ const poiToSave = (p: Poi): z.infer<typeof PoiSave> => ({
   ...(p.rerollCost !== undefined ? { rerollCost: p.rerollCost } : {}),
   ...(p.edgeOffer ? { edgeOffer: p.edgeOffer.map((e) => e.id) } : {}),
   ...(p.haggled ? { haggled: true } : {}),
+  ...(p.carve ? { carve: { signature: p.carve.signature, results: p.carve.results.map(toRef) } } : {}),
 })
 
 export const serializeRun = (state: RunState): SaveData => ({
@@ -134,6 +136,7 @@ const hydrate = (data: SaveData, content: Content): RunState => {
     ...(p.rerollCost !== undefined ? { rerollCost: p.rerollCost } : {}),
     ...(p.edgeOffer ? { edgeOffer: p.edgeOffer.map(edge) } : {}),
     ...(p.haggled ? { haggled: true } : {}),
+    ...(p.carve ? { carve: { signature: p.carve.signature, results: p.carve.results.map(item) } } : {}),
   }))
 
   return {

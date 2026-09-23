@@ -51,8 +51,17 @@ export const createFighter = (side: Side, c: Combatant): FighterState => {
   }
 }
 
+/** Gold can't start above a source's cap (Royal Scepter). */
+const capGold = (f: FighterState, sources: readonly Source[]): FighterState => {
+  const cap = Math.min(Infinity, ...sources.map((src) => src.goldCap ?? Infinity))
+  return f.gold > cap ? { ...f, gold: cap } : f
+}
+
 export const createBattle = (player: Combatant, enemy: Combatant, rules: Rules = DEFAULT_RULES): BattleState => {
-  const fighters = { player: createFighter('player', player), enemy: createFighter('enemy', enemy) }
+  const fighters = {
+    player: capGold(createFighter('player', player), player.sources),
+    enemy: capGold(createFighter('enemy', enemy), enemy.sources),
+  }
   const faster: Side = fighters.player.speed >= fighters.enemy.speed ? 'player' : 'enemy'
   return {
     rules,

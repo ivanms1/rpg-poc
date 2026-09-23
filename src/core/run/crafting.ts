@@ -65,20 +65,35 @@ export const visitBeehive = (state: RunState, content: Content, poi: Poi): RunSt
 
 const WOODCUTTER_PAIRS = 6
 
-/** Up to 6 pairs of carried items, each pre-rolled to a hidden heroic item. */
+/** Which items are carried where; the woodcutter re-rolls only when this changes. */
+const signatureOf = (state: RunState): string => state.hero.items.map((e) => e?.item.id ?? '-').join('|')
+
+const rollCarvings = (state: RunState, content: Content, count: number): [Equipped[], RunState['rng']] => {
+  let rng = state.rng
+  const results: Equipped[] = []
+  for (let i = 0; i < count; i++) {
+    const [heroic, next] = randomItem(rng, content, 'heroic', ownedIds(state.hero))
+    rng = next
+    if (heroic) results.push({ item: heroic })
+  }
+  return [results, rng]
+}
+
+/** Up to 6 pairs of carried items, each pre-rolled (and remembered) to a hidden heroic item. */
 export const openWoodcutter = (state: RunState, content: Content, poi: Poi): RunState => {
   const items = filled(state)
   const pairs = items.flatMap((a, i) => items.slice(i + 1).map((b) => [a.slot, b.slot] as const)).slice(0, WOODCUTTER_PAIRS)
   if (pairs.length === 0) return message(state, 'Woodcutter', 'Bring two items and the woodcutter will carve them into something heroic.')
-  let rng = state.rng
-  const options: CraftOption[] = []
-  for (const slots of pairs) {
-    const [heroic, next] = randomItem(rng, content, 'heroic', ownedIds(state.hero))
-    rng = next
-    if (heroic) options.push({ result: { item: heroic }, slots, hidden: true })
-  }
+  const signature = signatureOf(state)
+  const cached = poi.carve?.signature === signature ? poi.carve.results : null
+  const [results, rng] = cached ? [cached, state.rng] : rollCarvings(state, content, pairs.length)
+  const options: CraftOption[] = results.flatMap((result, i) => {
+    const slots = pairs[i]
+    return slots ? [{ result, slots, hidden: true }] : []
+  })
   if (options.length === 0) return message(state, 'Woodcutter', 'The woodcutter has nothing left to carve.')
-  return { ...state, rng, screen: { kind: 'craft', poiId: poi.id, title: 'Woodcutter', options } }
+  const remembered = updatePoi({ ...state, rng }, poi.id, { carve: { signature, results } })
+  return { ...remembered, screen: { kind: 'craft', poiId: poi.id, title: 'Woodcutter', options } }
 }
 
 /** Applies craft option `index`: the cauldron can be used again, the golem and woodcutter can't. */

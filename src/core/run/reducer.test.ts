@@ -244,6 +244,7 @@ describe('the weekly boss', () => {
     if (abomination.screen.kind !== 'battle') return
     expect(abomination.screen.battle.result.events[0]?.snapshot.player.hp).toBe(500)
     expect(play(abomination, { type: 'finishBattle' }).screen.kind).toBe('victory')
+    if (leshen.screen.kind === 'battle') expect(abomination.screen.battle.id).not.toBe(leshen.screen.battle.id)
   })
 
   it('taking loot on the last step of the week brings the boss', () => {
@@ -492,6 +493,16 @@ describe('fairy, wishing well, bargaining tent, woodcutter', () => {
     expect(visitWith('fairy', { items: [null, null] }).screen).toMatchObject({ kind: 'message' })
   })
 
+  it('the fairy never makes a second rose', () => {
+    for (let seed = 1; seed < 40; seed++) {
+      const s = createRun(seed, CONTENT, { world: world([poi('fairy', 8, 5)]) })
+      const open = play({ ...s, hero: { ...s.hero, items: [byId('sanguine-rose'), byId('bramble-belt'), null, null] } }, right)
+      const after = play(open, { type: 'choose', index: 1 })
+      expect(after.hero.items[1]?.item.id).not.toBe('bramble-belt')
+      expect(after.hero.items[1]?.item.tags.includes('rose')).toBe(false)
+    }
+  })
+
   it('the wishing well sells a golden (5) or diamond (10) item', () => {
     const s = visitWith('wishingWell', { gold: 12 })
     expect(s.screen).toMatchObject({ kind: 'pick', purpose: 'well' })
@@ -514,6 +525,13 @@ describe('fairy, wishing well, bargaining tent, woodcutter', () => {
     expect(haggled.screen.canHaggle).toBe(false)
     expect(play(haggled, { type: 'haggle' })).toBe(haggled)
     expect(play(haggled, { type: 'reroll' })).toBe(haggled)
+  })
+
+  it('the woodcutter keeps its hidden results when reopened, until the items change', () => {
+    const open = visitWith('woodcutter', { items: [byId('leather-vest'), byId('horned-helmet'), null, null] })
+    const again = play(open, { type: 'dismiss' }, left, right)
+    expect(again.screen).toEqual(open.screen)
+    expect(again.rng).toEqual(open.rng)
   })
 
   it('the woodcutter turns two items into a hidden heroic', () => {

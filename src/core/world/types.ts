@@ -75,6 +75,8 @@ export interface Poi extends Point {
   readonly edgeOffer?: readonly EdgeDef[]
   /** Bargaining Tent: already haggled. */
   readonly haggled?: boolean
+  /** Woodcutter: hidden results rolled for the hero's items (`signature`), one per offered pair. */
+  readonly carve?: { readonly signature: string; readonly results: readonly Equipped[] }
 }
 
 export interface EnemyEntity extends Point {

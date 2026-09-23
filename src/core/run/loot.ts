@@ -97,7 +97,14 @@ export const tentStock = (rng: Rng, content: Content, owned: ReadonlySet<string>
 }
 
 /** Random items of one rarity (not crafted-only, not owned uniques), for the Fairy and the Wishing Well. */
-export const randomItem = (rng: Rng, content: Content, rarity: ItemDef['rarity'], owned: ReadonlySet<string>, except?: string): [ItemDef | null, Rng] => {
-  const [picked, next] = drawDistinct(rng, available(content.items.filter((i) => i.rarity === rarity && i.id !== except), owned), 1)
+export const randomItem = (
+  rng: Rng,
+  content: Content,
+  rarity: ItemDef['rarity'],
+  owned: ReadonlySet<string>,
+  accept: (item: ItemDef) => boolean = () => true,
+): [ItemDef | null, Rng] => {
+  const pool = available(content.items.filter((i) => i.rarity === rarity && accept(i)), owned)
+  const [picked, next] = drawDistinct(rng, pool, 1)
   return [picked[0] ?? null, next]
 }

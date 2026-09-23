@@ -51,6 +51,7 @@ describe('more weapons', () => {
 
   it('Royal Scepter: attack equals gold, capped at 10 gold', () => {
     expect(strikes(fight(hero('royal-scepter', [], { gold: 5 }), dummy()).events, 'player')[0]).toBe(5)
+    expect(strikes(fight(hero('royal-scepter', [], { gold: 50 }), dummy()).events, 'player')[0]).toBe(10)
     expect(fight(hero('royal-scepter', ['gold-ring'], { gold: 10 }), dummy(1)).final.player.gold).toBe(10)
   })
 
