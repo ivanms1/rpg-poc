@@ -48,6 +48,21 @@ export const paceKeys = (seed: number): [string, string] => {
   throw new Error(`seed ${seed}: the start has no free neighbour`)
 }
 
+/** A free tile 3–4 steps from the start (well inside the first sight radius) and its path length. */
+export const nearbyTile = (seed: number): { dx: number; dy: number; steps: number } => {
+  const { world, things } = describe(seed)
+  const taken = new Set(things.map((t) => tileKey(t.x, t.y)))
+  for (let dy = -3; dy <= 3; dy++) {
+    for (let dx = -3; dx <= 3; dx++) {
+      const target = { x: world.start.x + dx, y: world.start.y + dy }
+      if (taken.has(tileKey(target.x, target.y)) || !isWalkable(world.map, target.x, target.y)) continue
+      const path = findPath(world.map, world.start, target, taken)
+      if (path && path.length >= 3 && path.length <= 4) return { dx, dy, steps: path.length }
+    }
+  }
+  throw new Error(`seed ${seed}: no free tile 3–4 steps from the start`)
+}
+
 /** Targets the e2e specs walk to. */
 export const TARGETS = {
   enemy: (tag: string) => tag === 'enemy:spider' || tag === 'enemy:wolf',
@@ -60,6 +75,7 @@ export const TARGETS = {
 const works = (seed: number): boolean => {
   try {
     paceKeys(seed)
+    nearbyTile(seed)
     return Object.values(TARGETS).every((match) => routeTo(seed, match).length <= 60)
   } catch {
     return false

@@ -445,3 +445,27 @@ body,
 .title-controls dd {
   margin: 0;
 }
+
+/* ---------- Map extras ---------- */
+.map-canvas.is-clickable {
+  cursor: pointer;
+}
+
+.map-overview-label {
+  position: absolute;
+  right: 4px;
+  top: 3px;
+  color: var(--muted);
+}
+
+.key-button {
+  background: none;
+  color: var(--frame);
+  font: inherit;
+  font-size: 7px;
+  cursor: pointer;
+}
+
+.key-button.is-on {
+  background: #33202a;
+}

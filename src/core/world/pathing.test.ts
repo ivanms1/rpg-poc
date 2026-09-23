@@ -80,6 +80,13 @@ describe('findPath', () => {
     expect(path).toEqual([{ x: 0, y: 1 }, { x: 1, y: 1 }, { x: 2, y: 1 }, { x: 2, y: 0 }])
   })
 
+  it('only crosses known tiles when given them', () => {
+    const map = mapOf(['.....', '.....'])
+    const known = new Set(['0,0', '0,1', '1,1', '2,1', '2,0'])
+    expect(findPath(map, { x: 0, y: 0 }, { x: 2, y: 0 }, new Set(), known)).toEqual([{ x: 0, y: 1 }, { x: 1, y: 1 }, { x: 2, y: 1 }, { x: 2, y: 0 }])
+    expect(findPath(map, { x: 0, y: 0 }, { x: 4, y: 0 }, new Set(), known)).toBeNull()
+  })
+
   it('returns null when unreachable and [] for the start itself', () => {
     const map = mapOf(['..#..'])
     expect(findPath(map, { x: 0, y: 0 }, { x: 4, y: 0 }, new Set())).toBeNull()

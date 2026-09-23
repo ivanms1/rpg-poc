@@ -32,6 +32,10 @@ test.describe('combat playback', () => {
     await result.getByRole('button', { name: 'Continue' }).click()
     await expect(page.getByTestId('combat')).toHaveCount(0)
     await expect(page.getByLabel('Gold 1')).toBeVisible()
+    const back: Record<string, string> = { w: 's', s: 'w', a: 'd', d: 'a' }
+    await page.keyboard.press(back[ENEMY_ROUTE.at(-1) ?? 'w'] ?? 's')
+    await page.waitForTimeout(200)
+    await page.screenshot({ path: 'test-results/map-remains.png' })
   })
 
   test('speed buttons toggle and pause holds the fight', async ({ page }) => {

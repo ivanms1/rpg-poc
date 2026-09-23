@@ -3,6 +3,7 @@ import { tileKey } from '../core/world/fog'
 import { terrainAt } from '../core/world/terrain'
 import type { EnemyEntity, Point, Poi, Terrain, World } from '../core/world/types'
 import type { Atlas } from './atlas'
+import { cameraFor, tileToScreen, type Camera } from './camera'
 import { maskOf } from './autotile'
 import { PALETTE } from './palette'
 import { TERRAIN_GLYPH } from './terrainStyle'
@@ -15,7 +16,11 @@ export interface WorldView {
   /** Device pixels per tile pixel. */
   readonly px: number
   readonly heroBitmap: readonly string[]
+  /** Tile at the canvas centre (defaults to the player; the Shift overview uses the map centre). */
+  readonly focus?: Point
 }
+
+const REMAINS_ALPHA = 0.45
 
 const PATHLIKE: ReadonlySet<Terrain | null> = new Set(['path', 'bridge'])
 const WATERLIKE: ReadonlySet<Terrain | null> = new Set(['water', 'bridge'])
@@ -74,42 +79,47 @@ const drawBitmap = (ctx: CanvasRenderingContext2D, bitmap: readonly string[], x:
   bitmap.forEach((line, by) => [...line].forEach((ch, bx) => ch === '#' && ctx.fillRect(x + bx * px, y + by * px, px, px)))
 }
 
-export const drawWorld = (ctx: CanvasRenderingContext2D, atlas: Atlas, view: WorldView): void => {
+/** Used locations and fallen enemies leave faint remains, so paths never seem to lead nowhere. */
+const drawRemains = (ctx: CanvasRenderingContext2D, atlas: Atlas, tile: TileName, color: string, x: number, y: number, size: number, px: number) => {
+  ctx.globalAlpha = REMAINS_ALPHA
+  atlas.draw(ctx, tile, x + px, y + px, size - 2 * px, color)
+  ctx.globalAlpha = 1
+}
+
+export const drawWorld = (ctx: CanvasRenderingContext2D, atlas: Atlas, view: WorldView): Camera => {
   const { world, player, revealed, px, heroBitmap } = view
   const { width, height } = ctx.canvas
   ctx.imageSmoothingEnabled = false
   ctx.clearRect(0, 0, width, height)
 
-  const size = TILE_SIZE * px
-  const originX = Math.floor(width / 2 - size / 2 - player.x * size)
-  const originY = Math.floor(height / 2 - size / 2 - player.y * size)
-  const x0 = Math.floor(-originX / size)
-  const y0 = Math.floor(-originY / size)
-  const cols = Math.ceil(width / size) + 1
-  const rows = Math.ceil(height / size) + 1
-  const screen = (p: Point) => ({ x: originX + p.x * size, y: originY + p.y * size })
+  const cam = cameraFor(width, height, px, view.focus ?? player)
+  const { size } = cam
+  const screen = (p: Point) => tileToScreen(cam, p)
   const seen = (p: Point) => revealed.has(tileKey(p.x, p.y))
 
-  for (let ty = y0; ty < y0 + rows; ty++) {
-    for (let tx = x0; tx < x0 + cols; tx++) {
-      if (seen({ x: tx, y: ty })) drawTerrain(ctx, atlas, world, tx, ty, originX + tx * size, originY + ty * size, size)
+  for (let ty = cam.y0; ty < cam.y0 + cam.rows; ty++) {
+    for (let tx = cam.x0; tx < cam.x0 + cam.cols; tx++) {
+      if (seen({ x: tx, y: ty })) drawTerrain(ctx, atlas, world, tx, ty, cam.originX + tx * size, cam.originY + ty * size, size)
     }
   }
 
   for (const poi of world.pois) {
-    if (!seen(poi) || poi.used) continue
+    if (!seen(poi)) continue
     const style = POI_STYLE[poi.kind]
     const { x, y } = screen(poi)
-    drawFramed(ctx, atlas, style.tile, style.color, style.frame, x, y, size, px)
+    if (poi.used) drawRemains(ctx, atlas, style.tile, style.color, x, y, size, px)
+    else drawFramed(ctx, atlas, style.tile, style.color, style.frame, x, y, size, px)
   }
 
-  const living: readonly EnemyEntity[] = world.enemies.filter((e) => e.alive && seen(e))
-  for (const enemy of living) {
+  const visible: readonly EnemyEntity[] = world.enemies.filter((e) => seen(e))
+  for (const enemy of visible) {
     const { x, y } = screen(enemy)
-    drawFramed(ctx, atlas, 'skull', PALETTE.enemy, PALETTE.enemy, x, y, size, px)
+    if (enemy.alive) drawFramed(ctx, atlas, 'skull', PALETTE.enemy, PALETTE.enemy, x, y, size, px)
+    else drawRemains(ctx, atlas, 'skull', PALETTE.bone, x, y, size, px)
   }
 
   const hero = screen(player)
   const w = heroBitmap[0]?.length ?? 0
   drawBitmap(ctx, heroBitmap, hero.x + Math.floor((TILE_SIZE - w) / 2) * px, hero.y + Math.floor((TILE_SIZE - heroBitmap.length) / 2) * px, px, PALETTE.frame)
+  return cam
 }

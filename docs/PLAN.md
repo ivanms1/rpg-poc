@@ -1,6 +1,6 @@
 # He is Coming — Browser Clone: Plan
 
-Status: Phase 5 done · 2026-09-23
+Status: Phase 6 in progress (map clarity done) · 2026-09-23
 
 Reference docs: [research/mechanics.md](research/mechanics.md) (rules spec) ·
 [research/content.md](research/content.md) (items/enemies/bosses/sets data) ·
@@ -162,6 +162,9 @@ Twinfuse Knot, Vampire's Tooth, Cleansing Edge, Fairy Queen, Large Golem, Wishin
 - Written as data plus one test per item, so it can be split across parallel agents.
 
 ### Phase 6 — Polish
+- ✅ Map clarity: faded remains of used locations and defeated enemies, hold Shift (or pin with Shf) to zoom
+  out to everything explored, click a revealed tile to walk there (routes go around enemies and unused
+  locations, over seen tiles only).
 - Sound (sfx + ambient), hit/flash tweens, world "decay" tint as the weeks progress, difficulty modes,
   mobile/touch layout, deploy (static → Vercel or itch.io).
 

@@ -9,7 +9,7 @@ export default defineConfig({
     include: ['src/**/*.test.{ts,tsx}'],
     coverage: {
       provider: 'v8',
-      include: ['src/core/**', 'src/render/autotile.ts'],
+      include: ['src/core/**', 'src/render/autotile.ts', 'src/render/camera.ts'],
       exclude: ['src/**/*.test.ts', 'src/core/**/testkit.ts'],
       thresholds: { lines: 80, functions: 80, branches: 80, statements: 80 },
     },

@@ -2,9 +2,11 @@ import { useCallback, useEffect, useMemo, useReducer, useState } from 'react'
 import { setProgress, type Equipped } from '../core/items/loadout'
 import { heroCombatant } from '../core/run/hero'
 import { runReducer } from '../core/run/reducer'
+import { planRoute } from '../core/run/route'
 import { isSaveable } from '../core/run/save'
 import type { RunAction, RunState } from '../core/run/types'
 import { timeOfWeek } from '../core/world/clock'
+import type { Point } from '../core/world/types'
 import { CONTENT } from '../data/content'
 import { createAtlas, loadImage, type Atlas } from '../render/atlas'
 import { PALETTE } from '../render/palette'
@@ -24,6 +26,7 @@ import { Timeline } from './Timeline'
 const MAP_W = 382
 const MAP_H = 222
 const MAX_SLOTS = 8
+const WALK_STEP_MS = 70
 
 const MOVES: Record<string, readonly [number, number]> = {
   w: [0, -1], a: [-1, 0], s: [0, 1], d: [1, 0],
@@ -43,6 +46,11 @@ export function Game({ initial, onExit }: Props) {
   const [atlas, setAtlas] = useState<Atlas | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
   const [showBoss, setShowBoss] = useState(false)
+  /** The zoomed-out map: while Shift is held, or pinned open with the Shf button. */
+  const [mapHeld, setMapHeld] = useState(false)
+  const [mapPinned, setMapPinned] = useState(false)
+  const overview = mapHeld || mapPinned
+  const [route, setRoute] = useState<readonly Point[]>([])
   const [state, dispatch] = useReducer(reducer, initial)
   const { hero, screen, week, step } = state
   const time = timeOfWeek(step)
@@ -64,6 +72,45 @@ export function Game({ initial, onExit }: Props) {
 
   const act = useCallback((action: RunAction) => dispatch(action), [])
   const finished = screen.kind === 'gameOver' || screen.kind === 'victory'
+
+  /** Click-to-move: one step per tick. A dialog, battle, key press or blocked step ends the walk. */
+  useEffect(() => {
+    const next = route[0]
+    if (!next) return
+    const dx = next.x - state.player.x
+    const dy = next.y - state.player.y
+    const blocked = screen.kind !== 'map' || showBoss || overview || Math.abs(dx) + Math.abs(dy) !== 1
+    const timer = window.setTimeout(
+      () => {
+        if (blocked) return setRoute([])
+        act({ type: 'move', dx, dy })
+        setRoute((r) => r.slice(1))
+      },
+      blocked ? 0 : WALK_STEP_MS,
+    )
+    return () => window.clearTimeout(timer)
+  }, [route, screen.kind, showBoss, overview, state.player, act])
+
+  const walkTo = useCallback(
+    (tile: Point) => {
+      if (!showBoss && !overview) setRoute(planRoute(state, tile))
+    },
+    [showBoss, overview, state],
+  )
+
+  useEffect(() => {
+    const onDown = (e: KeyboardEvent) => e.key === 'Shift' && setMapHeld(true)
+    const onUp = (e: KeyboardEvent) => e.key === 'Shift' && setMapHeld(false)
+    const onBlur = () => setMapHeld(false)
+    window.addEventListener('keydown', onDown)
+    window.addEventListener('keyup', onUp)
+    window.addEventListener('blur', onBlur)
+    return () => {
+      window.removeEventListener('keydown', onDown)
+      window.removeEventListener('keyup', onUp)
+      window.removeEventListener('blur', onBlur)
+    }
+  }, [])
 
   useEffect(() => {
     if (isSaveable(state)) writeSave(state)
@@ -93,6 +140,7 @@ export function Game({ initial, onExit }: Props) {
       }
       if (key === 'escape') {
         setShowBoss(false)
+        setMapPinned(false)
         return act({ type: 'dismiss' })
       }
       const digit = Number(key)
@@ -103,13 +151,14 @@ export function Game({ initial, onExit }: Props) {
       if (screen.kind === 'shop' && key === 'r') return act({ type: 'reroll' })
       if (screen.kind === 'shop' && key === 'h') return act({ type: 'haggle' })
       const move = MOVES[key]
-      if (!move || showBoss) return
+      if (!move || showBoss || overview) return
       e.preventDefault()
+      setRoute([])
       act({ type: 'move', dx: move[0], dy: move[1] })
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [act, finished, onExit, screen.kind, showBoss])
+  }, [act, finished, onExit, screen.kind, showBoss, overview])
 
   return (
     <Stage>
@@ -128,6 +177,16 @@ export function Game({ initial, onExit }: Props) {
           </aside>
           <header className="panel topbar">
             <span className="week-label">Week {week}</span>
+            <button
+              type="button"
+              className={`key-hint key-button${overview ? ' is-on' : ''}`}
+              title="Hold Shift for the map"
+              aria-label="Toggle map overview"
+              aria-pressed={mapPinned}
+              onClick={() => setMapPinned((o) => !o)}
+            >
+              Shf
+            </button>
             <Timeline step={step} />
             <button type="button" className="boss-preview" title="Boss (Tab)" aria-label="Boss preview" onClick={() => setShowBoss((o) => !o)}>
               <PixelIcon icon="skull" color={PALETTE.enemy} scale={2} />
@@ -135,7 +194,18 @@ export function Game({ initial, onExit }: Props) {
             <span className="key-hint key-hint-red">Tab</span>
           </header>
           <main className={`panel map-area${time.phase === 'night' ? ' is-night' : ''}`}>
-            <WorldCanvas atlas={atlas} world={state.world} player={state.player} revealed={state.revealed} width={MAP_W} height={MAP_H} stageScale={scale} />
+            <WorldCanvas
+              atlas={atlas}
+              world={state.world}
+              player={state.player}
+              revealed={state.revealed}
+              width={MAP_W}
+              height={MAP_H}
+              stageScale={scale}
+              overview={overview}
+              onTileClick={walkTo}
+            />
+            {overview && <div className="map-overview-label">{mapPinned ? 'Map · Shf or Esc to return' : 'Map · release Shift to return'}</div>}
             <div className="map-caption">
               {time.phase} {time.day} · {time.stepsLeftInSegment} steps left · seed {state.seed}
             </div>
