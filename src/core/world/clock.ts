@@ -51,3 +51,10 @@ export const timeOfWeek = (step: number): TimeOfWeek => {
 }
 
 export const sightRadius = (phase: Phase): number => SIGHT[phase]
+
+/** Step at which the next day begins after sleeping (end of week after the last night). */
+export const nextMorning = (step: number): number => {
+  const { segment } = timeOfWeek(step)
+  const nightIndex = WEEK_SEGMENTS[segment]?.phase === 'night' ? segment : segment + 1
+  return WEEK_SEGMENTS.slice(0, nightIndex + 1).reduce((sum, s) => sum + s.steps, 0)
+}

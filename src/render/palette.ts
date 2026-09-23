@@ -14,6 +14,8 @@ export const PALETTE = {
   night: '#7a5cf0',
 
   pine: '#3f8a3a',
+  forestPine: '#2e6e36',
+  flowers: '#d890b8',
   grass: '#4f7a36',
   swampGrass: '#94a420',
   rock: '#6a7c64',

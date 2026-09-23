@@ -1,6 +1,6 @@
 # He is Coming — Browser Clone: Plan
 
-Status: Phase 2 done · 2026-09-23
+Status: Phase 3 done · 2026-09-23
 
 Reference docs: [research/mechanics.md](research/mechanics.md) (rules spec) ·
 [research/content.md](research/content.md) (items/enemies/bosses/sets data) ·
@@ -136,7 +136,7 @@ Each phase ends with something playable or testable.
 - CombatView replays events: sprites, stat bars, floating numbers, status counters, speed controls, skip.
 - **Done when:** a fight watched at 1× reads clearly and matches the log.
 
-### Phase 3 — Overworld (3–4 days)
+### Phase 3 — Overworld (3–4 days) ✅
 - Map generation: ~64×48 Woodland with 4 biome regions (Starting Area, Flower Glade, Rocky Plains, Forest),
   connected dirt paths, rivers + bridges, POIs placed by biome rules. Home next to spawn.
 - Movement (WASD/arrows; click-to-move as an optional extra), camera follow, fog of war (sight 5 day / 3 night,
@@ -145,6 +145,8 @@ Each phase ends with something playable or testable.
 - **Done when:** you can walk a full week, fight enemies, pick up items, and sleep.
 
 ### Phase 4 — Full run loop (2–3 days)
+_Already done in Phase 3: weekly boss (random pool, Tab preview, fight early), +2 slots per boss, week progression
+with enemy levels, game over / victory screens, double-click discard, `?seed=` runs._
 - Inventory UI: 1 weapon + 4/6/8 slots, drag to reorder, double-click to discard, tooltips with set info.
 - Boss at end of each week (random from week pool), Tab preview, +2 slots on win, Leshen → Abomination finale.
 - Gold, Traveling Merchant (reroll), Blade Oil, Forge (edges), Hero's Grave (opens at night), Jewelry Box.

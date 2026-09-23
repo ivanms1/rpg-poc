@@ -1,0 +1,58 @@
+import { reachableFrom, stepToward } from './pathing'
+import type { Terrain, WorldMap } from './types'
+
+/** Builds a map from rows: '.' ground, '#' pine, '~' water, '=' bridge. */
+const mapOf = (rows: readonly string[]): WorldMap => {
+  const legend: Record<string, Terrain> = { '.': 'ground', '#': 'pine', '~': 'water', '=': 'bridge' }
+  const terrain = rows.flatMap((row) => [...row].map((ch) => legend[ch] ?? 'ground'))
+  return { width: rows[0]!.length, height: rows.length, terrain, biome: terrain.map(() => 'start') }
+}
+
+describe('reachableFrom', () => {
+  it('floods walkable tiles only', () => {
+    const map = mapOf([
+      '..#..',
+      '..#..',
+      '.....',
+    ])
+    const seen = reachableFrom(map, { x: 0, y: 0 })
+    expect(seen.has('4,0')).toBe(true)
+    expect(seen.has('2,0')).toBe(false)
+  })
+
+  it('crosses bridges but not water', () => {
+    const map = mapOf([
+      '..~..',
+      '..=..',
+      '..~..',
+    ])
+    expect(reachableFrom(map, { x: 0, y: 0 }).has('4,2')).toBe(true)
+    const noBridge = mapOf(['..~..', '..~..'])
+    expect(reachableFrom(noBridge, { x: 0, y: 0 }).has('4,0')).toBe(false)
+  })
+})
+
+describe('stepToward', () => {
+  const open = mapOf(['.....', '.....', '.....'])
+
+  it('moves one tile along the longer axis', () => {
+    expect(stepToward(open, { x: 0, y: 0 }, { x: 4, y: 1 }, new Set())).toEqual({ x: 1, y: 0 })
+    expect(stepToward(open, { x: 2, y: 0 }, { x: 2, y: 2 }, new Set())).toEqual({ x: 2, y: 1 })
+  })
+
+  it('goes around an obstacle on the other axis', () => {
+    const map = mapOf(['.#...', '.....'])
+    expect(stepToward(map, { x: 0, y: 0 }, { x: 3, y: 1 }, new Set())).toEqual({ x: 0, y: 1 })
+  })
+
+  it('avoids occupied tiles and stays put when stuck', () => {
+    const map = mapOf(['.#', '#.'])
+    expect(stepToward(map, { x: 0, y: 0 }, { x: 1, y: 1 }, new Set())).toEqual({ x: 0, y: 0 })
+    expect(stepToward(open, { x: 0, y: 0 }, { x: 2, y: 0 }, new Set(['1,0']))).toEqual({ x: 0, y: 0 })
+    expect(stepToward(open, { x: 0, y: 0 }, { x: 2, y: 1 }, new Set(['1,0']))).toEqual({ x: 0, y: 1 })
+  })
+
+  it('may step onto the target itself', () => {
+    expect(stepToward(open, { x: 0, y: 0 }, { x: 1, y: 0 }, new Set())).toEqual({ x: 1, y: 0 })
+  })
+})

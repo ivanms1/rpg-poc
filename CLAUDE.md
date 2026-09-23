@@ -4,7 +4,7 @@ Personal browser remake of the roguelite auto-battler *He is Coming*. Plan and p
 Rules spec: [docs/research/mechanics.md](docs/research/mechanics.md). Content data: [docs/research/content.md](docs/research/content.md).
 
 ## Commands
-- `npm run dev` — dev server (`/?arena` = combat debug arena)
+- `npm run dev` — dev server (`/?seed=123` = fixed run, `/?arena` = combat debug arena)
 - `npm test` / `npm run test:coverage` — Vitest (core coverage threshold 80%)
 - `npm run test:e2e` — Playwright (builds + previews on :4173)
 - `npm run typecheck` · `npm run lint` (oxlint)
@@ -14,11 +14,13 @@ Rules spec: [docs/research/mechanics.md](docs/research/mechanics.md). Content da
   - `combat/` — `simulateBattle(player, enemy)` → event log with per-event snapshots. `ops.ts` holds the primitives (damage, heal, status…).
   - `effects/dsl.ts` — vocabulary for item/creature effects (`when(fasterThanEnemy, gain('attack', 2))`).
   - `items/` — item/creature types, `buildPlayer(loadout)`, tiers (Golden ×2, Diamond ×4 via `x()` and `{n}` text placeholders).
+  - `world/` — seeded map generator (`generateWorld`), terrain/walkability, clock, fog, pathing.
+  - `run/` — `createRun(seed, content)` + `runReducer(content)`: movement, night chase, locations, battles, weekly boss. Content is injected (see `data/content.ts`).
 - `src/data/` — content: weapons, items, enemies (3 levels), bosses. Each effect item has a test in `*.test.ts`.
 - `src/render/` — canvas tileset atlas (Bountiful Bits 1-bit sheet, tinted per tile), palette.
 - `src/ui/` — React components on a 480×270 art-pixel stage scaled by an integer factor.
   - `combat/` — replays a `BattleResult` event log (`playback.ts` pacing/popups, `usePlayback`, `CombatView`).
-  - `demo/` — throwaway walk-and-fight demo (map scatter, starter loadout, reducer) until the real run loop (Phase 3–4).
+  - `map/WorldCanvas` (draws via `render/drawWorld.ts`), `run/` dialogs (chest/pile choice, messages, boss preview, end screen).
 
 ## Conventions
 - Game state is immutable; changes go through reducers. Every random draw takes and returns an `Rng`.

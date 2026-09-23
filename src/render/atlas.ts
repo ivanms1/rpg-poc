@@ -1,3 +1,4 @@
+import { autotileBitmap, type AutotileStyle } from './autotile'
 import { PALETTE } from './palette'
 import { TILE_SIZE, TILES, type TileName } from './tiles'
 
@@ -7,6 +8,8 @@ import { TILE_SIZE, TILES, type TileName } from './tiles'
  */
 export interface Atlas {
   draw(ctx: CanvasRenderingContext2D, name: TileName, x: number, y: number, size: number, color?: string): void
+  /** Procedural path/water tile for a neighbour mask (see render/autotile.ts). */
+  drawAutotile(ctx: CanvasRenderingContext2D, mask: number, style: AutotileStyle, x: number, y: number, size: number, color: string): void
 }
 
 export const loadImage = (url: string): Promise<HTMLImageElement> =>
@@ -17,12 +20,24 @@ export const loadImage = (url: string): Promise<HTMLImageElement> =>
     img.src = url
   })
 
-const tint = (sheet: HTMLImageElement, col: number, row: number, color: string): HTMLCanvasElement => {
+const blankTile = (): [HTMLCanvasElement, CanvasRenderingContext2D] => {
   const canvas = document.createElement('canvas')
   canvas.width = TILE_SIZE
   canvas.height = TILE_SIZE
   const ctx = canvas.getContext('2d')
   if (!ctx) throw new Error('atlas: 2D context unavailable')
+  return [canvas, ctx]
+}
+
+const paintBitmap = (bitmap: readonly boolean[], color: string): HTMLCanvasElement => {
+  const [canvas, ctx] = blankTile()
+  ctx.fillStyle = color
+  bitmap.forEach((on, i) => on && ctx.fillRect(i % TILE_SIZE, Math.floor(i / TILE_SIZE), 1, 1))
+  return canvas
+}
+
+const tint = (sheet: HTMLImageElement, col: number, row: number, color: string): HTMLCanvasElement => {
+  const [canvas, ctx] = blankTile()
   ctx.drawImage(sheet, col * TILE_SIZE, row * TILE_SIZE, TILE_SIZE, TILE_SIZE, 0, 0, TILE_SIZE, TILE_SIZE)
   ctx.globalCompositeOperation = 'source-in'
   ctx.fillStyle = color
@@ -43,9 +58,21 @@ export const createAtlas = (sheet: HTMLImageElement): Atlas => {
     return tinted
   }
 
+  const getAutotile = (mask: number, style: AutotileStyle, color: string): HTMLCanvasElement => {
+    const key = `auto:${mask}:${style.dots}:${color}`
+    const hit = cache.get(key)
+    if (hit) return hit
+    const painted = paintBitmap(autotileBitmap(mask, style), color)
+    cache.set(key, painted)
+    return painted
+  }
+
   return {
     draw(ctx, name, x, y, size, color) {
       ctx.drawImage(get(name, color ?? PALETTE[TILES[name].color]), x, y, size, size)
+    },
+    drawAutotile(ctx, mask, style, x, y, size, color) {
+      ctx.drawImage(getAutotile(mask, style, color), x, y, size, size)
     },
   }
 }

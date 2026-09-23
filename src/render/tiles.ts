@@ -12,7 +12,7 @@ export interface TileDef {
 
 const tile = (col: number, row: number, color: PaletteColor): TileDef => ({ col, row, color })
 
-/** Named tiles used so far. Autotiled water/path sets get added with map generation (Phase 3). */
+/** Named tiles. Paths and water are drawn procedurally (render/autotile.ts). */
 export const TILES = {
   pine: tile(28, 1, 'pine'),
   pines: tile(26, 1, 'pine'),
@@ -34,6 +34,11 @@ export const TILES = {
   fence: tile(17, 29, 'wood'),
   waterFill: tile(4, 16, 'water'),
   pathFill: tile(4, 24, 'path'),
+  hut: tile(19, 18, 'bone'),
+  campfire: tile(3, 11, 'pumpkin'),
+  sword: tile(16, 14, 'shrine'),
+  bridgeAcross: tile(17, 14, 'wood'),
+  bridgeAlong: tile(17, 13, 'wood'),
 } as const satisfies Record<string, TileDef>
 
 export type TileName = keyof typeof TILES

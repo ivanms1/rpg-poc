@@ -1,54 +1,50 @@
 import { expect, test } from '@playwright/test'
 
-test.describe('layout mock', () => {
+/** Seed 12345: the two tiles right of the start are open ground (the start clearing). */
+const SEED = '/?seed=12345'
+
+test.describe('stage and map', () => {
   test('scales the 480×270 stage by an integer factor', async ({ page }) => {
     await page.setViewportSize({ width: 1920, height: 1080 })
-    await page.goto('/')
-    const box = await page.getByTestId('stage').boundingBox()
-    expect(box).toMatchObject({ width: 1920, height: 1080 })
-
+    await page.goto(SEED)
+    expect(await page.getByTestId('stage').boundingBox()).toMatchObject({ width: 1920, height: 1080 })
     await page.setViewportSize({ width: 1300, height: 800 })
     await expect.poll(() => page.getByTestId('stage').boundingBox()).toMatchObject({ width: 960, height: 540 })
   })
 
-  test('renders stats, inventory and a drawn map', async ({ page }) => {
+  test('a new run: 20 health, a Wooden Stick, 4 open slots and a drawn map', async ({ page }) => {
     await page.setViewportSize({ width: 1920, height: 1080 })
-    await page.goto('/')
-    await expect(page.getByLabel('Health 12/12')).toBeVisible()
-    await expect(page.getByLabel('Horned Helmet')).toBeVisible()
+    await page.goto(SEED)
+    await expect(page.getByLabel('Health 20/20')).toBeVisible()
+    await expect(page.getByLabel('Wooden Stick')).toBeVisible()
+    await expect(page.getByLabel('Empty slot')).toHaveCount(4)
     await expect(page.getByLabel('Locked slot')).toHaveCount(4)
-
+    await expect(page.getByText('seed 12345')).toBeVisible()
     const drawn = await page.getByTestId('map-canvas').evaluate(async (canvas: HTMLCanvasElement) => {
       await new Promise((r) => setTimeout(r, 300))
-      const ctx = canvas.getContext('2d')
-      if (!ctx) return 0
-      const { data } = ctx.getImageData(0, 0, canvas.width, canvas.height)
+      const { data } = canvas.getContext('2d')!.getImageData(0, 0, canvas.width, canvas.height)
       let opaque = 0
       for (let i = 3; i < data.length; i += 4) if ((data[i] ?? 0) > 0) opaque++
       return opaque
     })
-    expect(drawn).toBeGreaterThan(1000)
-    await page.screenshot({ path: 'test-results/layout-1080p.png' })
+    expect(drawn).toBeGreaterThan(5000)
+    await page.screenshot({ path: 'test-results/map-1080p.png' })
   })
 
-  test('moving advances the clock and shows item tooltips', async ({ page }) => {
+  test('hovering the weapon shows its tooltip', async ({ page }) => {
     await page.setViewportSize({ width: 1920, height: 1080 })
-    await page.goto('/')
+    await page.goto(SEED)
+    await page.getByLabel('Wooden Stick').hover()
+    await expect(page.getByRole('tooltip')).toContainText('Wooden Stick')
+  })
+
+  test('walking ticks the clock and night falls after 50 steps', async ({ page }) => {
+    await page.setViewportSize({ width: 1920, height: 1080 })
+    await page.goto(SEED)
     await expect(page.getByText('50 steps left')).toBeVisible()
-    for (let i = 0; i < 3; i++) await page.keyboard.press('d')
+    for (let i = 0; i < 3; i++) await page.keyboard.press(i % 2 === 0 ? 'd' : 'a')
     await expect(page.getByText('47 steps left')).toBeVisible()
-
-    await page.getByLabel('Horned Helmet').hover()
-    await expect(page.getByRole('tooltip')).toContainText('Battle Start: Gain 1 thorns')
-    await page.screenshot({ path: 'test-results/tooltip-1080p.png' })
-  })
-
-  test('night falls after 50 steps', async ({ page }) => {
-    await page.setViewportSize({ width: 1920, height: 1080 })
-    await page.goto('/')
-    await expect(page.getByText('50 steps left')).toBeVisible()
-    // Pace back and forth next to the start, where no enemy stands.
-    for (let i = 0; i < 52; i++) await page.keyboard.press(i % 2 === 0 ? 'd' : 'a')
+    for (let i = 3; i < 52; i++) await page.keyboard.press(i % 2 === 0 ? 'd' : 'a')
     await expect(page.getByText('night 1 · 28 steps left')).toBeVisible()
     await page.screenshot({ path: 'test-results/night-1080p.png' })
   })

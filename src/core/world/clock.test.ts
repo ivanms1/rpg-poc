@@ -1,4 +1,4 @@
-import { STEPS_PER_WEEK, WEEK_SEGMENTS, sightRadius, timeOfWeek } from './clock'
+import { STEPS_PER_WEEK, WEEK_SEGMENTS, nextMorning, sightRadius, timeOfWeek } from './clock'
 
 describe('clock', () => {
   it('has 3 days of 50 steps and 3 nights of 30 steps', () => {
@@ -36,5 +36,21 @@ describe('clock', () => {
   it('sees 5 tiles by day and 3 by night', () => {
     expect(sightRadius('day')).toBe(5)
     expect(sightRadius('night')).toBe(3)
+  })
+})
+
+describe('nextMorning', () => {
+  it('jumps from any point of a night to the start of the next day', () => {
+    expect(nextMorning(50)).toBe(80)
+    expect(nextMorning(79)).toBe(80)
+    expect(nextMorning(130)).toBe(160)
+  })
+
+  it('from the last night jumps to the end of the week (boss time)', () => {
+    expect(nextMorning(210)).toBe(STEPS_PER_WEEK)
+  })
+
+  it('by day jumps past the coming night too', () => {
+    expect(nextMorning(10)).toBe(80)
   })
 })
