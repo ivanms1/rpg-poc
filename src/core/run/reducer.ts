@@ -9,6 +9,7 @@ import { createRng, type Rng } from '../rng'
 import { finishBattle, startBossBattle, startEnemyBattle } from './battles'
 import { discardItem, swapSlots } from './hero'
 import { chooseOption, interact } from './locations'
+import { buy, reroll } from './shop'
 import { drawDistinct } from './loot'
 import type { Content, Hero, RunAction, RunState, Week } from './types'
 
@@ -104,13 +105,15 @@ const move = (state: RunState, content: Content, dx: number, dy: number): RunSta
   return bossIfDue(nightChase(visited, content), content)
 }
 
+const DIALOGS: ReadonlySet<RunState['screen']['kind']> = new Set(['choice', 'message', 'shop', 'forge', 'oil'])
+
 const dismiss = (state: RunState, content: Content): RunState => {
-  if (state.screen.kind !== 'choice' && state.screen.kind !== 'message') return state
+  if (!DIALOGS.has(state.screen.kind)) return state
   return bossIfDue(reveal({ ...state, screen: { kind: 'map' } }), content)
 }
 
 /** Inventory edits are allowed on the map and while a dialog is open, never mid-battle. */
-const canEditInventory = (state: RunState): boolean => state.screen.kind === 'map' || state.screen.kind === 'choice'
+const canEditInventory = (state: RunState): boolean => state.screen.kind === 'map' || DIALOGS.has(state.screen.kind)
 
 const reorder = (state: RunState, from: number, to: number): RunState => {
   if (!canEditInventory(state)) return state
@@ -122,7 +125,7 @@ const discard = (state: RunState, slot: number): RunState => {
   if (!canEditInventory(state)) return state
   const hero = discardItem(state.hero, slot)
   if (hero === state.hero) return state
-  const screen = state.screen.kind === 'choice' ? { ...state.screen, notice: undefined } : state.screen
+  const screen = state.screen.kind === 'choice' || state.screen.kind === 'shop' ? { ...state.screen, notice: undefined } : state.screen
   return { ...state, hero, screen }
 }
 
@@ -142,6 +145,10 @@ export const runReducer =
         return discard(state, action.slot)
       case 'reorder':
         return reorder(state, action.from, action.to)
+      case 'buy':
+        return buy(state, action.index)
+      case 'reroll':
+        return reroll(state, content)
       case 'fightBoss':
         return state.screen.kind === 'map' ? startBossBattle(state, content) : state
     }

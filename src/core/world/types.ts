@@ -1,5 +1,6 @@
 /** Overworld model. Rules: docs/research/mechanics.md §6 and §8. */
 import type { Equipped } from '../items/loadout'
+import type { EdgeDef } from '../items/types'
 
 export type Biome = 'start' | 'glade' | 'plains' | 'forest'
 
@@ -32,7 +33,14 @@ export interface WorldMap {
   readonly biome: readonly Biome[]
 }
 
-export type PoiKind = 'home' | 'chest' | 'weaponPile' | 'campfire'
+export type PoiKind = 'home' | 'chest' | 'weaponPile' | 'campfire' | 'merchant' | 'bladeOil' | 'forge' | 'grave' | 'jewelryBox'
+
+/** A merchant's ware (mirrors core/run ShopSlot; kept here so POIs stay self-contained). */
+export interface Ware {
+  readonly equipped: Equipped
+  readonly price: number
+  readonly sold: boolean
+}
 
 export interface Poi extends Point {
   readonly id: string
@@ -41,6 +49,11 @@ export interface Poi extends Point {
   readonly used: boolean
   /** Items rolled the first time a chest/pile is opened, so closing and reopening can't reroll. */
   readonly offer?: readonly Equipped[]
+  /** Merchant stock and the price of the next reroll. */
+  readonly stock?: readonly Ware[]
+  readonly rerollCost?: number
+  /** Edges a forge offers. */
+  readonly edgeOffer?: readonly EdgeDef[]
 }
 
 export interface EnemyEntity extends Point {

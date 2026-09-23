@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test'
 
-/** Seed 4: the path continues below the start, so the hero can pace down and up. */
-const SEED = '/?seed=4'
+/** Seed 991: the path continues below the start, so the hero can pace down and up. */
+const SEED = '/?seed=991'
 
 test.describe('stage and map', () => {
   test('scales the 480×270 stage by an integer factor', async ({ page }) => {
@@ -19,7 +19,7 @@ test.describe('stage and map', () => {
     await expect(page.getByLabel('Wooden Stick')).toBeVisible()
     await expect(page.getByLabel('Empty slot')).toHaveCount(4)
     await expect(page.getByLabel('Locked slot')).toHaveCount(4)
-    await expect(page.getByText('seed 4')).toBeVisible()
+    await expect(page.getByText('seed 991')).toBeVisible()
     const drawn = await page.getByTestId('map-canvas').evaluate(async (canvas: HTMLCanvasElement) => {
       await new Promise((r) => setTimeout(r, 300))
       const { data } = canvas.getContext('2d')!.getImageData(0, 0, canvas.width, canvas.height)

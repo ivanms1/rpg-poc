@@ -1,12 +1,15 @@
 import { expect, test } from '@playwright/test'
 
-/** Seed 4: a Treasure Chest is 12 steps down the path from the start (BFS over the generated map). */
-const CHEST_PATH = 'ssssssssssss'
+/** Seed 991 routes from the start, computed with a BFS over the generated map. */
+const CHEST_PATH = 'sssasssss'
+const MERCHANT_PATH = 'aaaaaaa'
+const FORGE_PATH = 'sssassssassssssssssss'
+const OIL_PATH = 'sssddddddd'
 
 test.describe('run loop', () => {
   test.beforeEach(async ({ page }) => {
     await page.setViewportSize({ width: 1920, height: 1080 })
-    await page.goto('/?seed=4')
+    await page.goto('/?seed=991')
     await expect(page.getByText('50 steps left')).toBeVisible()
   })
 
@@ -44,6 +47,38 @@ test.describe('run loop', () => {
     await slots.nth(0).dragTo(slots.nth(2))
     await expect(slots.nth(0)).toHaveAttribute('aria-label', 'Empty slot')
     await expect(slots.nth(2)).toHaveAttribute('aria-label', label!)
+  })
+
+  test('the merchant shows 6 wares and refuses without gold', async ({ page }) => {
+    for (const key of MERCHANT_PATH) await page.keyboard.press(key)
+    const shop = page.getByRole('dialog', { name: 'Traveling Merchant' })
+    await expect(shop).toBeVisible()
+    await expect(shop.getByRole('button', { name: /^Buy / })).toHaveCount(6)
+    await page.screenshot({ path: 'test-results/merchant.png' })
+    await page.keyboard.press('1')
+    await expect(shop.getByRole('alert')).toContainText('Not enough gold')
+    await page.keyboard.press('Escape')
+    await expect(shop).toHaveCount(0)
+  })
+
+  test('the forge puts an edge on the weapon', async ({ page }) => {
+    for (const key of FORGE_PATH) await page.keyboard.press(key)
+    const forge = page.getByRole('dialog', { name: 'Forge' })
+    await expect(forge).toContainText('free')
+    const edge = (await forge.getByRole('button', { name: /^Forge / }).first().getAttribute('aria-label'))!.replace('Forge ', '')
+    await page.keyboard.press('1')
+    await expect(forge).toHaveCount(0)
+    await page.getByLabel('Wooden Stick').hover()
+    await expect(page.getByRole('tooltip')).toContainText(`Edge — ${edge}`)
+  })
+
+  test('blade oil coats the weapon', async ({ page }) => {
+    for (const key of OIL_PATH) await page.keyboard.press(key)
+    await expect(page.getByRole('dialog', { name: 'Blade Oil' })).toBeVisible()
+    await page.keyboard.press('1')
+    await expect(page.getByLabel('Attack 2')).toBeVisible()
+    await page.getByLabel('Wooden Stick').hover()
+    await expect(page.getByRole('tooltip')).toContainText('Oils: +1 attack')
   })
 
   test('Tab previews the boss, who can be fought early', async ({ page }) => {

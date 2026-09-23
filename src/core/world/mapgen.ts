@@ -13,7 +13,17 @@ export interface MapGenOptions {
   readonly height?: number
 }
 
-export const POI_COUNTS = { chest: 8, weaponPile: 3, campfire: 4, enemy: 22 } as const
+export const POI_COUNTS = {
+  chest: 8,
+  weaponPile: 3,
+  campfire: 4,
+  merchant: 2,
+  bladeOil: 3,
+  forge: 2,
+  grave: 2,
+  jewelryBox: 2,
+  enemy: 22,
+} as const
 
 /** Which regular enemies live where (wiki: Woodland_enemies). */
 export const BIOME_ENEMIES: Readonly<Record<Biome, readonly string[]>> = {
@@ -123,11 +133,8 @@ const placeLocations = (d: Draft, start: Point): { pois: Poi[]; enemies: EnemyEn
   d.taken.add(tileKey(start.x, start.y))
   d.taken.add(tileKey(home.x, home.y))
   const pois: Poi[] = [{ id: 'home', kind: 'home', ...home, used: false }]
-  const kinds: readonly PoiKind[] = [
-    ...Array.from({ length: POI_COUNTS.campfire }, () => 'campfire' as const),
-    ...Array.from({ length: POI_COUNTS.chest }, () => 'chest' as const),
-    ...Array.from({ length: POI_COUNTS.weaponPile }, () => 'weaponPile' as const),
-  ]
+  const placed: readonly Exclude<PoiKind, 'home'>[] = ['campfire', 'chest', 'weaponPile', 'merchant', 'bladeOil', 'forge', 'grave', 'jewelryBox']
+  const kinds = placed.flatMap((kind) => Array.from({ length: POI_COUNTS[kind] }, () => kind))
   kinds.forEach((kind, i) => pois.push({ id: `${kind}-${i}`, kind, ...randomSpot(d, start), used: false }))
   const enemies: EnemyEntity[] = Array.from({ length: POI_COUNTS.enemy }, (_, i) => {
     const p = randomSpot(d, start)

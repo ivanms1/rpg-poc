@@ -3,7 +3,7 @@ import type { BattleResult } from '../combat/types'
 import type { Equipped } from '../items/loadout'
 import type { BossDef, EdgeDef, EnemyDef, ItemDef, OilKind, SetDef } from '../items/types'
 import type { Rng } from '../rng'
-import type { Point, World } from '../world/types'
+import type { Point, Ware, World } from '../world/types'
 
 /** Game content the run draws from; injected so tests can use tiny pools. */
 export interface Content {
@@ -29,6 +29,8 @@ export interface Hero {
   readonly edge: EdgeDef | null
 }
 
+export type ShopSlot = Ware
+
 export interface BattleInfo {
   readonly id: string
   readonly result: BattleResult
@@ -50,6 +52,9 @@ export type Screen =
       readonly notice?: string
     }
   | { readonly kind: 'message'; readonly title: string; readonly text: string }
+  | { readonly kind: 'shop'; readonly poiId: string; readonly stock: readonly Ware[]; readonly rerollCost: number; readonly notice?: string }
+  | { readonly kind: 'forge'; readonly poiId: string; readonly options: readonly EdgeDef[]; readonly cost: number; readonly notice?: string }
+  | { readonly kind: 'oil'; readonly poiId: string; readonly options: readonly OilKind[] }
   | { readonly kind: 'gameOver' }
   | { readonly kind: 'victory' }
 
@@ -77,4 +82,6 @@ export type RunAction =
   | { readonly type: 'dismiss' }
   | { readonly type: 'discard'; readonly slot: number }
   | { readonly type: 'reorder'; readonly from: number; readonly to: number }
+  | { readonly type: 'buy'; readonly index: number }
+  | { readonly type: 'reroll' }
   | { readonly type: 'fightBoss' }

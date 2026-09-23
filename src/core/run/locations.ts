@@ -1,49 +1,121 @@
 /** What happens when the hero steps onto a location. Rules: docs/research/mechanics.md §8. */
+import type { Equipped } from '../items/loadout'
+import type { OilKind } from '../items/types'
+import type { Rng } from '../rng'
 import { nextMorning, timeOfWeek } from '../world/clock'
 import type { Poi } from '../world/types'
 import { equipWeapon, heroMaxHp, placeItem, withHealth } from './hero'
-import { chestOptions, weaponPileOptions } from './loot'
+import { chestOptions, forgeOptions, graveOptions, jewelryOptions, weaponPileOptions } from './loot'
+import { openShop, ownedIds } from './shop'
 import type { Content, RunState } from './types'
 
 const CAMPFIRE_HEAL = 10
-const TITLES = { chest: 'Treasure Chest', weaponPile: 'Weapon Pile' } as const
+const FORGE_REPLACE_COST = 10
+const OILS: readonly OilKind[] = ['attack', 'armor', 'speed']
+
+type OfferKind = 'chest' | 'weaponPile' | 'grave' | 'jewelryBox'
+const TITLES: Record<OfferKind, string> = { chest: 'Treasure Chest', weaponPile: 'Weapon Pile', grave: "Hero's Grave", jewelryBox: 'Jewelry Box' }
 
 const updatePoi = (state: RunState, id: string, patch: Partial<Poi>): RunState => ({
   ...state,
   world: { ...state.world, pois: state.world.pois.map((p) => (p.id === id ? { ...p, ...patch } : p)) },
 })
 
-const openOffer = (state: RunState, content: Content, poi: Poi & { kind: 'chest' | 'weaponPile' }): RunState => {
-  const [options, rng] = poi.offer ? [poi.offer, state.rng] : (poi.kind === 'chest' ? chestOptions : weaponPileOptions)(state.rng, content)
-  const withOffer = updatePoi({ ...state, rng }, poi.id, { offer: options })
-  return { ...withOffer, screen: { kind: 'choice', poiId: poi.id, title: TITLES[poi.kind], options } }
-}
+const message = (state: RunState, title: string, text: string): RunState => ({ ...state, screen: { kind: 'message', title, text } })
 
-const rest = (state: RunState, title: string, heal: number, wakeText: string, dayText: string): RunState => {
-  if (timeOfWeek(state.step).phase !== 'night') return { ...state, screen: { kind: 'message', title, text: dayText } }
-  const hero = withHealth(state.hero, state.hero.hp + heal)
-  return { ...state, hero, step: nextMorning(state.step), screen: { kind: 'message', title, text: wakeText } }
-}
-
-export const interact = (state: RunState, content: Content, poi: Poi): RunState => {
-  switch (poi.kind) {
+const rollOffer = (state: RunState, content: Content, kind: OfferKind): [readonly Equipped[], Rng] => {
+  const owned = ownedIds(state.hero)
+  switch (kind) {
     case 'chest':
+      return chestOptions(state.rng, content)
     case 'weaponPile':
-      return poi.used ? state : openOffer(state, content, { ...poi, kind: poi.kind })
-    case 'campfire':
-      return rest(state, 'Campfire', CAMPFIRE_HEAL, `You rest by the fire until morning and restore ${CAMPFIRE_HEAL} health.`, 'The embers are warm. Come back at night to rest here.')
-    case 'home':
-      return rest(state, 'Home', heroMaxHp(state.hero), 'You sleep soundly at home and wake fully healed.', 'Home. Come back at night to sleep here.')
+      return weaponPileOptions(state.rng, content, owned)
+    case 'grave':
+      return graveOptions(state.rng, content, owned)
+    case 'jewelryBox':
+      return jewelryOptions(state.rng, content, owned)
   }
 }
 
-/** Takes option `index` from the open chest/pile. Items need a free slot; weapons replace the current one. */
-export const chooseOption = (state: RunState, index: number): RunState => {
+const openOffer = (state: RunState, content: Content, poi: Poi, kind: OfferKind): RunState => {
+  const [options, rng] = poi.offer ? [poi.offer, state.rng] : rollOffer(state, content, kind)
+  const withOffer = updatePoi({ ...state, rng }, poi.id, { offer: options })
+  return { ...withOffer, screen: { kind: 'choice', poiId: poi.id, title: TITLES[kind], options } }
+}
+
+const rest = (state: RunState, title: string, heal: number, wakeText: string, dayText: string): RunState => {
+  if (timeOfWeek(state.step).phase !== 'night') return message(state, title, dayText)
+  const hero = withHealth(state.hero, state.hero.hp + heal)
+  return { ...message(state, title, wakeText), hero, step: nextMorning(state.step) }
+}
+
+const openForge = (state: RunState, content: Content, poi: Poi): RunState => {
+  const [options, rng] = poi.edgeOffer ? [poi.edgeOffer, state.rng] : forgeOptions(state.rng, content)
+  const cost = state.hero.edge ? FORGE_REPLACE_COST : 0
+  return { ...updatePoi({ ...state, rng }, poi.id, { edgeOffer: options }), screen: { kind: 'forge', poiId: poi.id, options, cost } }
+}
+
+const openOil = (state: RunState, poi: Poi): RunState => {
+  const options = OILS.filter((oil) => !state.hero.oils.includes(oil))
+  if (options.length === 0) return message(state, 'Blade Oil', 'Your weapon already carries every oil.')
+  return { ...state, screen: { kind: 'oil', poiId: poi.id, options } }
+}
+
+const isNight = (state: RunState): boolean => timeOfWeek(state.step).phase === 'night'
+
+export const interact = (state: RunState, content: Content, poi: Poi): RunState => {
+  if (poi.used) return state
+  switch (poi.kind) {
+    case 'chest':
+    case 'weaponPile':
+    case 'jewelryBox':
+      return openOffer(state, content, poi, poi.kind)
+    case 'grave':
+      return isNight(state)
+        ? openOffer(state, content, poi, 'grave')
+        : message(state, "Hero's Grave", 'The grave is sealed. It opens at night.')
+    case 'merchant':
+      return openShop(state, content, poi)
+    case 'forge':
+      return openForge(state, content, poi)
+    case 'bladeOil':
+      return openOil(state, poi)
+    case 'campfire':
+      return rest(state, 'Campfire', CAMPFIRE_HEAL, `You rest by the fire until morning and restore ${CAMPFIRE_HEAL} health.`, 'The embers are warm. Come back at night to rest here.')
+    case 'home':
+      return rest(state, 'Home', heroMaxHp(state.hero, content.sets), 'You sleep soundly at home and wake fully healed.', 'Home. Come back at night to sleep here.')
+  }
+}
+
+const takeItem = (state: RunState, poiId: string, option: Equipped): RunState => {
   if (state.screen.kind !== 'choice') return state
-  const { poiId, options } = state.screen
-  const option = options[index]
-  if (!option) return state
   const hero = option.item.kind === 'weapon' ? equipWeapon(state.hero, option) : placeItem(state.hero, option)
   if (!hero) return { ...state, screen: { ...state.screen, notice: 'Your inventory is full — double-click an item to discard it.' } }
   return { ...updatePoi({ ...state, hero }, poiId, { used: true }), screen: { kind: 'map' } }
+}
+
+/** Takes option `index` on the open chest/pile/grave/box, forge or blade oil. */
+export const chooseOption = (state: RunState, index: number): RunState => {
+  const { screen } = state
+  switch (screen.kind) {
+    case 'choice': {
+      const option = screen.options[index]
+      return option ? takeItem(state, screen.poiId, option) : state
+    }
+    case 'forge': {
+      const edge = screen.options[index]
+      if (!edge) return state
+      if (state.hero.gold < screen.cost) return { ...state, screen: { ...screen, notice: `Not enough gold — replacing an edge costs ${screen.cost}.` } }
+      const hero = { ...state.hero, edge, gold: state.hero.gold - screen.cost }
+      return { ...updatePoi({ ...state, hero }, screen.poiId, { used: true }), screen: { kind: 'map' } }
+    }
+    case 'oil': {
+      const oil = screen.options[index]
+      if (!oil) return state
+      const hero = { ...state.hero, oils: [...state.hero.oils, oil] }
+      return { ...updatePoi({ ...state, hero }, screen.poiId, { used: true }), screen: { kind: 'map' } }
+    }
+    default:
+      return state
+  }
 }

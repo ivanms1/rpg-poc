@@ -242,6 +242,112 @@ describe('the weekly boss', () => {
   })
 })
 
+describe('traveling merchant', () => {
+  const shopRun = (gold: number) => {
+    const s = createRun(1, CONTENT, { world: world([poi('merchant', 8, 5)]) })
+    return play({ ...s, hero: { ...s.hero, gold } }, right)
+  }
+
+  it('shows 6 wares with prices and a 1-gold reroll', () => {
+    const s = shopRun(20)
+    expect(s.screen).toMatchObject({ kind: 'shop', rerollCost: 1 })
+    if (s.screen.kind === 'shop') expect(s.screen.stock).toHaveLength(6)
+  })
+
+  it('buying pays gold, delivers the ware and marks it sold', () => {
+    const open = shopRun(20)
+    if (open.screen.kind !== 'shop') throw new Error('expected shop')
+    const index = open.screen.stock.findIndex((w) => w.equipped.item.kind === 'item')
+    const ware = open.screen.stock[index]!
+    const s = play(open, { type: 'buy', index })
+    expect(s.hero.gold).toBe(20 - ware.price)
+    expect(s.hero.items[0]?.item.id).toBe(ware.equipped.item.id)
+    expect(s.screen).toMatchObject({ kind: 'shop' })
+    if (s.screen.kind === 'shop') expect(s.screen.stock[index]?.sold).toBe(true)
+    expect(play(s, { type: 'buy', index })).toBe(s)
+  })
+
+  it('buying a weapon replaces the current one', () => {
+    const open = shopRun(20)
+    if (open.screen.kind !== 'shop') throw new Error('expected shop')
+    const index = open.screen.stock.findIndex((w) => w.equipped.item.kind === 'weapon')
+    if (index === -1) return
+    expect(play(open, { type: 'buy', index }).hero.weapon?.item.id).toBe(open.screen.stock[index]!.equipped.item.id)
+  })
+
+  it('refuses without enough gold', () => {
+    const s = play(shopRun(0), { type: 'buy', index: 0 })
+    expect(s.screen).toMatchObject({ kind: 'shop', notice: expect.stringContaining('gold') })
+    expect(s.hero.items[0]).toBeNull()
+  })
+
+  it('rerolling costs 1, then 2, and changes the stock', () => {
+    const open = shopRun(5)
+    const once = play(open, { type: 'reroll' })
+    expect(once.hero.gold).toBe(4)
+    expect(once.screen).toMatchObject({ kind: 'shop', rerollCost: 2 })
+    const twice = play(once, { type: 'reroll' })
+    expect(twice.hero.gold).toBe(2)
+    expect(play(shopRun(0), { type: 'reroll' }).screen).toMatchObject({ notice: expect.stringContaining('gold') })
+  })
+
+  it('keeps its stock and prices when you come back', () => {
+    const open = shopRun(20)
+    const back = play(open, { type: 'dismiss' }, left, right)
+    expect(back.screen).toEqual(open.screen)
+  })
+})
+
+describe('blade oil, forge, grave and jewelry box', () => {
+  const visit = (kind: Poi['kind'], patch: Partial<RunState['hero']> = {}, step = 0) => {
+    const s = createRun(1, CONTENT, { world: world([poi(kind, 8, 5)]) })
+    return play({ ...s, step, hero: { ...s.hero, ...patch } }, right)
+  }
+
+  it('blade oil offers the oils this weapon lacks; taking one is permanent for the weapon', () => {
+    const s = visit('bladeOil', { oils: ['attack'] })
+    expect(s.screen).toMatchObject({ kind: 'oil', options: ['armor', 'speed'] })
+    const after = play(s, { type: 'choose', index: 1 })
+    expect(after.hero.oils).toEqual(['attack', 'speed'])
+    expect(after.world.pois[0]?.used).toBe(true)
+  })
+
+  it('blade oil with every oil applied just says so', () => {
+    expect(visit('bladeOil', { oils: ['attack', 'armor', 'speed'] }).screen).toMatchObject({ kind: 'message' })
+  })
+
+  it('the first forge edge is free', () => {
+    const s = visit('forge')
+    expect(s.screen).toMatchObject({ kind: 'forge', cost: 0 })
+    if (s.screen.kind !== 'forge') return
+    const edge = s.screen.options[0]!
+    expect(play(s, { type: 'choose', index: 0 }).hero.edge?.id).toBe(edge.id)
+  })
+
+  it('replacing an edge costs 10 gold', () => {
+    const edge = CONTENT.edges[0]!
+    const poor = visit('forge', { edge, gold: 3 })
+    expect(poor.screen).toMatchObject({ kind: 'forge', cost: 10 })
+    expect(play(poor, { type: 'choose', index: 0 }).screen).toMatchObject({ notice: expect.stringContaining('gold') })
+    const rich = play(visit('forge', { edge, gold: 12 }), { type: 'choose', index: 1 })
+    expect(rich.hero.gold).toBe(2)
+    expect(rich.world.pois[0]?.used).toBe(true)
+  })
+
+  it("the Hero's Grave is sealed by day and offers heroic items at night", () => {
+    expect(visit('grave').screen).toMatchObject({ kind: 'message', title: "Hero's Grave" })
+    const night = visit('grave', {}, 55)
+    expect(night.screen).toMatchObject({ kind: 'choice', title: "Hero's Grave" })
+    if (night.screen.kind === 'choice') expect(night.screen.options.every((o) => o.item.rarity === 'heroic')).toBe(true)
+  })
+
+  it('a jewelry box offers jewelry', () => {
+    const s = visit('jewelryBox')
+    expect(s.screen).toMatchObject({ kind: 'choice', title: 'Jewelry Box' })
+    if (s.screen.kind === 'choice') expect(s.screen.options.every((o) => o.item.tags.includes('jewelry'))).toBe(true)
+  })
+})
+
 describe('reorder', () => {
   it('swaps two slots on the map', () => {
     const s = createRun(1, CONTENT, { world: world() })

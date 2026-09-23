@@ -13,6 +13,7 @@ import { Inventory } from './Inventory'
 import { WorldCanvas } from './map/WorldCanvas'
 import { PixelIcon } from './PixelIcon'
 import { BossPreview, ChoiceDialog, EndScreen, MessageDialog } from './run/Dialogs'
+import { ForgeDialog, OilDialog, ShopDialog } from './run/ShopDialogs'
 import { StatPanel } from './StatPanel'
 import { Timeline } from './Timeline'
 import { STAGE_H, STAGE_W, useStageScale } from './useStageScale'
@@ -90,7 +91,12 @@ export function App() {
         setShowBoss(false)
         return act({ type: 'dismiss' })
       }
-      if (screen.kind === 'choice' && ['1', '2', '3'].includes(key)) return act({ type: 'choose', index: Number(key) - 1 })
+      const digit = Number(key)
+      if (Number.isInteger(digit) && digit >= 1) {
+        if (screen.kind === 'shop') return act({ type: 'buy', index: digit - 1 })
+        if (screen.kind === 'choice' || screen.kind === 'forge' || screen.kind === 'oil') return act({ type: 'choose', index: digit - 1 })
+      }
+      if (screen.kind === 'shop' && key === 'r') return act({ type: 'reroll' })
       const move = MOVES[key]
       if (!move || showBoss) return
       e.preventDefault()
@@ -142,6 +148,36 @@ export function App() {
             />
           )}
           {screen.kind === 'message' && <MessageDialog title={screen.title} text={screen.text} onClose={() => act({ type: 'dismiss' })} />}
+          {screen.kind === 'shop' && (
+            <ShopDialog
+              stock={screen.stock}
+              gold={hero.gold}
+              rerollCost={screen.rerollCost}
+              notice={screen.notice}
+              onBuy={(index) => act({ type: 'buy', index })}
+              onReroll={() => act({ type: 'reroll' })}
+              onClose={() => act({ type: 'dismiss' })}
+            />
+          )}
+          {screen.kind === 'forge' && (
+            <ForgeDialog
+              options={screen.options}
+              cost={screen.cost}
+              current={hero.edge}
+              weaponName={hero.weapon?.item.name ?? 'your weapon'}
+              notice={screen.notice}
+              onChoose={(index) => act({ type: 'choose', index })}
+              onClose={() => act({ type: 'dismiss' })}
+            />
+          )}
+          {screen.kind === 'oil' && (
+            <OilDialog
+              options={screen.options}
+              weaponName={hero.weapon?.item.name ?? 'your weapon'}
+              onChoose={(index) => act({ type: 'choose', index })}
+              onClose={() => act({ type: 'dismiss' })}
+            />
+          )}
           {showBoss && screen.kind === 'map' && boss && (
             <BossPreview
               boss={boss}
