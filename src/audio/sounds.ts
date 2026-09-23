@@ -31,6 +31,16 @@ export const SOUNDS = {
     { wave: 'sine', from: 330, to: 320, ms: 900, gain: 0.12 },
     { wave: 'sine', from: 165, to: 160, ms: 1100, gain: 0.08, delay: 120 },
   ],
+  /** A rising shimmer while the fog lifts (Lookout Tower, Crystal Ball). */
+  reveal: [
+    { wave: 'noise', from: 7000, to: 2500, ms: 900, gain: 0.03 },
+    { wave: 'triangle', from: 523, to: 523, ms: 420, gain: 0.08 },
+    { wave: 'triangle', from: 659, to: 659, ms: 420, gain: 0.08, delay: 130 },
+    { wave: 'triangle', from: 784, to: 784, ms: 420, gain: 0.08, delay: 260 },
+    { wave: 'triangle', from: 1047, to: 1047, ms: 520, gain: 0.08, delay: 390 },
+    { wave: 'sine', from: 1568, to: 1568, ms: 1000, gain: 0.05, delay: 520 },
+    { wave: 'sine', from: 2093, to: 2093, ms: 900, gain: 0.03, delay: 650 },
+  ],
   encounter: [
     { wave: 'noise', from: 3000, to: 600, ms: 160, gain: 0.12 },
     { wave: 'square', from: 110, to: 220, ms: 180, gain: 0.07 },

@@ -1,8 +1,6 @@
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react'
-import { runCues } from '../audio/cues'
 import { setProgress, type Equipped } from '../core/items/loadout'
 import { heroCombatant } from '../core/run/hero'
-import { runReducer } from '../core/run/reducer'
 import { planRoute } from '../core/run/route'
 import { isSaveable } from '../core/run/save'
 import type { RunAction, RunState } from '../core/run/types'
@@ -19,6 +17,7 @@ import { Inventory } from './Inventory'
 import { WorldCanvas } from './map/WorldCanvas'
 import { PixelIcon } from './PixelIcon'
 import { BossPreview, ChoiceDialog, EndScreen, MessageDialog } from './run/Dialogs'
+import { gameCues, gameReducer, initGame } from './run/gameState'
 import { CraftDialog, ForgeDialog, OilDialog, PickDialog, ShopDialog } from './run/ShopDialogs'
 import { clearSave, writeSave } from './save/storage'
 import { StatPanel } from './StatPanel'
@@ -36,7 +35,9 @@ const MOVES: Record<string, readonly [number, number]> = {
   arrowup: [0, -1], arrowleft: [-1, 0], arrowdown: [0, 1], arrowright: [1, 0],
 }
 
-const reducer = runReducer(CONTENT)
+const reducer = gameReducer(CONTENT)
+/** Keys that never skip the reveal animation. */
+const MODIFIERS: ReadonlySet<string> = new Set(['shift', 'control', 'alt', 'meta', 'm'])
 
 interface Props {
   readonly initial: RunState
@@ -54,10 +55,15 @@ export function Game({ initial, onExit }: Props) {
   const [mapPinned, setMapPinned] = useState(false)
   const overview = mapHeld || mapPinned
   const [route, setRoute] = useState<readonly Point[]>([])
-  const [state, dispatch] = useReducer(reducer, initial)
+  const [game, dispatch] = useReducer(reducer, initial, initGame)
+  const state = game.run
+  /** Lookout / Crystal Ball reveal playing: the run is paused and its dialog waits. */
+  const revealing = game.reveal !== null
   const sound = useSound()
-  const previous = useRef(state)
+  const previous = useRef(game)
   const { hero, screen, week, step } = state
+  /** The screen as drawn: a dialog opened by a reveal shows once the animation ends. */
+  const shown: RunState['screen'] = revealing ? { kind: 'map' } : screen
   const mode = DIFFICULTIES[state.difficulty]
   const time = timeOf(state)
   const stats = useMemo(() => heroCombatant(hero, CONTENT.sets).stats, [hero])
@@ -78,6 +84,7 @@ export function Game({ initial, onExit }: Props) {
   const boss = bossDef && empowerBoss(bossDef, state.difficulty)
 
   const act = useCallback((action: RunAction) => dispatch(action), [])
+  const skipReveal = useCallback(() => dispatch({ type: 'revealDone' }), [])
   const finished = screen.kind === 'gameOver' || screen.kind === 'victory'
 
   /** Click-to-move: one step per tick. A dialog, battle, key press or blocked step ends the walk. */
@@ -86,7 +93,7 @@ export function Game({ initial, onExit }: Props) {
     if (!next) return
     const dx = next.x - state.player.x
     const dy = next.y - state.player.y
-    const blocked = screen.kind !== 'map' || showBoss || overview || Math.abs(dx) + Math.abs(dy) !== 1
+    const blocked = screen.kind !== 'map' || revealing || showBoss || overview || Math.abs(dx) + Math.abs(dy) !== 1
     const timer = window.setTimeout(
       () => {
         if (blocked) return setRoute([])
@@ -96,7 +103,7 @@ export function Game({ initial, onExit }: Props) {
       blocked ? 0 : WALK_STEP_MS,
     )
     return () => window.clearTimeout(timer)
-  }, [route, screen.kind, showBoss, overview, state.player, act])
+  }, [route, screen.kind, revealing, showBoss, overview, state.player, act])
 
   const walkTo = useCallback(
     (tile: Point) => {
@@ -120,9 +127,9 @@ export function Game({ initial, onExit }: Props) {
   }, [])
 
   useEffect(() => {
-    for (const cue of runCues(previous.current, state)) sound.play(cue)
-    previous.current = state
-  }, [state, sound])
+    for (const cue of gameCues(previous.current, game)) sound.play(cue)
+    previous.current = game
+  }, [game, sound])
 
   useEffect(() => {
     if (isSaveable(state)) writeSave(state)
@@ -142,6 +149,11 @@ export function Game({ initial, onExit }: Props) {
     const onKey = (e: KeyboardEvent) => {
       const key = e.key.toLowerCase()
       if (key === 'm') return sound.toggleMute()
+      if (revealing) {
+        if (MODIFIERS.has(key)) return
+        e.preventDefault()
+        return skipReveal()
+      }
       if (screen.kind === 'battle') return
       if (finished) {
         if (key === 'r') onExit()
@@ -171,7 +183,7 @@ export function Game({ initial, onExit }: Props) {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [act, finished, onExit, screen.kind, showBoss, overview, sound])
+  }, [act, skipReveal, revealing, finished, onExit, screen.kind, showBoss, overview, sound])
 
   return (
     <Stage>
@@ -185,8 +197,8 @@ export function Game({ initial, onExit }: Props) {
               weapon={hero.weapon}
               items={hero.items}
               total={MAX_SLOTS}
-              onDiscard={screen.kind === 'battle' ? undefined : (slot) => act({ type: 'discard', slot })}
-              onReorder={screen.kind === 'battle' ? undefined : (from, to) => act({ type: 'reorder', from, to })}
+              onDiscard={screen.kind === 'battle' || revealing ? undefined : (slot) => act({ type: 'discard', slot })}
+              onReorder={screen.kind === 'battle' || revealing ? undefined : (from, to) => act({ type: 'reorder', from, to })}
               describe={describe}
             />
           </aside>
@@ -198,12 +210,12 @@ export function Game({ initial, onExit }: Props) {
               title="Hold Shift for the map"
               aria-label="Toggle map overview"
               aria-pressed={mapPinned}
-              onClick={() => setMapPinned((o) => !o)}
+              onClick={() => (revealing ? skipReveal() : setMapPinned((o) => !o))}
             >
               Shf
             </button>
             <Timeline step={step} schedule={mode.schedule} />
-            <button type="button" className="boss-preview" title="Boss (Tab)" aria-label="Boss preview" onClick={() => setShowBoss((o) => !o)}>
+            <button type="button" className="boss-preview" title="Boss (Tab)" aria-label="Boss preview" onClick={() => (revealing ? skipReveal() : setShowBoss((o) => !o))}>
               <PixelIcon icon="skull" color={PALETTE.enemy} scale={2} />
             </button>
             <span className="key-hint key-hint-red">Tab</span>
@@ -218,10 +230,13 @@ export function Game({ initial, onExit }: Props) {
               width={MAP_W}
               height={MAP_H}
               stageScale={scale}
-              overview={overview}
+              overview={overview && !revealing}
+              reveal={game.reveal}
+              onRevealDone={skipReveal}
               onTileClick={walkTo}
             />
-            {overview && <div className="map-overview-label">{mapPinned ? 'Map · Shf or Esc to return' : 'Map · release Shift to return'}</div>}
+            {revealing && <div className="map-overview-label">The fog lifts · any key to skip</div>}
+            {overview && !revealing && <div className="map-overview-label">{mapPinned ? 'Map · Shf or Esc to return' : 'Map · release Shift to return'}</div>}
             <div className="map-caption">
               {time.phase} {time.day} · {time.stepsLeftInSegment} steps left · {mode.name} · seed {state.seed}
             </div>
@@ -241,69 +256,69 @@ export function Game({ initial, onExit }: Props) {
           {screen.kind === 'battle' && (
             <CombatView key={screen.battle.id} battle={screen.battle} onCue={sound.play} onFinish={() => act({ type: 'finishBattle' })} />
           )}
-          {screen.kind === 'choice' && (
+          {shown.kind === 'choice' && (
             <ChoiceDialog
-              title={screen.title}
-              options={screen.options}
-              notice={screen.notice}
+              title={shown.title}
+              options={shown.options}
+              notice={shown.notice}
               onChoose={(index) => act({ type: 'choose', index })}
               onClose={() => act({ type: 'dismiss' })}
             />
           )}
-          {screen.kind === 'message' && <MessageDialog title={screen.title} text={screen.text} onClose={() => act({ type: 'dismiss' })} />}
-          {screen.kind === 'shop' && (
+          {shown.kind === 'message' && <MessageDialog title={shown.title} text={shown.text} onClose={() => act({ type: 'dismiss' })} />}
+          {shown.kind === 'shop' && (
             <ShopDialog
-              title={screen.title}
-              stock={screen.stock}
+              title={shown.title}
+              stock={shown.stock}
               gold={hero.gold}
-              rerollCost={screen.rerollCost}
-              canHaggle={screen.canHaggle}
-              notice={screen.notice}
+              rerollCost={shown.rerollCost}
+              canHaggle={shown.canHaggle}
+              notice={shown.notice}
               onBuy={(index) => act({ type: 'buy', index })}
               onReroll={() => act({ type: 'reroll' })}
               onHaggle={() => act({ type: 'haggle' })}
               onClose={() => act({ type: 'dismiss' })}
             />
           )}
-          {screen.kind === 'forge' && (
+          {shown.kind === 'forge' && (
             <ForgeDialog
-              options={screen.options}
-              cost={screen.cost}
+              options={shown.options}
+              cost={shown.cost}
               current={hero.edge}
               weaponName={hero.weapon?.item.name ?? 'your weapon'}
-              notice={screen.notice}
+              notice={shown.notice}
               onChoose={(index) => act({ type: 'choose', index })}
               onClose={() => act({ type: 'dismiss' })}
             />
           )}
-          {screen.kind === 'craft' && (
+          {shown.kind === 'craft' && (
             <CraftDialog
-              title={screen.title}
-              options={screen.options}
+              title={shown.title}
+              options={shown.options}
               items={hero.items}
               onChoose={(index) => act({ type: 'choose', index })}
               onClose={() => act({ type: 'dismiss' })}
             />
           )}
-          {screen.kind === 'pick' && (
+          {shown.kind === 'pick' && (
             <PickDialog
-              title={screen.title}
-              text={screen.text}
-              options={screen.options}
-              notice={screen.notice}
+              title={shown.title}
+              text={shown.text}
+              options={shown.options}
+              notice={shown.notice}
               onChoose={(index) => act({ type: 'choose', index })}
               onClose={() => act({ type: 'dismiss' })}
             />
           )}
-          {screen.kind === 'oil' && (
+          {shown.kind === 'oil' && (
             <OilDialog
-              options={screen.options}
+              options={shown.options}
               weaponName={hero.weapon?.item.name ?? 'your weapon'}
               onChoose={(index) => act({ type: 'choose', index })}
               onClose={() => act({ type: 'dismiss' })}
             />
           )}
-          {showBoss && screen.kind === 'map' && boss && (
+          {showBoss && shown.kind === 'map' && !revealing && boss && (
             <BossPreview
               boss={boss}
               week={week}

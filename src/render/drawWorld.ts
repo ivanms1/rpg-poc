@@ -13,7 +13,8 @@ import { TILE_SIZE, type TileName } from './tiles'
 export interface WorldView {
   readonly world: World
   readonly player: Point
-  readonly revealed: ReadonlySet<string>
+  /** Which "x,y" tiles are out of the fog (a Set, or the reveal animation's in-between state). */
+  readonly revealed: { readonly has: (key: string) => boolean }
   /** Device pixels per tile pixel. */
   readonly px: number
   readonly heroBitmap: readonly string[]
@@ -21,9 +22,26 @@ export interface WorldView {
   readonly focus?: Point
   /** 0–1: how far the land has withered as He draws near (see `withering`). */
   readonly decay?: number
+  /** 0–1 flash over tiles that were just revealed. */
+  readonly glow?: (key: string) => number
 }
 
 const REMAINS_ALPHA = 0.45
+/** Brightest a freshly revealed tile flashes. */
+const GLOW_ALPHA = 0.6
+
+const drawGlow = (ctx: CanvasRenderingContext2D, cam: Camera, glow: (key: string) => number) => {
+  ctx.fillStyle = PALETTE.bone
+  for (let ty = cam.y0; ty < cam.y0 + cam.rows; ty++) {
+    for (let tx = cam.x0; tx < cam.x0 + cam.cols; tx++) {
+      const g = glow(tileKey(tx, ty))
+      if (g <= 0) continue
+      ctx.globalAlpha = GLOW_ALPHA * Math.min(1, g)
+      ctx.fillRect(cam.originX + tx * cam.size, cam.originY + ty * cam.size, cam.size, cam.size)
+    }
+  }
+  ctx.globalAlpha = 1
+}
 /** Tint strength at full decay. */
 const DECAY_ALPHA = 0.35
 
@@ -147,6 +165,8 @@ export const drawWorld = (ctx: CanvasRenderingContext2D, atlas: Atlas, view: Wor
     if (enemy.alive) drawEnemy(ctx, atlas, enemy, x, y, size, px)
     else drawRemains(ctx, atlas, 'skull', PALETTE.bone, x, y, size, px)
   }
+
+  if (view.glow) drawGlow(ctx, cam, view.glow)
 
   const hero = screen(player)
   const w = heroBitmap[0]?.length ?? 0

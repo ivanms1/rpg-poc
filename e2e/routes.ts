@@ -90,3 +90,24 @@ export const SEED: number = (() => {
   for (let seed = 1; seed < 2000; seed++) if (works(seed)) return seed
   throw new Error('no seed has clean routes to every e2e target')
 })()
+
+/** Few maps have a clean walk to both a Lookout Tower and a Crystal Ball before night, so reveals get their own seed. */
+export const REVEAL_TARGETS = {
+  lookout: (tag: string) => tag === 'lookout',
+  crystalBall: (tag: string) => tag === 'crystalBall',
+} as const
+
+/** Longest walk that still arrives by day (a day is 50 steps; night chases would interfere). */
+const DAYLIGHT_STEPS = 45
+
+export const REVEAL_SEED: number = (() => {
+  const fits = (seed: number) => {
+    try {
+      return Object.values(REVEAL_TARGETS).every((match) => routeTo(seed, match).length <= DAYLIGHT_STEPS)
+    } catch {
+      return false
+    }
+  }
+  for (let seed = 1; seed < 3000; seed++) if (fits(seed)) return seed
+  throw new Error('no seed has clean daytime routes to a lookout and a crystal ball')
+})()
