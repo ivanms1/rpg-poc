@@ -22,6 +22,9 @@ export const POI_COUNTS = {
   forge: 2,
   grave: 2,
   jewelryBox: 2,
+  golem: 2,
+  cauldron: 2,
+  beehive: 2,
   enemy: 22,
 } as const
 
@@ -133,7 +136,7 @@ const placeLocations = (d: Draft, start: Point): { pois: Poi[]; enemies: EnemyEn
   d.taken.add(tileKey(start.x, start.y))
   d.taken.add(tileKey(home.x, home.y))
   const pois: Poi[] = [{ id: 'home', kind: 'home', ...home, used: false }]
-  const placed: readonly Exclude<PoiKind, 'home'>[] = ['campfire', 'chest', 'weaponPile', 'merchant', 'bladeOil', 'forge', 'grave', 'jewelryBox']
+  const placed: readonly Exclude<PoiKind, 'home'>[] = ['campfire', 'chest', 'weaponPile', 'merchant', 'bladeOil', 'forge', 'grave', 'jewelryBox', 'golem', 'cauldron', 'beehive']
   const kinds = placed.flatMap((kind) => Array.from({ length: POI_COUNTS[kind] }, () => kind))
   kinds.forEach((kind, i) => pois.push({ id: `${kind}-${i}`, kind, ...randomSpot(d, start), used: false }))
   const enemies: EnemyEntity[] = Array.from({ length: POI_COUNTS.enemy }, (_, i) => {

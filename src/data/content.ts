@@ -1,5 +1,6 @@
 import type { Content } from '../core/run/types'
 import { BOSSES } from './bosses'
+import { MERGES, RECIPES } from './crafting'
 import { EDGES } from './edges'
 import { ENEMIES_BY_ID } from './enemies'
 import { ITEMS } from './items'
@@ -17,5 +18,7 @@ export const CONTENT: Content = {
   bosses: BOSSES,
   sets: SETS,
   edges: EDGES,
+  recipes: RECIPES,
+  merges: MERGES,
   startingWeapon,
 }

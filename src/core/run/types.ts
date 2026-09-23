@@ -1,7 +1,7 @@
 /** A single run: world, clock, hero and whatever screen is in front. Changed only by `runReducer`. */
 import type { BattleResult } from '../combat/types'
 import type { Equipped } from '../items/loadout'
-import type { BossDef, EdgeDef, EnemyDef, ItemDef, OilKind, SetDef } from '../items/types'
+import type { BossDef, EdgeDef, EnemyDef, ItemDef, OilKind, Recipe, SetDef } from '../items/types'
 import type { Rng } from '../rng'
 import type { Point, Ware, World } from '../world/types'
 
@@ -13,6 +13,8 @@ export interface Content {
   readonly bosses: readonly BossDef[]
   readonly sets: readonly SetDef[]
   readonly edges: readonly EdgeDef[]
+  readonly recipes: readonly Recipe[]
+  readonly merges: readonly Recipe[]
   readonly startingWeapon: ItemDef
 }
 
@@ -30,6 +32,12 @@ export interface Hero {
 }
 
 export type ShopSlot = Ware
+
+/** Golem or cauldron: consume the items in `slots`; `result` lands in the first slot. */
+export interface CraftOption {
+  readonly result: Equipped
+  readonly slots: readonly [number, number]
+}
 
 export interface BattleInfo {
   readonly id: string
@@ -57,6 +65,7 @@ export type Screen =
   | { readonly kind: 'shop'; readonly poiId: string; readonly stock: readonly Ware[]; readonly rerollCost: number; readonly notice?: string }
   | { readonly kind: 'forge'; readonly poiId: string; readonly options: readonly EdgeDef[]; readonly cost: number; readonly notice?: string }
   | { readonly kind: 'oil'; readonly poiId: string; readonly options: readonly OilKind[] }
+  | { readonly kind: 'craft'; readonly poiId: string; readonly title: string; readonly options: readonly CraftOption[] }
   | { readonly kind: 'gameOver' }
   | { readonly kind: 'victory' }
 

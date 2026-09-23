@@ -39,6 +39,15 @@ export interface ItemDef {
   readonly baseModifier?: (stats: BaseStats, ctx: LoadoutContext, x: Scale) => BaseStats
   /** Gold gained at the start of every day (Loose Change). */
   readonly goldPerDay?: number
+  /** `false` for items that only come from crafting (dishes, honeycomb, merged weapons). */
+  readonly drop?: false
+}
+
+/** Two ingredients (item or weapon ids, either order) → a result: cauldron dishes and weapon merges. */
+export interface Recipe {
+  readonly a: string
+  readonly b: string
+  readonly result: ItemDef
 }
 
 /** Blade Oil: +1 to one weapon stat, each at most once per weapon. */

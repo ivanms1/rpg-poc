@@ -14,7 +14,7 @@ import { Inventory } from './Inventory'
 import { WorldCanvas } from './map/WorldCanvas'
 import { PixelIcon } from './PixelIcon'
 import { BossPreview, ChoiceDialog, EndScreen, MessageDialog } from './run/Dialogs'
-import { ForgeDialog, OilDialog, ShopDialog } from './run/ShopDialogs'
+import { CraftDialog, ForgeDialog, OilDialog, ShopDialog } from './run/ShopDialogs'
 import { clearSave, writeSave } from './save/storage'
 import { StatPanel } from './StatPanel'
 import { Stage } from './Stage'
@@ -98,7 +98,7 @@ export function Game({ initial, onExit }: Props) {
       const digit = Number(key)
       if (Number.isInteger(digit) && digit >= 1) {
         if (screen.kind === 'shop') return act({ type: 'buy', index: digit - 1 })
-        if (screen.kind === 'choice' || screen.kind === 'forge' || screen.kind === 'oil') return act({ type: 'choose', index: digit - 1 })
+        if (screen.kind === 'choice' || screen.kind === 'forge' || screen.kind === 'oil' || screen.kind === 'craft') return act({ type: 'choose', index: digit - 1 })
       }
       if (screen.kind === 'shop' && key === 'r') return act({ type: 'reroll' })
       const move = MOVES[key]
@@ -170,6 +170,15 @@ export function Game({ initial, onExit }: Props) {
               current={hero.edge}
               weaponName={hero.weapon?.item.name ?? 'your weapon'}
               notice={screen.notice}
+              onChoose={(index) => act({ type: 'choose', index })}
+              onClose={() => act({ type: 'dismiss' })}
+            />
+          )}
+          {screen.kind === 'craft' && (
+            <CraftDialog
+              title={screen.title}
+              options={screen.options}
+              items={hero.items}
               onChoose={(index) => act({ type: 'choose', index })}
               onClose={() => act({ type: 'dismiss' })}
             />

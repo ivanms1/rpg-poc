@@ -1,4 +1,4 @@
-import { reachableFrom, stepToward } from './pathing'
+import { findPath, reachableFrom, stepToward } from './pathing'
 import type { Terrain, WorldMap } from './types'
 
 /** Builds a map from rows: '.' path, ',' open ground, '#' pine, '~' water, '=' bridge. */
@@ -59,5 +59,30 @@ describe('stepToward', () => {
 
   it('may step onto the target itself', () => {
     expect(stepToward(open, { x: 0, y: 0 }, { x: 1, y: 0 }, new Set())).toEqual({ x: 1, y: 0 })
+  })
+})
+
+describe('findPath', () => {
+  it('returns the shortest walkable route, excluding the start', () => {
+    const map = mapOf([
+      '...#.',
+      '.#.#.',
+      '.#...',
+    ])
+    const path = findPath(map, { x: 0, y: 0 }, { x: 4, y: 0 }, new Set())
+    expect(path).toHaveLength(8)
+    expect(path?.at(-1)).toEqual({ x: 4, y: 0 })
+  })
+
+  it('routes around blocked tiles but may end on a blocked target', () => {
+    const map = mapOf(['.....', '.....'])
+    const path = findPath(map, { x: 0, y: 0 }, { x: 2, y: 0 }, new Set(['1,0', '2,0']))
+    expect(path).toEqual([{ x: 0, y: 1 }, { x: 1, y: 1 }, { x: 2, y: 1 }, { x: 2, y: 0 }])
+  })
+
+  it('returns null when unreachable and [] for the start itself', () => {
+    const map = mapOf(['..#..'])
+    expect(findPath(map, { x: 0, y: 0 }, { x: 4, y: 0 }, new Set())).toBeNull()
+    expect(findPath(map, { x: 0, y: 0 }, { x: 0, y: 0 }, new Set())).toEqual([])
   })
 })

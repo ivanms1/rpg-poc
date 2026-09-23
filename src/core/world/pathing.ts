@@ -41,3 +41,33 @@ export const stepToward = (map: WorldMap, from: Point, to: Point, occupied: Read
   )
   return options[0] ?? from
 }
+
+/**
+ * Shortest 4-way path from `from` to `to` over walkable tiles, avoiding `blocked` keys except the
+ * target itself. Excludes `from`; `[]` when already there, `null` when unreachable.
+ */
+export const findPath = (map: WorldMap, from: Point, to: Point, blocked: ReadonlySet<string>): Point[] | null => {
+  const goal = tileKey(to.x, to.y)
+  const start = tileKey(from.x, from.y)
+  if (start === goal) return []
+  const prev = new Map<string, Point>()
+  const seen = new Set<string>([start])
+  const queue: Point[] = [from]
+  for (let head = 0; head < queue.length; head++) {
+    const p = queue[head] as Point
+    for (const d of DIRS) {
+      const next = { x: p.x + d.x, y: p.y + d.y }
+      const key = tileKey(next.x, next.y)
+      if (seen.has(key) || !isWalkable(map, next.x, next.y) || (blocked.has(key) && key !== goal)) continue
+      seen.add(key)
+      prev.set(key, p)
+      if (key === goal) {
+        const path: Point[] = [next]
+        for (let cur = prev.get(key); cur && tileKey(cur.x, cur.y) !== start; cur = prev.get(tileKey(cur.x, cur.y))) path.unshift(cur)
+        return path
+      }
+      queue.push(next)
+    }
+  }
+  return null
+}

@@ -1,7 +1,8 @@
 import { expect, test } from '@playwright/test'
+import { paceKeys, SEED as SEED_NUMBER } from './routes'
 
-/** Seed 991: the path continues below the start, so the hero can pace down and up. */
-const SEED = '/?seed=991'
+const SEED = `/?seed=${SEED_NUMBER}`
+const [out, back] = paceKeys(SEED_NUMBER)
 
 test.describe('stage and map', () => {
   test('scales the 480×270 stage by an integer factor', async ({ page }) => {
@@ -19,7 +20,7 @@ test.describe('stage and map', () => {
     await expect(page.getByLabel('Wooden Stick')).toBeVisible()
     await expect(page.getByLabel('Empty slot')).toHaveCount(4)
     await expect(page.getByLabel('Locked slot')).toHaveCount(4)
-    await expect(page.getByText('seed 991')).toBeVisible()
+    await expect(page.getByText(`seed ${SEED_NUMBER}`)).toBeVisible()
     const drawn = await page.getByTestId('map-canvas').evaluate(async (canvas: HTMLCanvasElement) => {
       await new Promise((r) => setTimeout(r, 300))
       const { data } = canvas.getContext('2d')!.getImageData(0, 0, canvas.width, canvas.height)
@@ -42,9 +43,9 @@ test.describe('stage and map', () => {
     await page.setViewportSize({ width: 1920, height: 1080 })
     await page.goto(SEED)
     await expect(page.getByText('50 steps left')).toBeVisible()
-    for (let i = 0; i < 3; i++) await page.keyboard.press(i % 2 === 0 ? 's' : 'w')
+    for (let i = 0; i < 3; i++) await page.keyboard.press(i % 2 === 0 ? out : back)
     await expect(page.getByText('47 steps left')).toBeVisible()
-    for (let i = 3; i < 52; i++) await page.keyboard.press(i % 2 === 0 ? 's' : 'w')
+    for (let i = 3; i < 52; i++) await page.keyboard.press(i % 2 === 0 ? out : back)
     await expect(page.getByText('night 1 · 28 steps left')).toBeVisible()
     await page.screenshot({ path: 'test-results/night-1080p.png' })
   })

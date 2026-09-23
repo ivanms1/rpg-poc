@@ -19,7 +19,7 @@ const Point = z.object({ x: Int, y: Int })
 
 const PoiSave = Point.extend({
   id: z.string(),
-  kind: z.enum(['home', 'chest', 'weaponPile', 'campfire', 'merchant', 'bladeOil', 'forge', 'grave', 'jewelryBox']),
+  kind: z.enum(['home', 'chest', 'weaponPile', 'campfire', 'merchant', 'bladeOil', 'forge', 'grave', 'jewelryBox', 'golem', 'cauldron', 'beehive']),
   used: z.boolean(),
   offer: z.array(Ref).optional(),
   stock: z.array(z.object({ ref: Ref, price: Int.nonnegative(), sold: z.boolean() })).optional(),

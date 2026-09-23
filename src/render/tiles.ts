@@ -42,6 +42,9 @@ export const TILES = {
   lamp: tile(24, 51, 'speed'),
   jewelryBox: tile(24, 52, 'bone'),
   furnace: tile(20, 15, 'rock'),
+  golem: tile(19, 15, 'rock'),
+  cauldron: tile(25, 52, 'rock'),
+  beehive: tile(24, 53, 'speed'),
 } as const satisfies Record<string, TileDef>
 
 export type TileName = keyof typeof TILES

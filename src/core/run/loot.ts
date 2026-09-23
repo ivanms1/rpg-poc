@@ -38,9 +38,9 @@ const withTiers = (rng: Rng, defs: readonly ItemDef[]): [Equipped[], Rng] =>
     [[], rng],
   )
 
-/** Rare and better items are unique: never offer one the hero already has. */
+/** Crafted-only items never drop; rare and better items are unique (never offered while owned). */
 const available = (defs: readonly ItemDef[], owned: ReadonlySet<string>): readonly ItemDef[] =>
-  defs.filter((d) => d.rarity === 'common' || !owned.has(d.id))
+  defs.filter((d) => d.drop !== false && (d.rarity === 'common' || !owned.has(d.id)))
 
 const offer = (rng: Rng, pool: readonly ItemDef[], owned: ReadonlySet<string>, n = CHOICES): [Equipped[], Rng] => {
   const [defs, next] = drawDistinct(rng, available(pool, owned), n)

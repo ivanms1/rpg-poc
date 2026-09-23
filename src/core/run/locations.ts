@@ -4,8 +4,9 @@ import type { OilKind } from '../items/types'
 import type { Rng } from '../rng'
 import { nextMorning, timeOfWeek } from '../world/clock'
 import type { Poi } from '../world/types'
-import { acquire, alreadyHas, blockedReason, heroMaxHp, ownedIds, withHealth } from './hero'
+import { acquire, alreadyHas, blockedReason, heroMaxHp, mergedWeapon, ownedIds, withHealth } from './hero'
 import { chestOptions, forgeOptions, graveOptions, jewelryOptions, weaponPileOptions } from './loot'
+import { craft, openCauldron, openGolem, visitBeehive } from './crafting'
 import { openShop } from './shop'
 import type { Content, RunState } from './types'
 
@@ -83,6 +84,12 @@ export const interact = (state: RunState, content: Content, poi: Poi): RunState 
       return openForge(state, content, poi)
     case 'bladeOil':
       return openOil(state, poi)
+    case 'golem':
+      return openGolem(state, poi)
+    case 'cauldron':
+      return openCauldron(state, content, poi)
+    case 'beehive':
+      return visitBeehive(state, content, poi)
     case 'campfire':
       return rest(state, content.sets, 'Campfire', CAMPFIRE_HEAL, `You rest by the fire until morning and restore ${CAMPFIRE_HEAL} health.`, 'The embers are warm. Come back at night to rest here.')
     case 'home':
@@ -94,9 +101,14 @@ const takeItem = (state: RunState, content: Content, poiId: string, option: Equi
   if (state.screen.kind !== 'choice') return state
   const blocked = blockedReason(state.hero, option.item)
   if (blocked) return { ...state, screen: { ...state.screen, notice: blocked } }
-  const hero = acquire(state.hero, option, content.sets)
+  const merged = mergedWeapon(state.hero.weapon, option.item, content.merges)
+  const hero = acquire(state.hero, option, content.sets, content.merges)
   if (!hero) return { ...state, screen: { ...state.screen, notice: 'Your inventory is full — double-click an item to discard it.' } }
-  return { ...updatePoi({ ...state, hero }, poiId, { used: true }), screen: { kind: 'map' } }
+  const taken = updatePoi({ ...state, hero }, poiId, { used: true })
+  if (merged && state.hero.weapon) {
+    return message(taken, 'Weapons merge', `Your ${state.hero.weapon.item.name} and ${option.item.name} merge into ${merged.name}!`)
+  }
+  return { ...taken, screen: { kind: 'map' } }
 }
 
 /** Takes option `index` on the open chest/pile/grave/box, forge or blade oil. */
@@ -120,6 +132,8 @@ export const chooseOption = (state: RunState, content: Content, index: number): 
       const hero = { ...state.hero, oils: [...state.hero.oils, oil] }
       return { ...updatePoi({ ...state, hero }, screen.poiId, { used: true }), screen: { kind: 'map' } }
     }
+    case 'craft':
+      return craft(state, index)
     default:
       return state
   }

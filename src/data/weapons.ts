@@ -25,9 +25,11 @@ import {
   whileBonus,
 } from '../core/effects/dsl'
 import type { ItemDef } from '../core/items/types'
+import { MERGED_WEAPONS } from './crafting'
 import { byId, weapon } from './define'
 
 export const WEAPONS: readonly ItemDef[] = [
+  ...Object.values(MERGED_WEAPONS),
   weapon('Wooden Stick', { rarity: 'common', stats: { attack: 1 }, tags: ['wood'] }),
   weapon('Sword of the Hero', { rarity: 'common', stats: { attack: 3 } }),
   weapon('Ironstone Greatsword', { rarity: 'common', stats: { attack: 4, speed: -2 }, tags: ['stone'] }),

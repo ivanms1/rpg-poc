@@ -44,7 +44,7 @@ export const buy = (state: RunState, content: Content, index: number): RunState 
   if (blocked) return withNotice(state, blocked)
   if (state.hero.gold < ware.price) return withNotice(state, `Not enough gold — ${ware.equipped.item.name} costs ${ware.price}.`)
   const paid = { ...state.hero, gold: state.hero.gold - ware.price }
-  const hero = acquire(paid, ware.equipped, content.sets)
+  const hero = acquire(paid, ware.equipped, content.sets, content.merges)
   if (!hero) return withNotice(state, 'Your inventory is full — double-click an item to discard it.')
   const stock = shop.stock.map((w, i) => (i === index ? { ...w, sold: true } : w))
   const next = updatePoi({ ...state, hero }, shop.id, { stock })

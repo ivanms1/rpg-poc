@@ -30,6 +30,9 @@ const POI_STYLE: Record<Poi['kind'], { readonly tile: TileName; readonly color: 
   forge: { tile: 'furnace', color: PALETTE.frame, frame: PALETTE.shop },
   grave: { tile: 'grave', color: PALETTE.shrine, frame: PALETTE.shrine },
   jewelryBox: { tile: 'jewelryBox', color: PALETTE.purity, frame: PALETTE.night },
+  golem: { tile: 'golem', color: PALETTE.rock, frame: PALETTE.shrine },
+  cauldron: { tile: 'cauldron', color: PALETTE.frame, frame: PALETTE.shop },
+  beehive: { tile: 'beehive', color: PALETTE.speed, frame: PALETTE.shop },
 }
 
 const drawTerrain = (ctx: CanvasRenderingContext2D, atlas: Atlas, world: World, tx: number, ty: number, x: number, y: number, size: number) => {

@@ -15,6 +15,7 @@ interface Spec {
   readonly effect?: ItemDef['effect']
   readonly baseModifier?: ItemDef['baseModifier']
   readonly goldPerDay?: number
+  readonly drop?: false
 }
 
 const define =
@@ -30,6 +31,7 @@ const define =
     ...(spec.effect ? { effect: spec.effect } : {}),
     ...(spec.baseModifier ? { baseModifier: spec.baseModifier } : {}),
     ...(spec.goldPerDay ? { goldPerDay: spec.goldPerDay } : {}),
+    ...(spec.drop === false ? { drop: false as const } : {}),
   })
 
 export const weapon = define('weapon')

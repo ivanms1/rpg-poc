@@ -392,6 +392,56 @@ describe('rare and better items stay unique at claim time', () => {
   })
 })
 
+describe('crafting', () => {
+  const byId = (id: string) => ({ item: [...CONTENT.items, ...CONTENT.weapons].find((d) => d.id === id)! })
+  const visitWith = (kind: Poi['kind'], items: (Equipped | null)[], weapon?: string) => {
+    const s = createRun(1, CONTENT, { world: world([poi(kind, 8, 5)]) })
+    return play({ ...s, hero: { ...s.hero, items, ...(weapon ? { weapon: byId(weapon) } : {}) } }, right)
+  }
+
+  it('the golem merges two identical commons into the next tier', () => {
+    const s = visitWith('golem', [byId('leather-vest'), null, byId('leather-vest'), byId('horned-helmet')])
+    expect(s.screen).toMatchObject({ kind: 'craft', title: 'Golem' })
+    if (s.screen.kind !== 'craft') return
+    expect(s.screen.options[0]?.result).toEqual({ item: byId('leather-vest').item, tier: 'golden' })
+    const after = play(s, { type: 'choose', index: 0 })
+    expect(after.hero.items[0]).toEqual({ item: byId('leather-vest').item, tier: 'golden' })
+    expect(after.hero.items[2]).toBeNull()
+    expect(after.world.pois[0]?.used).toBe(true)
+  })
+
+  it('golden pairs become diamond; without a pair the golem just explains', () => {
+    const golden = { ...byId('leather-vest'), tier: 'golden' as const }
+    const s = visitWith('golem', [golden, golden])
+    if (s.screen.kind === 'craft') expect(s.screen.options[0]?.result.tier).toBe('diamond')
+    expect(visitWith('golem', [byId('leather-vest'), byId('horned-helmet')]).screen).toMatchObject({ kind: 'message', title: 'Golem' })
+  })
+
+  it('the cauldron cooks two foods into a dish and can be used again', () => {
+    const s = visitWith('cauldron', [byId('cherry-bomb'), byId('horned-helmet'), byId('redwood-roast'), null])
+    expect(s.screen).toMatchObject({ kind: 'craft', title: 'Cauldron' })
+    const after = play(s, { type: 'choose', index: 0 })
+    expect(after.hero.items.map((e) => e?.item.id ?? null)).toEqual(['explosive-roast', 'horned-helmet', null, null])
+    expect(after.world.pois[0]?.used).toBe(false)
+    expect(visitWith('cauldron', [byId('horned-helmet')]).screen).toMatchObject({ kind: 'message', title: 'Cauldron' })
+  })
+
+  it('a beehive gives a honeycomb once', () => {
+    const s = visitWith('beehive', [null, null])
+    expect(s.hero.items[0]?.item.id).toBe('honeycomb')
+    expect(s.world.pois[0]?.used).toBe(true)
+    expect(visitWith('beehive', [byId('leather-vest')]).world.pois[0]?.used).toBe(false)
+  })
+
+  it('picking up the matching weapon merges them', () => {
+    const s = createRun(1, CONTENT, { world: world([{ ...poi('weaponPile', 8, 5), offer: [byId('razorthorn-spear')] }]) })
+    const open = play({ ...s, hero: { ...s.hero, weapon: byId('boom-stick') } }, right)
+    const after = play(open, { type: 'choose', index: 0 })
+    expect(after.hero.weapon?.item.id).toBe('boom-spear')
+    expect(after.screen).toMatchObject({ kind: 'message', text: expect.stringContaining('Boom Spear') })
+  })
+})
+
 describe('Loose Change', () => {
   const change = { item: CONTENT.items.find((i) => i.id === 'loose-change')!, tier: 'golden' as const }
   const rich = (s: RunState, step: number): RunState => ({ ...s, step, hero: { ...s.hero, items: [change, null, null, null] } })

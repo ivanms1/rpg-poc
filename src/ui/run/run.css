@@ -322,3 +322,31 @@
   gap: 4px;
   padding: 4px 8px 4px 6px;
 }
+
+/* ---------- Golem & cauldron ---------- */
+.craft-dialog {
+  left: 110px;
+  top: 58px;
+  width: 352px;
+}
+
+.craft-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.craft-card {
+  height: 112px;
+}
+
+.craft-inputs {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 4px;
+}
+
+.craft-arrow {
+  color: var(--muted);
+}

@@ -1,15 +1,17 @@
 import { expect, test } from '@playwright/test'
+import { routeTo, SEED, TARGETS } from './routes'
 
-/** Seed 991 routes from the start, computed with a BFS over the generated map. */
-const CHEST_PATH = 'sssasssss'
-const MERCHANT_PATH = 'aaaaaaa'
-const FORGE_PATH = 'sssassssassssssssssss'
-const OIL_PATH = 'sssddddddd'
+const CHEST_PATH = routeTo(SEED, TARGETS.chest)
+const MERCHANT_PATH = routeTo(SEED, TARGETS.merchant)
+const FORGE_PATH = routeTo(SEED, TARGETS.forge)
+const OIL_PATH = routeTo(SEED, TARGETS.bladeOil)
+const BACK: Record<string, string> = { w: 's', s: 'w', a: 'd', d: 'a' }
+const lastStep = CHEST_PATH.at(-1) ?? 's'
 
 test.describe('run loop', () => {
   test.beforeEach(async ({ page }) => {
     await page.setViewportSize({ width: 1920, height: 1080 })
-    await page.goto('/?seed=991')
+    await page.goto(`/?seed=${SEED}`)
     await expect(page.getByText('50 steps left')).toBeVisible()
   })
 
@@ -31,8 +33,8 @@ test.describe('run loop', () => {
     for (const key of CHEST_PATH) await page.keyboard.press(key)
     await page.keyboard.press('Escape')
     await expect(page.getByRole('dialog', { name: 'Treasure Chest' })).toHaveCount(0)
-    await page.keyboard.press('w')
-    await page.keyboard.press('s')
+    await page.keyboard.press(BACK[lastStep]!)
+    await page.keyboard.press(lastStep)
     await page.keyboard.press('1')
     await expect(page.getByLabel('Empty slot')).toHaveCount(3)
     await page.locator('.slot-grid .slot').first().dblclick()

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { EdgeDef, OilKind } from '../../core/items/types'
-import type { ShopSlot } from '../../core/run/types'
+import type { Equipped } from '../../core/items/loadout'
+import type { CraftOption, ShopSlot } from '../../core/run/types'
 import { PALETTE } from '../../render/palette'
 import type { IconName } from '../icons'
 import { ItemGlyph } from '../items/ItemGlyph'
@@ -136,6 +137,53 @@ export function OilDialog({ options, weaponName, onChoose, onClose }: OilProps) 
             </button>
           )
         })}
+      </div>
+    </div>
+  )
+}
+
+interface CraftProps {
+  readonly title: string
+  readonly options: readonly CraftOption[]
+  /** The hero's slots, to show what each option consumes. */
+  readonly items: readonly (Equipped | null)[]
+  readonly onChoose: (index: number) => void
+  readonly onClose: () => void
+}
+
+const CRAFT_BLURB: Record<string, string> = {
+  Golem: 'Fuse two identical items into one stronger item.',
+  Cauldron: 'Cook two ingredients into a dish.',
+}
+
+/** Golem / Cauldron: each option shows its two inputs and the result. */
+export function CraftDialog({ title, options, items, onChoose, onClose }: CraftProps) {
+  return (
+    <div className="panel run-dialog craft-dialog" role="dialog" aria-label={title}>
+      <h2>{title}</h2>
+      <Close onClose={onClose} />
+      <p className="forge-note">{CRAFT_BLURB[title] ?? ''}</p>
+      <div className="craft-options">
+        {options.slice(0, 6).map((option, i) => (
+          <button
+            key={`${option.result.item.id}-${option.slots.join('-')}`}
+            type="button"
+            className="choice-card craft-card"
+            onClick={() => onChoose(i)}
+            aria-label={`Make ${option.result.item.name}`}
+          >
+            <span className="choice-key">{i + 1}</span>
+            <span className="craft-inputs">
+              {option.slots.map((slot) => {
+                const input = items[slot]
+                return input ? <ItemGlyph key={slot} item={input.item} scale={1} /> : null
+              })}
+              <span className="craft-arrow">→</span>
+              <ItemGlyph item={option.result.item} />
+            </span>
+            <ItemDetails equipped={option.result} />
+          </button>
+        ))}
       </div>
     </div>
   )

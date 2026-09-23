@@ -1,10 +1,13 @@
 import { expect, test, type Page } from '@playwright/test'
+import { routeTo, SEED, TARGETS } from './routes'
 
-/** Seed 991: a level-1 enemy is 12 steps from the start (computed with a BFS over the generated map). */
+/** Nearest Spider or Wolf (both lose to a starting hero). */
+const ENEMY_ROUTE = routeTo(SEED, TARGETS.enemy)
+
 const walkToSpider = async (page: Page) => {
-  await page.goto('/?seed=991')
+  await page.goto(`/?seed=${SEED}`)
   await expect(page.getByText('50 steps left')).toBeVisible()
-  for (const key of 'sssassssaaaa') await page.keyboard.press(key)
+  for (const key of ENEMY_ROUTE) await page.keyboard.press(key)
 }
 
 test.describe('combat playback', () => {

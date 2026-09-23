@@ -1,4 +1,7 @@
 import { expect, test } from '@playwright/test'
+import { paceKeys, SEED } from './routes'
+
+const [out, back] = paceKeys(SEED)
 
 test.describe('title screen and saves', () => {
   test.beforeEach(async ({ page }) => {
@@ -16,15 +19,15 @@ test.describe('title screen and saves', () => {
   })
 
   test('a run in progress can be continued after a reload', async ({ page }) => {
-    await page.goto('/?seed=991')
+    await page.goto(`/?seed=${SEED}`)
     await expect(page.getByText('50 steps left')).toBeVisible()
-    for (const key of 'sws') await page.keyboard.press(key)
+    for (const key of [out, back, out]) await page.keyboard.press(key)
     await expect(page.getByText('47 steps left')).toBeVisible()
     await page.goto('/')
     const resume = page.getByRole('button', { name: /^Continue · week 1, day 1/ })
     await expect(resume).toBeVisible()
     await resume.click()
-    await expect(page.getByText('47 steps left · seed 991')).toBeVisible()
+    await expect(page.getByText(`47 steps left · seed ${SEED}`)).toBeVisible()
   })
 
   test('a corrupt save is reported, not crashed on', async ({ page }) => {

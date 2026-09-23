@@ -38,7 +38,7 @@ describe('generateWorld', () => {
     expect(count('chest')).toBe(POI_COUNTS.chest)
     expect(count('weaponPile')).toBe(POI_COUNTS.weaponPile)
     expect(count('campfire')).toBe(POI_COUNTS.campfire)
-    for (const kind of ['merchant', 'bladeOil', 'forge', 'grave', 'jewelryBox'] as const) expect(count(kind)).toBe(POI_COUNTS[kind])
+    for (const kind of ['merchant', 'bladeOil', 'forge', 'grave', 'jewelryBox', 'golem', 'cauldron', 'beehive'] as const) expect(count(kind)).toBe(POI_COUNTS[kind])
     expect(enemies).toHaveLength(POI_COUNTS.enemy)
     const keys = [start, ...pois, ...enemies].map((p) => tileKey(p.x, p.y))
     expect(new Set(keys).size).toBe(keys.length)

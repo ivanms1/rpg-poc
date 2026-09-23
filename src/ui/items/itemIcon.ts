@@ -46,10 +46,10 @@ const ITEM_SHAPE_RULES: readonly Rule<ItemShape>[] = [
   [/crown/i, 'crown'],
   [/necklace|medallion|talisman|bond|chain/i, 'necklace'],
   [/gemstone|\bgem\b/i, 'gem'],
-  [/chestnut|acorn|\bnut/i, 'nut'],
-  [/roast|steak|meat/i, 'meat'],
-  [/wine|potion|elixir|flask/i, 'bottle'],
-  [/bomb|shrapnel|surprise|keg|powder|firecracker/i, 'bomb'],
+  [/chestnut|acorn|\bnut|mix/i, 'nut'],
+  [/roast|steak|meat|\bham\b|sausage/i, 'meat'],
+  [/wine|potion|elixir|flask|cocktail/i, 'bottle'],
+  [/bomb|shrapnel|surprise|keg|powder|firecracker|cherry/i, 'bomb'],
   [/trap/i, 'trap'],
   [/feather|wings/i, 'feather'],
   [/rose/i, 'rose'],
@@ -59,7 +59,7 @@ const ITEM_SHAPE_RULES: readonly Rule<ItemShape>[] = [
   [/scales/i, 'armor'],
   [/burst|explosion/i, 'bomb'],
   [/change|coin/i, 'coins'],
-  [/heart/i, 'gem'],
+  [/heart|candy|honeycomb/i, 'gem'],
   [/stone|\bore\b/i, 'stone'],
 ]
 

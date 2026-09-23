@@ -1,7 +1,7 @@
 /** Pure inventory and health helpers for the hero between battles. */
 import type { Combatant } from '../combat/types'
 import { buildPlayer, type Equipped, type Loadout } from '../items/loadout'
-import { TIER_MULTIPLIER, type ItemDef, type SetDef } from '../items/types'
+import { TIER_MULTIPLIER, type ItemDef, type Recipe, type SetDef } from '../items/types'
 import type { Hero } from './types'
 
 const loadoutOf = (hero: Hero, sets: readonly SetDef[]): Loadout => ({
@@ -64,9 +64,19 @@ export const discardItem = (hero: Hero, slot: number, sets: readonly SetDef[] = 
 export const equipWeapon = (hero: Hero, weapon: Equipped, sets: readonly SetDef[] = []): Hero =>
   refit(hero, { ...hero, weapon, oils: [], edge: null }, sets)
 
-/** Equips a weapon or places an item; null when the item needs a slot and none is free. */
-export const acquire = (hero: Hero, equipped: Equipped, sets: readonly SetDef[] = []): Hero | null =>
-  equipped.item.kind === 'weapon' ? equipWeapon(hero, equipped, sets) : placeItem(hero, equipped, sets)
+/** The merged weapon if picking up `incoming` while holding `held` completes a recipe. */
+export const mergedWeapon = (held: Equipped | null, incoming: ItemDef, merges: readonly Recipe[]): ItemDef | null => {
+  if (!held || incoming.kind !== 'weapon') return null
+  const pair = [held.item.id, incoming.id]
+  return merges.find((m) => pair.includes(m.a) && pair.includes(m.b) && m.a !== m.b)?.result ?? null
+}
+
+/** Equips a weapon (merging with the held one when a recipe matches) or places an item; null when no slot is free. */
+export const acquire = (hero: Hero, equipped: Equipped, sets: readonly SetDef[] = [], merges: readonly Recipe[] = []): Hero | null => {
+  if (equipped.item.kind !== 'weapon') return placeItem(hero, equipped, sets)
+  const merged = mergedWeapon(hero.weapon, equipped.item, merges)
+  return equipWeapon(hero, merged ? { item: merged } : equipped, sets)
+}
 
 /** Swaps two item slots (slot order is trigger order). */
 export const swapSlots = (hero: Hero, from: number, to: number): Hero => {

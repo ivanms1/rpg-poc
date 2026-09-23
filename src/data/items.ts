@@ -31,6 +31,7 @@ import {
 } from '../core/effects/dsl'
 import type { ItemDef } from '../core/items/types'
 import { byId, item } from './define'
+import { CRAFTED_ITEMS } from './crafting'
 import { MORE_ITEMS } from './moreItems'
 
 const ARMOR_ITEMS: readonly ItemDef[] = [
@@ -301,6 +302,6 @@ const FOOD: readonly ItemDef[] = [
   }),
 ]
 
-export const ITEMS: readonly ItemDef[] = [...ARMOR_ITEMS, ...JEWELRY, ...FOOD, ...MORE_ITEMS]
+export const ITEMS: readonly ItemDef[] = [...ARMOR_ITEMS, ...JEWELRY, ...FOOD, ...MORE_ITEMS, ...CRAFTED_ITEMS]
 
 export const ITEMS_BY_ID = byId(ITEMS)

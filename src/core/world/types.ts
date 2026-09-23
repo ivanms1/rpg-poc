@@ -33,7 +33,19 @@ export interface WorldMap {
   readonly biome: readonly Biome[]
 }
 
-export type PoiKind = 'home' | 'chest' | 'weaponPile' | 'campfire' | 'merchant' | 'bladeOil' | 'forge' | 'grave' | 'jewelryBox'
+export type PoiKind =
+  | 'home'
+  | 'chest'
+  | 'weaponPile'
+  | 'campfire'
+  | 'merchant'
+  | 'bladeOil'
+  | 'forge'
+  | 'grave'
+  | 'jewelryBox'
+  | 'golem'
+  | 'cauldron'
+  | 'beehive'
 
 /** A merchant's ware (mirrors core/run ShopSlot; kept here so POIs stay self-contained). */
 export interface Ware {

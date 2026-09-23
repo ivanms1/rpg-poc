@@ -105,7 +105,7 @@ const move = (state: RunState, content: Content, dx: number, dy: number): RunSta
   return bossIfDue(nightChase(visited, content), content)
 }
 
-const DIALOGS: ReadonlySet<RunState['screen']['kind']> = new Set(['choice', 'message', 'shop', 'forge', 'oil'])
+const DIALOGS: ReadonlySet<RunState['screen']['kind']> = new Set(['choice', 'message', 'shop', 'forge', 'oil', 'craft'])
 
 const dismiss = (state: RunState, content: Content): RunState => {
   if (!DIALOGS.has(state.screen.kind)) return state
