@@ -2,7 +2,8 @@
 import type { Equipped } from '../items/loadout'
 import type { OilKind } from '../items/types'
 import type { Rng } from '../rng'
-import { nextMorning, timeOfWeek } from '../world/clock'
+import { nextMorning } from '../world/clock'
+import { DIFFICULTIES, timeOf } from './difficulty'
 import type { Poi } from '../world/types'
 import { acquire, alreadyHas, blockedReason, heroMaxHp, mergedWeapon, ownedIds, withHealth } from './hero'
 import { chestOptions, forgeOptions, graveOptions, jewelryOptions, weaponPileOptions } from './loot'
@@ -27,15 +28,16 @@ const message = (state: RunState, title: string, text: string): RunState => ({ .
 
 const rollOffer = (state: RunState, content: Content, kind: OfferKind): [readonly Equipped[], Rng] => {
   const owned = ownedIds(state.hero)
+  const { luck } = DIFFICULTIES[state.difficulty]
   switch (kind) {
     case 'chest':
-      return chestOptions(state.rng, content)
+      return chestOptions(state.rng, content, luck)
     case 'weaponPile':
       return weaponPileOptions(state.rng, content, owned)
     case 'grave':
       return graveOptions(state.rng, content, owned)
     case 'jewelryBox':
-      return jewelryOptions(state.rng, content, owned)
+      return jewelryOptions(state.rng, content, owned, luck)
   }
 }
 
@@ -49,9 +51,9 @@ const openOffer = (state: RunState, content: Content, poi: Poi, kind: OfferKind)
 }
 
 const rest = (state: RunState, sets: Content['sets'], title: string, heal: number, wakeText: string, dayText: string): RunState => {
-  if (timeOfWeek(state.step).phase !== 'night') return message(state, title, dayText)
+  if (timeOf(state).phase !== 'night') return message(state, title, dayText)
   const hero = withHealth(state.hero, state.hero.hp + heal, sets)
-  return { ...message(state, title, wakeText), hero, step: nextMorning(state.step) }
+  return { ...message(state, title, wakeText), hero, step: nextMorning(state.step, DIFFICULTIES[state.difficulty].schedule) }
 }
 
 const openForge = (state: RunState, content: Content, poi: Poi): RunState => {
@@ -66,7 +68,7 @@ const openOil = (state: RunState, poi: Poi): RunState => {
   return { ...state, screen: { kind: 'oil', poiId: poi.id, options } }
 }
 
-const isNight = (state: RunState): boolean => timeOfWeek(state.step).phase === 'night'
+const isNight = (state: RunState): boolean => timeOf(state).phase === 'night'
 
 export const interact = (state: RunState, content: Content, poi: Poi): RunState => {
   if (poi.used) return state

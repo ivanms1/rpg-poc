@@ -104,3 +104,11 @@ Fairy · Wishing Well · Bargaining Tent · Woodcutter · Rune Stone · Crone.
 ## 9. Open questions (rule flags in code, defaults above)
 1. Freeze rounding. 2. Every-other-turn parity. 3. Exact fatigue formula. 4. Thorns per multi-strike.
 5. Speed compared before/after Battle Start. 6. Negative stat flooring. 7. Powder. 8. Miniboss scaling.
+
+## 10. Difficulty (Patch #08, via the Steam news API)
+- **Normal:** start with 20 health, each day has more steps, increased chance to find gold & diamond items.
+- **Hard:** start with 10 health, no added bonuses.
+- **Very Hard:** start with 10 health, bosses are more powerful, nights are longer. (Patch #11: Leshen and the
+  Abomination also carry items on Very Hard.)
+- The notes give no numbers. Ours (`src/core/run/difficulty.ts`): Normal = 50/30-step day/night and ×3
+  golden/diamond odds; Hard = 40/30 steps; Very Hard = 40/40 steps, bosses +25% health (rounded up) and +1 attack.

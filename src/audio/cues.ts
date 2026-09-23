@@ -1,7 +1,7 @@
 /** Which sound (if any) goes with a battle event or a change in the run. Pure, so it's testable. */
 import type { BattleEvent } from '../core/combat/types'
 import type { RunState } from '../core/run/types'
-import { timeOfWeek } from '../core/world/clock'
+import { timeOf } from '../core/run/difficulty'
 import type { SoundName } from './sounds'
 
 export const battleCue = (event: BattleEvent): SoundName | null => {
@@ -49,7 +49,7 @@ export const runCues = (prev: RunState, next: RunState): readonly SoundName[] =>
   if (itemCount(next) > itemCount(prev) || (next.hero.weapon?.item.id !== prev.hero.weapon?.item.id && next.hero.weapon)) cues.push('pickup')
   if (next.hero.gold < prev.hero.gold) cues.push('spend')
   else if (next.hero.gold > prev.hero.gold && prev.screen.kind !== 'battle') cues.push('coin')
-  if (timeOfWeek(next.step).phase === 'night' && timeOfWeek(prev.step).phase === 'day') cues.push('night')
+  if (timeOf(next).phase === 'night' && timeOf(prev).phase === 'day') cues.push('night')
   if (cues.length === 0 && next.step > prev.step) cues.push('step')
   return [...new Set(cues)]
 }

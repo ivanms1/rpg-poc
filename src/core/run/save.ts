@@ -8,6 +8,7 @@ import type { Equipped } from '../items/loadout'
 import type { EdgeDef, ItemDef } from '../items/types'
 import { generateWorld } from '../world/mapgen'
 import type { Poi } from '../world/types'
+import { DIFFICULTY_IDS } from './difficulty'
 import type { Content, RunState } from './types'
 
 export const SAVE_VERSION = 1
@@ -35,6 +36,8 @@ const PoiSave = Point.extend({
 const SaveData = z.object({
   version: z.literal(SAVE_VERSION),
   seed: Int,
+  /** Added after version 1 shipped; older saves were Normal. */
+  difficulty: z.enum(DIFFICULTY_IDS).default('normal'),
   rng: Int.nonnegative(),
   week: z.union([z.literal(1), z.literal(2), z.literal(3)]),
   step: Int.nonnegative(),
@@ -82,6 +85,7 @@ const poiToSave = (p: Poi): z.infer<typeof PoiSave> => ({
 export const serializeRun = (state: RunState): SaveData => ({
   version: SAVE_VERSION,
   seed: state.seed,
+  difficulty: state.difficulty,
   rng: state.rng.state,
   week: state.week,
   step: state.step,
@@ -141,6 +145,7 @@ const hydrate = (data: SaveData, content: Content): RunState => {
 
   return {
     seed: data.seed,
+    difficulty: data.difficulty,
     rng: { state: data.rng },
     world: { ...generated, pois, enemies: data.enemies },
     player: data.player,

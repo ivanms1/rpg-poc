@@ -27,7 +27,18 @@ test.describe('title screen and saves', () => {
     const resume = page.getByRole('button', { name: /^Continue · week 1, day 1/ })
     await expect(resume).toBeVisible()
     await resume.click()
-    await expect(page.getByText(`47 steps left · seed ${SEED}`)).toBeVisible()
+    await expect(page.getByText(`47 steps left · Normal · seed ${SEED}`)).toBeVisible()
+  })
+
+  test('the chosen difficulty sets starting health and is remembered', async ({ page }) => {
+    await page.goto('/')
+    await page.getByRole('radio', { name: 'Very Hard' }).click()
+    await expect(page.getByText('longer nights and stronger bosses')).toBeVisible()
+    await page.reload()
+    await expect(page.getByRole('radio', { name: 'Very Hard' })).toHaveAttribute('aria-checked', 'true')
+    await page.getByRole('button', { name: 'New run' }).click()
+    await expect(page.getByLabel('Health 10/10')).toBeVisible()
+    await expect(page.getByText(/40 steps left · Very Hard/)).toBeVisible()
   })
 
   test('a corrupt save is reported, not crashed on', async ({ page }) => {

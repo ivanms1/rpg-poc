@@ -1,24 +1,26 @@
 /** The run reducer: the only way run state changes. */
 import { tileKey, inSight, revealAround } from '../world/fog'
-import { sightRadius, timeOfWeek } from '../world/clock'
+import { sightRadius } from '../world/clock'
 import { generateWorld } from '../world/mapgen'
 import { stepToward } from '../world/pathing'
 import { isWalkable } from '../world/terrain'
 import type { EnemyEntity, Point, World } from '../world/types'
 import { createRng, type Rng } from '../rng'
 import { finishBattle, startBossBattle, startEnemyBattle } from './battles'
+import { DIFFICULTIES, timeOf, type Difficulty } from './difficulty'
 import { discardItem, goldPerDay, swapSlots } from './hero'
 import { chooseOption, interact } from './locations'
 import { buy, haggle, reroll } from './shop'
 import { drawDistinct } from './loot'
 import type { Content, Hero, RunAction, RunState, Week } from './types'
 
-export const NORMAL_BASE_HEALTH = 20
 const STARTING_SLOTS = 4
 const WEEKS: readonly Week[] = [1, 2, 3]
 
 export interface RunOptions {
   readonly world?: World
+  readonly difficulty?: Difficulty
+  /** Overrides the difficulty's starting health (tests). */
   readonly baseHealth?: number
 }
 
@@ -39,7 +41,8 @@ const pickBosses = (rng: Rng, content: Content): [RunState['bosses'], Rng] => {
 
 export const createRun = (seed: number, content: Content, opts: RunOptions = {}): RunState => {
   const world = opts.world ?? generateWorld(seed)
-  const baseHealth = opts.baseHealth ?? NORMAL_BASE_HEALTH
+  const difficulty = opts.difficulty ?? 'normal'
+  const baseHealth = opts.baseHealth ?? DIFFICULTIES[difficulty].baseHealth
   const [bosses, rng] = pickBosses(createRng(seed ^ 0x5eed), content)
   const hero: Hero = {
     hp: baseHealth,
@@ -52,6 +55,7 @@ export const createRun = (seed: number, content: Content, opts: RunOptions = {})
   }
   return {
     seed,
+    difficulty,
     rng,
     world,
     player: world.start,
@@ -68,15 +72,15 @@ const same = (a: Point, b: Point): boolean => a.x === b.x && a.y === b.y
 
 const reveal = (state: RunState): RunState => ({
   ...state,
-  revealed: revealAround(state.revealed, state.player.x, state.player.y, sightRadius(timeOfWeek(state.step).phase)),
+  revealed: revealAround(state.revealed, state.player.x, state.player.y, sightRadius(timeOf(state).phase)),
 })
 
 const bossIfDue = (state: RunState, content: Content): RunState =>
-  state.screen.kind === 'map' && timeOfWeek(state.step).bossDue ? startBossBattle(state, content) : state
+  state.screen.kind === 'map' && timeOf(state).bossDue ? startBossBattle(state, content) : state
 
 /** At night, enemies that see the hero step toward them; the first to arrive starts a battle. */
 const nightChase = (state: RunState, content: Content): RunState => {
-  if (timeOfWeek(state.step).phase !== 'night') return state
+  if (timeOf(state).phase !== 'night') return state
   const radius = sightRadius('night')
   const blockedByPois = state.world.pois.map((p) => tileKey(p.x, p.y))
   let enemies: readonly EnemyEntity[] = state.world.enemies
@@ -158,7 +162,7 @@ const reduceAction = (content: Content, state: RunState, action: RunAction): Run
 const payDailyIncome = (before: RunState, after: RunState): RunState => {
   const income = goldPerDay(after.hero)
   if (income === 0) return after
-  const days = after.week > before.week ? 1 : timeOfWeek(after.step).day - timeOfWeek(before.step).day
+  const days = after.week > before.week ? 1 : timeOf(after).day - timeOf(before).day
   return days > 0 ? { ...after, hero: { ...after.hero, gold: after.hero.gold + income * days } } : after
 }
 

@@ -1,5 +1,6 @@
 /** A single run: world, clock, hero and whatever screen is in front. Changed only by `runReducer`. */
 import type { BattleResult } from '../combat/types'
+import type { Difficulty } from './difficulty'
 import type { Equipped } from '../items/loadout'
 import type { BossDef, EdgeDef, EnemyDef, ItemDef, OilKind, Recipe, SetDef } from '../items/types'
 import type { Rng } from '../rng'
@@ -102,6 +103,7 @@ export type Week = 1 | 2 | 3
 
 export interface RunState {
   readonly seed: number
+  readonly difficulty: Difficulty
   readonly rng: Rng
   readonly world: World
   readonly player: Point

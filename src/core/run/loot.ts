@@ -8,10 +8,11 @@ export const GOLDEN_CHANCE = 1 / 80
 export const DIAMOND_CHANCE = 1 / 500
 const CHOICES = 3
 
-export const rollTier = (rng: Rng): [Tier, Rng] => {
+/** `luck` multiplies both upgrade chances (Normal difficulty finds more golden and diamond items). */
+export const rollTier = (rng: Rng, luck = 1): [Tier, Rng] => {
   const [roll, next] = nextFloat(rng)
-  if (roll < DIAMOND_CHANCE) return ['diamond', next]
-  if (roll < DIAMOND_CHANCE + GOLDEN_CHANCE) return ['golden', next]
+  if (roll < DIAMOND_CHANCE * luck) return ['diamond', next]
+  if (roll < (DIAMOND_CHANCE + GOLDEN_CHANCE) * luck) return ['golden', next]
   return ['normal', next]
 }
 
@@ -29,10 +30,10 @@ export const drawDistinct = <T>(rng: Rng, pool: readonly T[], n: number): [T[], 
   return [drawn, current]
 }
 
-const withTiers = (rng: Rng, defs: readonly ItemDef[]): [Equipped[], Rng] =>
+const withTiers = (rng: Rng, defs: readonly ItemDef[], luck: number): [Equipped[], Rng] =>
   defs.reduce<[Equipped[], Rng]>(
     ([acc, r], item) => {
-      const [tier, next] = item.rarity === 'common' ? rollTier(r) : ['normal' as const, r]
+      const [tier, next] = item.rarity === 'common' ? rollTier(r, luck) : ['normal' as const, r]
       return [[...acc, { item, tier }], next]
     },
     [[], rng],
@@ -42,16 +43,16 @@ const withTiers = (rng: Rng, defs: readonly ItemDef[]): [Equipped[], Rng] =>
 const available = (defs: readonly ItemDef[], owned: ReadonlySet<string>): readonly ItemDef[] =>
   defs.filter((d) => d.drop !== false && (d.rarity === 'common' || !owned.has(d.id)))
 
-const offer = (rng: Rng, pool: readonly ItemDef[], owned: ReadonlySet<string>, n = CHOICES): [Equipped[], Rng] => {
+const offer = (rng: Rng, pool: readonly ItemDef[], owned: ReadonlySet<string>, n = CHOICES, luck = 1): [Equipped[], Rng] => {
   const [defs, next] = drawDistinct(rng, available(pool, owned), n)
-  return withTiers(next, defs)
+  return withTiers(next, defs, luck)
 }
 
 const NONE: ReadonlySet<string> = new Set()
 
-/** Treasure Chest: choose 1 of 3 common items (1/80 golden, 1/500 diamond). */
-export const chestOptions = (rng: Rng, content: Content): [Equipped[], Rng] =>
-  offer(rng, content.items.filter((i) => i.rarity === 'common'), NONE)
+/** Treasure Chest: choose 1 of 3 common items (1/80 golden, 1/500 diamond, times `luck`). */
+export const chestOptions = (rng: Rng, content: Content, luck = 1): [Equipped[], Rng] =>
+  offer(rng, content.items.filter((i) => i.rarity === 'common'), NONE, CHOICES, luck)
 
 /** Weapon Pile: choose 1 of 3 rare or heroic weapons. */
 export const weaponPileOptions = (rng: Rng, content: Content, owned: ReadonlySet<string> = NONE): [Equipped[], Rng] =>
@@ -62,8 +63,8 @@ export const graveOptions = (rng: Rng, content: Content, owned: ReadonlySet<stri
   offer(rng, content.items.filter((i) => i.rarity === 'heroic'), owned)
 
 /** Jewelry Box: choose 1 of 3 jewelry items. */
-export const jewelryOptions = (rng: Rng, content: Content, owned: ReadonlySet<string>): [Equipped[], Rng] =>
-  offer(rng, content.items.filter((i) => i.tags.includes('jewelry')), owned)
+export const jewelryOptions = (rng: Rng, content: Content, owned: ReadonlySet<string>, luck = 1): [Equipped[], Rng] =>
+  offer(rng, content.items.filter((i) => i.tags.includes('jewelry')), owned, CHOICES, luck)
 
 const RARE_PRICES = [3, 5] as const
 const HEROIC_PRICE = 10

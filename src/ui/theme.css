@@ -418,6 +418,37 @@ body,
   outline: none;
 }
 
+.title-difficulty {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.difficulty-option {
+  padding: 1px 6px;
+  border: 1px solid var(--muted);
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+}
+
+.difficulty-option.is-on {
+  border-color: var(--frame);
+  color: var(--frame);
+}
+
+.difficulty-option:hover,
+.difficulty-option:focus-visible {
+  background: #33202a;
+  outline: none;
+}
+
+.title-difficulty-text {
+  margin: 3px 0 6px;
+  color: var(--muted);
+}
+
 .title-screen .dialog-notice {
   max-width: 260px;
   color: var(--enemy);

@@ -6,7 +6,8 @@ import { runReducer } from '../core/run/reducer'
 import { planRoute } from '../core/run/route'
 import { isSaveable } from '../core/run/save'
 import type { RunAction, RunState } from '../core/run/types'
-import { timeOfWeek, withering } from '../core/world/clock'
+import { withering } from '../core/world/clock'
+import { DIFFICULTIES, empowerBoss, timeOf } from '../core/run/difficulty'
 import type { Point } from '../core/world/types'
 import { CONTENT } from '../data/content'
 import { createAtlas, loadImage, type Atlas } from '../render/atlas'
@@ -57,7 +58,8 @@ export function Game({ initial, onExit }: Props) {
   const sound = useSound()
   const previous = useRef(state)
   const { hero, screen, week, step } = state
-  const time = timeOfWeek(step)
+  const mode = DIFFICULTIES[state.difficulty]
+  const time = timeOf(state)
   const stats = useMemo(() => heroCombatant(hero, CONTENT.sets).stats, [hero])
   const describe = useCallback(
     (equipped: Equipped, isWeapon: boolean): string[] => {
@@ -72,7 +74,8 @@ export function Game({ initial, onExit }: Props) {
     },
     [hero],
   )
-  const boss = CONTENT.bosses.find((b) => b.id === state.bosses[week - 1])
+  const bossDef = CONTENT.bosses.find((b) => b.id === state.bosses[week - 1])
+  const boss = bossDef && empowerBoss(bossDef, state.difficulty)
 
   const act = useCallback((action: RunAction) => dispatch(action), [])
   const finished = screen.kind === 'gameOver' || screen.kind === 'victory'
@@ -197,7 +200,7 @@ export function Game({ initial, onExit }: Props) {
             >
               Shf
             </button>
-            <Timeline step={step} />
+            <Timeline step={step} schedule={mode.schedule} />
             <button type="button" className="boss-preview" title="Boss (Tab)" aria-label="Boss preview" onClick={() => setShowBoss((o) => !o)}>
               <PixelIcon icon="skull" color={PALETTE.enemy} scale={2} />
             </button>
@@ -209,7 +212,7 @@ export function Game({ initial, onExit }: Props) {
               world={state.world}
               player={state.player}
               revealed={state.revealed}
-              decay={withering(week, step)}
+              decay={withering(week, step, mode.schedule)}
               width={MAP_W}
               height={MAP_H}
               stageScale={scale}
@@ -218,7 +221,7 @@ export function Game({ initial, onExit }: Props) {
             />
             {overview && <div className="map-overview-label">{mapPinned ? 'Map · Shf or Esc to return' : 'Map · release Shift to return'}</div>}
             <div className="map-caption">
-              {time.phase} {time.day} · {time.stepsLeftInSegment} steps left · seed {state.seed}
+              {time.phase} {time.day} · {time.stepsLeftInSegment} steps left · {mode.name} · seed {state.seed}
             </div>
             <button
               type="button"
