@@ -14,7 +14,7 @@ const room = (): World['map'] => {
   const terrain: Terrain[] = Array.from({ length: W * H }, (_, i) => {
     const x = i % W
     const y = Math.floor(i / W)
-    return x === 0 || y === 0 || x === W - 1 || y === H - 1 ? 'pines' : 'ground'
+    return x === 0 || y === 0 || x === W - 1 || y === H - 1 ? 'pines' : 'path'
   })
   return { width: W, height: H, terrain, biome: terrain.map(() => 'start') }
 }
@@ -56,6 +56,13 @@ describe('moving', () => {
     const s = play(createRun(1, CONTENT, { world: world() }), right)
     expect(s.player).toEqual({ x: 8, y: 5 })
     expect(s.step).toBe(1)
+  })
+
+  it('cannot leave the path', () => {
+    const base = createRun(1, CONTENT, { world: world() })
+    const terrain = base.world.map.terrain.map((t, i) => (i === 5 * W + 8 ? 'ground' : t))
+    const offPath = { ...base, world: { ...base.world, map: { ...base.world.map, terrain } } }
+    expect(play(offPath, right)).toBe(offPath)
   })
 
   it('bumping into an obstacle costs nothing', () => {

@@ -1,10 +1,10 @@
 import { expect, test, type Page } from '@playwright/test'
 
-/** Seed 12345: a level-1 Spider is 8 steps from the start (computed with a BFS over the generated map). */
+/** Seed 4: a level-1 Spider is 5 steps from the start (computed with a BFS over the generated map). */
 const walkToSpider = async (page: Page) => {
-  await page.goto('/?seed=12345')
+  await page.goto('/?seed=4')
   await expect(page.getByText('50 steps left')).toBeVisible()
-  for (const key of 'sssdssss') await page.keyboard.press(key)
+  for (const key of 'sssaa') await page.keyboard.press(key)
 }
 
 test.describe('combat playback', () => {

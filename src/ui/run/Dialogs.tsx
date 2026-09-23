@@ -2,6 +2,7 @@ import type { Equipped } from '../../core/items/loadout'
 import type { BossDef } from '../../core/items/types'
 import { PALETTE } from '../../render/palette'
 import { StatRow } from '../StatPanel'
+import { ItemGlyph } from '../items/ItemGlyph'
 import { ItemDetails } from './ItemCard'
 import './run.css'
 
@@ -25,6 +26,9 @@ export function ChoiceDialog({ title, options, notice, onChoose, onClose }: Choi
         {options.map((option, i) => (
           <button key={`${option.item.id}-${i}`} type="button" className="choice-card" onClick={() => onChoose(i)} aria-label={`Take ${option.item.name}`}>
             <span className="choice-key">{i + 1}</span>
+            <span className="choice-icon">
+              <ItemGlyph item={option.item} scale={2} />
+            </span>
             <ItemDetails equipped={option} />
           </button>
         ))}

@@ -3,6 +3,7 @@ import type { Equipped } from '../core/items/loadout'
 import type { Tier } from '../core/items/types'
 import { PALETTE } from '../render/palette'
 import { RARITY_COLOR } from './rarity'
+import { ItemGlyph } from './items/ItemGlyph'
 import { Tooltip } from './Tooltip'
 
 const TIER_GEM: Record<Tier, string | null> = { normal: null, golden: PALETTE.speed, diamond: PALETTE.freeze }
@@ -30,8 +31,8 @@ function Slot({ equipped, index, locked = false, weapon = false, onHover, onDisc
       {index !== undefined && <span className="slot-index">{index}</span>}
       {!locked && <span className="slot-gem" style={{ background: gem }} />}
       {equipped && (
-        <span className="slot-glyph" style={{ color }}>
-          {equipped.item.name.charAt(0)}
+        <span className="slot-glyph">
+          <ItemGlyph item={equipped.item} />
         </span>
       )}
     </div>

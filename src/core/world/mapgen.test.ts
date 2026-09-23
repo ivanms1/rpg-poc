@@ -1,7 +1,7 @@
 import { tileKey } from './fog'
 import { BIOME_ENEMIES, generateWorld, POI_COUNTS } from './mapgen'
 import { reachableFrom } from './pathing'
-import { indexOf, isWalkable, manhattan, terrainAt } from './terrain'
+import { indexOf, isWalkable, manhattan } from './terrain'
 
 const SEEDS = [1, 7, 42, 1337, 2024, 99999]
 
@@ -17,7 +17,7 @@ describe('generateWorld', () => {
     expect(map.biome).toHaveLength(64 * 48)
   })
 
-  it.each(SEEDS)('seed %i: starts on walkable ground in the starting area, home next door', (seed) => {
+  it.each(SEEDS)('seed %i: starts on the path in the starting area, home next door', (seed) => {
     const { map, start, pois } = generateWorld(seed)
     expect(isWalkable(map, start.x, start.y)).toBe(true)
     expect(map.biome[indexOf(map, start.x, start.y)]).toBe('start')
@@ -65,13 +65,23 @@ describe('generateWorld', () => {
     expect(map.terrain).toContain('bridge')
   })
 
+  it.each(SEEDS)('seed %i: the path network has loops, not just dead ends', (seed) => {
+    const { map } = generateWorld(seed)
+    let nodes = 0
+    let edges = 0
+    for (let y = 0; y < map.height; y++) {
+      for (let x = 0; x < map.width; x++) {
+        if (!isWalkable(map, x, y)) continue
+        nodes++
+        if (isWalkable(map, x + 1, y)) edges++
+        if (isWalkable(map, x, y + 1)) edges++
+      }
+    }
+    expect(edges - nodes + 1).toBeGreaterThanOrEqual(3)
+  })
+
   it('uses every biome', () => {
     const { map } = generateWorld(5)
     expect(new Set(map.biome)).toEqual(new Set(['start', 'glade', 'plains', 'forest']))
-  })
-
-  it('keeps a clearing around the start', () => {
-    const { map, start } = generateWorld(3)
-    expect(terrainAt(map, start.x + 1, start.y + 1)).not.toBe('pine')
   })
 })

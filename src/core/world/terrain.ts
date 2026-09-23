@@ -1,9 +1,9 @@
 import type { Point, Terrain, WorldMap } from './types'
 
-/** Trees, rocks and water block movement; paths, bridges and low plants don't. */
-const BLOCKING: ReadonlySet<Terrain> = new Set<Terrain>(['water', 'pine', 'pines', 'rock', 'deadTree'])
+/** As in the original, the hero (and chasing enemies) can only walk on paths and bridges. */
+const WALKABLE: ReadonlySet<Terrain> = new Set<Terrain>(['path', 'bridge'])
 
-export const blocksMovement = (terrain: Terrain): boolean => BLOCKING.has(terrain)
+export const blocksMovement = (terrain: Terrain): boolean => !WALKABLE.has(terrain)
 
 export const inBounds = (map: WorldMap, x: number, y: number): boolean => x >= 0 && y >= 0 && x < map.width && y < map.height
 

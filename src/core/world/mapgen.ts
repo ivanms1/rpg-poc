@@ -34,6 +34,8 @@ const OUTER_BIOMES: readonly Biome[] = ['glade', 'plains', 'forest']
 const START_RADIUS = 7
 const EDGE_MARGIN = 2
 const MIN_SPACING = 3
+/** Extra path links on top of the spanning tree, so walking isn't all dead ends. */
+const LOOPS = 8
 
 /** Mutable scratch state local to one generateWorld call; never escapes. */
 interface Draft {
@@ -154,6 +156,7 @@ const carvePath = (d: Draft, from: Point, to: Point): void => {
   }
 }
 
+/** Spanning tree from the start (each target joins its nearest connected node), plus a few loops. */
 const connect = (d: Draft, start: Point, targets: readonly Point[]): void => {
   const connected: Point[] = [start]
   const byDistance = [...targets].sort((a, b) => manhattan(a, start) - manhattan(b, start))
@@ -162,9 +165,17 @@ const connect = (d: Draft, start: Point, targets: readonly Point[]): void => {
     carvePath(d, nearest, target)
     connected.push(target)
   }
+  if (targets.length < 3) return
+  for (let i = 0; i < LOOPS; i++) {
+    const from = choose(d, targets)
+    const others = targets.filter((t) => t !== from).sort((a, b) => manhattan(a, from) - manhattan(b, from))
+    // Skip the nearest (usually already linked); join one of the next few.
+    const to = others[int(d, 1, Math.min(3, others.length - 1))]
+    if (to) carvePath(d, from, to)
+  }
 }
 
-const decorate = (d: Draft, start: Point): void => {
+const decorate = (d: Draft): void => {
   for (let y = 0; y < d.height; y++) {
     for (let x = 0; x < d.width; x++) {
       const i = y * d.width + x
@@ -173,7 +184,7 @@ const decorate = (d: Draft, start: Point): void => {
         d.terrain[i] = 'pines'
         continue
       }
-      if (d.terrain[i] !== 'ground' || d.taken.has(tileKey(x, y)) || manhattan({ x, y }, start) <= 2) continue
+      if (d.terrain[i] !== 'ground' || d.taken.has(tileKey(x, y))) continue
       const r = roll(d)
       let acc = 0
       for (const [terrain, weight] of DECOR[d.biome[i] as Biome]) {
@@ -204,7 +215,7 @@ export const generateWorld = (seed: number, opts: MapGenOptions = {}): World => 
   carveRiver(d, start)
   const { pois, enemies } = placeLocations(d, start)
   connect(d, start, [...pois, ...enemies])
-  decorate(d, start)
+  decorate(d)
 
   const map: WorldMap = { width, height, terrain: d.terrain, biome: d.biome }
   if (blocksMovement(map.terrain[indexOf(map, start.x, start.y)] ?? 'ground')) throw new Error('mapgen: start is blocked')

@@ -1,12 +1,12 @@
 import { expect, test } from '@playwright/test'
 
-/** Seed 12345: a Treasure Chest is 15 steps from the start (BFS over the generated map). */
-const CHEST_PATH = 'ssssssssssaaaaa'
+/** Seed 4: a Treasure Chest is 12 steps down the path from the start (BFS over the generated map). */
+const CHEST_PATH = 'ssssssssssss'
 
 test.describe('run loop', () => {
   test.beforeEach(async ({ page }) => {
     await page.setViewportSize({ width: 1920, height: 1080 })
-    await page.goto('/?seed=12345')
+    await page.goto('/?seed=4')
     await expect(page.getByText('50 steps left')).toBeVisible()
   })
 
@@ -28,8 +28,8 @@ test.describe('run loop', () => {
     for (const key of CHEST_PATH) await page.keyboard.press(key)
     await page.keyboard.press('Escape')
     await expect(page.getByRole('dialog', { name: 'Treasure Chest' })).toHaveCount(0)
-    await page.keyboard.press('d')
-    await page.keyboard.press('a')
+    await page.keyboard.press('w')
+    await page.keyboard.press('s')
     await page.keyboard.press('1')
     await expect(page.getByLabel('Empty slot')).toHaveCount(3)
     await page.locator('.slot-grid .slot').first().dblclick()

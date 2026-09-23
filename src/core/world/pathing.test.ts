@@ -1,10 +1,10 @@
 import { reachableFrom, stepToward } from './pathing'
 import type { Terrain, WorldMap } from './types'
 
-/** Builds a map from rows: '.' ground, '#' pine, '~' water, '=' bridge. */
+/** Builds a map from rows: '.' path, ',' open ground, '#' pine, '~' water, '=' bridge. */
 const mapOf = (rows: readonly string[]): WorldMap => {
-  const legend: Record<string, Terrain> = { '.': 'ground', '#': 'pine', '~': 'water', '=': 'bridge' }
-  const terrain = rows.flatMap((row) => [...row].map((ch) => legend[ch] ?? 'ground'))
+  const legend: Record<string, Terrain> = { '.': 'path', ',': 'ground', '#': 'pine', '~': 'water', '=': 'bridge' }
+  const terrain = rows.flatMap((row) => [...row].map((ch) => legend[ch] ?? 'path'))
   return { width: rows[0]!.length, height: rows.length, terrain, biome: terrain.map(() => 'start') }
 }
 
@@ -18,6 +18,11 @@ describe('reachableFrom', () => {
     const seen = reachableFrom(map, { x: 0, y: 0 })
     expect(seen.has('4,0')).toBe(true)
     expect(seen.has('2,0')).toBe(false)
+  })
+
+  it('stays on paths: open ground blocks too', () => {
+    const map = mapOf(['..,..'])
+    expect(reachableFrom(map, { x: 0, y: 0 }).has('4,0')).toBe(false)
   })
 
   it('crosses bridges but not water', () => {
